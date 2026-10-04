@@ -412,6 +412,30 @@ def _canonicalize_semantic_groups(groups: list[SemanticRequirementGroup], *, que
     return canonical_groups
 
 
+def _disjoint_required_and_excluded(required: list[str], excluded: list[str], *, upper: bool = False) -> tuple[list[str], list[str]]:
+    excluded_lookup = {value.upper() if upper else value.lower() for value in excluded}
+    filtered_required = []
+    for value in required:
+        normalized = value.upper() if upper else value.lower()
+        if normalized in excluded_lookup:
+            continue
+        filtered_required.append(value)
+    return _dedupe(filtered_required), _dedupe(excluded)
+
+
+def _disjoint_semantic_concepts(
+    required: list[SemanticConcept],
+    excluded: list[SemanticConcept],
+) -> tuple[list[SemanticConcept], list[SemanticConcept]]:
+    excluded_lookup = {concept.concept or concept.aspect_id for concept in excluded if (concept.concept or concept.aspect_id)}
+    filtered_required = [
+        concept
+        for concept in required
+        if (concept.concept or concept.aspect_id) not in excluded_lookup
+    ]
+    return filtered_required, excluded
+
+
 def _has_meaningful_semantic_intent(spec: RequestSpec) -> bool:
     if spec.semantic_requirement_groups or spec.semantic_requirements or spec.semantic_exclusions:
         return True
@@ -1023,6 +1047,23 @@ def _normalize_request_spec(spec: RequestSpec, query: str, client: TMDBClient | 
     )
     if structured.min_year is not None and structured.max_year is not None and structured.min_year > structured.max_year:
         structured.min_year, structured.max_year = structured.max_year, structured.min_year
+    structured.required_languages, structured.excluded_languages = _disjoint_required_and_excluded(
+        structured.required_languages,
+        structured.excluded_languages,
+    )
+    structured.required_countries, structured.excluded_countries = _disjoint_required_and_excluded(
+        structured.required_countries,
+        structured.excluded_countries,
+        upper=True,
+    )
+    structured.required_genres, structured.excluded_genres = _disjoint_required_and_excluded(
+        structured.required_genres,
+        structured.excluded_genres,
+    )
+    structured.required_decades, structured.excluded_decades = _disjoint_required_and_excluded(
+        structured.required_decades,
+        structured.excluded_decades,
+    )
 
     semantic_requirements_source = spec.semantic_requirements or fallback.semantic_requirements
     semantic_requirements = _canonicalize_semantic_concepts(semantic_requirements_source, source_span=query)
@@ -1030,6 +1071,7 @@ def _normalize_request_spec(spec: RequestSpec, query: str, client: TMDBClient | 
     semantic_exclusions = _canonicalize_semantic_concepts(semantic_exclusions_source, source_span=query)
     semantic_requirement_groups_source = spec.semantic_requirement_groups or fallback.semantic_requirement_groups
     semantic_requirement_groups, group_exclusions = _canonicalize_semantic_groups_with_negations(semantic_requirement_groups_source, query=query)
+    semantic_requirements, semantic_exclusions = _disjoint_semantic_concepts(semantic_requirements, semantic_exclusions)
     semantic_exclusions = _dedupe(
         [
             *_dedupe([concept.concept for concept in semantic_exclusions if concept.concept]),

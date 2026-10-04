@@ -161,6 +161,20 @@ def load_consumption_history(raw_path: str | Path = RAW_INGESTION_PATH) -> pd.Da
     return frame.reset_index(drop=True)
 
 
+def load_watched_source_ids(raw_path: str | Path = RAW_INGESTION_PATH) -> list[str]:
+    history = load_consumption_history(raw_path)
+    if history.empty or "source_id" not in history.columns:
+        return []
+    watched = (
+        history["source_id"]
+        .astype(str)
+        .loc[lambda series: series.str.strip() != ""]
+        .drop_duplicates()
+        .tolist()
+    )
+    return watched
+
+
 def load_condition_a_enriched(path: str | Path = CONDITION_A_PATH) -> pd.DataFrame:
     frame = pd.read_csv(path)
     frame = _ensure_columns(frame)

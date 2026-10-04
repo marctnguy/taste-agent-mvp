@@ -20,6 +20,7 @@ from mvp.src.generative_v4.selection_chain import select_candidates
 from mvp.src.generative_v4.validators import validate_runtime_v4_result
 from mvp.src.mvp_deployment import score_candidates
 from mvp.src.retrieval.catalog_retrieval import discover_catalog_for_request
+from mvp.src.candidates import load_watched_source_ids
 
 
 DEFAULT_V4_CANDIDATE_CONTEXT_SIZE = 50
@@ -353,6 +354,7 @@ def run_runtime_v4(
     source_recommendation_run: str = "dynamic_tmdb_runtime_v4",
 ) -> RuntimeV4Result:
     load_runtime_env()
+    watched_ids = list(watched_ids or load_watched_source_ids())
 
     with trace(
         "taste_agent_request_v4",
@@ -557,6 +559,7 @@ def run_runtime_v4(
                             "request": request.model_dump(),
                             "request_spec": request.spec.model_dump() if request.spec is not None else None,
                             "retrieval_plan": request.retrieval_plan.model_dump() if request.retrieval_plan is not None else None,
+                            "watched_ids": watched_ids,
                                 "retrieval_diagnostics": {
                                     "interaction_mode": request.interaction_mode,
                                     "target_candidate_id": str(candidate_id) if candidate_id is not None else None,
@@ -1000,6 +1003,7 @@ def run_runtime_v4(
                 "request": request.model_dump(),
                 "request_spec": request.spec.model_dump() if request.spec is not None else None,
                 "retrieval_plan": request.retrieval_plan.model_dump() if request.retrieval_plan is not None else None,
+                "watched_ids": watched_ids,
                 "retrieval_diagnostics": asdict(retrieval.retrieval_diagnostics),
                 "augmentation_report": retrieval.augmentation_report,
                 "candidate_context": candidate_context_records,

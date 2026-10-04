@@ -91,6 +91,13 @@ def _semantic_requirement_groups(result: RuntimeV4Result) -> list[dict[str, Any]
     return [group for group in groups if isinstance(group, dict)]
 
 
+def _watched_ids(result: RuntimeV4Result) -> set[str]:
+    watched = result.debug.get("watched_ids", [])
+    if not isinstance(watched, list):
+        return set()
+    return {str(item) for item in watched if str(item).strip()}
+
+
 def _candidate_satisfies_constraints(candidate: dict[str, Any], constraints: dict[str, Any]) -> bool:
     genres = {str(item).lower() for item in candidate.get("genres", []) if item is not None}
     languages = str(candidate.get("original_language", "")).lower()
@@ -103,8 +110,9 @@ def _candidate_satisfies_constraints(candidate: dict[str, Any], constraints: dic
     for language in constraints.get("languages", []):
         if languages != str(language).lower():
             return False
-    for country in constraints.get("countries", []):
-        if str(country).lower() not in countries:
+    if constraints.get("countries"):
+        allowed = {str(country).lower() for country in constraints.get("countries", [])}
+        if not countries.intersection(allowed):
             return False
     if constraints.get("decades"):
         if year is None:
@@ -158,6 +166,7 @@ def validate_runtime_v4_result(result: RuntimeV4Result) -> ValidationResult:
     constraints = _structured_constraints(result)
     semantic_exclusions = set(_semantic_exclusions(result))
     semantic_groups = _semantic_requirement_groups(result)
+    watched_ids = _watched_ids(result)
 
     if len(recommendation_ids) != len(set(recommendation_ids)):
         errors.append("Duplicate candidates were returned.")
@@ -174,6 +183,8 @@ def validate_runtime_v4_result(result: RuntimeV4Result) -> ValidationResult:
             errors.append(f"Recommendation {rec.candidate_id!r} should not have been selected after unsupported qualification.")
         if candidate.get("violated_semantic_exclusions"):
             errors.append(f"Recommendation {rec.candidate_id!r} violated a semantic exclusion during qualification.")
+        if watched_ids and str(rec.candidate_id) in watched_ids:
+            errors.append(f"Recommendation {rec.candidate_id!r} was already present in the consumed-film history.")
         if constraints and not _candidate_satisfies_constraints(candidate, constraints):
             errors.append(f"Recommendation {rec.candidate_id!r} violates a structured hard constraint.")
         if semantic_exclusions:
@@ -194,16 +205,16 @@ def validate_runtime_v4_result(result: RuntimeV4Result) -> ValidationResult:
         if str(candidate.get("qualification_status")) == "partial" and not rec.caveat:
             errors.append(f"Recommendation {rec.candidate_id!r} is partial but the caveat was dropped.")
         if str(candidate.get("qualification_status")) == "strong" and semantic_groups:
-            supported = {str(item) for item in candidate.get("supported_request_aspects", []) if item is not None}
+            supported_required = {str(item) for item in candidate.get("supported_required_aspects", []) if item is not None}
             for group in semantic_groups:
                 mode = str(group.get("mode", "all_of"))
                 concepts = [str(item.get("concept") or item.get("aspect_id") or "") for item in group.get("concepts", []) if isinstance(item, dict)]
                 concepts = [concept for concept in concepts if concept]
                 if not concepts:
                     continue
-                if mode == "all_of" and not set(concepts).issubset(supported):
+                if mode == "all_of" and not set(concepts).issubset(supported_required):
                     errors.append(f"Recommendation {rec.candidate_id!r} was marked strong without satisfying an all_of semantic group.")
-                if mode == "any_of" and not any(concept in supported for concept in concepts):
+                if mode == "any_of" and not any(concept in supported_required for concept in concepts):
                     errors.append(f"Recommendation {rec.candidate_id!r} was marked strong without satisfying an any_of semantic group.")
         if rec.taste_signals:
             evidence_dims = {

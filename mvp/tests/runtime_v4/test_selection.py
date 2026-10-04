@@ -34,3 +34,36 @@ def test_fewer_than_five_recommendations_is_valid(runtime_v4_candidate_pool) -> 
     assert len(result.selected_frame) == 1
     assert result.selection_report["selected_count"] == 1
 
+
+def test_contextual_selection_prioritizes_preferred_support_before_relevance(runtime_v4_candidate_pool) -> None:
+    request = understand_request("I want a film about performers and fame").model_copy(
+        update={"request_mode": "contextual", "request_relevance_mode": "query_aware"}
+    )
+    qualified = pd.DataFrame(
+        [
+            {
+                "source_id": "1001",
+                "title": "Less Preferred",
+                "qualification_status": "strong",
+                "supported_required_aspects": ["performers", "fame"],
+                "supported_preferred_aspects": [],
+                "request_relevance": 0.99,
+                "predicted_preference": 0.95,
+                "b3_applicability_distance": 0.02,
+            },
+            {
+                "source_id": "1002",
+                "title": "More Preferred",
+                "qualification_status": "strong",
+                "supported_required_aspects": ["performers", "fame"],
+                "supported_preferred_aspects": ["period_setting"],
+                "request_relevance": 0.50,
+                "predicted_preference": 0.30,
+                "b3_applicability_distance": 0.80,
+            },
+        ]
+    )
+
+    result = select_candidates(request, qualified, recommendation_count=1)
+
+    assert result.selected_frame.iloc[0]["source_id"] == "1002"

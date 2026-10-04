@@ -141,6 +141,10 @@ class RetrievedCandidate(CandidateContextItem):
     b3_applicability_distance: float | None = None
     novelty_score: float | None = None
     qualification_status: QualificationStatus = "pending"
+    supported_required_aspects: list[str] = Field(default_factory=list)
+    unsupported_required_aspects: list[str] = Field(default_factory=list)
+    supported_preferred_aspects: list[str] = Field(default_factory=list)
+    unsupported_preferred_aspects: list[str] = Field(default_factory=list)
     supported_request_aspects: list[str] = Field(default_factory=list)
     unsupported_request_aspects: list[str] = Field(default_factory=list)
     grounded_evidence: list[str] = Field(default_factory=list)
@@ -154,6 +158,8 @@ class RetrievedCandidate(CandidateContextItem):
 class QualificationRecord(BaseModel):
     candidate_id: str
     qualification_status: QualificationStatus
+    supported_required_aspects: list[str] = Field(default_factory=list)
+    unsupported_required_aspects: list[str] = Field(default_factory=list)
     supported_request_aspects: list[str] = Field(default_factory=list)
     unsupported_request_aspects: list[str] = Field(default_factory=list)
     supported_preferred_aspects: list[str] = Field(default_factory=list)

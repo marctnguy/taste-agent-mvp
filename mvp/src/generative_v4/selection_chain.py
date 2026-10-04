@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 from dataclasses import dataclass
 from typing import Any
 
@@ -31,6 +32,23 @@ def _status_rank(value: str | None) -> int:
 
 def _candidate_embedding_columns(frame: pd.DataFrame) -> list[str]:
     return [column for column in frame.columns if column.startswith("emb_")]
+
+
+def _aspect_count(value: Any) -> int:
+    if isinstance(value, list):
+        return sum(1 for item in value if str(item).strip())
+    if pd.isna(value):
+        return 0
+    text = str(value).strip()
+    if not text:
+        return 0
+    try:
+        parsed = ast.literal_eval(text)
+        if isinstance(parsed, list):
+            return sum(1 for item in parsed if str(item).strip())
+    except Exception:
+        pass
+    return 1
 
 
 def _build_history_embeddings() -> pd.DataFrame:
@@ -92,12 +110,18 @@ def select_candidates(
 
     frame["qualification_rank"] = frame["qualification_status"].map(_status_rank) if "qualification_status" in frame.columns else 0
     b3_available = bool(pd.to_numeric(frame["predicted_preference"], errors="coerce").notna().any())
+    frame["supported_required_count"] = frame.get("supported_required_aspects", pd.Series(dtype=object)).apply(_aspect_count) if "supported_required_aspects" in frame.columns else 0
+    frame["supported_preferred_count"] = frame.get("supported_preferred_aspects", pd.Series(dtype=object)).apply(_aspect_count) if "supported_preferred_aspects" in frame.columns else 0
 
     if request.request_mode == "novelty" or request.novelty_requested:
+        valid_b3 = pd.to_numeric(frame["predicted_preference"], errors="coerce").fillna(np.nan)
+        frame = frame.loc[valid_b3.notna() & (valid_b3 > 0)].copy().reset_index(drop=True)
+        if frame.empty:
+            return SelectionResult(frame, [], {"selected_count": 0, "abstained": True, "novelty_requested": True, "request_mode": request.request_mode, "b3_positive_count": 0, "b3_available_count": 0, "b3_available_selected_count": 0})
         frame["novelty_score"] = _novelty_scores(frame)
         frame = frame.sort_values(
-            ["novelty_score", "request_relevance", "predicted_preference", "source_id"],
-            ascending=[False, False, False, True],
+            ["novelty_score", "predicted_preference", "source_id"],
+            ascending=[False, False, True],
             na_position="last",
         )
         selection_reason = "Novelty-ranked selection using nearest-neighbour distance from the consumed-film embedding distribution."
@@ -119,9 +143,15 @@ def select_candidates(
             na_position="last",
         )
         selection_reason = (
-            "Contextual selection prioritized request-fit first, then frozen B3 compatibility among qualified candidates."
+            "Contextual selection prioritized required grounding, then preferred concepts, then request-fit, then frozen B3 compatibility among qualified candidates."
             if b3_available
-            else "Contextual selection prioritized request-fit first with stable tie-breakers because B3 was unavailable for this slate."
+            else "Contextual selection prioritized required grounding, then preferred concepts, then request-fit with stable tie-breakers because B3 was unavailable for this slate."
+        )
+    if request.request_mode == "contextual":
+        frame = frame.sort_values(
+            ["supported_required_count", "supported_preferred_count", "request_relevance", "predicted_preference", "source_id"],
+            ascending=[False, False, False, False, True],
+            na_position="last",
         )
 
     selected = frame.head(recommendation_count).copy().reset_index(drop=True)
@@ -137,7 +167,7 @@ def select_candidates(
             selection_reason=selection_reason,
             request_relevance=float(row.get("request_relevance", 0.0)) if pd.notna(row.get("request_relevance", np.nan)) else 0.0,
             b3_predicted_preference=float(row.get("predicted_preference")) if pd.notna(row.get("predicted_preference", np.nan)) else None,
-            b3_available=bool(pd.notna(row.get("predicted_preference", np.nan))),
+            b3_available=bool(pd.notna(row.get("predicted_preference", np.nan)) and pd.to_numeric(row.get("predicted_preference", np.nan), errors="coerce") > 0),
             qualification_status=str(row.get("qualification_status", "pending")),
         )
         for index, row in selected.iterrows()
@@ -148,7 +178,8 @@ def select_candidates(
         "novelty_requested": bool(request.novelty_requested),
         "request_mode": request.request_mode,
         "b3_available_count": int(pd.to_numeric(frame["predicted_preference"], errors="coerce").notna().sum()),
-        "b3_available_selected_count": int(pd.to_numeric(selected["predicted_preference"], errors="coerce").notna().sum()),
+        "b3_available_selected_count": int((pd.to_numeric(selected["predicted_preference"], errors="coerce") > 0).sum()),
+        "b3_positive_count": int((pd.to_numeric(frame["predicted_preference"], errors="coerce") > 0).sum()),
     }
     total_candidates = int(len(frame))
     report["b3_available_coverage"] = float(report["b3_available_count"] / total_candidates) if total_candidates else 0.0

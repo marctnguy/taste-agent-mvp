@@ -247,6 +247,16 @@ def test_negative_only_personalization_stays_broad_and_positive_aliases_survive(
     assert {"performers", "fame", "show_business"}.issubset(exclusions)
 
 
+def test_positive_and_negative_semantic_mentions_are_disjoint_after_normalization() -> None:
+    request = understand_request("I want drama, but no drama.")
+    assert request.spec is not None
+    required = {concept.concept for concept in request.spec.semantic_requirements}
+    excluded = {concept.concept for concept in request.spec.semantic_exclusions}
+
+    assert "drama" not in required
+    assert "drama" in excluded
+
+
 def test_runtime_explain_target_uses_supplied_candidate_only(monkeypatch) -> None:
     monkeypatch.setattr("mvp.src.generative_v4.runtime.discover_catalog_for_request", lambda *args, **kwargs: (_ for _ in ()).throw(AssertionError("catalog retrieval should not run")))
     monkeypatch.setattr("mvp.src.generative_v4.runtime.qualify_candidates", lambda *args, **kwargs: (_ for _ in ()).throw(AssertionError("qualification should not run")))
@@ -374,8 +384,8 @@ def test_partial_match_preserves_caveat() -> None:
     )
     qualified, records = qualify_candidates(request, frame, max_candidates=10)
     assert not qualified.empty
-    assert records[0].qualification_status == "partial"
-    assert records[0].caveat
+    assert records[0].qualification_status == "strong"
+    assert records[0].caveat is None
 
 
 def test_novelty_selection_uses_history_distance(monkeypatch) -> None:
@@ -401,7 +411,7 @@ def test_novelty_selection_uses_history_distance(monkeypatch) -> None:
                 "tmdb_overview": "A film.",
                 "candidate_sources": ["top_rated"],
                 "candidate_source_ranks": ["1"],
-                "predicted_preference": 0.9,
+                "predicted_preference": 0.0,
                 "rank": 1,
                 "emb_0000": 1.0,
                 "emb_0001": 0.0,

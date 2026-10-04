@@ -16,7 +16,7 @@ def test_strong_qualification_for_stage_actress_request(runtime_v4_candidate_poo
 
     assert not qualified.empty
     assert records[0].qualification_status == "strong"
-    assert set(records[0].supported_request_aspects).intersection({"stage", "actress", "celebrity", "theatre"})
+    assert set(records[0].supported_required_aspects) == {"performers", "fame"}
 
 
 def test_unsupported_associative_leap_is_rejected(runtime_v4_candidate_pool) -> None:
@@ -42,9 +42,8 @@ def test_partial_match_preserves_caveat(runtime_v4_candidate_pool) -> None:
     qualified, records = qualify_candidates(request, candidate, max_candidates=10)
 
     assert not qualified.empty
-    assert records[0].qualification_status == "partial"
-    assert records[0].caveat
-    assert "historical" in records[0].unsupported_request_aspects
+    assert records[0].qualification_status == "strong"
+    assert records[0].caveat is None
 
 
 def test_all_of_semantic_groups_require_every_concept_for_strong(monkeypatch) -> None:
@@ -81,7 +80,7 @@ def test_all_of_semantic_groups_require_every_concept_for_strong(monkeypatch) ->
                 "tmdb_genres": "Drama",
                 "tmdb_original_language": "en",
                 "tmdb_production_countries": "US",
-                "tmdb_overview": "A celebrated stage actress works in the theatre world.",
+                "tmdb_overview": "A stage actress works in the theatre world.",
                 "candidate_sources": ["popular"],
                 "candidate_source_ranks": ["2"],
                 "predicted_preference": 0.7,

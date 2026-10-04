@@ -1,0 +1,19 @@
+{
+  "history_rows": 663,
+  "watched_rows": 662,
+  "tmdb_exclusions": 492,
+  "fallback_exclusions": 171,
+  "unique_exclusion_keys": 662,
+  "sample_titles": [
+    "Barbie",
+    "Parasite",
+    "Fight Club",
+    "Everything Everywhere All at Once",
+    "La La Land",
+    "Interstellar",
+    "Oppenheimer",
+    "Joker",
+    "Pulp Fiction",
+    "Dune"
+  ]
+}

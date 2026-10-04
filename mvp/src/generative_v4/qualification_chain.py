@@ -40,7 +40,7 @@ ASPECT_SYNONYMS: dict[str, list[str]] = {
     "sentimental": ["sentimental", "sappy", "maudlin", "treacly"],
     "cheesy": ["cheesy", "corny", "cloying"],
     "performers": ["performer", "performers", "performance", "actor", "actress", "stage", "theatre", "theater"],
-    "fame": ["fame", "famous", "star", "stars", "renown"],
+    "fame": ["fame", "famous", "celebrity", "celebrated", "star", "stars", "renown"],
     "show_business": ["show business", "entertainment", "cinema", "film industry", "behind the scenes", "industry"],
     "freedom": ["freedom", "liberation", "escape", "rebellion"],
     "youthful": ["youthful", "youth", "young", "coming of age", "coming-of-age"],
@@ -228,21 +228,84 @@ def _candidate_year(candidate: RetrievedCandidate | pd.Series | dict[str, Any]) 
         return None
 
 
-def _subject_matters_for_concept(candidate_text: str, concept: str, candidate: RetrievedCandidate | pd.Series | dict[str, Any]) -> bool:
+def _candidate_payload(candidate: RetrievedCandidate | pd.Series | dict[str, Any]) -> dict[str, Any]:
+    if isinstance(candidate, RetrievedCandidate):
+        return candidate.model_dump()
+    if isinstance(candidate, pd.Series):
+        return candidate.to_dict()
+    return dict(candidate)
+
+
+def _candidate_field_text(candidate: RetrievedCandidate | pd.Series | dict[str, Any], field: str) -> str:
+    payload = _candidate_payload(candidate)
+    value = payload.get(field)
+    if value is None:
+        fallback_fields = {
+            "overview": "tmdb_overview",
+            "genres": "tmdb_genres",
+            "original_language": "tmdb_original_language",
+            "production_countries": "tmdb_production_countries",
+        }
+        fallback_field = fallback_fields.get(field)
+        if fallback_field:
+            value = payload.get(fallback_field)
+    if isinstance(value, list):
+        return _normalize_text(" ".join(str(item) for item in value if str(item).strip()))
+    return _normalize_text(value)
+
+
+def _candidate_grounding_text(candidate: RetrievedCandidate | pd.Series | dict[str, Any]) -> str:
+    payload = _candidate_payload(candidate)
+    parts = [
+        _candidate_field_text(payload, "title"),
+        _candidate_field_text(payload, "overview"),
+        _candidate_field_text(payload, "document_text"),
+        _candidate_field_text(payload, "candidate_sources"),
+        _candidate_field_text(payload, "candidate_source_ranks"),
+        _candidate_field_text(payload, "genres"),
+        _candidate_field_text(payload, "original_language"),
+        _candidate_field_text(payload, "production_countries"),
+    ]
+    return _normalize_text(" ".join(part for part in parts if part))
+
+
+def _concept_match_state(candidate: RetrievedCandidate | pd.Series | dict[str, Any], concept: str) -> tuple[str, str | None]:
+    payload = _candidate_payload(candidate)
+    subject_text = _candidate_grounding_text(payload)
+    overview_text = _candidate_field_text(payload, "overview") or _candidate_field_text(payload, "document_text")
+    title_text = _candidate_field_text(payload, "title")
+    source_text = _candidate_field_text(payload, "candidate_sources")
+    candidate_text = subject_text
+    synonyms = ASPECT_SYNONYMS.get(concept, [concept.replace("_", " ")])
     matched, synonym = _supported_by_synonym(candidate_text, concept)
     if not matched:
-        return False
-    if concept in _ABOUTNESS_REQUIRED_CONCEPTS and not any(marker in candidate_text for marker in _ABOUTNESS_MARKERS):
-        return False
-    if concept in {"fame", "celebrity"} and synonym in {"famous", "fame", "celebrity", "star", "stars", "renown"}:
-        if not any(marker in candidate_text for marker in ("stardom", "limelight", "celebrity culture", "show business", "entertainment industry", "about", "story", "portrait", *_DIRECT_SUBJECT_MARKERS)):
-            return False
+        return "unsupported", None
+
     if concept in _TEMPORAL_CONCEPTS:
         year = _candidate_year(candidate)
         current_year = datetime.now().year
         if year is not None and year > current_year - 15:
-            return False
-    return True
+            return "ambiguous", synonym
+
+    if concept in _ABOUTNESS_REQUIRED_CONCEPTS or concept in {"fame", "celebrity", "performers", "musicians"}:
+        direct_markers = tuple(marker for marker in (*_ABOUTNESS_MARKERS, *_DIRECT_SUBJECT_MARKERS) if marker)
+        if not any(marker in overview_text for marker in direct_markers) and not any(marker in source_text for marker in direct_markers):
+            return "ambiguous", synonym
+        return "supported", synonym
+
+    overview_or_source_hit = any(alias in overview_text or alias in source_text for alias in synonyms)
+    title_hit = any(alias in title_text for alias in synonyms)
+    if overview_or_source_hit:
+        return "supported", synonym
+    if title_hit:
+        return "ambiguous", synonym
+
+    return "ambiguous", synonym
+
+
+def _subject_matters_for_concept(candidate_text: str, concept: str, candidate: RetrievedCandidate | pd.Series | dict[str, Any]) -> bool:
+    state, _ = _concept_match_state(candidate, concept)
+    return state == "supported"
 
 
 def _candidate_text(candidate: RetrievedCandidate | pd.Series | dict[str, Any]) -> str:
@@ -447,6 +510,10 @@ def _fallback_qualification_output(request: RequestUnderstanding, candidate: Ret
     evidence: list[str] = []
     evidence_details: list[dict[str, Any]] = []
 
+    def _append_evidence(concept_id: str, synonym: str | None, field: str) -> None:
+        evidence.append(f"{concept_id} via {synonym or concept_id}")
+        evidence_details.append({"aspect_id": concept_id, "field": field, "evidence": synonym or concept_id})
+
     for group in groups:
         group_supported = False
         group_missing: list[str] = []
@@ -454,21 +521,26 @@ def _fallback_qualification_output(request: RequestUnderstanding, candidate: Ret
             concept_id = _semantic_value(concept)
             if not concept_id:
                 continue
-            matched = _subject_matters_for_concept(candidate_text, concept_id, candidate)
-            synonym = None
-            if matched:
-                synonyms = ASPECT_SYNONYMS.get(concept_id, [concept_id.replace("_", " ")])
-                synonym = next((item for item in synonyms if item in candidate_text), concept_id.replace("_", " "))
-            if matched:
+            match_state, synonym = _concept_match_state(candidate, concept_id)
+            if match_state == "supported":
                 group_supported = True
                 if group.mode == "preferred":
                     supported_preferred.append(concept_id)
                 else:
                     supported_required.append(concept_id)
-                evidence.append(f"{concept_id} via {synonym}")
-                evidence_details.append({"aspect_id": concept_id, "field": "overview", "evidence": synonym})
+                _append_evidence(concept_id, synonym, "overview")
+            elif match_state == "ambiguous":
+                group_missing.append(concept_id)
+                if group.mode == "preferred":
+                    unsupported_preferred.append(concept_id)
+                else:
+                    unsupported_required.append(concept_id)
             else:
                 group_missing.append(concept_id)
+                if group.mode == "preferred":
+                    unsupported_preferred.append(concept_id)
+                else:
+                    unsupported_required.append(concept_id)
         if group.mode == "all_of" and group_missing:
             unsupported_required.extend(group_missing)
         elif group.mode == "any_of" and not group_supported:
@@ -479,27 +551,18 @@ def _fallback_qualification_output(request: RequestUnderstanding, candidate: Ret
     for concept in preferred_aspects:
         if not concept:
             continue
-        matched = _subject_matters_for_concept(candidate_text, concept, candidate)
-        synonym = None
-        if matched:
-            synonyms = ASPECT_SYNONYMS.get(concept, [concept.replace("_", " ")])
-            synonym = next((item for item in synonyms if item in candidate_text), concept.replace("_", " "))
-        if matched:
+        match_state, synonym = _concept_match_state(candidate, concept)
+        if match_state == "supported":
             supported_preferred.append(concept)
-            evidence.append(f"{concept} via {synonym}")
-            evidence_details.append({"aspect_id": concept, "field": "overview", "evidence": synonym})
+            _append_evidence(concept, synonym, "overview")
         else:
             unsupported_preferred.append(concept)
 
     for concept in excluded_concepts:
         if not concept:
             continue
-        matched = _subject_matters_for_concept(candidate_text, concept, candidate)
-        synonym = None
-        if matched:
-            synonyms = ASPECT_SYNONYMS.get(concept, [concept.replace("_", " ")])
-            synonym = next((item for item in synonyms if item in candidate_text), concept.replace("_", " "))
-        if matched:
+        match_state, synonym = _concept_match_state(candidate, concept)
+        if match_state == "supported":
             violated_exclusions.append(concept)
             evidence_details.append({"aspect_id": concept, "field": "overview", "evidence": synonym or concept})
 
@@ -511,14 +574,19 @@ def _fallback_qualification_output(request: RequestUnderstanding, candidate: Ret
     if spec.novelty_goal.enabled:
         supported_preferred.append("novelty_requested")
 
-    semantic_supported = any(aspect in supported_required for aspect in required_aspects if aspect)
-    required_group_unsatisfied = any(
-        group.mode == "all_of" and any(_semantic_value(concept) not in supported_required for concept in group.concepts if _semantic_value(concept))
-        for group in groups
-    ) or any(
-        group.mode == "any_of" and not any(_semantic_value(concept) in supported_required for concept in group.concepts if _semantic_value(concept))
-        for group in groups
-    )
+    required_group_unsatisfied = False
+    for group in groups:
+        if group.mode not in {"all_of", "any_of"}:
+            continue
+        group_concepts = [_semantic_value(concept) for concept in group.concepts if _semantic_value(concept)]
+        if not group_concepts:
+            continue
+        if group.mode == "all_of" and not set(group_concepts).issubset(set(supported_required)):
+            required_group_unsatisfied = True
+            break
+        if group.mode == "any_of" and not any(concept in supported_required for concept in group_concepts):
+            required_group_unsatisfied = True
+            break
     required_failure = bool(structured_unsupported or required_group_unsatisfied)
 
     if violated_exclusions:
@@ -526,11 +594,11 @@ def _fallback_qualification_output(request: RequestUnderstanding, candidate: Ret
     elif structured_unsupported:
         status = "unsupported"
     elif required_failure and required_aspects:
-        status = "partial" if (semantic_supported or supported_preferred) else "unsupported"
-    elif unsupported_preferred:
-        status = "partial"
+        status = "unsupported"
+    elif unsupported_preferred and not supported_preferred and not required_aspects:
+        status = "strong"
     elif required_aspects or preferred_aspects or spec.semantic_exclusions:
-        status = "strong" if not required_failure and not violated_exclusions else "partial"
+        status = "strong" if not required_failure and not violated_exclusions else "unsupported"
     elif not structured_unsupported and not violated_exclusions:
         status = "strong"
     else:
@@ -744,6 +812,8 @@ def _record_from_output(candidate_id: str, output: QualificationOutput, llm_used
     return QualificationRecord(
         candidate_id=candidate_id,
         qualification_status=output.status,
+        supported_required_aspects=output.supported_required_aspects,
+        unsupported_required_aspects=output.unsupported_required_aspects,
         supported_request_aspects=supported,
         unsupported_request_aspects=unsupported,
         supported_preferred_aspects=output.supported_preferred_aspects,
@@ -793,6 +863,10 @@ def qualify_candidates(
         record = _record_from_output(candidate.candidate_id, output, llm_used=llm_used)
         records.append(record)
         candidate.qualification_status = record.qualification_status
+        candidate.supported_required_aspects = record.supported_required_aspects
+        candidate.unsupported_required_aspects = record.unsupported_required_aspects
+        candidate.supported_preferred_aspects = record.supported_preferred_aspects
+        candidate.unsupported_preferred_aspects = record.unsupported_preferred_aspects
         candidate.supported_request_aspects = record.supported_request_aspects
         candidate.unsupported_request_aspects = record.unsupported_request_aspects
         candidate.grounded_evidence = record.grounded_evidence

@@ -94,3 +94,13 @@ def test_validator_rejects_strong_candidates_missing_an_all_of_requirement() -> 
 
     assert validation.passed is False
     assert any("all_of semantic group" in error for error in validation.errors)
+
+
+def test_validator_rejects_watched_candidates_from_consumed_history() -> None:
+    result = _baseline_result("This is a grounded request match.")
+    result.debug["watched_ids"] = ["1"]
+
+    validation = validate_runtime_v4_result(result)
+
+    assert validation.passed is False
+    assert any("consumed-film history" in error for error in validation.errors)

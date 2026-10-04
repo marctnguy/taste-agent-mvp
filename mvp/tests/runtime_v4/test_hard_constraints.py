@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
+from mvp.src.candidates import build_watched_exclusions
 from mvp.src.generative_v4.intent_chain import RequestUnderstanding, understand_request
 from mvp.src.generative_v4.qualification_chain import qualify_candidates
 from mvp.src.retrieval.catalog_retrieval import discover_catalog_for_request
@@ -57,6 +58,12 @@ def _patch_embeddings(monkeypatch) -> None:
             {"requested_countries": ["FR"]},
             {"source_id": "2", "tmdb_id": 2, "title": "French Country Film", "year": 2001, "release_year": 2001, "tmdb_genres": "Drama", "tmdb_original_language": "fr", "tmdb_production_countries": "FR|BE", "tmdb_overview": "A French co-production.", "candidate_sources": ["country:FR"], "candidate_source_ranks": ["1"]},
             {"2"},
+        ),
+        (
+            "I want a European film.",
+            {"requested_countries": ["FR", "DE", "IT", "ES", "GB"]},
+            {"source_id": "6", "tmdb_id": 6, "title": "European Film", "year": 2006, "release_year": 2006, "tmdb_genres": "Drama", "tmdb_original_language": "fr", "tmdb_production_countries": "FR|US", "tmdb_overview": "A European co-production.", "candidate_sources": ["country:FR"], "candidate_source_ranks": ["1"]},
+            {"6"},
         ),
         (
             "I want something from the 1990s.",
@@ -155,6 +162,26 @@ def test_missing_genre_metadata_fails_closed(monkeypatch) -> None:
     qualified, records = qualify_candidates(request, candidate_pool, max_candidates=10)
     assert qualified.empty
     assert records[0].qualification_status == "unsupported"
+
+
+def test_watched_exclusion_audit_captures_consumed_titles() -> None:
+    consumed = pd.DataFrame(
+        [
+            {"source_id": "101", "title": "Bridesmaids", "year": 2011, "release_year": 2011},
+            {"source_id": "102", "title": "The Bling Ring", "year": 2013, "release_year": 2013},
+        ]
+    )
+    enriched = pd.DataFrame(
+        [
+            {"source_id": "101", "tmdb_id": 101},
+            {"source_id": "102", "tmdb_id": 102},
+        ]
+    )
+
+    exclusions, report = build_watched_exclusions(consumed, enriched, client=None)
+
+    assert set(exclusions["title"].tolist()) == {"Bridesmaids", "The Bling Ring"}
+    assert report["tmdb_exclusions"] == 2
 
 
 def test_coordinated_semantic_exclusions_are_all_captured() -> None:
