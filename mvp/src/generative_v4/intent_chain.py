@@ -82,12 +82,20 @@ _GENRE_ALIASES = {
 
 _SEMANTIC_ALIASES: dict[str, list[str]] = {
     "comforting": ["comforting", "comfort", "cozy", "coziness", "warm", "gentle", "soothing"],
+    "contemplative": ["contemplative", "meditative", "reflective", "thoughtful", "slow burn", "slow-burn"],
+    "slow_burn": ["slow", "slow burn", "slow-burn", "slow paced", "slow pace"],
+    "alternative": ["alternative", "offbeat", "unconventional", "non-mainstream"],
+    "austere": ["austere", "visually austere", "minimal", "minimalist", "sparse", "ascetic"],
+    "adolescence": ["adolescence", "adolescent", "teenage", "teenager"],
+    "character_driven": ["character driven", "character-driven", "character focused", "character-focused", "character centred", "character-centered", "character-based"],
     "performers": ["performer", "performers", "performance", "actor", "actress", "stage", "theatre", "theater"],
     "fame": ["fame", "famous", "star", "stars", "renown"],
     "show_business": ["show business", "entertainment", "cinema", "film industry", "behind the scenes", "industry"],
     "period_setting": ["period setting", "historical setting", "period piece", "set in the past", "set in a period"],
     "melancholic": ["melancholic", "melancholy", "sad", "wistful", "somber"],
     "intimate": ["intimate", "intimacy", "personal", "close"],
+    "sentimental": ["sentimental", "sappy", "maudlin", "treacly"],
+    "cheesy": ["cheesy", "corny", "cloying"],
     "grief": ["grief", "mourning", "loss", "bereavement"],
     "filmmaking": ["filmmaking", "film making", "making films", "about filmmaking", "director", "directing", "cinema"],
     "politics": ["politics", "political", "campaign", "election", "government"],
@@ -96,6 +104,8 @@ _SEMANTIC_ALIASES: dict[str, list[str]] = {
     "mind_blown": ["mind blown", "mind-blown", "mind blowing", "mind-blowing", "surprise", "surprising", "surprises me", "out there", "wild", "bizarre", "experimental"],
     "musicians": ["musician", "musicians", "music", "band", "songwriter", "singer"],
     "celebrity": ["celebrity", "celebrity culture", "celebrated"],
+    "freedom": ["freedom", "liberation", "escape", "rebellion"],
+    "youthful": ["youthful", "youth", "young", "coming of age", "coming-of-age"],
     "historical": ["historical", "history", "period", "old", "past"],
 }
 
@@ -418,6 +428,94 @@ def _has_meaningful_semantic_intent(spec: RequestSpec) -> bool:
         or constraints.min_year is not None
         or constraints.max_year is not None
     )
+
+
+def _language_label(code: str) -> str:
+    labels = {
+        "fr": "french",
+        "en": "english",
+        "ja": "japanese",
+        "it": "italian",
+        "es": "spanish",
+        "de": "german",
+        "ko": "korean",
+        "pt": "portuguese",
+        "hi": "hindi",
+    }
+    return labels.get(code.lower(), code.lower())
+
+
+def _country_label(code: str) -> str:
+    labels = {
+        "FR": "france",
+        "JP": "japan",
+        "US": "united states",
+        "GB": "united kingdom",
+        "ES": "spain",
+        "IT": "italy",
+        "DE": "germany",
+        "KR": "korea",
+        "PT": "portugal",
+    }
+    return labels.get(code.upper(), code.upper().lower())
+
+
+def _semantic_query_terms(
+    structured_constraints: StructuredConstraints,
+    semantic_requirements: list[SemanticConcept],
+    semantic_requirement_groups: list[SemanticRequirementGroup],
+    reference_title: str | None,
+) -> list[str]:
+    terms: list[str] = []
+    seen: set[str] = set()
+
+    def _add(value: str | None) -> None:
+        normalized = _normalize_text(value or "")
+        if not normalized or normalized in seen:
+            return
+        seen.add(normalized)
+        terms.append(normalized)
+
+    for concept in semantic_requirements:
+        _add(concept.concept)
+    for group in semantic_requirement_groups:
+        for concept in group.concepts:
+            _add(concept.concept)
+
+    for genre in structured_constraints.required_genres:
+        _add(genre)
+    for language in structured_constraints.required_languages:
+        _add(_language_label(language))
+    for country in structured_constraints.required_countries:
+        _add(_country_label(country))
+    for decade in structured_constraints.required_decades:
+        _add(decade)
+    if structured_constraints.min_year is not None and structured_constraints.max_year is not None:
+        _add(f"{structured_constraints.min_year}-{structured_constraints.max_year}")
+    elif structured_constraints.min_year is not None:
+        _add(f"after {structured_constraints.min_year}")
+    elif structured_constraints.max_year is not None:
+        _add(f"before {structured_constraints.max_year}")
+
+    if reference_title:
+        _add(reference_title)
+    return terms
+
+
+def _semantic_query_text_from_spec(
+    structured_constraints: StructuredConstraints,
+    semantic_requirements: list[SemanticConcept],
+    semantic_requirement_groups: list[SemanticRequirementGroup],
+    reference_title: str | None,
+) -> str:
+    return " ".join(
+        _semantic_query_terms(
+            structured_constraints,
+            semantic_requirements,
+            semantic_requirement_groups,
+            reference_title,
+        )
+    ).strip()
 
 
 def _is_plausible_reference_span(span: str) -> bool:
@@ -837,20 +935,27 @@ def _deterministic_request_spec(query: str) -> RequestSpec:
     if _is_explanation_request(query):
         request_mode = "clarification"
 
-    request_relevance_mode = "query_aware" if request_mode != "generic" else "broad"
     intent_type = _canonical_intent_type(legacy_parse_intent(query).intent_type, query)
+    semantic_requirement_groups = _build_semantic_requirement_groups(semantic_requirements, semantic_exclusions, reference_title)
+    semantic_query_text = _semantic_query_text_from_spec(
+        structured_constraints,
+        semantic_requirements,
+        semantic_requirement_groups,
+        reference_title,
+    )
+    request_relevance_mode = "query_aware" if semantic_query_text else "broad"
     spec = RequestSpec(
         intent_type=intent_type,
         mode="contextual" if request_mode != "generic" else "generic",
         structured_constraints=structured_constraints,
-        semantic_requirement_groups=_build_semantic_requirement_groups(semantic_requirements, semantic_exclusions, reference_title),
+        semantic_requirement_groups=semantic_requirement_groups,
         semantic_requirements=semantic_requirements,
         semantic_exclusions=semantic_exclusions,
         reference=ReferenceSpec(title=reference_title, relation="similar_to" if reference_title else None),
         novelty_goal=novelty_goal,
         personalization_instruction=_extract_personalization_instruction(query),
         request_relevance_mode=request_relevance_mode,
-        semantic_query_text=query.strip(),
+        semantic_query_text=semantic_query_text,
         request_summary=query.strip(),
     )
     return spec
@@ -960,6 +1065,12 @@ def _normalize_request_spec(spec: RequestSpec, query: str, client: TMDBClient | 
         semantic_requirement_groups or _build_semantic_requirement_groups(semantic_requirements, semantic_exclusions, reference.title),
         query=query,
     )
+    semantic_query_text = _semantic_query_text_from_spec(
+        structured,
+        semantic_requirements,
+        semantic_requirement_groups,
+        reference.title,
+    )
 
     request_mode = spec.mode
     if novelty_goal.enabled:
@@ -971,18 +1082,7 @@ def _normalize_request_spec(spec: RequestSpec, query: str, client: TMDBClient | 
     elif spec.request_relevance_mode == "query_aware":
         request_mode = "contextual"
 
-    request_relevance_mode = "query_aware" if request_mode != "generic" else "broad"
-    if request_mode == "generic" and not semantic_requirement_groups and not semantic_requirements and not semantic_exclusions and not any(
-        [
-            structured.required_languages,
-            structured.required_countries,
-            structured.required_genres,
-            structured.required_decades,
-            structured.min_year is not None,
-            structured.max_year is not None,
-        ]
-    ):
-        request_relevance_mode = "broad"
+    request_relevance_mode = "query_aware" if semantic_query_text else "broad"
 
     return RequestSpec(
         intent_type=_canonical_intent_type(spec.intent_type, query),
@@ -995,7 +1095,7 @@ def _normalize_request_spec(spec: RequestSpec, query: str, client: TMDBClient | 
         novelty_goal=novelty_goal,
         personalization_instruction=spec.personalization_instruction if (spec.personalization_instruction.preference or spec.personalization_instruction.priority) else fallback.personalization_instruction,
         request_relevance_mode=request_relevance_mode,
-        semantic_query_text=spec.semantic_query_text or query.strip(),
+        semantic_query_text=semantic_query_text,
         request_summary=spec.request_summary or query.strip(),
     )
 

@@ -120,6 +120,22 @@ def _request_semantic_exclusions(request: RequestUnderstanding) -> list[str]:
     return [concept.concept for concept in spec.semantic_exclusions if concept.concept]
 
 
+def _request_has_query_aware_signal(request: RequestUnderstanding) -> bool:
+    spec = _request_spec(request)
+    if spec is None:
+        return False
+    return bool(
+        spec.semantic_query_text.strip()
+        or spec.reference.title
+        or spec.structured_constraints.required_languages
+        or spec.structured_constraints.required_countries
+        or spec.structured_constraints.required_genres
+        or spec.structured_constraints.required_decades
+        or spec.structured_constraints.min_year is not None
+        or spec.structured_constraints.max_year is not None
+    )
+
+
 def _discover_movies(client: TMDBClient, endpoint: str, params: dict[str, Any], pages: int = 1) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for page in range(1, pages + 1):
@@ -657,44 +673,38 @@ def _request_embedding_and_scores(frame: pd.DataFrame, request: RequestUnderstan
     if frame.empty:
         return None, frame.copy(), "no_candidates"
     spec = _request_spec(request)
-    semantic_requirements = spec.semantic_requirements if spec is not None else []
-    structured_constraints = spec.structured_constraints if spec is not None else None
-    if request.request_mode == "generic" and not semantic_requirements and not (structured_constraints and any(
-        [
-            structured_constraints.required_languages,
-            structured_constraints.required_countries,
-            structured_constraints.required_genres,
-            structured_constraints.required_decades,
-            structured_constraints.min_year is not None,
-            structured_constraints.max_year is not None,
-        ]
-    )):
+    if not _request_has_query_aware_signal(request):
         frame = frame.copy()
         frame["request_relevance"] = 0.0
         frame["request_relevance_score"] = 0.0
         frame["request_relevance_rank"] = np.arange(1, len(frame) + 1)
-        return None, frame, "generic_broad"
+        if "predicted_preference" not in frame.columns:
+            frame["predicted_preference"] = np.nan
+        return None, frame, "broad"
 
-    query_embedding = embed_text(request.query)
+    semantic_query_text = spec.semantic_query_text if spec is not None else request.query
+    query_embedding = embed_text(semantic_query_text or request.query)
     emb_cols = _candidate_embedding_columns(frame)
     if not emb_cols:
         frame = frame.copy()
         frame["request_relevance"] = 0.0
         frame["request_relevance_score"] = 0.0
         frame["request_relevance_rank"] = np.arange(1, len(frame) + 1)
+        if "predicted_preference" not in frame.columns:
+            frame["predicted_preference"] = np.nan
         return query_embedding, frame, "embedding_unavailable"
 
     matrix = frame.loc[:, emb_cols].to_numpy(dtype=float)
     relevance = _cosine_similarity(matrix, query_embedding.reshape(1, -1)).reshape(-1)
     frame = frame.copy()
     if "predicted_preference" not in frame.columns:
-        frame["predicted_preference"] = 0.0
+        frame["predicted_preference"] = np.nan
     frame["request_relevance"] = relevance
     frame["request_relevance_score"] = relevance
     frame["request_relevance_rank"] = frame["request_relevance"].rank(method="first", ascending=False).astype(int)
     frame = frame.sort_values(["request_relevance", "predicted_preference", "source_id"], ascending=[False, False, True]).reset_index(drop=True)
     frame["request_relevance_rank"] = np.arange(1, len(frame) + 1)
-    return query_embedding, frame, "openai_embedding" if get_api_keys().openai_api_key else "local_embedding"
+    return query_embedding, frame, "query_aware_embedding" if get_api_keys().openai_api_key else "local_embedding"
 
 
 def _b3_applicability(frame: pd.DataFrame) -> pd.DataFrame:
@@ -756,7 +766,7 @@ def discover_catalog_for_request(
     augmentation_frames: list[pd.DataFrame] = []
     augmentation_report: dict[str, Any] = {"query_aware_augmentation_used": False}
     spec = _request_spec(request)
-    if request.request_mode in {"contextual", "reference", "novelty"} or (spec is not None and spec.mode == "contextual"):
+    if _request_has_query_aware_signal(request):
         ref_frame, ref_report = _augment_with_reference_candidates(request, client)
         if not ref_frame.empty:
             augmentation_frames.append(ref_frame)
@@ -804,7 +814,7 @@ def discover_catalog_for_request(
     candidate_pool = _b3_applicability(candidate_pool)
 
     post_constraint_candidate_count = int(len(candidate_pool))
-    contextual_retrieval_used = request.request_mode != "generic" or bool(spec.semantic_requirements if spec is not None else [])
+    contextual_retrieval_used = _request_has_query_aware_signal(request)
     retrieval_mode = "query_aware" if contextual_retrieval_used else "broad"
     shortlist_size = min(candidate_context_size, len(candidate_pool))
 

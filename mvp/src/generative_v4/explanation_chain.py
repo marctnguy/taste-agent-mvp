@@ -125,6 +125,7 @@ def explain_selection(
 
     taste_profile = _semantic_profile()
     semantic_vectors, semantic_report = _selected_semantic_frame(frame)
+    b3_active = bool(pd.to_numeric(frame.get("predicted_preference", pd.Series(dtype=float)), errors="coerce").notna().any())
     if not semantic_vectors.empty:
         frame = frame.merge(semantic_vectors, on="source_id", how="left", suffixes=("", "_semantic"))
     items = []
@@ -138,10 +139,16 @@ def explain_selection(
         frame = frame.copy()
         frame["semantic_evidence"] = semantic_evidence_rows
     response_summary = f"Returned {len(items)} grounded recommendation{'s' if len(items) != 1 else ''} from the qualified catalog."
-    methodology_note = (
-        "Request relevance was checked first, then frozen B3 compatibility was used to order only the qualified candidates, "
-        "and the explanation only verbalizes grounded evidence already attached to the selected films."
-    )
+    if b3_active:
+        methodology_note = (
+            "Request relevance was checked first, then frozen B3 compatibility was used to order only the qualified candidates, "
+            "and the explanation only verbalizes grounded evidence already attached to the selected films."
+        )
+    else:
+        methodology_note = (
+            "Request relevance was checked first, then the qualified candidates were ordered with grounded tie-breakers because frozen B3 scores were unavailable, "
+            "and the explanation only verbalizes grounded evidence already attached to the selected films."
+        )
     response = RecommendationResponse(
         intent=request.intent,
         recommendations=items,

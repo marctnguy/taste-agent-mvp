@@ -30,8 +30,15 @@ SEMANTIC_QUALIFICATION_SHORTLIST_SIZE = 20
 
 ASPECT_SYNONYMS: dict[str, list[str]] = {
     "comforting": ["comforting", "comfort", "cozy", "coziness", "warm", "gentle", "soothing"],
+    "contemplative": ["contemplative", "meditative", "reflective", "thoughtful", "slow burn", "slow-burn"],
+    "slow_burn": ["slow", "slow burn", "slow-burn", "slow paced", "slow pace"],
+    "alternative": ["alternative", "offbeat", "unconventional", "non-mainstream"],
+    "austere": ["austere", "visually austere", "minimal", "minimalist", "sparse", "ascetic"],
+    "adolescence": ["adolescence", "adolescent", "teenage", "teenager", "coming of age", "coming-of-age"],
     "melancholic": ["melancholic", "melancholy", "sad", "wistful", "somber"],
     "intimate": ["intimate", "intimacy", "personal", "close"],
+    "sentimental": ["sentimental", "sappy", "maudlin", "treacly"],
+    "cheesy": ["cheesy", "corny", "cloying"],
     "performers": ["performer", "performers", "performance", "actor", "actress", "stage", "theatre", "theater"],
     "fame": ["fame", "famous", "star", "stars", "renown"],
     "show_business": ["show business", "entertainment", "cinema", "film industry", "behind the scenes", "industry"],

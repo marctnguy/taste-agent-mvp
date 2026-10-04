@@ -147,7 +147,7 @@ def test_request_spec_is_orthogonal_to_interaction_routing() -> None:
         ),
         (
             "Recommend something that is very high-B3 compatible, but it must not actually be about performers, fame, or show business.",
-            {"exclusions": {"performers", "fame", "show_business"}, "request_mode": "contextual", "relevance_mode": "query_aware"},
+            {"exclusions": {"performers", "fame", "show_business"}, "request_mode": "contextual", "relevance_mode": "broad"},
         ),
         (
             "Surprise me with something different from my usual choices.",
@@ -228,6 +228,23 @@ def test_runtime_v4_preserves_semantic_request_spec_at_retrieval_boundary(monkey
         assert spec.reference.title or request.reference_title
     if "reference_title" in expected:
         assert expected["reference_title"] in (spec.reference.title or "")
+
+
+def test_negative_only_personalization_stays_broad_and_positive_aliases_survive() -> None:
+    contextual = understand_request("I want something meditative and visually austere.")
+    assert contextual.request_mode == "contextual"
+    assert contextual.request_relevance_mode == "query_aware"
+    assert contextual.spec is not None
+    concepts = {concept.concept for concept in contextual.spec.semantic_requirements}
+    assert {"contemplative", "austere"}.issubset(concepts)
+
+    exclusion_only = understand_request("Recommend something that is very high-B3 compatible, but it must not actually be about performers, fame, or show business.")
+    assert exclusion_only.request_mode == "contextual"
+    assert exclusion_only.request_relevance_mode == "broad"
+    assert exclusion_only.spec is not None
+    assert exclusion_only.spec.semantic_query_text == ""
+    exclusions = {concept.concept for concept in exclusion_only.spec.semantic_exclusions}
+    assert {"performers", "fame", "show_business"}.issubset(exclusions)
 
 
 def test_runtime_explain_target_uses_supplied_candidate_only(monkeypatch) -> None:
