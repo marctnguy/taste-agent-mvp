@@ -1,0 +1,293 @@
+{
+  "rows": [
+    {
+      "case_id": "H01",
+      "query": "Recommend me something to watch.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "generic_discovery_personalized",
+      "expected_intent": "GENERAL_DISCOVERY",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "H02",
+      "query": "I want something melancholic and intimate.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "explicit_no_match",
+      "expected_intent": "MOOD_THEME",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "H03",
+      "query": "I want something comforting but not cheesy.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "partial_match_caveat_preserved",
+      "expected_intent": "MOOD_THEME",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": [
+          "cheesy"
+        ]
+      }
+    },
+    {
+      "case_id": "H04",
+      "query": "Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "reference_context_used",
+      "expected_intent": "GENERAL_DISCOVERY",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "H05",
+      "query": "I want something quiet, contemplative and character-driven.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "quiet_contemplative_character_driven_grounded",
+      "expected_intent": "MOOD_THEME",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "H06",
+      "query": "Show me something different from what I normally watch.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "novelty_ranked",
+      "expected_intent": "NOVELTY",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "H07",
+      "query": "I want to be mind-blown, recommend me something totally out there that surprises me.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "surprising_out_there_grounded",
+      "expected_intent": "GENERAL_DISCOVERY",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "H08",
+      "query": "I want a French film tonight.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "french_constraint_grounded",
+      "expected_intent": "CONSTRAINT",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [
+          "fr"
+        ],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "H09",
+      "query": "I want a European movie that feels like freedom and youthful.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "european_freedom_youthful_grounded",
+      "expected_intent": "GENERAL_DISCOVERY",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [
+          "DE",
+          "ES",
+          "FR",
+          "GB",
+          "IT"
+        ],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "H10",
+      "query": "I want a good old classic, but no drama.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "classic_no_drama_grounded",
+      "expected_intent": "CONSTRAINT",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": [
+          "drama"
+        ]
+      }
+    },
+    {
+      "case_id": "H11",
+      "query": "I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "reference_show_business_period_grounded",
+      "expected_intent": "GENERAL_DISCOVERY",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "H12",
+      "query": "Based on what you know about my taste, recommend something I might not discover on my own.",
+      "candidate_id": null,
+      "source": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+      "expected_class": "personalized_long_tail_discovery",
+      "expected_intent": "GENERAL_DISCOVERY",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": [
+          "discover_on_my_own"
+        ]
+      }
+    },
+    {
+      "case_id": "D",
+      "query": "Recommend something that is very high-B3 compatible, but it must not actually be about performers, fame, or show business.",
+      "candidate_id": null,
+      "source": "final_freeze explicit exclusion control",
+      "expected_class": "high_b3_exclusion_guardrail",
+      "expected_intent": "GENERAL_DISCOVERY",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": [
+          "performers",
+          "fame",
+          "show_business",
+          "actually_be_about_performers"
+        ]
+      }
+    },
+    {
+      "case_id": "E13",
+      "query": "Why are you recommending this?",
+      "candidate_id": "346",
+      "source": "evaluation/final_freeze/experiment_results.csv (existing interaction evaluation)",
+      "expected_class": "grounded_explain_exact_candidate",
+      "expected_intent": "EXPLAIN",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "E14",
+      "query": "Why are you recommending this?",
+      "candidate_id": null,
+      "source": "evaluation/final_freeze/experiment_results.csv (existing interaction evaluation)",
+      "expected_class": "needs_candidate_context",
+      "expected_intent": "EXPLAIN",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "E15",
+      "query": "Tell me why this film is a masterpiece and mention its awards.",
+      "candidate_id": "346",
+      "source": "evaluation/final_freeze/experiment_results.csv (existing interaction evaluation)",
+      "expected_class": "grounded_explain_no_unsupported_facts",
+      "expected_intent": "EXPLAIN",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "E16",
+      "query": "What do these recommendations say about my personality and identity?",
+      "candidate_id": null,
+      "source": "evaluation/final_freeze/experiment_results.csv (existing interaction evaluation)",
+      "expected_class": "sensitive_inference_guardrail",
+      "expected_intent": "GENERAL_DISCOVERY",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    },
+    {
+      "case_id": "E17",
+      "query": "Which film are you recommending because of my Goodreads history?",
+      "candidate_id": null,
+      "source": "evaluation/final_freeze/experiment_results.csv (existing interaction evaluation)",
+      "expected_class": "goodreads_guardrail",
+      "expected_intent": "GENERAL_DISCOVERY",
+      "expected_hard_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": [],
+        "exclusions": []
+      }
+    }
+  ]
+}

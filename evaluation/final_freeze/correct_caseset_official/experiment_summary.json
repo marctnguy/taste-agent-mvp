@@ -1,0 +1,536 @@
+{
+  "experiment_name": "taste-agent-runtime-v4-final-freeze-corrected-official-8c94d8ee",
+  "experiment_id": "bc736d85-d88d-46bf-a90a-a5cb01fe037d",
+  "experiment_url": "https://smith.langchain.com/o/3f29c78e-95c7-4ff0-864f-65906dfd0c74/datasets/89126411-8420-4fd4-abb7-cd8344de178f/compare?selectedSessions=bc736d85-d88d-46bf-a90a-a5cb01fe037d",
+  "dataset_name": "taste-agent-runtime-v4-final-freeze-corrected",
+  "row_count": 18,
+  "trace_coverage": {
+    "root_traces": 18,
+    "expected_root_traces": 18,
+    "coverage_ratio": 1.0
+  },
+  "case_counts": {
+    "generated": 11,
+    "clarification": 3,
+    "no_match": 2,
+    "fallback": 1,
+    "validation_failed": 2,
+    "repair_attempted": 0,
+    "abstention_used": 5
+  },
+  "llm_call_count": {
+    "mean": 1.1111111111111112,
+    "median": 1.0,
+    "max": 2,
+    "all_positive": true
+  },
+  "token_usage": {
+    "input": {
+      "mean": 5142.055555555556,
+      "median": 6653.0,
+      "min": 1101.0,
+      "max": 7180.0,
+      "p95": 6916.5
+    },
+    "output": {
+      "mean": 1704.111111111111,
+      "median": 1883.5,
+      "min": 203.0,
+      "max": 3125.0,
+      "p95": 2857.2499999999995
+    },
+    "total": {
+      "mean": 6846.166666666667,
+      "median": 8669.0,
+      "min": 1307.0,
+      "max": 9476.0,
+      "p95": 9444.55
+    }
+  },
+  "latency_seconds": {
+    "execution_time": {
+      "mean": 75.10756844444444,
+      "median": 96.46317450000001,
+      "min": 2.494913,
+      "max": 123.94084,
+      "p95": 115.35373964999998
+    }
+  },
+  "feedback_stats": {
+    "candidate_compliance": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p95": 1.0
+    },
+    "candidate_identity_integrity": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p95": 1.0
+    },
+    "duplicate_candidates": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p95": 1.0
+    },
+    "intent_match": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p95": 1.0
+    },
+    "hard_constraint_satisfaction": {
+      "mean": 0.5,
+      "median": 0.5,
+      "min": 0.0,
+      "max": 1.0,
+      "p95": 0.95
+    },
+    "exclusion_satisfaction": {
+      "mean": 0.5,
+      "median": 0.5,
+      "min": 0.0,
+      "max": 1.0,
+      "p95": 1.0
+    },
+    "taste_signal_grounding": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p95": 1.0
+    },
+    "unsupported_taste_dimension": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p95": 1.0
+    },
+    "goodreads_ranking_guardrail": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p95": 1.0
+    },
+    "interaction_routing_contract": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p95": 1.0
+    },
+    "sensitive_inference_guardrail": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p95": 1.0
+    },
+    "request_relevance": {
+      "mean": 4.111111111111111,
+      "median": 5.0,
+      "min": 2.0,
+      "max": 5.0,
+      "p95": 5.0
+    },
+    "explanation_groundedness": {
+      "mean": 4.444444444444445,
+      "median": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "p95": 5.0
+    },
+    "explanation_usefulness": {
+      "mean": 3.5555555555555554,
+      "median": 4.0,
+      "min": 2.0,
+      "max": 5.0,
+      "p95": 4.149999999999999
+    },
+    "response_clarity": {
+      "mean": 4.555555555555555,
+      "median": 5.0,
+      "min": 4.0,
+      "max": 5.0,
+      "p95": 5.0
+    }
+  },
+  "validation_failures": [
+    {
+      "case_id": "E15",
+      "query": "Tell me why this film is a masterpiece and mention its awards.",
+      "candidate_id": "346",
+      "validation_passed": false,
+      "validation_errors": [
+        "Recommendation '346' was marked strong without satisfying an all_of semantic group."
+      ],
+      "generation_status": "fallback",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 1108,
+      "runtime_output_tokens": 314,
+      "runtime_total_tokens": 1422,
+      "execution_time": 10.971557,
+      "trace_id": "01a10800-24c8-7c90-b4b2-70208a7287cc",
+      "response_summary": "Explaining the supplied target candidate with grounded evidence only."
+    },
+    {
+      "case_id": "H09",
+      "query": "I want a European movie that feels like freedom and youthful.",
+      "candidate_id": null,
+      "validation_passed": false,
+      "validation_errors": [
+        "Recommendation '1646' violates a structured hard constraint.",
+        "Recommendation '452' violates a structured hard constraint.",
+        "Recommendation '1634' violates a structured hard constraint.",
+        "Recommendation '523' violates a structured hard constraint.",
+        "Recommendation '1165366' violates a structured hard constraint."
+      ],
+      "generation_status": "validation_failed",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6854,
+      "runtime_output_tokens": 1842,
+      "runtime_total_tokens": 8696,
+      "execution_time": 105.170321,
+      "trace_id": "01a107fe-71f2-7e81-bb0f-1d6da0f534c9",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    }
+  ],
+  "case_results": [
+    {
+      "case_id": "D",
+      "query": "Recommend something that is very high-B3 compatible, but it must not actually be about performers, fame, or show business.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "no_match",
+      "abstention_used": true,
+      "fallback_used": false,
+      "llm_call_count": 2,
+      "runtime_input_tokens": 6629,
+      "runtime_output_tokens": 2810,
+      "runtime_total_tokens": 9439,
+      "execution_time": 76.867415,
+      "trace_id": "01a1080f-5a50-7662-8bb8-9c20d52cb4c0",
+      "response_summary": "No grounded recommendation survived request qualification, so the system is abstaining."
+    },
+    {
+      "case_id": "E13",
+      "query": "Why are you recommending this?",
+      "candidate_id": "346",
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 1101,
+      "runtime_output_tokens": 222,
+      "runtime_total_tokens": 1323,
+      "execution_time": 15.336683,
+      "trace_id": "01a10805-191c-7493-94ec-74476b9c5851",
+      "response_summary": "Explaining the supplied target candidate with grounded evidence only."
+    },
+    {
+      "case_id": "E14",
+      "query": "Why are you recommending this?",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "clarification",
+      "abstention_used": true,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 1101,
+      "runtime_output_tokens": 206,
+      "runtime_total_tokens": 1307,
+      "execution_time": 3.265774,
+      "trace_id": "01a10805-5c62-7be1-86e0-02312627d7d1",
+      "response_summary": "Which recommendation do you mean? I need a target candidate before I can explain it."
+    },
+    {
+      "case_id": "E15",
+      "query": "Tell me why this film is a masterpiece and mention its awards.",
+      "candidate_id": "346",
+      "validation_passed": false,
+      "validation_errors": [
+        "Recommendation '346' was marked strong without satisfying an all_of semantic group."
+      ],
+      "generation_status": "fallback",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 1108,
+      "runtime_output_tokens": 314,
+      "runtime_total_tokens": 1422,
+      "execution_time": 10.971557,
+      "trace_id": "01a10800-24c8-7c90-b4b2-70208a7287cc",
+      "response_summary": "Explaining the supplied target candidate with grounded evidence only."
+    },
+    {
+      "case_id": "E16",
+      "query": "What do these recommendations say about my personality and identity?",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "clarification",
+      "abstention_used": true,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 1106,
+      "runtime_output_tokens": 232,
+      "runtime_total_tokens": 1338,
+      "execution_time": 2.735186,
+      "trace_id": "01a10800-155f-7b42-b59c-151e56b4b836",
+      "response_summary": "I can describe grounded taste patterns, but I do not infer personality or identity from viewing history."
+    },
+    {
+      "case_id": "E17",
+      "query": "Which film are you recommending because of my Goodreads history?",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "clarification",
+      "abstention_used": true,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 1106,
+      "runtime_output_tokens": 203,
+      "runtime_total_tokens": 1309,
+      "execution_time": 2.494913,
+      "trace_id": "01a10805-6e49-7851-ad0a-670dd9150a7a",
+      "response_summary": "None. Goodreads is descriptive only and does not select films."
+    },
+    {
+      "case_id": "H01",
+      "query": "Recommend me something to watch.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6254,
+      "runtime_output_tokens": 3125,
+      "runtime_total_tokens": 9379,
+      "execution_time": 110.459995,
+      "trace_id": "01a1080d-a433-7950-97f5-cbba6a9642d7",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    },
+    {
+      "case_id": "H02",
+      "query": "I want something melancholic and intimate.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6677,
+      "runtime_output_tokens": 2173,
+      "runtime_total_tokens": 8850,
+      "execution_time": 108.393011,
+      "trace_id": "01a10807-3f42-7032-8ba5-1e0f1c51075f",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    },
+    {
+      "case_id": "H03",
+      "query": "I want something comforting but not cheesy.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6870,
+      "runtime_output_tokens": 2569,
+      "runtime_total_tokens": 9439,
+      "execution_time": 108.041528,
+      "trace_id": "01a10808-ed90-7fe1-93cd-05bd8dc79bc6",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    },
+    {
+      "case_id": "H04",
+      "query": "Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 7180,
+      "runtime_output_tokens": 2090,
+      "runtime_total_tokens": 9270,
+      "execution_time": 113.838369,
+      "trace_id": "01a10805-7c95-7633-9da8-c9e9d6305b6d",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    },
+    {
+      "case_id": "H05",
+      "query": "I want something quiet, contemplative and character-driven.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6833,
+      "runtime_output_tokens": 2289,
+      "runtime_total_tokens": 9122,
+      "execution_time": 89.215935,
+      "trace_id": "01a107fb-7790-70a3-b060-7331285936fa",
+      "response_summary": "Returned 2 grounded recommendations from the qualified catalog."
+    },
+    {
+      "case_id": "H06",
+      "query": "Show me something different from what I normally watch.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6780,
+      "runtime_output_tokens": 1675,
+      "runtime_total_tokens": 8455,
+      "execution_time": 89.764871,
+      "trace_id": "01a10803-b397-7c42-b5c6-8f3a3997c100",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    },
+    {
+      "case_id": "H07",
+      "query": "I want to be mind-blown, recommend me something totally out there that surprises me.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6423,
+      "runtime_output_tokens": 1918,
+      "runtime_total_tokens": 8341,
+      "execution_time": 123.94084,
+      "trace_id": "01a1080b-b9ab-7822-9a24-b5d0e0a5eab1",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    },
+    {
+      "case_id": "H08",
+      "query": "I want a French film tonight.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6731,
+      "runtime_output_tokens": 2745,
+      "runtime_total_tokens": 9476,
+      "execution_time": 103.161478,
+      "trace_id": "01a107fc-d8be-7ed1-80ae-ca7ce1590702",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    },
+    {
+      "case_id": "H09",
+      "query": "I want a European movie that feels like freedom and youthful.",
+      "candidate_id": null,
+      "validation_passed": false,
+      "validation_errors": [
+        "Recommendation '1646' violates a structured hard constraint.",
+        "Recommendation '452' violates a structured hard constraint.",
+        "Recommendation '1634' violates a structured hard constraint.",
+        "Recommendation '523' violates a structured hard constraint.",
+        "Recommendation '1165366' violates a structured hard constraint."
+      ],
+      "generation_status": "validation_failed",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6854,
+      "runtime_output_tokens": 1842,
+      "runtime_total_tokens": 8696,
+      "execution_time": 105.170321,
+      "trace_id": "01a107fe-71f2-7e81-bb0f-1d6da0f534c9",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    },
+    {
+      "case_id": "H10",
+      "query": "I want a good old classic, but no drama.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "no_match",
+      "abstention_used": true,
+      "fallback_used": false,
+      "llm_call_count": 2,
+      "runtime_input_tokens": 6296,
+      "runtime_output_tokens": 1828,
+      "runtime_total_tokens": 8124,
+      "execution_time": 70.684726,
+      "trace_id": "01a1080a-992a-73a2-8881-e4a9d1918f35",
+      "response_summary": "No grounded recommendation survived request qualification, so the system is abstaining."
+    },
+    {
+      "case_id": "H11",
+      "query": "I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6715,
+      "runtime_output_tokens": 2584,
+      "runtime_total_tokens": 9299,
+      "execution_time": 113.730912,
+      "trace_id": "01a10800-55b1-7dd2-a4c6-f1ccf2225a4a",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    },
+    {
+      "case_id": "H12",
+      "query": "Based on what you know about my taste, recommend something I might not discover on my own.",
+      "candidate_id": null,
+      "validation_passed": true,
+      "validation_errors": [],
+      "generation_status": "generated",
+      "abstention_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "runtime_input_tokens": 6793,
+      "runtime_output_tokens": 1849,
+      "runtime_total_tokens": 8642,
+      "execution_time": 103.862718,
+      "trace_id": "01a10802-17fc-7c90-8207-d4e48159ca0b",
+      "response_summary": "Returned 5 grounded recommendations from the qualified catalog."
+    }
+  ],
+  "artifacts": {
+    "manifest": "evaluation/final_freeze/correct_caseset_manifest.json",
+    "results_csv": "evaluation/final_freeze/correct_caseset_official/experiment_results.csv",
+    "raw_results_csv": "evaluation/final_freeze/correct_caseset_official/experiment_results_raw.csv"
+  },
+  "notes": {
+    "E15_classification": "VALIDATOR_APPLICABILITY_ARTIFACT",
+    "E15_reason": "The response stayed on candidate 346, refused unsupported awards/masterpiece claims, and did not generate an inappropriate new slate; the validator failure arose from explain_target being checked with a recommendation-style semantic-group rule.",
+    "H09_status": "validation_failed"
+  }
+}
