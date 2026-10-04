@@ -1,0 +1,194 @@
+{
+  "experiment_status": "exploratory_training_only",
+  "holdout_used": false,
+  "same_outer_folds_as_previous_latent_experiment": true,
+  "canonical_book_document_schema": {
+    "fields": [
+      "title",
+      "author",
+      "publication_year",
+      "categories",
+      "description"
+    ],
+    "template_version": "book_doc_v1"
+  },
+  "book_document_coverage": {
+    "title": 51,
+    "author": 51,
+    "publication_year": 41,
+    "categories": 35,
+    "description": 38
+  },
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dimensionality": 1536,
+  "book_embedding_coverage": 1.0,
+  "book_embedding_successful": 51,
+  "book_embedding_failed": 0,
+  "shared_embedding_space": "OpenAI text-embedding-3-small, 1536 dimensions, with L2 normalization applied before centroid construction and cosine similarity.",
+  "book_counts": {
+    "positive": 36,
+    "negative": 7,
+    "neutral": 8,
+    "total": 51
+  },
+  "leakage_audit": {
+    "goodreads_input_scope": "51 rated Goodreads books only; no unread, unfinished, or missing-rating rows.",
+    "film_target_usage": "No film targets were used in book document construction or centroid fitting.",
+    "fixed_profile_across_folds": true,
+    "book_centroid_formula": "book_taste_global = sum(w_i * E_i) / sum(abs(w_i)), with E_i and the centroid both L2-normalized for cosine similarity.",
+    "positive_negative_formula": "positive centroid uses only preference_weight > 0; negative centroid uses only preference_weight < 0; neutral books are excluded from both.",
+    "book_doc_exclusion": [
+      "rating",
+      "preference_weight",
+      "user_review",
+      "notes",
+      "film_targets"
+    ]
+  },
+  "feature_distributions": {
+    "x1_global_alignment": {
+      "min": 0.2530514395864037,
+      "p25": 0.35835989382101796,
+      "median": 0.39185965304551523,
+      "mean": 0.3903574241229397,
+      "p75": 0.4257613664445211,
+      "max": 0.5204435125813583,
+      "std": 0.04938536085672311
+    },
+    "x2_positive_similarity": {
+      "min": 0.2594638382502115,
+      "p25": 0.3681661361400747,
+      "median": 0.4066949216601705,
+      "mean": 0.4038046331605915,
+      "p75": 0.440825221574281,
+      "max": 0.5483557895429522,
+      "std": 0.05428943517676818
+    },
+    "x2_negative_similarity": {
+      "min": 0.18406076917275332,
+      "p25": 0.3021789156441481,
+      "median": 0.3596852461367711,
+      "mean": 0.3626380112128013,
+      "p75": 0.41922998648331067,
+      "max": 0.5648767339762314,
+      "std": 0.0809234336496829
+    },
+    "x2_margin": {
+      "min": -0.11399969302983004,
+      "p25": 0.007954041878870943,
+      "median": 0.04518654630120589,
+      "mean": 0.04116662194779018,
+      "p75": 0.07754153658815144,
+      "max": 0.14456700689932794,
+      "std": 0.046144019489383035
+    }
+  },
+  "feature_correlations": {
+    "x1_vs_x2_positive": 0.9828304464361467,
+    "x1_vs_x2_negative": 0.7234377358489524,
+    "x1_vs_margin": -0.11238196980853274,
+    "positive_vs_negative": 0.8384011223674595,
+    "positive_vs_margin": -0.2937945712352556,
+    "negative_vs_margin": -0.7673174261061422
+  },
+  "redundancy_summary": {
+    "x1": [
+      {
+        "per_feature_max_abs_corr": {
+          "book_alignment_latent_global": 0.6556503329510589
+        },
+        "mean_abs_max_corr": 0.6556503329510589,
+        "max_abs_corr": 0.6556503329510589,
+        "reference_feature_count": 108
+      },
+      {
+        "per_feature_max_abs_corr": {
+          "book_alignment_latent_global": 0.517834800768269
+        },
+        "mean_abs_max_corr": 0.517834800768269,
+        "max_abs_corr": 0.517834800768269,
+        "reference_feature_count": 112
+      },
+      {
+        "per_feature_max_abs_corr": {
+          "book_alignment_latent_global": 0.4162615518388655
+        },
+        "mean_abs_max_corr": 0.4162615518388655,
+        "max_abs_corr": 0.4162615518388655,
+        "reference_feature_count": 125
+      },
+      {
+        "per_feature_max_abs_corr": {
+          "book_alignment_latent_global": 0.5337704058055631
+        },
+        "mean_abs_max_corr": 0.5337704058055631,
+        "max_abs_corr": 0.5337704058055631,
+        "reference_feature_count": 103
+      },
+      {
+        "per_feature_max_abs_corr": {
+          "book_alignment_latent_global": 0.6063117068095837
+        },
+        "mean_abs_max_corr": 0.6063117068095837,
+        "max_abs_corr": 0.6063117068095837,
+        "reference_feature_count": 108
+      }
+    ],
+    "x2": [
+      {
+        "per_feature_max_abs_corr": {
+          "book_similarity_positive": 0.7576101490346089,
+          "book_similarity_negative": 0.9061199216886741
+        },
+        "mean_abs_max_corr": 0.8318650353616415,
+        "max_abs_corr": 0.9061199216886741,
+        "reference_feature_count": 108
+      },
+      {
+        "per_feature_max_abs_corr": {
+          "book_similarity_positive": 0.6347828746328462,
+          "book_similarity_negative": 0.8444877800419788
+        },
+        "mean_abs_max_corr": 0.7396353273374126,
+        "max_abs_corr": 0.8444877800419788,
+        "reference_feature_count": 112
+      },
+      {
+        "per_feature_max_abs_corr": {
+          "book_similarity_positive": 0.5309079934590499,
+          "book_similarity_negative": 0.7606809718682892
+        },
+        "mean_abs_max_corr": 0.6457944826636696,
+        "max_abs_corr": 0.7606809718682892,
+        "reference_feature_count": 125
+      },
+      {
+        "per_feature_max_abs_corr": {
+          "book_similarity_positive": 0.6461438341931462,
+          "book_similarity_negative": 0.8460547526538631
+        },
+        "mean_abs_max_corr": 0.7460992934235047,
+        "max_abs_corr": 0.8460547526538631,
+        "reference_feature_count": 103
+      },
+      {
+        "per_feature_max_abs_corr": {
+          "book_similarity_positive": 0.727594535992769,
+          "book_similarity_negative": 0.9156719033043209
+        },
+        "mean_abs_max_corr": 0.821633219648545,
+        "max_abs_corr": 0.9156719033043209,
+        "reference_feature_count": 108
+      }
+    ]
+  },
+  "film_embedding_reuse": {
+    "source": "mvp/artifacts/experiments/exploratory_latent_semantics/embedding_cache/film_embeddings.csv",
+    "regenerated": false,
+    "coverage": 1.0
+  },
+  "baseline_b3_source": {
+    "cv_results_path": "mvp/artifacts/experiments/exploratory_latent_semantics/cv_results.json",
+    "fold_selections_path": "mvp/artifacts/experiments/exploratory_latent_semantics/fold_selections.json"
+  }
+}

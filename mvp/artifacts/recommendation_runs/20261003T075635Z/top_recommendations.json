@@ -1,0 +1,1538 @@
+[
+  {
+    "tmdb_id": 346,
+    "title": "Seven Samurai",
+    "year": 1954,
+    "rank": 1,
+    "predicted_preference": 0.808861177978014,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "metadata": {
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "original_language": "ja",
+      "production_countries": [
+        "JP"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "historical",
+          "candidate_score": 0.8,
+          "user_preference_association": 0.13237286714331162,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8035564620519869
+        },
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "melancholic",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08610459398628159,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8160302566268183
+        },
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "suspense",
+          "candidate_score": 0.6,
+          "user_preference_association": -0.005097585967435501,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8143690411556911
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 14537,
+    "title": "Harakiri",
+    "year": 1962,
+    "rank": 2,
+    "predicted_preference": 0.774387264685735,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "metadata": {
+      "genres": [
+        "Action",
+        "Drama",
+        "History"
+      ],
+      "original_language": "ja",
+      "production_countries": [
+        "JP"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "historical",
+          "candidate_score": 0.7,
+          "user_preference_association": 0.13237286714331162,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8035564620519869
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "melancholic",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.08610459398628159,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8160302566268183
+        },
+        {
+          "dimension": "grief",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.08246235675353457,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8136359539138639
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.8,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "morally_ambiguous",
+          "candidate_score": 0.6,
+          "user_preference_association": -0.02578820269782951,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326082671634301
+        },
+        {
+          "dimension": "dysfunctional_relationships",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.016173480816988953,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8172350065016936
+        },
+        {
+          "dimension": "suspense",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.005097585967435501,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8143690411556911
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 12493,
+    "title": "High and Low",
+    "year": 1963,
+    "rank": 3,
+    "predicted_preference": 0.6909862149911309,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "metadata": {
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller",
+        "Mystery"
+      ],
+      "original_language": "ja",
+      "production_countries": [
+        "JP"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "historical",
+          "candidate_score": 0.7,
+          "user_preference_association": 0.13237286714331162,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8035564620519869
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "melancholic",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08610459398628159,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8160302566268183
+        },
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.7,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "morally_ambiguous",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.02578820269782951,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326082671634301
+        },
+        {
+          "dimension": "suspense",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.005097585967435501,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8143690411556911
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 94623,
+    "title": "Directed by John Ford",
+    "year": 1971,
+    "rank": 4,
+    "predicted_preference": 0.6338240747053583,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "metadata": {
+      "genres": [
+        "Documentary"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        },
+        {
+          "dimension": "identity",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.0763669474750799,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7963023452947894
+        },
+        {
+          "dimension": "complex",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.05205905196989252,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7990085069132847
+        }
+      ],
+      "possible_mismatches": []
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 240,
+    "title": "The Godfather Part II",
+    "year": 1974,
+    "rank": 5,
+    "predicted_preference": 0.6279469284049591,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "metadata": {
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "historical",
+          "candidate_score": 0.7,
+          "user_preference_association": 0.13237286714331162,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8035564620519869
+        },
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "melancholic",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08610459398628159,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8160302566268183
+        },
+        {
+          "dimension": "grief",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08246235675353457,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8136359539138639
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "morally_ambiguous",
+          "candidate_score": 0.6,
+          "user_preference_association": -0.02578820269782951,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326082671634301
+        },
+        {
+          "dimension": "anti_hero",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.02072783583595954,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8158059225055568
+        },
+        {
+          "dimension": "suspense",
+          "candidate_score": 0.6,
+          "user_preference_association": -0.005097585967435501,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8143690411556911
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 238,
+    "title": "The Godfather",
+    "year": 1972,
+    "rank": 6,
+    "predicted_preference": 0.6267365117545219,
+    "candidate_sources": [
+      "top_rated",
+      "genre_diverse"
+    ],
+    "metadata": {
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "historical",
+          "candidate_score": 0.7,
+          "user_preference_association": 0.13237286714331162,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8035564620519869
+        },
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "melancholic",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08610459398628159,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8160302566268183
+        },
+        {
+          "dimension": "grief",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08246235675353457,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8136359539138639
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "morally_ambiguous",
+          "candidate_score": 0.6,
+          "user_preference_association": -0.02578820269782951,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326082671634301
+        },
+        {
+          "dimension": "anti_hero",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.02072783583595954,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8158059225055568
+        },
+        {
+          "dimension": "suspense",
+          "candidate_score": 0.6,
+          "user_preference_association": -0.005097585967435501,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8143690411556911
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 11216,
+    "title": "Cinema Paradiso",
+    "year": 1988,
+    "rank": 7,
+    "predicted_preference": 0.6164024512748973,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "metadata": {
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "original_language": "it",
+      "production_countries": [
+        "IT",
+        "FR"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        },
+        {
+          "dimension": "identity",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.0763669474750799,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7963023452947894
+        },
+        {
+          "dimension": "emotional_intensity",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.07595935740592684,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8036537579346084
+        }
+      ],
+      "possible_mismatches": []
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 24128,
+    "title": "Stop Making Sense",
+    "year": 1984,
+    "rank": 8,
+    "predicted_preference": 0.6124233138276907,
+    "candidate_sources": [
+      "genre_diverse"
+    ],
+    "metadata": {
+      "genres": [
+        "Documentary",
+        "Music"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        },
+        {
+          "dimension": "ensemble",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.07607497431420072,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7872989707813824
+        },
+        {
+          "dimension": "fast_paced",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.024651455817055353,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7993488662454246
+        },
+        {
+          "dimension": "high_energy",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.024543616138625258,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8212880560867641
+        }
+      ],
+      "possible_mismatches": []
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 40096,
+    "title": "A Dog's Will",
+    "year": 2000,
+    "rank": 9,
+    "predicted_preference": 0.6090595670511278,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "metadata": {
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Romance"
+      ],
+      "original_language": "pt",
+      "production_countries": [
+        "BR"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "comforting",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08927968348426918,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7956835964044577
+        },
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        },
+        {
+          "dimension": "identity",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.0763669474750799,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7963023452947894
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "contemporary",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.009417579586732137,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326998816235615
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 82976,
+    "title": "The Novices",
+    "year": 1970,
+    "rank": 10,
+    "predicted_preference": 0.6049943356617846,
+    "candidate_sources": [
+      "popular"
+    ],
+    "metadata": {
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "original_language": "fr",
+      "production_countries": [
+        "FR",
+        "IT"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        },
+        {
+          "dimension": "emotional_intensity",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.07595935740592684,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8036537579346084
+        },
+        {
+          "dimension": "class",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.06307619951427262,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878111185972827
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "dysfunctional_relationships",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.016173480816988953,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8172350065016936
+        },
+        {
+          "dimension": "sexuality",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.015155961224309485,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7978642453535852
+        },
+        {
+          "dimension": "contemporary",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.009417579586732137,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326998816235615
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 389,
+    "title": "12 Angry Men",
+    "year": 1957,
+    "rank": 11,
+    "predicted_preference": 0.6028398080125031,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "metadata": {
+      "genres": [
+        "Drama"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "historical",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.13237286714331162,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8035564620519869
+        },
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "melancholic",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08610459398628159,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8160302566268183
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "suspense",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.005097585967435501,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8143690411556911
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 166607,
+    "title": "Behold a Pale Horse",
+    "year": 1964,
+    "rank": 12,
+    "predicted_preference": 0.6005677046059796,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "metadata": {
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "historical",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.13237286714331162,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8035564620519869
+        },
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        },
+        {
+          "dimension": "identity",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.0763669474750799,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7963023452947894
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "morally_ambiguous",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.02578820269782951,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326082671634301
+        },
+        {
+          "dimension": "anti_hero",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.02072783583595954,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8158059225055568
+        },
+        {
+          "dimension": "contemporary",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.009417579586732137,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326998816235615
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 311,
+    "title": "Once Upon a Time in America",
+    "year": 1984,
+    "rank": 13,
+    "predicted_preference": 0.5794934713916975,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "metadata": {
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "IT",
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        },
+        {
+          "dimension": "plot_driven",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.07929890969551821,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7917482979821154
+        },
+        {
+          "dimension": "identity",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.0763669474750799,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7963023452947894
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "morally_ambiguous",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.02578820269782951,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326082671634301
+        },
+        {
+          "dimension": "contemporary",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.009417579586732137,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326998816235615
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 233651,
+    "title": "Sex Rider: Wet Highway",
+    "year": 1971,
+    "rank": 14,
+    "predicted_preference": 0.5729050801347045,
+    "candidate_sources": [
+      "popular"
+    ],
+    "metadata": {
+      "genres": [
+        "Thriller"
+      ],
+      "original_language": "ja",
+      "production_countries": [
+        "JP"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        },
+        {
+          "dimension": "emotional_intensity",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.07595935740592684,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8036537579346084
+        },
+        {
+          "dimension": "outsider_protagonist",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.06244737524946335,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8118575316089529
+        },
+        {
+          "dimension": "joyful",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.06153134276941142,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8037023716439855
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "morally_ambiguous",
+          "candidate_score": 0.6,
+          "user_preference_association": -0.02578820269782951,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326082671634301
+        },
+        {
+          "dimension": "dysfunctional_relationships",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.016173480816988953,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8172350065016936
+        },
+        {
+          "dimension": "sexuality",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.015155961224309485,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7978642453535852
+        },
+        {
+          "dimension": "contemporary",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.009417579586732137,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326998816235615
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 72680,
+    "title": "The Curse of the Dragon",
+    "year": 1993,
+    "rank": 15,
+    "predicted_preference": 0.5716178966701664,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "metadata": {
+      "genres": [
+        "Documentary"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "morality",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        },
+        {
+          "dimension": "conventional",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.05768434365859212,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7917256047106396
+        }
+      ],
+      "possible_mismatches": []
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 97537,
+    "title": "Beefcake",
+    "year": 1998,
+    "rank": 16,
+    "predicted_preference": 0.5701871456643846,
+    "candidate_sources": [
+      "genre_diverse"
+    ],
+    "metadata": {
+      "genres": [
+        "Drama",
+        "History",
+        "Documentary"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "CA",
+        "FR",
+        "IT",
+        "GB",
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        },
+        {
+          "dimension": "identity",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.0763669474750799,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7963023452947894
+        },
+        {
+          "dimension": "emotional_intensity",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.07595935740592684,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8036537579346084
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "morally_ambiguous",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.02578820269782951,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326082671634301
+        },
+        {
+          "dimension": "contemporary",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.009417579586732137,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326998816235615
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 20561,
+    "title": "28 Up",
+    "year": 1984,
+    "rank": 17,
+    "predicted_preference": 0.5701638522859875,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "metadata": {
+      "genres": [
+        "Documentary"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "GB"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "episodic",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.1421630797621839,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7703596105668831
+        },
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.7,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "niche",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.10392625799467371,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7733387977466948
+        },
+        {
+          "dimension": "melancholic",
+          "candidate_score": 0.7,
+          "user_preference_association": 0.08610459398628159,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8160302566268183
+        }
+      ],
+      "possible_mismatches": []
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 39787,
+    "title": "Jacknife",
+    "year": 1989,
+    "rank": 18,
+    "predicted_preference": 0.5648555972347876,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "metadata": {
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "melancholic",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.08610459398628159,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8160302566268183
+        },
+        {
+          "dimension": "grief",
+          "candidate_score": 0.7,
+          "user_preference_association": 0.08246235675353457,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8136359539138639
+        },
+        {
+          "dimension": "morality",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.081006714564804,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7878112225789552
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "morally_ambiguous",
+          "candidate_score": 0.6,
+          "user_preference_association": -0.02578820269782951,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326082671634301
+        },
+        {
+          "dimension": "dysfunctional_relationships",
+          "candidate_score": 0.7,
+          "user_preference_association": -0.016173480816988953,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8172350065016936
+        },
+        {
+          "dimension": "contemporary",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.009417579586732137,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326998816235615
+        },
+        {
+          "dimension": "suspense",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.005097585967435501,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8143690411556911
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 130824,
+    "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+    "year": 2000,
+    "rank": 19,
+    "predicted_preference": 0.5645852664650447,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "metadata": {
+      "genres": [
+        "Documentary"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "episodic",
+          "candidate_score": 0.7,
+          "user_preference_association": 0.1421630797621839,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7703596105668831
+        },
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.8,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "niche",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.10392625799467371,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7733387977466948
+        },
+        {
+          "dimension": "melancholic",
+          "candidate_score": 0.8,
+          "user_preference_association": 0.08610459398628159,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8160302566268183
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "contemporary",
+          "candidate_score": 0.6,
+          "user_preference_association": -0.009417579586732137,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326998816235615
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  },
+  {
+    "tmdb_id": 1857,
+    "title": "The Transformers: The Movie",
+    "year": 1986,
+    "rank": 20,
+    "predicted_preference": 0.562762856154503,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "metadata": {
+      "genres": [
+        "Animation",
+        "Science Fiction",
+        "Action",
+        "Adventure",
+        "Family"
+      ],
+      "original_language": "en",
+      "production_countries": [
+        "US"
+      ]
+    },
+    "taste_evidence": {
+      "evidence_status": "descriptive_not_causal",
+      "positive_matches": [
+        {
+          "dimension": "moderate",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.11057977131957977,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7706879478777277
+        },
+        {
+          "dimension": "atmospheric",
+          "candidate_score": 0.6,
+          "user_preference_association": 0.1101403790153267,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8021202366425044
+        },
+        {
+          "dimension": "visual",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.08105742013153179,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7954038741167977
+        },
+        {
+          "dimension": "plot_driven",
+          "candidate_score": 0.7,
+          "user_preference_association": 0.07929890969551821,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7917482979821154
+        },
+        {
+          "dimension": "ensemble",
+          "candidate_score": 0.5,
+          "user_preference_association": 0.07607497431420072,
+          "evidence_count": 444,
+          "evidence_confidence": 0.7872989707813824
+        }
+      ],
+      "possible_mismatches": [
+        {
+          "dimension": "contemporary",
+          "candidate_score": 0.5,
+          "user_preference_association": -0.009417579586732137,
+          "evidence_count": 444,
+          "evidence_confidence": 0.8326998816235615
+        }
+      ]
+    },
+    "model": {
+      "architecture": "B3",
+      "status": "exploratory_candidate_mvp"
+    }
+  }
+]

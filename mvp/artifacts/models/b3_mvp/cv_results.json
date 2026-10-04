@@ -1,0 +1,1010 @@
+{
+  "selection": {
+    "selected_pca_dim": 16,
+    "selected_alpha": 316.22776601683796,
+    "candidate_rows": [
+      {
+        "pca_dim": 16,
+        "alpha": 0.001,
+        "mean_mae": 0.3443901365525327,
+        "mean_rmse": 0.4550517591243824,
+        "mean_pearson": 0.27930742794898655,
+        "mean_spearman": 0.3364236727806211,
+        "mean_ndcg_at_k": 0.8260725732889707,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.0017782794100389228,
+        "mean_mae": 0.3441212758724945,
+        "mean_rmse": 0.45427272327580226,
+        "mean_pearson": 0.2799344015103995,
+        "mean_spearman": 0.3363626828727934,
+        "mean_ndcg_at_k": 0.8261404654574982,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.0031622776601683794,
+        "mean_mae": 0.3436580871816798,
+        "mean_rmse": 0.4529454605739359,
+        "mean_pearson": 0.2810231495658823,
+        "mean_spearman": 0.3371783974029879,
+        "mean_ndcg_at_k": 0.8275000359131333,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.005623413251903491,
+        "mean_mae": 0.34287531983280106,
+        "mean_rmse": 0.4507516351158255,
+        "mean_pearson": 0.28288009224969596,
+        "mean_spearman": 0.33655355234887585,
+        "mean_ndcg_at_k": 0.8275000359131333,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.01,
+        "mean_mae": 0.3416354918939477,
+        "mean_rmse": 0.4472961137276593,
+        "mean_pearson": 0.28595133704483267,
+        "mean_spearman": 0.3362714045851313,
+        "mean_ndcg_at_k": 0.8276671734693195,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.01778279410038923,
+        "mean_mae": 0.33970110963011224,
+        "mean_rmse": 0.4422271702264052,
+        "mean_pearson": 0.29078016851335614,
+        "mean_spearman": 0.33503031770158354,
+        "mean_ndcg_at_k": 0.8294161140483999,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.03162277660168379,
+        "mean_mae": 0.3368643819929549,
+        "mean_rmse": 0.43545760967339947,
+        "mean_pearson": 0.29780815339673083,
+        "mean_spearman": 0.3350535049758389,
+        "mean_ndcg_at_k": 0.8282823852150132,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.05623413251903491,
+        "mean_mae": 0.33305755226619776,
+        "mean_rmse": 0.4273321375852758,
+        "mean_pearson": 0.3070417765972802,
+        "mean_spearman": 0.33737486089839297,
+        "mean_ndcg_at_k": 0.8295097317313841,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.1,
+        "mean_mae": 0.3282936175119902,
+        "mean_rmse": 0.4185535164919604,
+        "mean_pearson": 0.3179178034230474,
+        "mean_spearman": 0.34222548629549465,
+        "mean_ndcg_at_k": 0.84094104235433,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.1778279410038923,
+        "mean_mae": 0.3230982377293077,
+        "mean_rmse": 0.4099482783381811,
+        "mean_pearson": 0.3295849392276734,
+        "mean_spearman": 0.34910997267169785,
+        "mean_ndcg_at_k": 0.85545641966542,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.31622776601683794,
+        "mean_mae": 0.3178513927188474,
+        "mean_rmse": 0.4022153904834598,
+        "mean_pearson": 0.34116374250142356,
+        "mean_spearman": 0.35761614250007995,
+        "mean_ndcg_at_k": 0.8654697556922027,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 0.5623413251903491,
+        "mean_mae": 0.3123216290907917,
+        "mean_rmse": 0.39570548742173794,
+        "mean_pearson": 0.35187218266142944,
+        "mean_spearman": 0.3721046120808566,
+        "mean_ndcg_at_k": 0.871176076815616,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 1.0,
+        "mean_mae": 0.307241921707614,
+        "mean_rmse": 0.39041539948857285,
+        "mean_pearson": 0.361262009271783,
+        "mean_spearman": 0.37870749606823706,
+        "mean_ndcg_at_k": 0.8727300539652869,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 1.7782794100389228,
+        "mean_mae": 0.30369808956385025,
+        "mean_rmse": 0.3861750347211905,
+        "mean_pearson": 0.36928824796295884,
+        "mean_spearman": 0.37991741165199555,
+        "mean_ndcg_at_k": 0.8669871537865739,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 3.1622776601683795,
+        "mean_mae": 0.30101538371246406,
+        "mean_rmse": 0.3827708756972098,
+        "mean_pearson": 0.37613353336644756,
+        "mean_spearman": 0.3825359169768812,
+        "mean_ndcg_at_k": 0.8717801942776594,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 5.623413251903491,
+        "mean_mae": 0.29875404539179695,
+        "mean_rmse": 0.37997423383906737,
+        "mean_pearson": 0.3820736555741736,
+        "mean_spearman": 0.3885031646970389,
+        "mean_ndcg_at_k": 0.8718859626456495,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 10.0,
+        "mean_mae": 0.2971640049972394,
+        "mean_rmse": 0.37760277704045747,
+        "mean_pearson": 0.3873873472256267,
+        "mean_spearman": 0.3952359186390349,
+        "mean_ndcg_at_k": 0.8712449531630467,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 17.78279410038923,
+        "mean_mae": 0.29589165232970305,
+        "mean_rmse": 0.3755985164482381,
+        "mean_pearson": 0.39216442487753955,
+        "mean_spearman": 0.39960291700112205,
+        "mean_ndcg_at_k": 0.8721992517420553,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 31.622776601683793,
+        "mean_mae": 0.29519886976315746,
+        "mean_rmse": 0.37403191556488685,
+        "mean_pearson": 0.39620623518096,
+        "mean_spearman": 0.4106324570139912,
+        "mean_ndcg_at_k": 0.8666094463339636,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 56.23413251903491,
+        "mean_mae": 0.29545100340601027,
+        "mean_rmse": 0.3730482647973501,
+        "mean_pearson": 0.3992133784504468,
+        "mean_spearman": 0.41621727501080474,
+        "mean_ndcg_at_k": 0.8732694125322423,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 100.0,
+        "mean_mae": 0.2970217793355734,
+        "mean_rmse": 0.37285136423736437,
+        "mean_pearson": 0.4011157597213525,
+        "mean_spearman": 0.41509775384554537,
+        "mean_ndcg_at_k": 0.8732870521976009,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 177.82794100389228,
+        "mean_mae": 0.2995845372286471,
+        "mean_rmse": 0.37379037160571327,
+        "mean_pearson": 0.4021396137786818,
+        "mean_spearman": 0.41637117864586015,
+        "mean_ndcg_at_k": 0.8734282601414624,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 316.22776601683796,
+        "mean_mae": 0.3036178468462583,
+        "mean_rmse": 0.37635621997738794,
+        "mean_pearson": 0.4025294756481319,
+        "mean_spearman": 0.417366214378336,
+        "mean_ndcg_at_k": 0.8716670027950352,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 562.341325190349,
+        "mean_mae": 0.309669989250152,
+        "mean_rmse": 0.38077325781850113,
+        "mean_pearson": 0.4024011452714308,
+        "mean_spearman": 0.41689340508048456,
+        "mean_ndcg_at_k": 0.8684942825346657,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 16,
+        "alpha": 1000.0,
+        "mean_mae": 0.3169580766118304,
+        "mean_rmse": 0.38647587020607344,
+        "mean_pearson": 0.4018935420739986,
+        "mean_spearman": 0.4134392850513563,
+        "mean_ndcg_at_k": 0.8626303651006639,
+        "mean_explained_variance": 0.30732382320690393
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.001,
+        "mean_mae": 0.35198300991622133,
+        "mean_rmse": 0.46603029413995084,
+        "mean_pearson": 0.2603908028241268,
+        "mean_spearman": 0.3075115156788766,
+        "mean_ndcg_at_k": 0.8163517924895828,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.0017782794100389228,
+        "mean_mae": 0.35162913825935954,
+        "mean_rmse": 0.46512551456165524,
+        "mean_pearson": 0.2610317698806187,
+        "mean_spearman": 0.30723406106096185,
+        "mean_ndcg_at_k": 0.8163517924895828,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.0031622776601683794,
+        "mean_mae": 0.35102038439756267,
+        "mean_rmse": 0.4635890028311339,
+        "mean_pearson": 0.2621449347601244,
+        "mean_spearman": 0.3074492306140244,
+        "mean_ndcg_at_k": 0.8230322956677112,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.005623413251903491,
+        "mean_mae": 0.34999727913743256,
+        "mean_rmse": 0.46106289674016276,
+        "mean_pearson": 0.26404365343675995,
+        "mean_spearman": 0.30620128102114375,
+        "mean_ndcg_at_k": 0.8230322956677112,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.01,
+        "mean_mae": 0.3483763705792005,
+        "mean_rmse": 0.4571174539701561,
+        "mean_pearson": 0.2671833425903244,
+        "mean_spearman": 0.3065764858228123,
+        "mean_ndcg_at_k": 0.8232359721732936,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.01778279410038923,
+        "mean_mae": 0.3459832341574214,
+        "mean_rmse": 0.4514002504747066,
+        "mean_pearson": 0.27211385355877604,
+        "mean_spearman": 0.3035567698356065,
+        "mean_ndcg_at_k": 0.8277216544160829,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.03162277660168379,
+        "mean_mae": 0.34253986499826167,
+        "mean_rmse": 0.44388336658220257,
+        "mean_pearson": 0.27926194107380853,
+        "mean_spearman": 0.3060716659711845,
+        "mean_ndcg_at_k": 0.8209015417239567,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.05623413251903491,
+        "mean_mae": 0.33802233961609995,
+        "mean_rmse": 0.4350111302785732,
+        "mean_pearson": 0.2885635883145065,
+        "mean_spearman": 0.30977282667206535,
+        "mean_ndcg_at_k": 0.8284001007641443,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.1,
+        "mean_mae": 0.3327817735551659,
+        "mean_rmse": 0.42556970677802025,
+        "mean_pearson": 0.29931074087970766,
+        "mean_spearman": 0.31623319005791906,
+        "mean_ndcg_at_k": 0.8334034186994235,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.1778279410038923,
+        "mean_mae": 0.3272413084057647,
+        "mean_rmse": 0.4164341879116097,
+        "mean_pearson": 0.31047152326750405,
+        "mean_spearman": 0.3190734871306053,
+        "mean_ndcg_at_k": 0.8585649747070608,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.31622776601683794,
+        "mean_mae": 0.32167434091153196,
+        "mean_rmse": 0.40833056790564654,
+        "mean_pearson": 0.32104729027169976,
+        "mean_spearman": 0.3281966483070134,
+        "mean_ndcg_at_k": 0.8717225122642669,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 0.5623413251903491,
+        "mean_mae": 0.31550486193538757,
+        "mean_rmse": 0.40160805043987224,
+        "mean_pearson": 0.3303083198090353,
+        "mean_spearman": 0.3392707061738004,
+        "mean_ndcg_at_k": 0.8691425033452294,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 1.0,
+        "mean_mae": 0.3102588150480231,
+        "mean_rmse": 0.3962178381154695,
+        "mean_pearson": 0.3380667941690567,
+        "mean_spearman": 0.35207526664981026,
+        "mean_ndcg_at_k": 0.8774506426882137,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 1.7782794100389228,
+        "mean_mae": 0.3071288262671753,
+        "mean_rmse": 0.3918969783341081,
+        "mean_pearson": 0.34472151523153816,
+        "mean_spearman": 0.35504803881683056,
+        "mean_ndcg_at_k": 0.8698822277450322,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 3.1622776601683795,
+        "mean_mae": 0.3049918993558952,
+        "mean_rmse": 0.38831773585488405,
+        "mean_pearson": 0.35100423147844906,
+        "mean_spearman": 0.3581959178790588,
+        "mean_ndcg_at_k": 0.8639565516703712,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 5.623413251903491,
+        "mean_mae": 0.30291371124698196,
+        "mean_rmse": 0.3851802347196614,
+        "mean_pearson": 0.3575805433519554,
+        "mean_spearman": 0.3628926619158272,
+        "mean_ndcg_at_k": 0.8783902015657876,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 10.0,
+        "mean_mae": 0.3012037870331351,
+        "mean_rmse": 0.3823281523917288,
+        "mean_pearson": 0.36461224671060577,
+        "mean_spearman": 0.367079842776476,
+        "mean_ndcg_at_k": 0.8786125172432013,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 17.78279410038923,
+        "mean_mae": 0.2999014648537629,
+        "mean_rmse": 0.3797872809658866,
+        "mean_pearson": 0.37161057392931235,
+        "mean_spearman": 0.3727154803384146,
+        "mean_ndcg_at_k": 0.8746535104639754,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 31.622776601683793,
+        "mean_mae": 0.298965010498498,
+        "mean_rmse": 0.3776622014255516,
+        "mean_pearson": 0.37784252882402714,
+        "mean_spearman": 0.3775271263246948,
+        "mean_ndcg_at_k": 0.8684617922015256,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 56.23413251903491,
+        "mean_mae": 0.29844365595209366,
+        "mean_rmse": 0.37604124736839695,
+        "mean_pearson": 0.38292428067053674,
+        "mean_spearman": 0.38511866354972246,
+        "mean_ndcg_at_k": 0.868578899038407,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 100.0,
+        "mean_mae": 0.29884576134050267,
+        "mean_rmse": 0.37507224157046004,
+        "mean_pearson": 0.3869957911976331,
+        "mean_spearman": 0.39353056431350114,
+        "mean_ndcg_at_k": 0.8747240831968395,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 177.82794100389228,
+        "mean_mae": 0.30063750623452523,
+        "mean_rmse": 0.37516098489944216,
+        "mean_pearson": 0.3903642356711333,
+        "mean_spearman": 0.39746539933116753,
+        "mean_ndcg_at_k": 0.8738691957911779,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 316.22776601683796,
+        "mean_mae": 0.3038031357184444,
+        "mean_rmse": 0.3769599815286212,
+        "mean_pearson": 0.39309201999584564,
+        "mean_spearman": 0.3993556466434906,
+        "mean_ndcg_at_k": 0.8733486698652383,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 562.341325190349,
+        "mean_mae": 0.3091518961498005,
+        "mean_rmse": 0.38084508532799877,
+        "mean_pearson": 0.39500885164225047,
+        "mean_spearman": 0.39783608716287766,
+        "mean_ndcg_at_k": 0.8749855875393839,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 32,
+        "alpha": 1000.0,
+        "mean_mae": 0.31656168645233335,
+        "mean_rmse": 0.38628849605346594,
+        "mean_pearson": 0.3960605824945843,
+        "mean_spearman": 0.3991021541414153,
+        "mean_ndcg_at_k": 0.8740285138968256,
+        "mean_explained_variance": 0.4458854743406371
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.001,
+        "mean_mae": 0.3744548962676104,
+        "mean_rmse": 0.48747220116674617,
+        "mean_pearson": 0.20899164455080524,
+        "mean_spearman": 0.2339862092105251,
+        "mean_ndcg_at_k": 0.8016424838490289,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.0017782794100389228,
+        "mean_mae": 0.374096327564732,
+        "mean_rmse": 0.4866615620595602,
+        "mean_pearson": 0.2095480129235206,
+        "mean_spearman": 0.2336254080269781,
+        "mean_ndcg_at_k": 0.8016424838490289,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.0031622776601683794,
+        "mean_mae": 0.3734779634900917,
+        "mean_rmse": 0.48528630063997014,
+        "mean_pearson": 0.21050458887269072,
+        "mean_spearman": 0.2339100285486475,
+        "mean_ndcg_at_k": 0.8016424838490289,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.005623413251903491,
+        "mean_mae": 0.37244029686954244,
+        "mean_rmse": 0.4830278634443964,
+        "mean_pearson": 0.21210899047806026,
+        "mean_spearman": 0.23412993330875223,
+        "mean_ndcg_at_k": 0.8029466910018244,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.01,
+        "mean_mae": 0.37075003437198345,
+        "mean_rmse": 0.4795019280917133,
+        "mean_pearson": 0.21469213222657668,
+        "mean_spearman": 0.2332596460139713,
+        "mean_ndcg_at_k": 0.8041482412345516,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.01778279410038923,
+        "mean_mae": 0.36814768738011666,
+        "mean_rmse": 0.47437930406310214,
+        "mean_pearson": 0.21859704061832766,
+        "mean_spearman": 0.23248731374009105,
+        "mean_ndcg_at_k": 0.8095847764264512,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.03162277660168379,
+        "mean_mae": 0.3643712271435976,
+        "mean_rmse": 0.467579264084199,
+        "mean_pearson": 0.22401599914218823,
+        "mean_spearman": 0.23622710602008895,
+        "mean_ndcg_at_k": 0.8157911020091728,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.05623413251903491,
+        "mean_mae": 0.35945581989062725,
+        "mean_rmse": 0.459384452315377,
+        "mean_pearson": 0.23086702504333637,
+        "mean_spearman": 0.2372524004283782,
+        "mean_ndcg_at_k": 0.8220952937059783,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.1,
+        "mean_mae": 0.35372389802754844,
+        "mean_rmse": 0.4503405867675997,
+        "mean_pearson": 0.23892846857251313,
+        "mean_spearman": 0.24027269508161292,
+        "mean_ndcg_at_k": 0.8299807057491279,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.1778279410038923,
+        "mean_mae": 0.3471595866990038,
+        "mean_rmse": 0.4410170234685924,
+        "mean_pearson": 0.24810885078943706,
+        "mean_spearman": 0.24965553868560936,
+        "mean_ndcg_at_k": 0.8460549951258954,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.31622776601683794,
+        "mean_mae": 0.339597350428312,
+        "mean_rmse": 0.4318114853094709,
+        "mean_pearson": 0.2585313385632584,
+        "mean_spearman": 0.2610215918980555,
+        "mean_ndcg_at_k": 0.8485926816322176,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 0.5623413251903491,
+        "mean_mae": 0.33166466394402744,
+        "mean_rmse": 0.42295701303079536,
+        "mean_pearson": 0.2704040639030998,
+        "mean_spearman": 0.2763795552457154,
+        "mean_ndcg_at_k": 0.8812457810443318,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 1.0,
+        "mean_mae": 0.32342145630753194,
+        "mean_rmse": 0.4146878306707434,
+        "mean_pearson": 0.2837328476721899,
+        "mean_spearman": 0.28862492457781364,
+        "mean_ndcg_at_k": 0.8760770404401992,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 1.7782794100389228,
+        "mean_mae": 0.3173631217758113,
+        "mean_rmse": 0.40728995042064786,
+        "mean_pearson": 0.2980456533416025,
+        "mean_spearman": 0.3027869665463071,
+        "mean_ndcg_at_k": 0.8747212681163077,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 3.1622776601683795,
+        "mean_mae": 0.31252238293216195,
+        "mean_rmse": 0.4009268635096297,
+        "mean_pearson": 0.31248426339474195,
+        "mean_spearman": 0.3177460171131923,
+        "mean_ndcg_at_k": 0.870807647791176,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 5.623413251903491,
+        "mean_mae": 0.3086707535744931,
+        "mean_rmse": 0.395521181992157,
+        "mean_pearson": 0.32628077858198906,
+        "mean_spearman": 0.3277927853226138,
+        "mean_ndcg_at_k": 0.8670052792739755,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 10.0,
+        "mean_mae": 0.3055735634378674,
+        "mean_rmse": 0.3908995223099496,
+        "mean_pearson": 0.3389567815319613,
+        "mean_spearman": 0.34370597092738847,
+        "mean_ndcg_at_k": 0.8706354227794698,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 17.78279410038923,
+        "mean_mae": 0.3032620917693235,
+        "mean_rmse": 0.38694834234244396,
+        "mean_pearson": 0.3501030469639157,
+        "mean_spearman": 0.353616524285204,
+        "mean_ndcg_at_k": 0.8674165980311415,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 31.622776601683793,
+        "mean_mae": 0.3013140301875585,
+        "mean_rmse": 0.38357617726485327,
+        "mean_pearson": 0.3594234721663578,
+        "mean_spearman": 0.3602867996100413,
+        "mean_ndcg_at_k": 0.8701148049081301,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 56.23413251903491,
+        "mean_mae": 0.30036933004051514,
+        "mean_rmse": 0.38067106674179396,
+        "mean_pearson": 0.3670366451823092,
+        "mean_spearman": 0.36825410348071946,
+        "mean_ndcg_at_k": 0.8684353112323386,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 100.0,
+        "mean_mae": 0.30015867882212716,
+        "mean_rmse": 0.3782716953953433,
+        "mean_pearson": 0.3734602077760497,
+        "mean_spearman": 0.376512881580447,
+        "mean_ndcg_at_k": 0.8753249063310171,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 177.82794100389228,
+        "mean_mae": 0.30104783080782316,
+        "mean_rmse": 0.3768632135151064,
+        "mean_pearson": 0.3791884955512169,
+        "mean_spearman": 0.38410896555781066,
+        "mean_ndcg_at_k": 0.8785326673015744,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 316.22776601683796,
+        "mean_mae": 0.3038669414188404,
+        "mean_rmse": 0.37736439303192043,
+        "mean_pearson": 0.38427922617585614,
+        "mean_spearman": 0.38561246622196366,
+        "mean_ndcg_at_k": 0.8808888812199156,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 562.341325190349,
+        "mean_mae": 0.30911391065854044,
+        "mean_rmse": 0.38042162603686974,
+        "mean_pearson": 0.38838904767737786,
+        "mean_spearman": 0.38879398360860645,
+        "mean_ndcg_at_k": 0.8774832582425794,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 64,
+        "alpha": 1000.0,
+        "mean_mae": 0.315936115189681,
+        "mean_rmse": 0.3855563156712789,
+        "mean_pearson": 0.39124442865985243,
+        "mean_spearman": 0.3899083162867184,
+        "mean_ndcg_at_k": 0.8708976195192347,
+        "mean_explained_variance": 0.625393312798006
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.001,
+        "mean_mae": 0.43242427613024886,
+        "mean_rmse": 0.5940074821729304,
+        "mean_pearson": 0.19887940598113008,
+        "mean_spearman": 0.26412333527057025,
+        "mean_ndcg_at_k": 0.794774472215236,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.0017782794100389228,
+        "mean_mae": 0.43107383683884776,
+        "mean_rmse": 0.590395619574242,
+        "mean_pearson": 0.1999428722827238,
+        "mean_spearman": 0.2626817272062848,
+        "mean_ndcg_at_k": 0.794774472215236,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.0031622776601683794,
+        "mean_mae": 0.4288077490477211,
+        "mean_rmse": 0.5844626240819841,
+        "mean_pearson": 0.2017789776992247,
+        "mean_spearman": 0.26281674059520105,
+        "mean_ndcg_at_k": 0.7948618193026874,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.005623413251903491,
+        "mean_mae": 0.42517582124838177,
+        "mean_rmse": 0.5752111905628416,
+        "mean_pearson": 0.20487719099790178,
+        "mean_spearman": 0.2650887391916018,
+        "mean_ndcg_at_k": 0.7981776002546415,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.01,
+        "mean_mae": 0.41961923220637154,
+        "mean_rmse": 0.5618475741243708,
+        "mean_pearson": 0.20990157774277343,
+        "mean_spearman": 0.2667852678589971,
+        "mean_ndcg_at_k": 0.7985899462556288,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.01778279410038923,
+        "mean_mae": 0.41178929315097756,
+        "mean_rmse": 0.5443783897849153,
+        "mean_pearson": 0.2175391280454042,
+        "mean_spearman": 0.2655543957675589,
+        "mean_ndcg_at_k": 0.8058288324672211,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.03162277660168379,
+        "mean_mae": 0.40167092887572886,
+        "mean_rmse": 0.5239209121702146,
+        "mean_pearson": 0.2281203684319288,
+        "mean_spearman": 0.26657641518922043,
+        "mean_ndcg_at_k": 0.8059431804903898,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.05623413251903491,
+        "mean_mae": 0.3891021573300493,
+        "mean_rmse": 0.5021999103930342,
+        "mean_pearson": 0.2412872849821622,
+        "mean_spearman": 0.2703508523123405,
+        "mean_ndcg_at_k": 0.8045812771626254,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.1,
+        "mean_mae": 0.3747380964709012,
+        "mean_rmse": 0.48078354545333035,
+        "mean_pearson": 0.25617828540514836,
+        "mean_spearman": 0.27435159178884344,
+        "mean_ndcg_at_k": 0.8061937138563755,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.1778279410038923,
+        "mean_mae": 0.3601740871709847,
+        "mean_rmse": 0.4609716763089448,
+        "mean_pearson": 0.2718222221394372,
+        "mean_spearman": 0.2868096319466297,
+        "mean_ndcg_at_k": 0.823259745780268,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.31622776601683794,
+        "mean_mae": 0.3477362345862819,
+        "mean_rmse": 0.44394630186929157,
+        "mean_pearson": 0.28720884649892015,
+        "mean_spearman": 0.30411652972733483,
+        "mean_ndcg_at_k": 0.831750416565583,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 0.5623413251903491,
+        "mean_mae": 0.3384253785092532,
+        "mean_rmse": 0.43036136802522823,
+        "mean_pearson": 0.3015064246542175,
+        "mean_spearman": 0.3197681046360168,
+        "mean_ndcg_at_k": 0.8336950987891913,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 1.0,
+        "mean_mae": 0.33088506696635334,
+        "mean_rmse": 0.4198806461864752,
+        "mean_pearson": 0.31458584529218736,
+        "mean_spearman": 0.3282638767117537,
+        "mean_ndcg_at_k": 0.8400554495220195,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 1.7782794100389228,
+        "mean_mae": 0.32385198758198463,
+        "mean_rmse": 0.411549183809038,
+        "mean_pearson": 0.3269417190485469,
+        "mean_spearman": 0.34028067722879374,
+        "mean_ndcg_at_k": 0.8405958974903684,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 3.1622776601683795,
+        "mean_mae": 0.3182297624853572,
+        "mean_rmse": 0.40455800503605477,
+        "mean_pearson": 0.33894574500435615,
+        "mean_spearman": 0.34687533044564267,
+        "mean_ndcg_at_k": 0.8407316060836288,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 5.623413251903491,
+        "mean_mae": 0.3139668155542018,
+        "mean_rmse": 0.3985545398090268,
+        "mean_pearson": 0.35040285906518565,
+        "mean_spearman": 0.35552252170667453,
+        "mean_ndcg_at_k": 0.8427584542921795,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 10.0,
+        "mean_mae": 0.31051800008131736,
+        "mean_rmse": 0.39344622846091803,
+        "mean_pearson": 0.36071555720596604,
+        "mean_spearman": 0.36085817275237175,
+        "mean_ndcg_at_k": 0.8416976305803608,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 17.78279410038923,
+        "mean_mae": 0.30755411705706254,
+        "mean_rmse": 0.38908733323912537,
+        "mean_pearson": 0.36938509352643845,
+        "mean_spearman": 0.3729837496126391,
+        "mean_ndcg_at_k": 0.8363820118845176,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 31.622776601683793,
+        "mean_mae": 0.3051378514586664,
+        "mean_rmse": 0.38515349269520416,
+        "mean_pearson": 0.37645076083878104,
+        "mean_spearman": 0.3760165786500995,
+        "mean_ndcg_at_k": 0.8449202183854483,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 56.23413251903491,
+        "mean_mae": 0.3027890593735988,
+        "mean_rmse": 0.3813002764797364,
+        "mean_pearson": 0.38250195166426565,
+        "mean_spearman": 0.37746392472411794,
+        "mean_ndcg_at_k": 0.844012183337254,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 100.0,
+        "mean_mae": 0.30065181567509475,
+        "mean_rmse": 0.37755181084756506,
+        "mean_pearson": 0.38831248335979013,
+        "mean_spearman": 0.38223936870769953,
+        "mean_ndcg_at_k": 0.8419256290281434,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 177.82794100389228,
+        "mean_mae": 0.30004649938866457,
+        "mean_rmse": 0.37471418690287844,
+        "mean_pearson": 0.3943609216360965,
+        "mean_spearman": 0.38740128552756464,
+        "mean_ndcg_at_k": 0.8487590525904791,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 316.22776601683796,
+        "mean_mae": 0.3018358378938092,
+        "mean_rmse": 0.3742552786807174,
+        "mean_pearson": 0.4004665210963984,
+        "mean_spearman": 0.3919494427500604,
+        "mean_ndcg_at_k": 0.8512533174337156,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 562.341325190349,
+        "mean_mae": 0.30660341033926464,
+        "mean_rmse": 0.377177258488019,
+        "mean_pearson": 0.40587635465550476,
+        "mean_spearman": 0.3985162933056321,
+        "mean_ndcg_at_k": 0.85023088206945,
+        "mean_explained_variance": 0.8194742660943968
+      },
+      {
+        "pca_dim": 128,
+        "alpha": 1000.0,
+        "mean_mae": 0.3137591349343278,
+        "mean_rmse": 0.3828458093968542,
+        "mean_pearson": 0.4099068774774607,
+        "mean_spearman": 0.4013325298274637,
+        "mean_ndcg_at_k": 0.851837888359157,
+        "mean_explained_variance": 0.8194742660943968
+      }
+    ]
+  },
+  "fold_count": 5,
+  "training_population": 393
+}

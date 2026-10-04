@@ -1,0 +1,38 @@
+{
+  "holdout": {
+    "status": "frozen",
+    "train_count": 393,
+    "test_count": 99
+  },
+  "condition_a": {
+    "rated_films": 492,
+    "matched": 492,
+    "coverage": 1.0,
+    "failures": []
+  },
+  "condition_b": {
+    "semantic_classified": 492,
+    "semantic_total": 492,
+    "coverage": 1.0,
+    "newly_classified": 0,
+    "failures": []
+  },
+  "raw_rated_films": 504,
+  "experimental_films": 492,
+  "excluded_non_film_works": 12,
+  "excluded_non_film_source_ids": [
+    "https://boxd.it/qX9i",
+    "https://boxd.it/xlUa",
+    "https://boxd.it/fYde",
+    "https://boxd.it/Azw8",
+    "https://boxd.it/rlRo",
+    "https://boxd.it/KSe8",
+    "https://boxd.it/EB36",
+    "https://boxd.it/IiB2",
+    "https://boxd.it/KihU",
+    "https://boxd.it/j3NM",
+    "https://boxd.it/K7fI",
+    "https://boxd.it/pE50"
+  ],
+  "semantic_vector_rows": 492
+}

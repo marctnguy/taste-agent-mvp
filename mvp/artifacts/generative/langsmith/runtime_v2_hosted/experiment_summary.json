@@ -1,0 +1,184 @@
+{
+  "experiment_name": "taste-agent-runtime-v2-975cf538",
+  "experiment_id": "414dd2a1-d63d-468d-9ce5-73bb017b9352",
+  "experiment_url": "https://smith.langchain.com/o/3f29c78e-95c7-4ff0-864f-65906dfd0c74/datasets/5511335c-2116-4bed-9689-d3e61f4e23e7/compare?selectedSessions=414dd2a1-d63d-468d-9ce5-73bb017b9352",
+  "dataset_name": "taste-agent-runtime-v1-eval",
+  "dataset_status": "langsmith_dataset",
+  "runtime_version": "runtime_v2",
+  "intent_prompt_version": "intent_v2",
+  "recommendation_prompt_version": "recommendation_v1",
+  "trace_coverage": "18/18",
+  "actual_llm_calls_occurred": true,
+  "validation_pass_rate": 0.9444444444444444,
+  "repair_rate": 0.2222222222222222,
+  "fallback_rate": 0.1111111111111111,
+  "llm_calls": {
+    "mean": 1.1111111111111112,
+    "median": 1.0,
+    "max": 2.0
+  },
+  "token_usage": {
+    "input_mean": 17218.0,
+    "output_mean": 488.05555555555554,
+    "total_mean": 17706.055555555555,
+    "input_total": 309924.0,
+    "output_total": 8785.0,
+    "total_total": 318709.0
+  },
+  "latency": {
+    "mean": 5.5783619444444446,
+    "median": 5.4902975000000005,
+    "p95": 10.992686,
+    "total": 100.410515
+  },
+  "deterministic_metrics": {
+    "candidate_compliance": 1.0,
+    "candidate_identity_integrity": 1.0,
+    "recommendation_count": 1.0,
+    "duplicate_candidates": 1.0,
+    "intent_match": 1.0,
+    "hard_constraint_satisfaction": 1.0,
+    "exclusion_satisfaction": 1.0,
+    "taste_signal_grounding": 1.0,
+    "unsupported_taste_dimension": 1.0,
+    "goodreads_ranking_guardrail": 1.0,
+    "candidate_context_required": 0.05555555555555555,
+    "no_match_behavior": 0.05555555555555555,
+    "sensitive_inference_guardrail": 1.0,
+    "request_relevance": 4.777777777777778,
+    "explanation_groundedness": 4.777777777777778,
+    "explanation_usefulness": 4.666666666666667,
+    "response_clarity": 4.888888888888889
+  },
+  "v1_deterministic_metrics": {
+    "candidate_compliance": 1.0,
+    "candidate_identity_integrity": 1.0,
+    "recommendation_count": 0.8333333333333334,
+    "duplicate_candidates": 1.0,
+    "intent_match": 0.9444444444444444,
+    "hard_constraint_satisfaction": 1.0,
+    "exclusion_satisfaction": 0.9444444444444444,
+    "taste_signal_grounding": 1.0,
+    "unsupported_taste_dimension": 1.0,
+    "goodreads_ranking_guardrail": 1.0,
+    "candidate_context_required": 0.05555555555555555,
+    "no_match_behavior": 0.05555555555555555,
+    "sensitive_inference_guardrail": 1.0,
+    "request_relevance": 4.722222222222222,
+    "explanation_groundedness": 4.833333333333333,
+    "explanation_usefulness": 4.666666666666667,
+    "response_clarity": 4.833333333333333
+  },
+  "cases": {
+    "E06": {
+      "v1": {
+        "intent": "CONSTRAINT",
+        "count": 1,
+        "fallback": false,
+        "validation": true,
+        "generation_status": "generated",
+        "titles": [
+          "The Novices"
+        ]
+      },
+      "v2": {
+        "intent": "CONSTRAINT",
+        "count": 1,
+        "fallback": false,
+        "validation": true,
+        "generation_status": "generated",
+        "titles": [
+          "The Novices"
+        ]
+      }
+    },
+    "E11": {
+      "v1": {
+        "intent": "CONSTRAINT",
+        "count": 5,
+        "fallback": true,
+        "validation": false,
+        "generation_status": "fallback",
+        "titles": [
+          "Seven Samurai",
+          "Harakiri",
+          "High and Low",
+          "The Godfather Part II",
+          "The Godfather"
+        ]
+      },
+      "v2": {
+        "intent": "CONSTRAINT",
+        "count": 5,
+        "fallback": false,
+        "validation": true,
+        "generation_status": "generated",
+        "titles": [
+          "Directed by John Ford",
+          "Stop Making Sense",
+          "The Curse of the Dragon",
+          "28 Up",
+          "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty"
+        ]
+      }
+    },
+    "E17": {
+      "v1": {
+        "intent": "GENERAL_DISCOVERY",
+        "count": 3,
+        "fallback": false,
+        "validation": true,
+        "generation_status": "generated",
+        "titles": [
+          "Harakiri",
+          "The Last of the Mohicans",
+          "The Grey Zone"
+        ]
+      },
+      "v2": {
+        "intent": "GENERAL_DISCOVERY",
+        "count": 5,
+        "fallback": false,
+        "validation": true,
+        "generation_status": "generated",
+        "titles": [
+          "Seven Samurai",
+          "Harakiri",
+          "High and Low",
+          "The Godfather Part II",
+          "The Godfather"
+        ]
+      }
+    },
+    "E18": {
+      "v1": {
+        "intent": "GENERAL_DISCOVERY",
+        "count": 5,
+        "fallback": false,
+        "validation": true,
+        "generation_status": "generated",
+        "titles": [
+          "Psycho",
+          "A Dog's Will",
+          "A Silent Voice: The Movie",
+          "Harakiri",
+          "High and Low"
+        ]
+      },
+      "v2": {
+        "intent": "MOOD_THEME",
+        "count": 5,
+        "fallback": true,
+        "validation": false,
+        "generation_status": "fallback",
+        "titles": [
+          "Seven Samurai",
+          "Harakiri",
+          "High and Low",
+          "Directed by John Ford",
+          "The Godfather Part II"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1202 @@
+[
+  {
+    "hitl_id": "H01",
+    "exact_prompt": "Recommend me something to watch.",
+    "parsed_intent": "GENERAL_DISCOVERY",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 259,
+    "contextual_retrieval_used": false,
+    "runtime_v2_top50_overlap": 50,
+    "newly_admitted_from_outside_b3_top50": 0,
+    "retrieval_mode": "b3_only",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "346",
+        "title": "Seven Samurai",
+        "year": 1954,
+        "b3_rank": 1,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "14537",
+        "title": "Harakiri",
+        "year": 1962,
+        "b3_rank": 2,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "12493",
+        "title": "High and Low",
+        "year": 1963,
+        "b3_rank": 3,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "94623",
+        "title": "Directed by John Ford",
+        "year": 1971,
+        "b3_rank": 4,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "240",
+        "title": "The Godfather Part II",
+        "year": 1974,
+        "b3_rank": 5,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "238",
+        "title": "The Godfather",
+        "year": 1972,
+        "b3_rank": 6,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "11216",
+        "title": "Cinema Paradiso",
+        "year": 1988,
+        "b3_rank": 7,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "24128",
+        "title": "Stop Making Sense",
+        "year": 1984,
+        "b3_rank": 8,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "40096",
+        "title": "A Dog's Will",
+        "year": 2000,
+        "b3_rank": 9,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "82976",
+        "title": "The Novices",
+        "year": 1970,
+        "b3_rank": 10,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 10
+      }
+    ]
+  },
+  {
+    "hitl_id": "H02",
+    "exact_prompt": "I want something melancholic and intimate.",
+    "parsed_intent": "MOOD_THEME",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 259,
+    "contextual_retrieval_used": true,
+    "runtime_v2_top50_overlap": 27,
+    "newly_admitted_from_outside_b3_top50": 23,
+    "retrieval_mode": "rrf_fusion",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "11216",
+        "title": "Cinema Paradiso",
+        "year": 1988,
+        "b3_rank": 7,
+        "context_rank": 14,
+        "rrf_rank": 1,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "14537",
+        "title": "Harakiri",
+        "year": 1962,
+        "b3_rank": 2,
+        "context_rank": 38,
+        "rrf_rank": 2,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "130824",
+        "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+        "year": 2000,
+        "b3_rank": 19,
+        "context_rank": 18,
+        "rrf_rank": 3,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "12493",
+        "title": "High and Low",
+        "year": 1963,
+        "b3_rank": 3,
+        "context_rank": 65,
+        "rrf_rank": 4,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "45722",
+        "title": "Don't Look Down",
+        "year": 2008,
+        "b3_rank": 76,
+        "context_rank": 8,
+        "rrf_rank": 5,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "233651",
+        "title": "Sex Rider: Wet Highway",
+        "year": 1971,
+        "b3_rank": 14,
+        "context_rank": 58,
+        "rrf_rank": 6,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "311",
+        "title": "Once Upon a Time in America",
+        "year": 1984,
+        "b3_rank": 13,
+        "context_rank": 74,
+        "rrf_rank": 7,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "40096",
+        "title": "A Dog's Will",
+        "year": 2000,
+        "b3_rank": 9,
+        "context_rank": 96,
+        "rrf_rank": 8,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "523936",
+        "title": "Meander",
+        "year": 2021,
+        "b3_rank": 144,
+        "context_rank": 4,
+        "rrf_rank": 9,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "17609",
+        "title": "Antichrist",
+        "year": 2009,
+        "b3_rank": 98,
+        "context_rank": 12,
+        "rrf_rank": 10,
+        "final_shortlist_rank": 10
+      }
+    ]
+  },
+  {
+    "hitl_id": "H03",
+    "exact_prompt": "I want something comforting but not cheesy.",
+    "parsed_intent": "MOOD_THEME",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 259,
+    "contextual_retrieval_used": true,
+    "runtime_v2_top50_overlap": 27,
+    "newly_admitted_from_outside_b3_top50": 23,
+    "retrieval_mode": "rrf_fusion",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "11216",
+        "title": "Cinema Paradiso",
+        "year": 1988,
+        "b3_rank": 7,
+        "context_rank": 14,
+        "rrf_rank": 1,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "497",
+        "title": "The Green Mile",
+        "year": 1999,
+        "b3_rank": 30,
+        "context_rank": 21,
+        "rrf_rank": 2,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "255709",
+        "title": "Hope",
+        "year": 2013,
+        "b3_rank": 72,
+        "context_rank": 3,
+        "rrf_rank": 3,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "97537",
+        "title": "Beefcake",
+        "year": 1998,
+        "b3_rank": 16,
+        "context_rank": 38,
+        "rrf_rank": 4,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "1492608",
+        "title": "John Candy: I Like Me",
+        "year": 2025,
+        "b3_rank": 89,
+        "context_rank": 1,
+        "rrf_rank": 5,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "130824",
+        "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+        "year": 2000,
+        "b3_rank": 19,
+        "context_rank": 44,
+        "rrf_rank": 6,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "40096",
+        "title": "A Dog's Will",
+        "year": 2000,
+        "b3_rank": 9,
+        "context_rank": 77,
+        "rrf_rank": 7,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "39787",
+        "title": "Jacknife",
+        "year": 1989,
+        "b3_rank": 18,
+        "context_rank": 54,
+        "rrf_rank": 8,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "346",
+        "title": "Seven Samurai",
+        "year": 1954,
+        "b3_rank": 1,
+        "context_rank": 140,
+        "rrf_rank": 9,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "1285366",
+        "title": "Shape of My Heart",
+        "year": 2024,
+        "b3_rank": 135,
+        "context_rank": 2,
+        "rrf_rank": 10,
+        "final_shortlist_rank": 10
+      }
+    ]
+  },
+  {
+    "hitl_id": "H04",
+    "exact_prompt": "Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",
+    "parsed_intent": "GENERAL_DISCOVERY",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 259,
+    "contextual_retrieval_used": true,
+    "runtime_v2_top50_overlap": 26,
+    "newly_admitted_from_outside_b3_top50": 24,
+    "retrieval_mode": "rrf_fusion",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "82976",
+        "title": "The Novices",
+        "year": 1970,
+        "b3_rank": 10,
+        "context_rank": 5,
+        "rrf_rank": 1,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "12493",
+        "title": "High and Low",
+        "year": 1963,
+        "b3_rank": 3,
+        "context_rank": 15,
+        "rrf_rank": 2,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "539",
+        "title": "Psycho",
+        "year": 1960,
+        "b3_rank": 29,
+        "context_rank": 10,
+        "rrf_rank": 3,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "130824",
+        "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+        "year": 2000,
+        "b3_rank": 19,
+        "context_rank": 20,
+        "rrf_rank": 4,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "233651",
+        "title": "Sex Rider: Wet Highway",
+        "year": 1971,
+        "b3_rank": 14,
+        "context_rank": 31,
+        "rrf_rank": 5,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "166607",
+        "title": "Behold a Pale Horse",
+        "year": 1964,
+        "b3_rank": 12,
+        "context_rank": 40,
+        "rrf_rank": 6,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "11216",
+        "title": "Cinema Paradiso",
+        "year": 1988,
+        "b3_rank": 7,
+        "context_rank": 54,
+        "rrf_rank": 7,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "18256",
+        "title": "Castle Freak",
+        "year": 1996,
+        "b3_rank": 51,
+        "context_rank": 9,
+        "rrf_rank": 8,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "14537",
+        "title": "Harakiri",
+        "year": 1962,
+        "b3_rank": 2,
+        "context_rank": 104,
+        "rrf_rank": 9,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "1507877",
+        "title": "Another Day",
+        "year": 2026,
+        "b3_rank": 122,
+        "context_rank": 2,
+        "rrf_rank": 10,
+        "final_shortlist_rank": 10
+      }
+    ]
+  },
+  {
+    "hitl_id": "H05",
+    "exact_prompt": "I want something quiet, contemplative and character-driven.",
+    "parsed_intent": "MOOD_THEME",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 259,
+    "contextual_retrieval_used": true,
+    "runtime_v2_top50_overlap": 26,
+    "newly_admitted_from_outside_b3_top50": 24,
+    "retrieval_mode": "rrf_fusion",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "14537",
+        "title": "Harakiri",
+        "year": 1962,
+        "b3_rank": 2,
+        "context_rank": 4,
+        "rrf_rank": 1,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "12493",
+        "title": "High and Low",
+        "year": 1963,
+        "b3_rank": 3,
+        "context_rank": 9,
+        "rrf_rank": 2,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "378064",
+        "title": "A Silent Voice: The Movie",
+        "year": 2016,
+        "b3_rank": 34,
+        "context_rank": 12,
+        "rrf_rank": 3,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "11216",
+        "title": "Cinema Paradiso",
+        "year": 1988,
+        "b3_rank": 7,
+        "context_rank": 58,
+        "rrf_rank": 4,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "130824",
+        "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+        "year": 2000,
+        "b3_rank": 19,
+        "context_rank": 38,
+        "rrf_rank": 5,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "346",
+        "title": "Seven Samurai",
+        "year": 1954,
+        "b3_rank": 1,
+        "context_rank": 129,
+        "rrf_rank": 6,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "18256",
+        "title": "Castle Freak",
+        "year": 1996,
+        "b3_rank": 51,
+        "context_rank": 23,
+        "rrf_rank": 7,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "233651",
+        "title": "Sex Rider: Wet Highway",
+        "year": 1971,
+        "b3_rank": 14,
+        "context_rank": 73,
+        "rrf_rank": 8,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "311",
+        "title": "Once Upon a Time in America",
+        "year": 1984,
+        "b3_rank": 13,
+        "context_rank": 77,
+        "rrf_rank": 9,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "1330021",
+        "title": "Remarkably Bright Creatures",
+        "year": 2026,
+        "b3_rank": 187,
+        "context_rank": 1,
+        "rrf_rank": 10,
+        "final_shortlist_rank": 10
+      }
+    ]
+  },
+  {
+    "hitl_id": "H06",
+    "exact_prompt": "Show me something different from what I normally watch.",
+    "parsed_intent": "NOVELTY",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 259,
+    "contextual_retrieval_used": true,
+    "runtime_v2_top50_overlap": 24,
+    "newly_admitted_from_outside_b3_top50": 26,
+    "retrieval_mode": "rrf_fusion",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "130824",
+        "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+        "year": 2000,
+        "b3_rank": 19,
+        "context_rank": 1,
+        "rrf_rank": 1,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "94623",
+        "title": "Directed by John Ford",
+        "year": 1971,
+        "b3_rank": 4,
+        "context_rank": 26,
+        "rrf_rank": 2,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "56828",
+        "title": "Dexter's Laboratory: Ego Trip",
+        "year": 1999,
+        "b3_rank": 23,
+        "context_rank": 15,
+        "rrf_rank": 3,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "354857",
+        "title": "Regular Show: The Movie",
+        "year": 2015,
+        "b3_rank": 70,
+        "context_rank": 2,
+        "rrf_rank": 4,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "12493",
+        "title": "High and Low",
+        "year": 1963,
+        "b3_rank": 3,
+        "context_rank": 70,
+        "rrf_rank": 5,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "20561",
+        "title": "28 Up",
+        "year": 1984,
+        "b3_rank": 17,
+        "context_rank": 36,
+        "rrf_rank": 6,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "346",
+        "title": "Seven Samurai",
+        "year": 1954,
+        "b3_rank": 1,
+        "context_rank": 84,
+        "rrf_rank": 7,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "20562",
+        "title": "35 Up",
+        "year": 1991,
+        "b3_rank": 35,
+        "context_rank": 24,
+        "rrf_rank": 8,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "14537",
+        "title": "Harakiri",
+        "year": 1962,
+        "b3_rank": 2,
+        "context_rank": 137,
+        "rrf_rank": 9,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "97537",
+        "title": "Beefcake",
+        "year": 1998,
+        "b3_rank": 16,
+        "context_rank": 66,
+        "rrf_rank": 10,
+        "final_shortlist_rank": 10
+      }
+    ]
+  },
+  {
+    "hitl_id": "H07",
+    "exact_prompt": "I want to be mind-blown, recommend me something totally out there that surprises me.",
+    "parsed_intent": "GENERAL_DISCOVERY",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 259,
+    "contextual_retrieval_used": true,
+    "runtime_v2_top50_overlap": 21,
+    "newly_admitted_from_outside_b3_top50": 29,
+    "retrieval_mode": "rrf_fusion",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "1236419",
+        "title": "Piece by Piece",
+        "year": 2024,
+        "b3_rank": 80,
+        "context_rank": 11,
+        "rrf_rank": 1,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "130824",
+        "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+        "year": 2000,
+        "b3_rank": 19,
+        "context_rank": 57,
+        "rrf_rank": 2,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "1451867",
+        "title": "Ghost Elephants",
+        "year": 2026,
+        "b3_rank": 86,
+        "context_rank": 12,
+        "rrf_rank": 3,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "45722",
+        "title": "Don't Look Down",
+        "year": 2008,
+        "b3_rank": 76,
+        "context_rank": 15,
+        "rrf_rank": 4,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "1515899",
+        "title": "Billie Eilish - Hit Me Hard and Soft: The Tour (Live in 3D)",
+        "year": 2026,
+        "b3_rank": 186,
+        "context_rank": 1,
+        "rrf_rank": 5,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "1448497",
+        "title": "Ocean with David Attenborough",
+        "year": 2025,
+        "b3_rank": 148,
+        "context_rank": 5,
+        "rrf_rank": 6,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "1330021",
+        "title": "Remarkably Bright Creatures",
+        "year": 2026,
+        "b3_rank": 187,
+        "context_rank": 2,
+        "rrf_rank": 7,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "24128",
+        "title": "Stop Making Sense",
+        "year": 1984,
+        "b3_rank": 8,
+        "context_rank": 126,
+        "rrf_rank": 8,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "12493",
+        "title": "High and Low",
+        "year": 1963,
+        "b3_rank": 3,
+        "context_rank": 187,
+        "rrf_rank": 9,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "14537",
+        "title": "Harakiri",
+        "year": 1962,
+        "b3_rank": 2,
+        "context_rank": 217,
+        "rrf_rank": 10,
+        "final_shortlist_rank": 10
+      }
+    ]
+  },
+  {
+    "hitl_id": "H08",
+    "exact_prompt": "I want a French film tonight.",
+    "parsed_intent": "CONSTRAINT",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 6,
+    "contextual_retrieval_used": false,
+    "runtime_v2_top50_overlap": 1,
+    "newly_admitted_from_outside_b3_top50": 5,
+    "retrieval_mode": "b3_only",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "82976",
+        "title": "The Novices",
+        "year": 1970,
+        "b3_rank": 1,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "1365884",
+        "title": "Call My Agent! The Movie",
+        "year": 2026,
+        "b3_rank": 2,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "1507877",
+        "title": "Another Day",
+        "year": 2026,
+        "b3_rank": 3,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "523936",
+        "title": "Meander",
+        "year": 2021,
+        "b3_rank": 4,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "1258181",
+        "title": "A Woman's Life",
+        "year": 2026,
+        "b3_rank": 5,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "1641629",
+        "title": "You+Me - Against the World",
+        "year": 2026,
+        "b3_rank": 6,
+        "context_rank": null,
+        "rrf_rank": null,
+        "final_shortlist_rank": 6
+      }
+    ]
+  },
+  {
+    "hitl_id": "H09",
+    "exact_prompt": "I want a European movie that feels like freedom and youthful.",
+    "parsed_intent": "GENERAL_DISCOVERY",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 259,
+    "contextual_retrieval_used": true,
+    "runtime_v2_top50_overlap": 25,
+    "newly_admitted_from_outside_b3_top50": 25,
+    "retrieval_mode": "rrf_fusion",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "11216",
+        "title": "Cinema Paradiso",
+        "year": 1988,
+        "b3_rank": 7,
+        "context_rank": 3,
+        "rrf_rank": 1,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "311",
+        "title": "Once Upon a Time in America",
+        "year": 1984,
+        "b3_rank": 13,
+        "context_rank": 11,
+        "rrf_rank": 2,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "12493",
+        "title": "High and Low",
+        "year": 1963,
+        "b3_rank": 3,
+        "context_rank": 58,
+        "rrf_rank": 3,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "130824",
+        "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+        "year": 2000,
+        "b3_rank": 19,
+        "context_rank": 30,
+        "rrf_rank": 4,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "82976",
+        "title": "The Novices",
+        "year": 1970,
+        "b3_rank": 10,
+        "context_rank": 51,
+        "rrf_rank": 5,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "429",
+        "title": "The Good, the Bad and the Ugly",
+        "year": 1966,
+        "b3_rank": 24,
+        "context_rank": 37,
+        "rrf_rank": 6,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "346",
+        "title": "Seven Samurai",
+        "year": 1954,
+        "b3_rank": 1,
+        "context_rank": 113,
+        "rrf_rank": 7,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "45722",
+        "title": "Don't Look Down",
+        "year": 2008,
+        "b3_rank": 76,
+        "context_rank": 8,
+        "rrf_rank": 8,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "166607",
+        "title": "Behold a Pale Horse",
+        "year": 1964,
+        "b3_rank": 12,
+        "context_rank": 66,
+        "rrf_rank": 9,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "1507877",
+        "title": "Another Day",
+        "year": 2026,
+        "b3_rank": 122,
+        "context_rank": 2,
+        "rrf_rank": 10,
+        "final_shortlist_rank": 10
+      }
+    ]
+  },
+  {
+    "hitl_id": "H10",
+    "exact_prompt": "I want a good old classic, but no drama.",
+    "parsed_intent": "CONSTRAINT",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 164,
+    "contextual_retrieval_used": true,
+    "runtime_v2_top50_overlap": 22,
+    "newly_admitted_from_outside_b3_top50": 28,
+    "retrieval_mode": "rrf_fusion",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "233651",
+        "title": "Sex Rider: Wet Highway",
+        "year": 1971,
+        "b3_rank": 3,
+        "context_rank": 4,
+        "rrf_rank": 1,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "429",
+        "title": "The Good, the Bad and the Ugly",
+        "year": 1966,
+        "b3_rank": 8,
+        "context_rank": 6,
+        "rrf_rank": 2,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "30723",
+        "title": "Cavegirl",
+        "year": 1985,
+        "b3_rank": 17,
+        "context_rank": 1,
+        "rrf_rank": 3,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "539",
+        "title": "Psycho",
+        "year": 1960,
+        "b3_rank": 11,
+        "context_rank": 10,
+        "rrf_rank": 4,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "94623",
+        "title": "Directed by John Ford",
+        "year": 1971,
+        "b3_rank": 1,
+        "context_rank": 49,
+        "rrf_rank": 5,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "6435",
+        "title": "Practical Magic",
+        "year": 1998,
+        "b3_rank": 47,
+        "context_rank": 3,
+        "rrf_rank": 6,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "44980",
+        "title": "Zero Woman 2",
+        "year": 1995,
+        "b3_rank": 16,
+        "context_rank": 25,
+        "rrf_rank": 7,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "1891",
+        "title": "The Empire Strikes Back",
+        "year": 1980,
+        "b3_rank": 15,
+        "context_rank": 37,
+        "rrf_rank": 8,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "1857",
+        "title": "The Transformers: The Movie",
+        "year": 1986,
+        "b3_rank": 7,
+        "context_rank": 61,
+        "rrf_rank": 9,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "1232569",
+        "title": "Pinocchio: Unstrung",
+        "year": 2026,
+        "b3_rank": 49,
+        "context_rank": 12,
+        "rrf_rank": 10,
+        "final_shortlist_rank": 10
+      }
+    ]
+  },
+  {
+    "hitl_id": "H11",
+    "exact_prompt": "I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",
+    "parsed_intent": "GENERAL_DISCOVERY",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 259,
+    "contextual_retrieval_used": true,
+    "runtime_v2_top50_overlap": 27,
+    "newly_admitted_from_outside_b3_top50": 23,
+    "retrieval_mode": "rrf_fusion",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "166607",
+        "title": "Behold a Pale Horse",
+        "year": 1964,
+        "b3_rank": 12,
+        "context_rank": 6,
+        "rrf_rank": 1,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "82976",
+        "title": "The Novices",
+        "year": 1970,
+        "b3_rank": 10,
+        "context_rank": 18,
+        "rrf_rank": 2,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "429",
+        "title": "The Good, the Bad and the Ugly",
+        "year": 1966,
+        "b3_rank": 24,
+        "context_rank": 11,
+        "rrf_rank": 3,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "11216",
+        "title": "Cinema Paradiso",
+        "year": 1988,
+        "b3_rank": 7,
+        "context_rank": 31,
+        "rrf_rank": 4,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "11703",
+        "title": "Kiss of the Spider Woman",
+        "year": 1985,
+        "b3_rank": 54,
+        "context_rank": 1,
+        "rrf_rank": 5,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "311",
+        "title": "Once Upon a Time in America",
+        "year": 1984,
+        "b3_rank": 13,
+        "context_rank": 32,
+        "rrf_rank": 6,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "660637",
+        "title": "Dance of the Forty One",
+        "year": 2020,
+        "b3_rank": 63,
+        "context_rank": 5,
+        "rrf_rank": 7,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "45722",
+        "title": "Don't Look Down",
+        "year": 2008,
+        "b3_rank": 76,
+        "context_rank": 4,
+        "rrf_rank": 8,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "12493",
+        "title": "High and Low",
+        "year": 1963,
+        "b3_rank": 3,
+        "context_rank": 85,
+        "rrf_rank": 9,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "240",
+        "title": "The Godfather Part II",
+        "year": 1974,
+        "b3_rank": 5,
+        "context_rank": 77,
+        "rrf_rank": 10,
+        "final_shortlist_rank": 10
+      }
+    ]
+  },
+  {
+    "hitl_id": "H12",
+    "exact_prompt": "Based on what you know about my taste, recommend something I might not discover on my own.",
+    "parsed_intent": "GENERAL_DISCOVERY",
+    "candidate_universe_count": 259,
+    "post_constraint_candidate_count": 259,
+    "contextual_retrieval_used": true,
+    "runtime_v2_top50_overlap": 24,
+    "newly_admitted_from_outside_b3_top50": 26,
+    "retrieval_mode": "rrf_fusion",
+    "top_10_shortlist": [
+      {
+        "candidate_id": "130824",
+        "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+        "year": 2000,
+        "b3_rank": 19,
+        "context_rank": 1,
+        "rrf_rank": 1,
+        "final_shortlist_rank": 1
+      },
+      {
+        "candidate_id": "1492608",
+        "title": "John Candy: I Like Me",
+        "year": 2025,
+        "b3_rank": 89,
+        "context_rank": 2,
+        "rrf_rank": 2,
+        "final_shortlist_rank": 2
+      },
+      {
+        "candidate_id": "12493",
+        "title": "High and Low",
+        "year": 1963,
+        "b3_rank": 3,
+        "context_rank": 87,
+        "rrf_rank": 3,
+        "final_shortlist_rank": 3
+      },
+      {
+        "candidate_id": "1236419",
+        "title": "Piece by Piece",
+        "year": 2024,
+        "b3_rank": 80,
+        "context_rank": 7,
+        "rrf_rank": 4,
+        "final_shortlist_rank": 4
+      },
+      {
+        "candidate_id": "20561",
+        "title": "28 Up",
+        "year": 1984,
+        "b3_rank": 17,
+        "context_rank": 52,
+        "rrf_rank": 5,
+        "final_shortlist_rank": 5
+      },
+      {
+        "candidate_id": "24128",
+        "title": "Stop Making Sense",
+        "year": 1984,
+        "b3_rank": 8,
+        "context_rank": 95,
+        "rrf_rank": 6,
+        "final_shortlist_rank": 6
+      },
+      {
+        "candidate_id": "94623",
+        "title": "Directed by John Ford",
+        "year": 1971,
+        "b3_rank": 4,
+        "context_rank": 131,
+        "rrf_rank": 7,
+        "final_shortlist_rank": 7
+      },
+      {
+        "candidate_id": "1301421",
+        "title": "The Sheep Detectives",
+        "year": 2026,
+        "b3_rank": 149,
+        "context_rank": 4,
+        "rrf_rank": 8,
+        "final_shortlist_rank": 8
+      },
+      {
+        "candidate_id": "346",
+        "title": "Seven Samurai",
+        "year": 1954,
+        "b3_rank": 1,
+        "context_rank": 195,
+        "rrf_rank": 9,
+        "final_shortlist_rank": 9
+      },
+      {
+        "candidate_id": "508003",
+        "title": "McQueen",
+        "year": 2018,
+        "b3_rank": 101,
+        "context_rank": 11,
+        "rrf_rank": 10,
+        "final_shortlist_rank": 10
+      }
+    ]
+  }
+]

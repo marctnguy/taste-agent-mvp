@@ -1,0 +1,18 @@
+{
+  "runtime_version": "runtime_v4",
+  "intent_prompt_version": "intent_v4",
+  "recommendation_prompt_version": "recommendation_v4",
+  "generation_model": "gpt-4o-mini",
+  "candidate_context_size": 50,
+  "recommendation_count": 5,
+  "ranking_model": "B3",
+  "ranking_model_status": "exploratory_candidate_mvp",
+  "taste_model": "62_dim_interpretable_profile",
+  "goodreads_status": "descriptive_only",
+  "source_recommendation_run": "dynamic_tmdb_runtime_v4",
+  "created_at": "2026-10-04T13:22:47.005595+00:00",
+  "b3_modified": false,
+  "candidate_retrieval_modified": false,
+  "semantic_taxonomy_modified": false,
+  "goodreads_ranking_enabled": false
+}

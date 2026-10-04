@@ -1,0 +1,23 @@
+{
+  "runtime_version": "runtime_v3",
+  "intent_prompt_version": "intent_v2",
+  "recommendation_prompt_version": "recommendation_v1",
+  "project_name": "Taste Agent",
+  "case_count": 12,
+  "source_prompt_set": "evaluation/hitl/hitl_runtime_v2_results.json",
+  "created_at": "2026-10-03T13:40:49.428358+00:00",
+  "execution_mode": "single_pass_runtime_v3_hitl_candidate",
+  "runtime_v3_unchanged": true,
+  "outputs": {
+    "results_json": "evaluation/hitl/runtime_v3/hitl_runtime_v3_results.json",
+    "outputs_md": "evaluation/hitl/runtime_v3/hitl_runtime_v3_outputs.md",
+    "rating_template_csv": "evaluation/hitl/runtime_v3/hitl_runtime_v3_rating_template.csv",
+    "run_manifest_json": "evaluation/hitl/runtime_v3/hitl_run_manifest.json"
+  },
+  "counts": {
+    "generated": 9,
+    "repaired": 4,
+    "fallback": 3
+  },
+  "validation_failures": 3
+}

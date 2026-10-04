@@ -1,0 +1,471 @@
+{
+  "condition_a": {
+    "selected_alpha": 31.622776601683793,
+    "train_n": 393,
+    "test_n": 99,
+    "feature_count": 12,
+    "metrics": {
+      "n": 99.0,
+      "mae": 0.28789899217746723,
+      "rmse": 0.3674526412912024,
+      "pearson": 0.35654142562952534,
+      "spearman": 0.28886727498449105,
+      "ndcg_at_k": 0.8489962106348251
+    },
+    "prediction_stats": {
+      "actual_mean": 0.4328282828282828,
+      "actual_min": -0.8,
+      "actual_max": 1.0,
+      "pred_mean": 0.44038340303864704,
+      "pred_min": 0.2959711569575191,
+      "pred_max": 0.7702695687652418
+    },
+    "top_positive_coefficients": [
+      {
+        "feature": "decade__2000s",
+        "coefficient": 0.05628693319102261,
+        "abs_coefficient": 0.05628693319102261
+      },
+      {
+        "feature": "decade__1980s",
+        "coefficient": 0.03483693399117973,
+        "abs_coefficient": 0.03483693399117973
+      },
+      {
+        "feature": "decade__1990s",
+        "coefficient": 0.03088764903173119,
+        "abs_coefficient": 0.03088764903173119
+      },
+      {
+        "feature": "decade__1970s",
+        "coefficient": 0.017828818982109022,
+        "abs_coefficient": 0.017828818982109022
+      },
+      {
+        "feature": "decade__1930s",
+        "coefficient": 0.003835557223646778,
+        "abs_coefficient": 0.003835557223646778
+      },
+      {
+        "feature": "decade__1950s",
+        "coefficient": -0.001102280181069366,
+        "abs_coefficient": 0.001102280181069366
+      },
+      {
+        "feature": "decade__1940s",
+        "coefficient": -0.005920438297035546,
+        "abs_coefficient": 0.005920438297035546
+      },
+      {
+        "feature": "decade__1900s",
+        "coefficient": -0.013368185117163556,
+        "abs_coefficient": 0.013368185117163556
+      },
+      {
+        "feature": "decade__1960s",
+        "coefficient": -0.017624223796389855,
+        "abs_coefficient": 0.017624223796389855
+      },
+      {
+        "feature": "decade__2020s",
+        "coefficient": -0.0394894990694697,
+        "abs_coefficient": 0.0394894990694697
+      }
+    ],
+    "top_negative_coefficients": [
+      {
+        "feature": "release_year_z",
+        "coefficient": -0.09712564691258367,
+        "abs_coefficient": 0.09712564691258367
+      },
+      {
+        "feature": "decade__2010s",
+        "coefficient": -0.06617126595856136,
+        "abs_coefficient": 0.06617126595856136
+      },
+      {
+        "feature": "decade__2020s",
+        "coefficient": -0.0394894990694697,
+        "abs_coefficient": 0.0394894990694697
+      },
+      {
+        "feature": "decade__1960s",
+        "coefficient": -0.017624223796389855,
+        "abs_coefficient": 0.017624223796389855
+      },
+      {
+        "feature": "decade__1900s",
+        "coefficient": -0.013368185117163556,
+        "abs_coefficient": 0.013368185117163556
+      },
+      {
+        "feature": "decade__1940s",
+        "coefficient": -0.005920438297035546,
+        "abs_coefficient": 0.005920438297035546
+      },
+      {
+        "feature": "decade__1950s",
+        "coefficient": -0.001102280181069366,
+        "abs_coefficient": 0.001102280181069366
+      },
+      {
+        "feature": "decade__1930s",
+        "coefficient": 0.003835557223646778,
+        "abs_coefficient": 0.003835557223646778
+      },
+      {
+        "feature": "decade__1970s",
+        "coefficient": 0.017828818982109022,
+        "abs_coefficient": 0.017828818982109022
+      },
+      {
+        "feature": "decade__1990s",
+        "coefficient": 0.03088764903173119,
+        "abs_coefficient": 0.03088764903173119
+      }
+    ]
+  },
+  "condition_b": {
+    "selected_alpha": 5.623413251903491,
+    "train_n": 393,
+    "test_n": 99,
+    "feature_count": 62,
+    "metrics": {
+      "n": 99.0,
+      "mae": 0.31870240770704,
+      "rmse": 0.3897169816699715,
+      "pearson": 0.13792682508601142,
+      "spearman": 0.12991982880720185,
+      "ndcg_at_k": 0.6650767956314795
+    },
+    "prediction_stats": {
+      "actual_mean": 0.4328282828282828,
+      "actual_min": -0.8,
+      "actual_max": 1.0,
+      "pred_mean": 0.4274851389562896,
+      "pred_min": 0.2500745366835164,
+      "pred_max": 0.6217102148999141
+    },
+    "coefficients_sorted_desc": [
+      {
+        "feature": "naturalistic",
+        "coefficient": 0.23243369228270455,
+        "abs_coefficient": 0.23243369228270455
+      },
+      {
+        "feature": "minimalist",
+        "coefficient": 0.19634828732830442,
+        "abs_coefficient": 0.19634828732830442
+      },
+      {
+        "feature": "episodic",
+        "coefficient": 0.12623759912031804,
+        "abs_coefficient": 0.12623759912031804
+      },
+      {
+        "feature": "darkly_comic",
+        "coefficient": 0.11885486726281655,
+        "abs_coefficient": 0.11885486726281655
+      },
+      {
+        "feature": "sentimental",
+        "coefficient": 0.11715798066524594,
+        "abs_coefficient": 0.11715798066524594
+      },
+      {
+        "feature": "morality",
+        "coefficient": 0.10817260777152819,
+        "abs_coefficient": 0.10817260777152819
+      },
+      {
+        "feature": "abstract",
+        "coefficient": 0.098857104620283,
+        "abs_coefficient": 0.098857104620283
+      },
+      {
+        "feature": "challenging",
+        "coefficient": 0.09772101858107943,
+        "abs_coefficient": 0.09772101858107943
+      },
+      {
+        "feature": "contemplative",
+        "coefficient": 0.08725802711196118,
+        "abs_coefficient": 0.08725802711196118
+      },
+      {
+        "feature": "comforting",
+        "coefficient": 0.08725167395898975,
+        "abs_coefficient": 0.08725167395898975
+      },
+      {
+        "feature": "stylized",
+        "coefficient": 0.08655613521214651,
+        "abs_coefficient": 0.08655613521214651
+      },
+      {
+        "feature": "ethereal",
+        "coefficient": 0.07509437251301025,
+        "abs_coefficient": 0.07509437251301025
+      },
+      {
+        "feature": "niche",
+        "coefficient": 0.07320350389836372,
+        "abs_coefficient": 0.07320350389836372
+      },
+      {
+        "feature": "coming_of_age",
+        "coefficient": 0.07083557720496499,
+        "abs_coefficient": 0.07083557720496499
+      },
+      {
+        "feature": "contained",
+        "coefficient": 0.06429844069901568,
+        "abs_coefficient": 0.06429844069901568
+      },
+      {
+        "feature": "emotional_intensity",
+        "coefficient": 0.06304318908464192,
+        "abs_coefficient": 0.06304318908464192
+      },
+      {
+        "feature": "dialogue_heavy",
+        "coefficient": 0.0621511877007284,
+        "abs_coefficient": 0.0621511877007284
+      },
+      {
+        "feature": "moderate",
+        "coefficient": 0.061758820169793,
+        "abs_coefficient": 0.061758820169793
+      },
+      {
+        "feature": "friendship",
+        "coefficient": 0.059645123760014365,
+        "abs_coefficient": 0.059645123760014365
+      },
+      {
+        "feature": "identity",
+        "coefficient": 0.05921046114558712,
+        "abs_coefficient": 0.05921046114558712
+      },
+      {
+        "feature": "nonlinear",
+        "coefficient": 0.0381771444350495,
+        "abs_coefficient": 0.0381771444350495
+      },
+      {
+        "feature": "visual",
+        "coefficient": 0.03787416453060405,
+        "abs_coefficient": 0.03787416453060405
+      },
+      {
+        "feature": "high_energy",
+        "coefficient": 0.03617403696143713,
+        "abs_coefficient": 0.03617403696143713
+      },
+      {
+        "feature": "surreal",
+        "coefficient": 0.03279569688077766,
+        "abs_coefficient": 0.03279569688077766
+      },
+      {
+        "feature": "character_driven",
+        "coefficient": 0.018627413157270577,
+        "abs_coefficient": 0.018627413157270577
+      },
+      {
+        "feature": "psychological_intensity",
+        "coefficient": 0.01808273684449265,
+        "abs_coefficient": 0.01808273684449265
+      },
+      {
+        "feature": "atmospheric",
+        "coefficient": 0.017132587798446477,
+        "abs_coefficient": 0.017132587798446477
+      },
+      {
+        "feature": "bizarre",
+        "coefficient": 0.016530111050465944,
+        "abs_coefficient": 0.016530111050465944
+      },
+      {
+        "feature": "nostalgic",
+        "coefficient": 0.012375547418824528,
+        "abs_coefficient": 0.012375547418824528
+      },
+      {
+        "feature": "accessible",
+        "coefficient": 0.008403527123700884,
+        "abs_coefficient": 0.008403527123700884
+      },
+      {
+        "feature": "grief",
+        "coefficient": 0.007364569480556287,
+        "abs_coefficient": 0.007364569480556287
+      },
+      {
+        "feature": "suspense",
+        "coefficient": 0.005331107193557672,
+        "abs_coefficient": 0.005331107193557672
+      },
+      {
+        "feature": "tense",
+        "coefficient": 0.002055853588703979,
+        "abs_coefficient": 0.002055853588703979
+      },
+      {
+        "feature": "fast_paced",
+        "coefficient": -0.009406539405179925,
+        "abs_coefficient": 0.009406539405179925
+      },
+      {
+        "feature": "conventional",
+        "coefficient": -0.009607415117016141,
+        "abs_coefficient": 0.009607415117016141
+      },
+      {
+        "feature": "melancholic",
+        "coefficient": -0.015065143865179207,
+        "abs_coefficient": 0.015065143865179207
+      },
+      {
+        "feature": "absurd",
+        "coefficient": -0.015355007740254136,
+        "abs_coefficient": 0.015355007740254136
+      },
+      {
+        "feature": "morally_ambiguous",
+        "coefficient": -0.016068349104705715,
+        "abs_coefficient": 0.016068349104705715
+      },
+      {
+        "feature": "dysfunctional_relationships",
+        "coefficient": -0.01963259899146052,
+        "abs_coefficient": 0.01963259899146052
+      },
+      {
+        "feature": "ambiguous",
+        "coefficient": -0.02211967879278292,
+        "abs_coefficient": 0.02211967879278292
+      },
+      {
+        "feature": "class",
+        "coefficient": -0.02550680540791353,
+        "abs_coefficient": 0.02550680540791353
+      },
+      {
+        "feature": "violence",
+        "coefficient": -0.027095069478462047,
+        "abs_coefficient": 0.027095069478462047
+      },
+      {
+        "feature": "ensemble",
+        "coefficient": -0.02850179291688618,
+        "abs_coefficient": 0.02850179291688618
+      },
+      {
+        "feature": "unsettling",
+        "coefficient": -0.028596508814285736,
+        "abs_coefficient": 0.028596508814285736
+      },
+      {
+        "feature": "intimate_relationships",
+        "coefficient": -0.029061859363214742,
+        "abs_coefficient": 0.029061859363214742
+      },
+      {
+        "feature": "playful",
+        "coefficient": -0.054016398831307745,
+        "abs_coefficient": 0.054016398831307745
+      },
+      {
+        "feature": "maximalist",
+        "coefficient": -0.057490995073719936,
+        "abs_coefficient": 0.057490995073719936
+      },
+      {
+        "feature": "historical",
+        "coefficient": -0.060440338567787494,
+        "abs_coefficient": 0.060440338567787494
+      },
+      {
+        "feature": "alienation",
+        "coefficient": -0.06056474711554506,
+        "abs_coefficient": 0.06056474711554506
+      },
+      {
+        "feature": "power",
+        "coefficient": -0.062170916321503525,
+        "abs_coefficient": 0.062170916321503525
+      },
+      {
+        "feature": "joyful",
+        "coefficient": -0.06412066126578272,
+        "abs_coefficient": 0.06412066126578272
+      },
+      {
+        "feature": "experimental",
+        "coefficient": -0.06625502101988257,
+        "abs_coefficient": 0.06625502101988257
+      },
+      {
+        "feature": "slow_burn",
+        "coefficient": -0.06849563247276874,
+        "abs_coefficient": 0.06849563247276874
+      },
+      {
+        "feature": "anti_hero",
+        "coefficient": -0.07051271690848807,
+        "abs_coefficient": 0.07051271690848807
+      },
+      {
+        "feature": "outsider_protagonist",
+        "coefficient": -0.07931319953794734,
+        "abs_coefficient": 0.07931319953794734
+      },
+      {
+        "feature": "romantic",
+        "coefficient": -0.10626014147559076,
+        "abs_coefficient": 0.10626014147559076
+      },
+      {
+        "feature": "family",
+        "coefficient": -0.10911148894131727,
+        "abs_coefficient": 0.10911148894131727
+      },
+      {
+        "feature": "plot_driven",
+        "coefficient": -0.12191858950245782,
+        "abs_coefficient": 0.12191858950245782
+      },
+      {
+        "feature": "complex",
+        "coefficient": -0.15128611667537847,
+        "abs_coefficient": 0.15128611667537847
+      },
+      {
+        "feature": "sexuality",
+        "coefficient": -0.15312943217754396,
+        "abs_coefficient": 0.15312943217754396
+      },
+      {
+        "feature": "love_desire",
+        "coefficient": -0.16998173303407657,
+        "abs_coefficient": 0.16998173303407657
+      },
+      {
+        "feature": "contemporary",
+        "coefficient": -0.2132184479401469,
+        "abs_coefficient": 0.2132184479401469
+      }
+    ]
+  },
+  "comparison": {
+    "mae_abs_diff": 0.030803415529572775,
+    "mae_pct_diff_vs_a": 10.69938289696578,
+    "rmse_abs_diff": 0.022264340378769065,
+    "rmse_pct_diff_vs_a": 6.059104732662625,
+    "pearson_abs_diff": 0.21861460054351392,
+    "spearman_abs_diff": 0.1589474461772892,
+    "ndcg_abs_diff": 0.18391941500334563
+  }
+}

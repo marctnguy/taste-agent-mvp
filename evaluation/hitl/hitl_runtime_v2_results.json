@@ -1,0 +1,1223 @@
+{
+  "project_name": "Taste Agent",
+  "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+  "runtime_version": "runtime_v2",
+  "intent_prompt_version": "intent_v2",
+  "recommendation_prompt_version": "recommendation_v1",
+  "source": "LangSmith root traces",
+  "case_count": 12,
+  "cases": [
+    {
+      "hitl_id": "H01",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "Recommend me something to watch.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101db-5360-7780-996f-0f99c009cc78",
+      "trace_id": "01a101db-5360-7780-996f-0f99c009cc78",
+      "trace_start_time": "2026-10-03T13:01:53.376481+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "GENERAL_DISCOVERY",
+      "parsed_semantic_dimensions": [],
+      "parsed_free_text_context": "Recommend me something to watch.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [],
+      "eligible_candidate_count": 50,
+      "generation_status": "generated",
+      "validation_passed": true,
+      "repair_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "346",
+          "title": "Seven Samurai",
+          "year": 1954,
+          "why_it_may_fit": "A classic film that combines action and drama, showcasing themes of morality and emotional intensity.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity",
+            "plot_driven"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "14537",
+          "title": "Harakiri",
+          "year": 1962,
+          "why_it_may_fit": "This film offers a gripping narrative with strong historical context and emotional depth, making it a compelling watch.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity",
+            "identity"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "12493",
+          "title": "High and Low",
+          "year": 1963,
+          "why_it_may_fit": "A thrilling drama that explores crime and morality, with a strong atmospheric presence.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "melancholic",
+            "moderate"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "240",
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "why_it_may_fit": "A highly acclaimed film that delves into crime and drama, rich in emotional intensity and historical context.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "emotional_intensity",
+            "melancholic",
+            "visual"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "238",
+          "title": "The Godfather",
+          "year": 1972,
+          "why_it_may_fit": "A landmark film in cinema that combines crime and drama, known for its emotional depth and atmospheric storytelling.",
+          "taste_signals": [
+            "moderate",
+            "atmospheric",
+            "comforting",
+            "emotional_intensity",
+            "visual"
+          ],
+          "request_match": null,
+          "caveat": null
+        }
+      ],
+      "response_summary": "Here are some highly regarded films that offer a mix of action, drama, and strong thematic elements.",
+      "methodology_note": "Recommendations are based on strong relevance to classic cinema and thematic depth."
+    },
+    {
+      "hitl_id": "H02",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "I want something melancholic and intimate.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101db-75ea-76a1-89f1-eb07a077d141",
+      "trace_id": "01a101db-75ea-76a1-89f1-eb07a077d141",
+      "trace_start_time": "2026-10-03T13:02:02.218285+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "MOOD_THEME",
+      "parsed_semantic_dimensions": [
+        "melancholic"
+      ],
+      "parsed_free_text_context": "I want something melancholic and intimate.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [],
+      "eligible_candidate_count": 50,
+      "generation_status": "fallback",
+      "validation_passed": false,
+      "repair_used": true,
+      "fallback_used": true,
+      "llm_call_count": 2,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "346",
+          "title": "Seven Samurai",
+          "year": 1954,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "14537",
+          "title": "Harakiri",
+          "year": 1962,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "12493",
+          "title": "High and Low",
+          "year": 1963,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "94623",
+          "title": "Directed by John Ford",
+          "year": 1971,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "atmospheric",
+            "niche"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "240",
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        }
+      ],
+      "response_summary": "A grounded fallback selection was used because the generative path was unavailable or failed validation.",
+      "methodology_note": "Selections were drawn from the frozen B3 shortlist, filtered deterministically for hard constraints, and explained only with grounded metadata and eligible semantic evidence."
+    },
+    {
+      "hitl_id": "H03",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "I want something comforting but not cheesy.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101db-a509-72a3-b894-68c21f341b44",
+      "trace_id": "01a101db-a509-72a3-b894-68c21f341b44",
+      "trace_start_time": "2026-10-03T13:02:14.281906+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "MOOD_THEME",
+      "parsed_semantic_dimensions": [
+        "comforting"
+      ],
+      "parsed_free_text_context": "I want something comforting but not cheesy.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [
+        "cheesy"
+      ],
+      "eligible_candidate_count": 50,
+      "generation_status": "fallback",
+      "validation_passed": false,
+      "repair_used": true,
+      "fallback_used": true,
+      "llm_call_count": 2,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "346",
+          "title": "Seven Samurai",
+          "year": 1954,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "14537",
+          "title": "Harakiri",
+          "year": 1962,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "12493",
+          "title": "High and Low",
+          "year": 1963,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "94623",
+          "title": "Directed by John Ford",
+          "year": 1971,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "atmospheric",
+            "niche"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "240",
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        }
+      ],
+      "response_summary": "A grounded fallback selection was used because the generative path was unavailable or failed validation.",
+      "methodology_note": "Selections were drawn from the frozen B3 shortlist, filtered deterministically for hard constraints, and explained only with grounded metadata and eligible semantic evidence."
+    },
+    {
+      "hitl_id": "H04",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101db-d100-7fc2-a5cc-5e82426e3533",
+      "trace_id": "01a101db-d100-7fc2-a5cc-5e82426e3533",
+      "trace_start_time": "2026-10-03T13:02:25.536801+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "GENERAL_DISCOVERY",
+      "parsed_semantic_dimensions": [],
+      "parsed_free_text_context": "Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [],
+      "eligible_candidate_count": 50,
+      "generation_status": "generated",
+      "validation_passed": true,
+      "repair_used": true,
+      "fallback_used": false,
+      "llm_call_count": 2,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "539",
+          "title": "Psycho",
+          "year": 1960,
+          "why_it_may_fit": "This film is known for its slow build-up and unsettling atmosphere, creating a sense of anxiety throughout.",
+          "taste_signals": [
+            "atmospheric",
+            "emotional_intensity",
+            "melancholic",
+            "morality"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "14537",
+          "title": "Harakiri",
+          "year": 1962,
+          "why_it_may_fit": "The film's deliberate pacing and intense emotional themes contribute to a deeply unsettling experience.",
+          "taste_signals": [
+            "atmospheric",
+            "emotional_intensity",
+            "morality",
+            "identity"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "12493",
+          "title": "High and Low",
+          "year": 1963,
+          "why_it_may_fit": "This film combines a slow narrative with a tense atmosphere, creating a sense of unease and anxiety.",
+          "taste_signals": [
+            "atmospheric",
+            "morality",
+            "melancholic",
+            "moderate"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "346",
+          "title": "Seven Samurai",
+          "year": 1954,
+          "why_it_may_fit": "While it has action elements, its pacing and character development create a reflective and sometimes unsettling atmosphere.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "240",
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "why_it_may_fit": "The film's slow pacing and intense emotional moments contribute to a deeply unsettling atmosphere.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "emotional_intensity",
+            "melancholic"
+          ],
+          "request_match": null,
+          "caveat": null
+        }
+      ],
+      "response_summary": "These recommendations feature slow pacing and unsettling atmospheres, aligning with your request for films similar to 'Jeanne Dielman'.",
+      "methodology_note": "Recommendations are based on the candidates' atmospheric qualities and emotional intensity, which align with the user's request."
+    },
+    {
+      "hitl_id": "H05",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "I want something quiet, contemplative and character-driven.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101db-fcd4-7e01-b47e-1b5e60b500b8",
+      "trace_id": "01a101db-fcd4-7e01-b47e-1b5e60b500b8",
+      "trace_start_time": "2026-10-03T13:02:36.756986+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "MOOD_THEME",
+      "parsed_semantic_dimensions": [
+        "character_driven"
+      ],
+      "parsed_free_text_context": "I want something quiet, contemplative and character-driven.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [],
+      "eligible_candidate_count": 50,
+      "generation_status": "generated",
+      "validation_passed": true,
+      "repair_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "14537",
+          "title": "Harakiri",
+          "year": 1962,
+          "why_it_may_fit": "This film is character-driven and explores deep themes of honor and sacrifice, making it contemplative and quiet in its storytelling approach.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity",
+            "identity"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "346",
+          "title": "Seven Samurai",
+          "year": 1954,
+          "why_it_may_fit": "A character-driven narrative that delves into the lives and motivations of its characters, offering a contemplative look at honor and duty.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity",
+            "plot_driven"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "12493",
+          "title": "High and Low",
+          "year": 1963,
+          "why_it_may_fit": "This film focuses on character interactions and moral dilemmas, providing a quiet and contemplative atmosphere throughout its narrative.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "melancholic",
+            "moderate"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "389",
+          "title": "12 Angry Men",
+          "year": 1957,
+          "why_it_may_fit": "A deeply character-driven film that explores moral and ethical questions in a confined setting, fostering a contemplative atmosphere.",
+          "taste_signals": [
+            "morality",
+            "moderate",
+            "atmospheric",
+            "emotional_intensity",
+            "melancholic"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "278",
+          "title": "The Shawshank Redemption",
+          "year": 1994,
+          "why_it_may_fit": "This film is character-driven and contemplative, focusing on themes of hope and friendship in a quiet, reflective manner.",
+          "taste_signals": [
+            "moderate",
+            "atmospheric",
+            "comforting",
+            "emotional_intensity",
+            "visual"
+          ],
+          "request_match": null,
+          "caveat": null
+        }
+      ],
+      "response_summary": "These recommendations focus on character-driven narratives that are quiet and contemplative, aligning well with your request.",
+      "methodology_note": "The recommendations were selected based on their strong relevance to character-driven storytelling and contemplative themes, supported by the provided semantic evidence."
+    },
+    {
+      "hitl_id": "H06",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "Show me something different from what I normally watch.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101dc-18ac-7fc1-a1b8-7a441a86fe91",
+      "trace_id": "01a101dc-18ac-7fc1-a1b8-7a441a86fe91",
+      "trace_start_time": "2026-10-03T13:02:43.884950+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "NOVELTY",
+      "parsed_semantic_dimensions": [],
+      "parsed_free_text_context": "Show me something different from what I normally watch.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [],
+      "eligible_candidate_count": 50,
+      "generation_status": "generated",
+      "validation_passed": true,
+      "repair_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "346",
+          "title": "Seven Samurai",
+          "year": 1954,
+          "why_it_may_fit": "This classic film offers a unique blend of action and drama, showcasing a historical narrative that may differ from typical viewing habits.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity",
+            "plot_driven"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "14537",
+          "title": "Harakiri",
+          "year": 1962,
+          "why_it_may_fit": "A powerful story set in feudal Japan, this film combines action and drama with deep moral questions, providing a fresh perspective.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity",
+            "identity"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "12493",
+          "title": "High and Low",
+          "year": 1963,
+          "why_it_may_fit": "This gripping crime thriller offers a different narrative style and emotional depth, making it a compelling choice for something new.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "melancholic",
+            "moderate"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "94623",
+          "title": "Directed by John Ford",
+          "year": 1971,
+          "why_it_may_fit": "As a documentary, this film provides a unique exploration of cinematic history, differing from traditional narrative films.",
+          "taste_signals": [
+            "atmospheric",
+            "niche",
+            "visual",
+            "moderate",
+            "historical"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "240",
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "why_it_may_fit": "This sequel expands on the original's themes with a complex narrative structure, offering a different viewing experience.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "emotional_intensity",
+            "melancholic",
+            "visual"
+          ],
+          "request_match": null,
+          "caveat": null
+        }
+      ],
+      "response_summary": "Here are some films that offer a different viewing experience, ranging from classic action dramas to unique documentaries.",
+      "methodology_note": "Recommendations were selected based on their novelty and potential to differ from typical viewing habits, utilizing strong semantic evidence."
+    },
+    {
+      "hitl_id": "H07",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "I want to be mind-blown, recommend me something totally out there that surprises me.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101dc-4196-7693-b75f-3d1ce1d45b9d",
+      "trace_id": "01a101dc-4196-7693-b75f-3d1ce1d45b9d",
+      "trace_start_time": "2026-10-03T13:02:54.358922+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "GENERAL_DISCOVERY",
+      "parsed_semantic_dimensions": [],
+      "parsed_free_text_context": "I want to be mind-blown, recommend me something totally out there that surprises me.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [],
+      "eligible_candidate_count": 50,
+      "generation_status": "generated",
+      "validation_passed": true,
+      "repair_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "346",
+          "title": "Seven Samurai",
+          "year": 1954,
+          "why_it_may_fit": "This film is a groundbreaking classic that combines action and drama in a way that has influenced countless films. Its epic storytelling and character depth can be mind-blowing for viewers.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity",
+            "plot_driven"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "14537",
+          "title": "Harakiri",
+          "year": 1962,
+          "why_it_may_fit": "This film offers a unique perspective on honor and sacrifice, with a narrative that unfolds in unexpected ways, making it a thought-provoking experience.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity",
+            "identity"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "12493",
+          "title": "High and Low",
+          "year": 1963,
+          "why_it_may_fit": "This film presents a gripping narrative that explores social issues and moral dilemmas, providing a surprising and intense viewing experience.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "melancholic",
+            "moderate"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "94623",
+          "title": "Directed by John Ford",
+          "year": 1971,
+          "why_it_may_fit": "As a documentary, it offers a unique insight into the filmmaking process, which can be quite surprising and enlightening for viewers interested in cinema.",
+          "taste_signals": [
+            "atmospheric",
+            "niche",
+            "visual",
+            "moderate",
+            "historical"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "240",
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "why_it_may_fit": "This sequel expands on the original's themes in unexpected ways, providing a complex narrative that can be both surprising and deeply engaging.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "emotional_intensity",
+            "melancholic",
+            "visual"
+          ],
+          "request_match": null,
+          "caveat": null
+        }
+      ],
+      "response_summary": "These recommendations include classic films known for their innovative storytelling and emotional depth, which can provide a mind-blowing experience.",
+      "methodology_note": "The selections were made based on their strong relevance to the request for surprising and out-there films, utilizing the provided candidate context and taste signals."
+    },
+    {
+      "hitl_id": "H08",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "I want a French film tonight.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101dc-68f3-7ab3-8578-14cbc0d90e62",
+      "trace_id": "01a101dc-68f3-7ab3-8578-14cbc0d90e62",
+      "trace_start_time": "2026-10-03T13:03:04.435551+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "CONSTRAINT",
+      "parsed_semantic_dimensions": [],
+      "parsed_free_text_context": "I want a French film tonight.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [
+          "fr"
+        ],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [],
+      "eligible_candidate_count": 1,
+      "generation_status": "generated",
+      "validation_passed": true,
+      "repair_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "final_recommendation_count": 1,
+      "recommendations": [
+        {
+          "candidate_id": "82976",
+          "title": "The Novices",
+          "year": 1970,
+          "why_it_may_fit": "This film is a French production, aligning perfectly with your request for a French film tonight.",
+          "taste_signals": [
+            "historical",
+            "comforting",
+            "emotional_intensity",
+            "naturalistic",
+            "moderate"
+          ],
+          "request_match": "Requested language is French.",
+          "caveat": null
+        }
+      ],
+      "response_summary": "I found a French film that fits your request.",
+      "methodology_note": "The recommendation is based on the candidate's French language and its alignment with your request."
+    },
+    {
+      "hitl_id": "H09",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "I want a European movie that feels like freedom and youthful.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101dc-735d-7d93-9313-78d15817c86e",
+      "trace_id": "01a101dc-735d-7d93-9313-78d15817c86e",
+      "trace_start_time": "2026-10-03T13:03:07.101502+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "GENERAL_DISCOVERY",
+      "parsed_semantic_dimensions": [],
+      "parsed_free_text_context": "I want a European movie that feels like freedom and youthful.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [],
+      "eligible_candidate_count": 50,
+      "generation_status": "fallback",
+      "validation_passed": false,
+      "repair_used": true,
+      "fallback_used": true,
+      "llm_call_count": 2,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "346",
+          "title": "Seven Samurai",
+          "year": 1954,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "14537",
+          "title": "Harakiri",
+          "year": 1962,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "12493",
+          "title": "High and Low",
+          "year": 1963,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "94623",
+          "title": "Directed by John Ford",
+          "year": 1971,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "atmospheric",
+            "niche"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "240",
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "why_it_may_fit": "B3 places this title near the top of the supplied shortlist and the grounded evidence supports it.",
+          "taste_signals": [
+            "historical",
+            "atmospheric"
+          ],
+          "request_match": "Grounded fallback selection.",
+          "caveat": null
+        }
+      ],
+      "response_summary": "A grounded fallback selection was used because the generative path was unavailable or failed validation.",
+      "methodology_note": "Selections were drawn from the frozen B3 shortlist, filtered deterministically for hard constraints, and explained only with grounded metadata and eligible semantic evidence."
+    },
+    {
+      "hitl_id": "H10",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "I want a good old classic, but no drama.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101dc-c598-78a0-a5c8-f433fba14808",
+      "trace_id": "01a101dc-c598-78a0-a5c8-f433fba14808",
+      "trace_start_time": "2026-10-03T13:03:28.152953+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "CONSTRAINT",
+      "parsed_semantic_dimensions": [],
+      "parsed_free_text_context": "I want a good old classic, but no drama.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [
+        "drama"
+      ],
+      "eligible_candidate_count": 24,
+      "generation_status": "generated",
+      "validation_passed": true,
+      "repair_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "94623",
+          "title": "Directed by John Ford",
+          "year": 1971,
+          "why_it_may_fit": "This documentary offers a classic perspective on the legendary director John Ford, showcasing his impact on cinema without delving into dramatic narratives.",
+          "taste_signals": [
+            "atmospheric",
+            "niche",
+            "visual",
+            "moderate",
+            "historical"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "24128",
+          "title": "Stop Making Sense",
+          "year": 1984,
+          "why_it_may_fit": "This concert film is a classic in the music documentary genre, celebrated for its vibrant visuals and joyful atmosphere, steering clear of drama.",
+          "taste_signals": [
+            "visual",
+            "ensemble",
+            "moderate",
+            "joyful",
+            "maximalist"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "72680",
+          "title": "The Curse of the Dragon",
+          "year": 1993,
+          "why_it_may_fit": "This documentary explores Bruce Lee's legacy, providing a classic cinematic experience without dramatic elements.",
+          "taste_signals": [
+            "moderate",
+            "historical",
+            "identity",
+            "atmospheric",
+            "visual"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "20561",
+          "title": "28 Up",
+          "year": 1984,
+          "why_it_may_fit": "This documentary continues the classic series that follows the lives of individuals over decades, focusing on their experiences rather than drama.",
+          "taste_signals": [
+            "episodic",
+            "atmospheric",
+            "identity",
+            "coming_of_age",
+            "emotional_intensity"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "20562",
+          "title": "35 Up",
+          "year": 1991,
+          "why_it_may_fit": "Another installment in the Up series, this documentary maintains a classic approach to storytelling, focusing on life experiences without dramatic conflict.",
+          "taste_signals": [
+            "moderate",
+            "historical",
+            "atmospheric",
+            "visual",
+            "identity"
+          ],
+          "request_match": null,
+          "caveat": null
+        }
+      ],
+      "response_summary": "Here are some classic films that avoid drama, focusing instead on documentaries and music that celebrate culture and history.",
+      "methodology_note": "Recommendations were selected based on the exclusion of drama and the classic nature of the films, utilizing the provided candidate context and semantic evidence."
+    },
+    {
+      "hitl_id": "H11",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101dc-e997-7660-98b2-de4a658c3083",
+      "trace_id": "01a101dc-e997-7660-98b2-de4a658c3083",
+      "trace_start_time": "2026-10-03T13:03:37.367806+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "GENERAL_DISCOVERY",
+      "parsed_semantic_dimensions": [],
+      "parsed_free_text_context": "I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [],
+      "eligible_candidate_count": 50,
+      "generation_status": "generated",
+      "validation_passed": true,
+      "repair_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "240",
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "why_it_may_fit": "This film explores themes of power, family, and the complexities of fame within the context of organized crime, making it a compelling choice for those interested in show business and its darker sides.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "emotional_intensity",
+            "melancholic",
+            "visual"
+          ],
+          "request_match": "Strong thematic relevance to fame and show business.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "238",
+          "title": "The Godfather",
+          "year": 1972,
+          "why_it_may_fit": "Similar to its sequel, this film delves into the world of organized crime, showcasing the intricacies of power and fame, which aligns with your interest in performers and show business.",
+          "taste_signals": [
+            "moderate",
+            "atmospheric",
+            "comforting",
+            "emotional_intensity",
+            "visual"
+          ],
+          "request_match": "Strong thematic relevance to fame and show business.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "11216",
+          "title": "Cinema Paradiso",
+          "year": 1988,
+          "why_it_may_fit": "This film is a nostalgic look at the world of cinema and the impact of film on personal lives, making it a heartfelt exploration of show business.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "moderate",
+            "emotional_intensity",
+            "morality"
+          ],
+          "request_match": "Strong thematic relevance to show business and nostalgia.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "94623",
+          "title": "Directed by John Ford",
+          "year": 1971,
+          "why_it_may_fit": "This documentary provides insight into the life and work of a legendary filmmaker, exploring the world of cinema and the art of storytelling, which relates to performers and fame.",
+          "taste_signals": [
+            "atmospheric",
+            "niche",
+            "visual",
+            "moderate",
+            "historical"
+          ],
+          "request_match": "Relevant to the theme of show business through the lens of a director's life.",
+          "caveat": null
+        },
+        {
+          "candidate_id": "12493",
+          "title": "High and Low",
+          "year": 1963,
+          "why_it_may_fit": "While primarily a crime thriller, it touches on themes of morality and societal pressures, which can resonate with the world of fame and public scrutiny.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "melancholic",
+            "moderate"
+          ],
+          "request_match": "Relevant to the themes of societal pressures related to fame.",
+          "caveat": null
+        }
+      ],
+      "response_summary": "Here are some films that explore themes of performers, fame, and show business, with strong historical and atmospheric elements.",
+      "methodology_note": "Recommendations were selected based on thematic relevance to the user's interest in performers and show business, with a preference for films that have a period setting."
+    },
+    {
+      "hitl_id": "H12",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "exact_prompt": "Based on what you know about my taste, recommend something I might not discover on my own.",
+      "langsmith_project": "Taste Agent",
+      "langsmith_run_id": "01a101dd-0e80-7043-a1bc-fb155d71f068",
+      "trace_id": "01a101dd-0e80-7043-a1bc-fb155d71f068",
+      "trace_start_time": "2026-10-03T13:03:46.816363+00:00",
+      "runtime_version": "runtime_v2",
+      "intent_prompt_version": "intent_v2",
+      "recommendation_prompt_version": "recommendation_v1",
+      "candidate_context_size": 50,
+      "parsed_intent": "GENERAL_DISCOVERY",
+      "parsed_semantic_dimensions": [],
+      "parsed_free_text_context": "Based on what you know about my taste, recommend something I might not discover on my own.",
+      "parsed_constraints": {
+        "genres": [],
+        "languages": [],
+        "countries": [],
+        "decades": []
+      },
+      "parsed_exclusions": [
+        "discover on my own"
+      ],
+      "eligible_candidate_count": 50,
+      "generation_status": "generated",
+      "validation_passed": true,
+      "repair_used": false,
+      "fallback_used": false,
+      "llm_call_count": 1,
+      "final_recommendation_count": 5,
+      "recommendations": [
+        {
+          "candidate_id": "346",
+          "title": "Seven Samurai",
+          "year": 1954,
+          "why_it_may_fit": "This film is a classic that combines action and drama with strong themes of morality and emotional intensity, which align with your taste profile.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity",
+            "plot_driven"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "14537",
+          "title": "Harakiri",
+          "year": 1962,
+          "why_it_may_fit": "A powerful narrative that explores themes of honor and sacrifice, resonating with your appreciation for historical and emotional storytelling.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "emotional_intensity",
+            "identity"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "12493",
+          "title": "High and Low",
+          "year": 1963,
+          "why_it_may_fit": "This film offers a gripping crime drama with strong moral questions and emotional depth, fitting well with your taste for intense narratives.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "morality",
+            "melancholic",
+            "moderate"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "94623",
+          "title": "Directed by John Ford",
+          "year": 1971,
+          "why_it_may_fit": "A documentary that provides insight into the filmmaking process, appealing to your interest in historical and atmospheric storytelling.",
+          "taste_signals": [
+            "atmospheric",
+            "niche",
+            "visual",
+            "moderate",
+            "historical"
+          ],
+          "request_match": null,
+          "caveat": null
+        },
+        {
+          "candidate_id": "240",
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "why_it_may_fit": "This sequel is renowned for its deep emotional and moral complexity, aligning with your taste for intense and atmospheric narratives.",
+          "taste_signals": [
+            "historical",
+            "atmospheric",
+            "emotional_intensity",
+            "melancholic",
+            "visual"
+          ],
+          "request_match": null,
+          "caveat": null
+        }
+      ],
+      "response_summary": "Here are some films that align with your taste profile and may not be on your radar. Each offers a unique blend of historical context, emotional depth, and strong storytelling.",
+      "methodology_note": "Recommendations are based on strong relevance to your taste profile, focusing on historical and emotional dimensions."
+    }
+  ]
+}

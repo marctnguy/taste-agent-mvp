@@ -1,0 +1,69 @@
+{
+  "experiment_name": "exploratory_latent_crossmedia",
+  "status": "exploratory_training_only",
+  "outer_splits": 5,
+  "inner_splits": 5,
+  "random_state": 42,
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dimensionality": 1536,
+  "book_document_template_version": "book_doc_v1",
+  "crossmedia_features": [
+    "book_alignment_latent_global",
+    "book_similarity_positive",
+    "book_similarity_negative",
+    "book_crossmedia_margin"
+  ],
+  "model_features": {
+    "b3": "frozen baseline from exploratory_latent_semantics",
+    "x1": [
+      "b3",
+      "book_alignment_latent_global"
+    ],
+    "x2": [
+      "b3",
+      "book_similarity_positive",
+      "book_similarity_negative"
+    ]
+  },
+  "pca_candidates": [
+    16,
+    32,
+    64,
+    128
+  ],
+  "ridge_alphas": [
+    0.001,
+    0.0017782794100389228,
+    0.0031622776601683794,
+    0.005623413251903491,
+    0.01,
+    0.01778279410038923,
+    0.03162277660168379,
+    0.05623413251903491,
+    0.1,
+    0.1778279410038923,
+    0.31622776601683794,
+    0.5623413251903491,
+    1.0,
+    1.7782794100389228,
+    3.1622776601683795,
+    5.623413251903491,
+    10.0,
+    17.78279410038923,
+    31.622776601683793,
+    56.23413251903491,
+    100.0,
+    177.82794100389228,
+    316.22776601683796,
+    562.341325190349,
+    1000.0
+  ],
+  "selection_metric": "spearman",
+  "tie_breaker": "ndcg_at_k",
+  "holdout_used": false,
+  "train_population": 393,
+  "book_population": 51,
+  "baseline_b3_path": "mvp/artifacts/experiments/exploratory_latent_semantics/cv_results.json",
+  "film_embedding_path": "mvp/artifacts/experiments/exploratory_latent_semantics/embedding_cache/film_embeddings.csv",
+  "crossmedia_features_path": "mvp/artifacts/experiments/exploratory_latent_crossmedia/crossmedia_features.csv"
+}

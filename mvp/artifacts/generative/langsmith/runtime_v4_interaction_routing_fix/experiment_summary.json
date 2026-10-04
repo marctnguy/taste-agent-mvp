@@ -1,0 +1,117 @@
+{
+  "runtime_version": "runtime_v4",
+  "dataset_name": "taste-agent-runtime-v4-eval",
+  "dataset_status": "langsmith_dataset",
+  "experiment_name": "taste-agent-runtime-v4-interaction-routing-680302c1",
+  "experiment_id": "2df1a35f-ca6e-4f70-b198-8bcfbc731c7e",
+  "experiment_url": "https://smith.langchain.com/o/3f29c78e-95c7-4ff0-864f-65906dfd0c74/datasets/86d55dca-57b7-4069-9df8-9319afb925f4/compare?selectedSessions=2df1a35f-ca6e-4f70-b198-8bcfbc731c7e",
+  "created_at": "2026-10-04T13:22:46.997623+00:00",
+  "row_count": 11,
+  "summary": {
+    "row_count": 11,
+    "outputs.validation_passed": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.candidate_compliance": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.candidate_identity_integrity": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.duplicate_candidates": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.intent_match": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.hard_constraint_satisfaction": {
+      "mean": 0.5,
+      "median": 0.5,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "feedback.exclusion_satisfaction": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.taste_signal_grounding": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.unsupported_taste_dimension": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.goodreads_ranking_guardrail": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.interaction_routing_contract": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.sensitive_inference_guardrail": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "feedback.request_relevance": {
+      "mean": 4.454545454545454,
+      "median": 5.0,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "feedback.explanation_groundedness": {
+      "mean": 5.0,
+      "median": 5.0,
+      "min": 5.0,
+      "max": 5.0
+    },
+    "feedback.explanation_usefulness": {
+      "mean": 3.8181818181818183,
+      "median": 4.0,
+      "min": 2.0,
+      "max": 4.0
+    },
+    "feedback.response_clarity": {
+      "mean": 4.7272727272727275,
+      "median": 5.0,
+      "min": 3.0,
+      "max": 5.0
+    },
+    "execution_time": {
+      "mean": 102.7695759090909,
+      "median": 101.475529,
+      "min": 60.929937,
+      "max": 158.067444
+    }
+  },
+  "results_path": "mvp/artifacts/generative/langsmith/runtime_v4_interaction_routing_fix/experiment_results.csv",
+  "manifest_path": "mvp/artifacts/generative/langsmith/runtime_v4_interaction_routing_fix/runtime_v4_manifest.json"
+}

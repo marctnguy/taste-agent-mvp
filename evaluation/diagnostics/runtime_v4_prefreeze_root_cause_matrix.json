@@ -1,0 +1,143 @@
+{
+  "scope": {
+    "runtime_version": "runtime_v4",
+    "audit_type": "pre-freeze forensic diagnostic",
+    "git_commit_hash": null,
+    "working_tree_status": "unavailable: not a git repository at this path",
+    "notes": [
+      "Diagnostic only.",
+      "No code, prompts, models, or manifests were modified."
+    ]
+  },
+  "protected_successes": {
+    "H04_reference_routing": true,
+    "H06_novelty_routing": true,
+    "H08_structured_constraint_routing": true
+  },
+  "b3_assessment": {
+    "contributes_materially": false,
+    "reason": "The frozen candidate pool lacks B3 columns, and the selector backfills defaults (including predicted_preference = 0.0), so the generic ordering is mostly deterministic tie-breaking rather than a real preference signal.",
+    "candidate_pool_columns_present": [
+      "source_id",
+      "tmdb_id",
+      "title",
+      "year",
+      "release_year",
+      "tmdb_genres",
+      "tmdb_original_language",
+      "tmdb_production_countries",
+      "tmdb_overview",
+      "candidate_sources",
+      "candidate_source_ranks"
+    ],
+    "candidate_pool_columns_missing": [
+      "predicted_preference",
+      "b3_applicability",
+      "b3_applicability_distance",
+      "request_relevance"
+    ],
+    "selection_defaulting": {
+      "predicted_preference": 0.0,
+      "b3_applicability_distance": "NaN",
+      "request_relevance": 0.0
+    }
+  },
+  "root_causes": [
+    {
+      "id": "RC1",
+      "title": "Request parsing and normalization collapse",
+      "mechanism": [
+        "The novelty detector only recognizes a narrow explicit phrase list.",
+        "The request normalizer can collapse intended concepts into weak labels such as tone or numeric ordinals.",
+        "Reference and semantic modes can be inferred inconsistently from the same query."
+      ],
+      "code_paths": [
+        "mvp/src/generative_v4/intent_chain.py:_contains_explicit_novelty_request",
+        "mvp/src/generative_v4/intent_chain.py:_deterministic_request_spec",
+        "mvp/src/generative_v4/intent_chain.py:_normalize_request_spec",
+        "mvp/src/generative_v4/intent_chain.py:_extract_positive_concepts",
+        "mvp/src/generative_v4/intent_chain.py:_extract_negated_concepts"
+      ],
+      "affected_cases": ["H03", "H05", "H07", "H10", "H12"],
+      "confidence": "high"
+    },
+    {
+      "id": "RC2",
+      "title": "Reference extraction is overbroad",
+      "mechanism": [
+        "_extract_reference_title matches common prose patterns like 'like' and 'based on'.",
+        "Mood language can be promoted to a film reference title and then resolved against TMDB."
+      ],
+      "code_paths": [
+        "mvp/src/generative_v4/intent_chain.py:_REFERENCE_PATTERNS",
+        "mvp/src/generative_v4/intent_chain.py:_extract_reference_title",
+        "mvp/src/generative_v4/intent_chain.py:_resolve_reference_title"
+      ],
+      "affected_cases": ["H09", "H12"],
+      "confidence": "high"
+    },
+    {
+      "id": "RC3",
+      "title": "Qualification uses lexical synonym matching as subject evidence",
+      "mechanism": [
+        "_fallback_qualification_output checks overview/candidate text for literal synonym hits.",
+        "That can mark shallow lexical overlap as grounded subject matter.",
+        "The LLM qualification path exists, but the final records still come from the heuristic fallback."
+      ],
+      "code_paths": [
+        "mvp/src/generative_v4/qualification_chain.py:_supported_by_synonym",
+        "mvp/src/generative_v4/qualification_chain.py:_fallback_qualification_output",
+        "mvp/src/generative_v4/qualification_chain.py:qualify_candidates"
+      ],
+      "affected_cases": ["H11"],
+      "confidence": "high"
+    },
+    {
+      "id": "RC4",
+      "title": "B3 feature propagation is incomplete",
+      "mechanism": [
+        "The frozen candidate pool artifact does not carry the B3 prediction columns.",
+        "The selector backfills defaults, so B3 does not meaningfully rank the generic slate.",
+        "The runtime still narrates B3 as a rationale, but the actual signal is weak or absent."
+      ],
+      "code_paths": [
+        "mvp/src/generative_v4/selection_chain.py:select_candidates",
+        "mvp/artifacts/recommendation_runs/20261003T075635Z/candidate_pool.csv"
+      ],
+      "affected_cases": ["H01", "H03", "H05", "H07"],
+      "confidence": "high"
+    },
+    {
+      "id": "RC5",
+      "title": "Exclusion semantics are not enforced end-to-end",
+      "mechanism": [
+        "Negated concepts are not consistently preserved as hard semantic exclusions.",
+        "The qualification/selection chain does not treat them as a single admission barrier across all paths.",
+        "Validation exists, but the upstream semantics are already inconsistent by the time it runs."
+      ],
+      "code_paths": [
+        "mvp/src/generative_v4/intent_chain.py:_extract_negated_concepts",
+        "mvp/src/generative_v4/qualification_chain.py:_fallback_qualification_output",
+        "mvp/src/generative_v4/validators.py:validate_runtime_v4_result"
+      ],
+      "affected_cases": ["H03", "case D"],
+      "confidence": "medium_high"
+    }
+  ],
+  "direct_answers": {
+    "b3_contribution": "nominal_only",
+    "repeated_generic_five_reason": [
+      "generic request mode",
+      "defaulted B3 fields",
+      "stable deterministic tie-breaking"
+    ],
+    "h02_abstention_reason": "no candidate satisfied the combined grounded mood semantics; qualified_candidate_count was 0",
+    "h03_reason": "negation was not turned into a reliable exclusion; the request stayed generic and produced the fallback-failing generic slate",
+    "h05_reason": "semantic concepts collapsed into ordinal placeholders instead of usable concept labels",
+    "h07_reason": "the novelty detector does not recognize the phrasing used in H07",
+    "h09_reason": "the word 'freedom' was extracted as a reference title from ordinary prose",
+    "h10_reason": "old/classic language is soft semantic evidence, not a hard year cutoff",
+    "h11_reason": "literal 'famous' overlap in candidate text satisfied the fame heuristic",
+    "h12_reason": "the phrase 'based on what you know about my taste' was treated as a reference trigger"
+  }
+}

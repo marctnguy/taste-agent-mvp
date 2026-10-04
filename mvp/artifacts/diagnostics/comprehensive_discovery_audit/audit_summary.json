@@ -1,0 +1,1155 @@
+{
+  "run_dir": "mvp/artifacts/recommendation_runs/20261003T075635Z",
+  "output_dir": "mvp/artifacts/diagnostics/comprehensive_discovery_audit",
+  "candidate_pool_rows": 259,
+  "top20_rows": 20,
+  "semantic_candidate_coverage": 1.0,
+  "semantic_candidate_failures": 0,
+  "largest_temporal_shift": [
+    {
+      "dimension_family": "decade",
+      "category": "2020s",
+      "candidate_count": 154,
+      "candidate_share": 0.5945945945945946,
+      "top100_share": 0.22,
+      "top50_share": 0.04,
+      "top20_share": 0.0,
+      "top10_share": 0.0,
+      "top100_amplification_ratio": 0.37,
+      "top50_amplification_ratio": 0.06727272727272728,
+      "top20_amplification_ratio": 0.0,
+      "top10_amplification_ratio": 0.0,
+      "top20_percentage_point_change": -0.5945945945945946,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "decade",
+      "category": "1980s",
+      "candidate_count": 9,
+      "candidate_share": 0.03474903474903475,
+      "top100_share": 0.09,
+      "top50_share": 0.16,
+      "top20_share": 0.3,
+      "top10_share": 0.2,
+      "top100_amplification_ratio": 2.59,
+      "top50_amplification_ratio": 4.604444444444445,
+      "top20_amplification_ratio": 8.633333333333333,
+      "top10_amplification_ratio": 5.7555555555555555,
+      "top20_percentage_point_change": 0.26525096525096525,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "decade",
+      "category": "1970s",
+      "candidate_count": 6,
+      "candidate_share": 0.023166023166023165,
+      "top100_share": 0.06,
+      "top50_share": 0.1,
+      "top20_share": 0.25,
+      "top10_share": 0.4,
+      "top100_amplification_ratio": 2.59,
+      "top50_amplification_ratio": 4.316666666666667,
+      "top20_amplification_ratio": 10.791666666666668,
+      "top10_amplification_ratio": 17.26666666666667,
+      "top20_percentage_point_change": 0.22683397683397682,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "decade",
+      "category": "2010s",
+      "candidate_count": 43,
+      "candidate_share": 0.16602316602316602,
+      "top100_share": 0.18,
+      "top50_share": 0.04,
+      "top20_share": 0.0,
+      "top10_share": 0.0,
+      "top100_amplification_ratio": 1.0841860465116278,
+      "top50_amplification_ratio": 0.24093023255813953,
+      "top20_amplification_ratio": 0.0,
+      "top10_amplification_ratio": 0.0,
+      "top20_percentage_point_change": -0.16602316602316602,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "decade",
+      "category": "1960s",
+      "candidate_count": 5,
+      "candidate_share": 0.019305019305019305,
+      "top100_share": 0.05,
+      "top50_share": 0.1,
+      "top20_share": 0.15,
+      "top10_share": 0.2,
+      "top100_amplification_ratio": 2.5900000000000003,
+      "top50_amplification_ratio": 5.180000000000001,
+      "top20_amplification_ratio": 7.77,
+      "top10_amplification_ratio": 10.360000000000001,
+      "top20_percentage_point_change": 0.1306949806949807,
+      "support_flag": true
+    }
+  ],
+  "largest_genre_shifts": [
+    {
+      "dimension_family": "genre",
+      "category": "Drama",
+      "candidate_count": 94,
+      "candidate_share": 0.36293436293436293,
+      "top100_share": 0.38,
+      "top50_share": 0.5,
+      "top20_share": 0.65,
+      "top10_share": 0.8,
+      "top100_amplification_ratio": 1.0470212765957447,
+      "top50_amplification_ratio": 1.377659574468085,
+      "top20_amplification_ratio": 1.7909574468085108,
+      "top10_amplification_ratio": 2.2042553191489365,
+      "top20_percentage_point_change": 0.2870656370656371,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "primary_genre",
+      "category": "Drama",
+      "candidate_count": 44,
+      "candidate_share": 0.16988416988416988,
+      "top100_share": 0.22,
+      "top50_share": 0.26,
+      "top20_share": 0.45,
+      "top10_share": 0.4,
+      "top100_amplification_ratio": 1.2950000000000002,
+      "top50_amplification_ratio": 1.5304545454545455,
+      "top20_amplification_ratio": 2.6488636363636364,
+      "top10_amplification_ratio": 2.354545454545455,
+      "top20_percentage_point_change": 0.28011583011583013,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "genre_count",
+      "category": "3",
+      "candidate_count": 86,
+      "candidate_share": 0.33204633204633205,
+      "top100_share": 0.29,
+      "top50_share": 0.32,
+      "top20_share": 0.1,
+      "top10_share": 0.1,
+      "top100_amplification_ratio": 0.8733720930232558,
+      "top50_amplification_ratio": 0.9637209302325581,
+      "top20_amplification_ratio": 0.30116279069767443,
+      "top10_amplification_ratio": 0.30116279069767443,
+      "top20_percentage_point_change": -0.23204633204633204,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "genre",
+      "category": "Thriller",
+      "candidate_count": 73,
+      "candidate_share": 0.28185328185328185,
+      "top100_share": 0.12,
+      "top50_share": 0.12,
+      "top20_share": 0.1,
+      "top10_share": 0.1,
+      "top100_amplification_ratio": 0.42575342465753424,
+      "top50_amplification_ratio": 0.42575342465753424,
+      "top20_amplification_ratio": 0.35479452054794525,
+      "top10_amplification_ratio": 0.35479452054794525,
+      "top20_percentage_point_change": -0.18185328185328184,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "genre_count",
+      "category": "1",
+      "candidate_count": 36,
+      "candidate_share": 0.138996138996139,
+      "top100_share": 0.2,
+      "top50_share": 0.18,
+      "top20_share": 0.3,
+      "top10_share": 0.1,
+      "top100_amplification_ratio": 1.4388888888888889,
+      "top50_amplification_ratio": 1.295,
+      "top20_amplification_ratio": 2.158333333333333,
+      "top10_amplification_ratio": 0.7194444444444444,
+      "top20_percentage_point_change": 0.161003861003861,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "genre",
+      "category": "Documentary",
+      "candidate_count": 39,
+      "candidate_share": 0.15057915057915058,
+      "top100_share": 0.21,
+      "top50_share": 0.16,
+      "top20_share": 0.3,
+      "top10_share": 0.2,
+      "top100_amplification_ratio": 1.3946153846153846,
+      "top50_amplification_ratio": 1.0625641025641026,
+      "top20_amplification_ratio": 1.9923076923076921,
+      "top10_amplification_ratio": 1.3282051282051281,
+      "top20_percentage_point_change": 0.1494208494208494,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "genre",
+      "category": "Comedy",
+      "candidate_count": 64,
+      "candidate_share": 0.2471042471042471,
+      "top100_share": 0.31,
+      "top50_share": 0.22,
+      "top20_share": 0.1,
+      "top10_share": 0.2,
+      "top100_amplification_ratio": 1.2545312499999999,
+      "top50_amplification_ratio": 0.8903125,
+      "top20_amplification_ratio": 0.40468750000000003,
+      "top10_amplification_ratio": 0.8093750000000001,
+      "top20_percentage_point_change": -0.1471042471042471,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "genre",
+      "category": "Science Fiction",
+      "candidate_count": 50,
+      "candidate_share": 0.19305019305019305,
+      "top100_share": 0.18,
+      "top50_share": 0.16,
+      "top20_share": 0.05,
+      "top10_share": 0.0,
+      "top100_amplification_ratio": 0.9324,
+      "top50_amplification_ratio": 0.8288,
+      "top20_amplification_ratio": 0.259,
+      "top10_amplification_ratio": 0.0,
+      "top20_percentage_point_change": -0.14305019305019306,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "primary_genre",
+      "category": "Documentary",
+      "candidate_count": 29,
+      "candidate_share": 0.11196911196911197,
+      "top100_share": 0.16,
+      "top50_share": 0.12,
+      "top20_share": 0.25,
+      "top10_share": 0.2,
+      "top100_amplification_ratio": 1.4289655172413793,
+      "top50_amplification_ratio": 1.0717241379310345,
+      "top20_amplification_ratio": 2.2327586206896552,
+      "top10_amplification_ratio": 1.7862068965517242,
+      "top20_percentage_point_change": 0.13803088803088803,
+      "support_flag": true
+    },
+    {
+      "dimension_family": "genre_combo",
+      "category": "Crime|Drama",
+      "candidate_count": 5,
+      "candidate_share": 0.019305019305019305,
+      "top100_share": 0.05,
+      "top50_share": 0.1,
+      "top20_share": 0.15,
+      "top10_share": 0.2,
+      "top100_amplification_ratio": 2.5900000000000003,
+      "top50_amplification_ratio": 5.180000000000001,
+      "top20_amplification_ratio": 7.77,
+      "top10_amplification_ratio": 10.360000000000001,
+      "top20_percentage_point_change": 0.1306949806949807,
+      "support_flag": true
+    }
+  ],
+  "taste_coverage_summary": {
+    "eligible_positive_dimensions": 35,
+    "zero_top20": 1,
+    "low_top20": 4,
+    "substantial_top20": 30,
+    "zero_top20_share": 0.02857142857142857,
+    "low_top20_share": 0.11428571428571428,
+    "substantial_top20_share": 0.8571428571428571
+  },
+  "cluster_audit": {
+    "available": true,
+    "selected_k": 5,
+    "silhouette_scores": [
+      {
+        "k": 4,
+        "silhouette": 0.15498993755502438
+      },
+      {
+        "k": 5,
+        "silhouette": 0.16215915672524314
+      },
+      {
+        "k": 6,
+        "silhouette": 0.13656752598127017
+      },
+      {
+        "k": 7,
+        "silhouette": 0.11667035390727029
+      },
+      {
+        "k": 8,
+        "silhouette": 0.11475801829340056
+      },
+      {
+        "k": 9,
+        "silhouette": 0.11912722409995055
+      },
+      {
+        "k": 10,
+        "silhouette": 0.12983838424817587
+      }
+    ],
+    "cluster_records": [
+      {
+        "cluster_id": 1,
+        "cluster_name": "Taste Cluster 1",
+        "historical_count": 126,
+        "historical_share": 0.4421052631578947,
+        "representative_films": [
+          {
+            "title": "Tie Me Up! Tie Me Down!",
+            "source_id": "https://boxd.it/26FW",
+            "distance_to_centroid": 3.199720589798089
+          },
+          {
+            "title": "The Flower of My Secret",
+            "source_id": "https://boxd.it/24we",
+            "distance_to_centroid": 3.2947641936715732
+          },
+          {
+            "title": "Anatomy of a Fall",
+            "source_id": "https://boxd.it/yuDE",
+            "distance_to_centroid": 3.516279643377877
+          }
+        ],
+        "top_genres": [
+          [
+            "Drama",
+            117
+          ],
+          [
+            "Romance",
+            33
+          ],
+          [
+            "Comedy",
+            20
+          ],
+          [
+            "Thriller",
+            12
+          ],
+          [
+            "Crime",
+            9
+          ]
+        ],
+        "top_languages": [
+          [
+            "en",
+            48
+          ],
+          [
+            "fr",
+            30
+          ],
+          [
+            "es",
+            26
+          ],
+          [
+            "ja",
+            7
+          ],
+          [
+            "sv",
+            3
+          ]
+        ],
+        "top_countries": [
+          [
+            "US",
+            46
+          ],
+          [
+            "FR",
+            45
+          ],
+          [
+            "ES",
+            28
+          ],
+          [
+            "GB",
+            11
+          ],
+          [
+            "JP",
+            11
+          ]
+        ],
+        "top_semantic_dimensions": [
+          {
+            "dimension": "character_driven",
+            "mean_value": 0.7428571428571428
+          },
+          {
+            "dimension": "emotional_intensity",
+            "mean_value": 0.6698412698412696
+          },
+          {
+            "dimension": "naturalistic",
+            "mean_value": 0.6007936507936507
+          },
+          {
+            "dimension": "complex",
+            "mean_value": 0.5960317460317459
+          },
+          {
+            "dimension": "dialogue_heavy",
+            "mean_value": 0.5714285714285714
+          }
+        ]
+      },
+      {
+        "cluster_id": 2,
+        "cluster_name": "Taste Cluster 2",
+        "historical_count": 64,
+        "historical_share": 0.22456140350877193,
+        "representative_films": [
+          {
+            "title": "Mamma Mia!",
+            "source_id": "https://boxd.it/1Tnq",
+            "distance_to_centroid": 3.021615152765325
+          },
+          {
+            "title": "Cars",
+            "source_id": "https://boxd.it/29ho",
+            "distance_to_centroid": 3.11019460130739
+          },
+          {
+            "title": "Happy 140",
+            "source_id": "https://boxd.it/aH1K",
+            "distance_to_centroid": 3.4185188179900843
+          }
+        ],
+        "top_genres": [
+          [
+            "Drama",
+            39
+          ],
+          [
+            "Comedy",
+            33
+          ],
+          [
+            "Romance",
+            18
+          ],
+          [
+            "Family",
+            17
+          ],
+          [
+            "Animation",
+            16
+          ]
+        ],
+        "top_languages": [
+          [
+            "en",
+            40
+          ],
+          [
+            "es",
+            11
+          ],
+          [
+            "fr",
+            6
+          ],
+          [
+            "ja",
+            4
+          ],
+          [
+            "it",
+            1
+          ]
+        ],
+        "top_countries": [
+          [
+            "US",
+            40
+          ],
+          [
+            "ES",
+            12
+          ],
+          [
+            "FR",
+            12
+          ],
+          [
+            "IT",
+            6
+          ],
+          [
+            "GB",
+            6
+          ]
+        ],
+        "top_semantic_dimensions": [
+          {
+            "dimension": "accessible",
+            "mean_value": 0.6203124999999999
+          },
+          {
+            "dimension": "character_driven",
+            "mean_value": 0.5734375
+          },
+          {
+            "dimension": "contemporary",
+            "mean_value": 0.54375
+          },
+          {
+            "dimension": "emotional_intensity",
+            "mean_value": 0.5359375000000001
+          },
+          {
+            "dimension": "conventional",
+            "mean_value": 0.5265624999999999
+          }
+        ]
+      },
+      {
+        "cluster_id": 4,
+        "cluster_name": "Taste Cluster 3",
+        "historical_count": 43,
+        "historical_share": 0.15087719298245614,
+        "representative_films": [
+          {
+            "title": "The Adventures of Priscilla, Queen of the Desert",
+            "source_id": "https://boxd.it/26mg",
+            "distance_to_centroid": 3.6693016880331895
+          },
+          {
+            "title": "The Killing of a Sacred Deer",
+            "source_id": "https://boxd.it/dZ5G",
+            "distance_to_centroid": 3.796323706063493
+          },
+          {
+            "title": "Poor Things",
+            "source_id": "https://boxd.it/tNWU",
+            "distance_to_centroid": 3.894514120786406
+          }
+        ],
+        "top_genres": [
+          [
+            "Drama",
+            27
+          ],
+          [
+            "Thriller",
+            16
+          ],
+          [
+            "Comedy",
+            13
+          ],
+          [
+            "Crime",
+            10
+          ],
+          [
+            "Science Fiction",
+            8
+          ]
+        ],
+        "top_languages": [
+          [
+            "en",
+            31
+          ],
+          [
+            "es",
+            5
+          ],
+          [
+            "fr",
+            3
+          ],
+          [
+            "ko",
+            1
+          ],
+          [
+            "de",
+            1
+          ]
+        ],
+        "top_countries": [
+          [
+            "US",
+            32
+          ],
+          [
+            "GB",
+            9
+          ],
+          [
+            "FR",
+            6
+          ],
+          [
+            "ES",
+            5
+          ],
+          [
+            "IE",
+            4
+          ]
+        ],
+        "top_semantic_dimensions": [
+          {
+            "dimension": "character_driven",
+            "mean_value": 0.7
+          },
+          {
+            "dimension": "emotional_intensity",
+            "mean_value": 0.6883720930232559
+          },
+          {
+            "dimension": "morally_ambiguous",
+            "mean_value": 0.6860465116279071
+          },
+          {
+            "dimension": "contemporary",
+            "mean_value": 0.6581395348837209
+          },
+          {
+            "dimension": "visual",
+            "mean_value": 0.6395348837209303
+          }
+        ]
+      },
+      {
+        "cluster_id": 0,
+        "cluster_name": "Taste Cluster 4",
+        "historical_count": 39,
+        "historical_share": 0.1368421052631579,
+        "representative_films": [
+          {
+            "title": "Shōgun",
+            "source_id": "https://boxd.it/LciY",
+            "distance_to_centroid": 4.28222617573602
+          },
+          {
+            "title": "Incendies",
+            "source_id": "https://boxd.it/Msm",
+            "distance_to_centroid": 4.541975065366506
+          },
+          {
+            "title": "Flamenco Flamenco",
+            "source_id": "https://boxd.it/3dXg",
+            "distance_to_centroid": 4.613362279861288
+          }
+        ],
+        "top_genres": [
+          [
+            "Drama",
+            20
+          ],
+          [
+            "Thriller",
+            11
+          ],
+          [
+            "Crime",
+            8
+          ],
+          [
+            "Horror",
+            8
+          ],
+          [
+            "Mystery",
+            6
+          ]
+        ],
+        "top_languages": [
+          [
+            "en",
+            25
+          ],
+          [
+            "es",
+            5
+          ],
+          [
+            "fr",
+            5
+          ],
+          [
+            "ja",
+            2
+          ],
+          [
+            "sv",
+            1
+          ]
+        ],
+        "top_countries": [
+          [
+            "US",
+            24
+          ],
+          [
+            "FR",
+            7
+          ],
+          [
+            "ES",
+            5
+          ],
+          [
+            "GB",
+            4
+          ],
+          [
+            "JP",
+            2
+          ]
+        ],
+        "top_semantic_dimensions": [
+          {
+            "dimension": "emotional_intensity",
+            "mean_value": 0.5641025641025642
+          },
+          {
+            "dimension": "character_driven",
+            "mean_value": 0.5641025641025641
+          },
+          {
+            "dimension": "morally_ambiguous",
+            "mean_value": 0.5128205128205128
+          },
+          {
+            "dimension": "contemporary",
+            "mean_value": 0.4974358974358975
+          },
+          {
+            "dimension": "tense",
+            "mean_value": 0.4974358974358974
+          }
+        ]
+      },
+      {
+        "cluster_id": 3,
+        "cluster_name": "Taste Cluster 5",
+        "historical_count": 13,
+        "historical_share": 0.0456140350877193,
+        "representative_films": [
+          {
+            "title": "Finding Nemo",
+            "source_id": "https://boxd.it/72i",
+            "distance_to_centroid": 3.071315089511995
+          },
+          {
+            "title": "The Talented Mr. Ripley",
+            "source_id": "https://boxd.it/2924",
+            "distance_to_centroid": 3.071315089511996
+          },
+          {
+            "title": "Pam & Tommy",
+            "source_id": "https://boxd.it/yMAy",
+            "distance_to_centroid": 3.071315089511996
+          }
+        ],
+        "top_genres": [
+          [
+            "Drama",
+            5
+          ],
+          [
+            "Comedy",
+            5
+          ],
+          [
+            "Adventure",
+            2
+          ],
+          [
+            "Romance",
+            2
+          ],
+          [
+            "Documentary",
+            2
+          ]
+        ],
+        "top_languages": [
+          [
+            "en",
+            7
+          ],
+          [
+            "es",
+            5
+          ],
+          [
+            "fr",
+            1
+          ]
+        ],
+        "top_countries": [
+          [
+            "US",
+            6
+          ],
+          [
+            "ES",
+            5
+          ],
+          [
+            "FR",
+            2
+          ],
+          [
+            "GB",
+            2
+          ],
+          [
+            "DE",
+            1
+          ]
+        ],
+        "top_semantic_dimensions": [
+          {
+            "dimension": "moderate",
+            "mean_value": 0.15384615384615385
+          },
+          {
+            "dimension": "accessible",
+            "mean_value": 0.13846153846153847
+          },
+          {
+            "dimension": "emotional_intensity",
+            "mean_value": 0.13076923076923078
+          },
+          {
+            "dimension": "plot_driven",
+            "mean_value": 0.12307692307692308
+          },
+          {
+            "dimension": "love_desire",
+            "mean_value": 0.11538461538461539
+          }
+        ]
+      }
+    ],
+    "cluster_distribution": {
+      "historical_positive": {
+        "distribution": {
+          "Taste Cluster 1": {
+            "count": 126,
+            "share": 0.4421052631578947
+          },
+          "Taste Cluster 2": {
+            "count": 64,
+            "share": 0.22456140350877193
+          },
+          "Taste Cluster 3": {
+            "count": 43,
+            "share": 0.15087719298245614
+          },
+          "Taste Cluster 4": {
+            "count": 39,
+            "share": 0.1368421052631579
+          },
+          "Taste Cluster 5": {
+            "count": 13,
+            "share": 0.0456140350877193
+          }
+        },
+        "represented_clusters": 5,
+        "absent_clusters": [],
+        "entropy": 2.012000362790204,
+        "normalized_entropy": 0.8665213910889032,
+        "hhi": 0.289455216989843
+      },
+      "candidate_pool": {
+        "distribution": {
+          "Taste Cluster 4": {
+            "count": 95,
+            "share": 0.3667953667953668
+          },
+          "Taste Cluster 2": {
+            "count": 81,
+            "share": 0.3127413127413127
+          },
+          "Taste Cluster 1": {
+            "count": 34,
+            "share": 0.13127413127413126
+          },
+          "Taste Cluster 3": {
+            "count": 33,
+            "share": 0.1274131274131274
+          },
+          "Taste Cluster 5": {
+            "count": 16,
+            "share": 0.06177606177606178
+          }
+        },
+        "represented_clusters": 5,
+        "absent_clusters": [],
+        "entropy": 2.066604134920395,
+        "normalized_entropy": 0.8900379557277579,
+        "hhi": 0.2696292541852387
+      },
+      "top100": {
+        "distribution": {
+          "Taste Cluster 2": {
+            "count": 39,
+            "share": 0.39
+          },
+          "Taste Cluster 4": {
+            "count": 19,
+            "share": 0.19
+          },
+          "Taste Cluster 1": {
+            "count": 19,
+            "share": 0.19
+          },
+          "Taste Cluster 3": {
+            "count": 16,
+            "share": 0.16
+          },
+          "Taste Cluster 5": {
+            "count": 7,
+            "share": 0.07
+          }
+        },
+        "represented_clusters": 5,
+        "absent_clusters": [],
+        "entropy": 2.131822024765853,
+        "normalized_entropy": 0.9181257720512094,
+        "hhi": 0.2548
+      },
+      "top50": {
+        "distribution": {
+          "Taste Cluster 2": {
+            "count": 16,
+            "share": 0.32
+          },
+          "Taste Cluster 4": {
+            "count": 13,
+            "share": 0.26
+          },
+          "Taste Cluster 1": {
+            "count": 10,
+            "share": 0.2
+          },
+          "Taste Cluster 3": {
+            "count": 9,
+            "share": 0.18
+          },
+          "Taste Cluster 5": {
+            "count": 2,
+            "share": 0.04
+          }
+        },
+        "represented_clusters": 5,
+        "absent_clusters": [],
+        "entropy": 2.126769743820952,
+        "normalized_entropy": 0.9159498730834394,
+        "hhi": 0.244
+      },
+      "top20": {
+        "distribution": {
+          "Taste Cluster 4": {
+            "count": 5,
+            "share": 0.25
+          },
+          "Taste Cluster 2": {
+            "count": 5,
+            "share": 0.25
+          },
+          "Taste Cluster 3": {
+            "count": 5,
+            "share": 0.25
+          },
+          "Taste Cluster 1": {
+            "count": 4,
+            "share": 0.2
+          },
+          "Taste Cluster 5": {
+            "count": 1,
+            "share": 0.05
+          }
+        },
+        "represented_clusters": 5,
+        "absent_clusters": [],
+        "entropy": 2.1804820237218405,
+        "normalized_entropy": 0.939082492917429,
+        "hhi": 0.23
+      },
+      "top10": {
+        "distribution": {
+          "Taste Cluster 2": {
+            "count": 3,
+            "share": 0.3
+          },
+          "Taste Cluster 3": {
+            "count": 3,
+            "share": 0.3
+          },
+          "Taste Cluster 4": {
+            "count": 2,
+            "share": 0.2
+          },
+          "Taste Cluster 1": {
+            "count": 2,
+            "share": 0.2
+          }
+        },
+        "represented_clusters": 4,
+        "absent_clusters": [
+          "Taste Cluster 5"
+        ],
+        "entropy": 1.9709505944546688,
+        "normalized_entropy": 0.9854752972273344,
+        "hhi": 0.26
+      }
+    }
+  },
+  "score_concentration": {
+    "candidate_pool": {
+      "mean": 0.3701342691510263,
+      "median": 0.3568460179923613,
+      "std": 0.11639726435025825,
+      "min": 0.1269381981492972,
+      "max": 0.808861177978014,
+      "adjacent_rank_gaps": {
+        "mean_gap": 0.0026431123249175074,
+        "median_gap": 0.001062552979250786,
+        "min_gap": 6.049073637104385e-06,
+        "max_gap": 0.08340104969460416
+      }
+    },
+    "top100": {
+      "mean": 0.48763172948112,
+      "median": 0.46583663207905895,
+      "std": 0.08354571903562474,
+      "min": 0.3879154672730375,
+      "max": 0.808861177978014,
+      "adjacent_rank_gaps": {
+        "mean_gap": 0.004251976875807844,
+        "median_gap": 0.0015888289195118976,
+        "min_gap": 2.329337839701573e-05,
+        "max_gap": 0.08340104969460416
+      }
+    },
+    "top50": {
+      "mean": 0.5523743748406199,
+      "median": 0.5328090536365145,
+      "std": 0.07086195906248444,
+      "min": 0.4662246359552759,
+      "max": 0.808861177978014,
+      "adjacent_rank_gaps": {
+        "mean_gap": 0.006992582490259962,
+        "median_gap": 0.0030818160016804486,
+        "min_gap": 2.329337839701573e-05,
+        "max_gap": 0.08340104969460416
+      }
+    },
+    "top20": {
+      "mean": 0.618280025947749,
+      "median": 0.6039170718371438,
+      "std": 0.06573548300982007,
+      "min": 0.562762856154503,
+      "max": 0.808861177978014,
+      "adjacent_rank_gaps": {
+        "mean_gap": 0.012952543253868999,
+        "median_gap": 0.003979137447206682,
+        "min_gap": 2.329337839701573e-05,
+        "max_gap": 0.08340104969460416
+      }
+    },
+    "top10": {
+      "mean": 0.660562184033522,
+      "median": 0.6273417200797405,
+      "std": 0.06986054530000113,
+      "min": 0.6049943356617846,
+      "max": 0.808861177978014,
+      "adjacent_rank_gaps": {
+        "mean_gap": 0.022651871368469936,
+        "median_gap": 0.00587714630039915,
+        "min_gap": 0.001210416650437196,
+        "max_gap": 0.08340104969460416
+      }
+    },
+    "top20_score_range": {
+      "min": 0.562762856154503,
+      "max": 0.808861177978014,
+      "range": 0.246098321823511
+    }
+  },
+  "embedding_redundancy": {
+    "candidate_pool": {
+      "mean_pairwise_cosine_similarity": 0.35524864127809985,
+      "median_pairwise_cosine_similarity": 0.350294548620753,
+      "max_pairwise_cosine_similarity": 0.8556957828839695,
+      "mean_nearest_neighbor_cosine_similarity": 0.5924175995951582,
+      "median_nearest_neighbor_cosine_similarity": 0.5737416427824729,
+      "embedding_diversity": 0.6447513587219001,
+      "count": 259
+    },
+    "top100": {
+      "mean_pairwise_cosine_similarity": 0.31917742863011506,
+      "median_pairwise_cosine_similarity": 0.3114110335447719,
+      "max_pairwise_cosine_similarity": 0.8556957828839695,
+      "mean_nearest_neighbor_cosine_similarity": 0.552085199131466,
+      "median_nearest_neighbor_cosine_similarity": 0.530389730049434,
+      "embedding_diversity": 0.680822571369885,
+      "count": 100
+    },
+    "top50": {
+      "mean_pairwise_cosine_similarity": 0.3300908544190462,
+      "median_pairwise_cosine_similarity": 0.3176335769487898,
+      "max_pairwise_cosine_similarity": 0.8556957828839695,
+      "mean_nearest_neighbor_cosine_similarity": 0.5649777261731436,
+      "median_nearest_neighbor_cosine_similarity": 0.53741313750869,
+      "embedding_diversity": 0.6699091455809538,
+      "count": 50
+    },
+    "top20": {
+      "mean_pairwise_cosine_similarity": 0.3550250320155106,
+      "median_pairwise_cosine_similarity": 0.3476265652231967,
+      "max_pairwise_cosine_similarity": 0.7950954045767789,
+      "mean_nearest_neighbor_cosine_similarity": 0.5134450809309901,
+      "median_nearest_neighbor_cosine_similarity": 0.4598794092014268,
+      "embedding_diversity": 0.6449749679844894,
+      "count": 20
+    },
+    "top10": {
+      "mean_pairwise_cosine_similarity": 0.36103591248580247,
+      "median_pairwise_cosine_similarity": 0.35444153871873424,
+      "max_pairwise_cosine_similarity": 0.7950954045767789,
+      "mean_nearest_neighbor_cosine_similarity": 0.5439965257191843,
+      "median_nearest_neighbor_cosine_similarity": 0.5069148105165693,
+      "embedding_diversity": 0.6389640875141975,
+      "count": 10
+    },
+    "historical_positive": {
+      "mean_pairwise_cosine_similarity": 0.36548364371800396,
+      "median_pairwise_cosine_similarity": 0.36184923613635694,
+      "max_pairwise_cosine_similarity": 0.8398378429821745,
+      "mean_nearest_neighbor_cosine_similarity": 0.5700594319470809,
+      "median_nearest_neighbor_cosine_similarity": 0.562768757111255,
+      "embedding_diversity": 0.634516356281996,
+      "count": 311
+    },
+    "historical_strong_positive": {
+      "mean_pairwise_cosine_similarity": 0.36369930605070105,
+      "median_pairwise_cosine_similarity": 0.3602826205607152,
+      "max_pairwise_cosine_similarity": 0.8398378429821745,
+      "mean_nearest_neighbor_cosine_similarity": 0.5641478454564959,
+      "median_nearest_neighbor_cosine_similarity": 0.5539010369074852,
+      "embedding_diversity": 0.636300693949299,
+      "count": 230
+    }
+  }
+}

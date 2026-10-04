@@ -1,0 +1,115 @@
+{
+  "run_dir": "mvp/artifacts/recommendation_runs/20261003T075635Z",
+  "model_dir": "mvp/artifacts/models/b3_mvp",
+  "output_dir": "mvp/artifacts/diagnostics/b3_live_behavior",
+  "evaluation_path": "evaluation/qualitative_recommendation_feedback.md",
+  "reconstruction": {
+    "max_abs_error": 0.0,
+    "mean_abs_error": 0.0,
+    "passed": true
+  },
+  "candidate_population": {
+    "rows": 259,
+    "years_2010s": 43,
+    "years_2020s": 154,
+    "pre_2000": 41
+  },
+  "top20": {
+    "source_mix": {
+      "top_rated": 9,
+      "seeded_recommendations": 7,
+      "genre_diverse": 3,
+      "popular": 2
+    },
+    "decade_mix": {
+      "1980s": 6,
+      "1970s": 5,
+      "1960s": 3,
+      "1950s": 2,
+      "2000s": 2,
+      "1990s": 2
+    }
+  },
+  "attribution_split": {
+    "metadata_mean": -0.050660564304875304,
+    "latent_mean": -0.021571272598991994,
+    "metadata_vs_latent_correlation": 0.6272146042285085
+  },
+  "association_audit": {
+    "abs_association_min": 0.001111385630112412,
+    "abs_association_q25": 0.02831914846542164,
+    "abs_association_median": 0.05395344988769446,
+    "abs_association_q75": 0.0762939541848601,
+    "abs_association_max": 0.1421630797621839,
+    "eligible_positive_dimensions": 56,
+    "eligible_negative_dimensions": 6
+  },
+  "evidence_audit": {
+    "all_dimensions_same_saved_count": true,
+    "saved_count": 444
+  },
+  "files": {
+    "prediction_contributions": "mvp/artifacts/diagnostics/b3_live_behavior/prediction_contributions.csv",
+    "top20_prediction_attributions": "mvp/artifacts/diagnostics/b3_live_behavior/top20_prediction_attributions.json",
+    "decade_attribution_summary": "mvp/artifacts/diagnostics/b3_live_behavior/decade_attribution_summary.csv",
+    "training_decade_preference_summary": "mvp/artifacts/diagnostics/b3_live_behavior/training_decade_preference_summary.csv",
+    "latent_component_summary": "mvp/artifacts/diagnostics/b3_live_behavior/latent_component_summary.csv",
+    "taste_profile": "mvp/artifacts/diagnostics/b3_live_behavior/taste_profile.csv",
+    "taste_profile_evidence_audit": "mvp/artifacts/diagnostics/b3_live_behavior/taste_profile_evidence_audit.csv",
+    "taste_profile_association_audit": "mvp/artifacts/diagnostics/b3_live_behavior/taste_profile_association_audit.csv"
+  },
+  "modern_slices": {
+    "top_2010s_count": 10,
+    "top_2020s_count": 10,
+    "comparison_summary": {
+      "top20": {
+        "count": 20,
+        "mean_grouped_contributions": {
+          "release_year": 0.08647819260987868,
+          "decade": 0.004412879640113202,
+          "genre": 0.006261997714691459,
+          "language": -0.010004038769999427,
+          "country": -0.008333307782042299,
+          "latent": 0.09709819660002483,
+          "metadata_total": 0.07881572341264162
+        }
+      },
+      "pre_2000": {
+        "count": 41,
+        "mean_grouped_contributions": {
+          "release_year": 0.07090987513020128,
+          "decade": 0.004335566957733222,
+          "genre": 0.003637421185835948,
+          "language": -0.012285009414417326,
+          "country": -0.009991724766930003,
+          "latent": 0.052011219915131184,
+          "metadata_total": 0.0566061290924231
+        }
+      },
+      "2010s": {
+        "count": 43,
+        "mean_grouped_contributions": {
+          "release_year": -0.02585787545710991,
+          "decade": -0.022198695869612275,
+          "genre": 0.004988147448096325,
+          "language": -0.014067591423549552,
+          "country": -0.010799680345632091,
+          "latent": -0.011135969646029122,
+          "metadata_total": -0.06793569564780752
+        }
+      },
+      "2020s": {
+        "count": 154,
+        "mean_grouped_contributions": {
+          "release_year": -0.05378317350490414,
+          "decade": -0.006437475284774335,
+          "genre": 0.0023622715211639163,
+          "language": -0.012311629826787308,
+          "country": -0.010718019675362263,
+          "latent": -0.05142562714465655,
+          "metadata_total": -0.08088802677066415
+        }
+      }
+    }
+  }
+}

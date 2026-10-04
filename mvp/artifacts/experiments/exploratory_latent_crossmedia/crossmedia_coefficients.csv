@@ -1,0 +1,16 @@
+fold,architecture,feature,coefficient,sign,alpha,selected_pca_dim,feature_count
+1,x1,book_alignment_latent_global,-0.0015334528904937031,negative,100.0,16,109
+1,x2,book_similarity_positive,-0.0017198654316668096,negative,100.0,16,110
+1,x2,book_similarity_negative,-0.002205375581810499,negative,100.0,16,110
+2,x1,book_alignment_latent_global,-0.001177715020533142,negative,100.0,16,113
+2,x2,book_similarity_positive,-0.0013309741531393506,negative,100.0,16,114
+2,x2,book_similarity_negative,-0.001750833291683791,negative,100.0,16,114
+3,x1,book_alignment_latent_global,-0.0007150973937959722,negative,177.82794100389228,32,126
+3,x2,book_similarity_positive,-0.0008374280412071816,negative,177.82794100389228,32,127
+3,x2,book_similarity_negative,-0.001222662111838305,negative,177.82794100389228,32,127
+4,x1,book_alignment_latent_global,-0.0008376355477565119,negative,177.82794100389228,16,104
+4,x2,book_similarity_positive,-0.0009299780778629762,negative,177.82794100389228,16,105
+4,x2,book_similarity_negative,-0.001146048716042957,negative,177.82794100389228,16,105
+5,x1,book_alignment_latent_global,-0.0014482861707549154,negative,100.0,16,109
+5,x2,book_similarity_positive,-0.0013388694588489746,negative,100.0,16,110
+5,x2,book_similarity_negative,-0.0004619604199986509,negative,100.0,16,110

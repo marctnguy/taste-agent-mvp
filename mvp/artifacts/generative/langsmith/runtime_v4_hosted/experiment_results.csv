@@ -1,0 +1,309 @@
+inputs.query,inputs.case_id,inputs.candidate_id,outputs.output,error,reference.expected_intent,reference.evaluation_notes,reference.expected_behavior,reference.expected_hard_constraints,reference.expected_retrieval_behavior,reference.expected_selection_behavior,reference.expected_explanation_behavior,reference.expected_qualification_status,feedback.candidate_compliance,feedback.candidate_identity_integrity,feedback.duplicate_candidates,feedback.intent_match,feedback.hard_constraint_satisfaction,feedback.exclusion_satisfaction,feedback.taste_signal_grounding,feedback.unsupported_taste_dimension,feedback.goodreads_ranking_guardrail,feedback.sensitive_inference_guardrail,feedback.request_relevance,feedback.explanation_groundedness,feedback.explanation_usefulness,feedback.response_clarity,execution_time,example_id,id
+"I want a French film tonight, but absolutely no drama.",V05,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    result = run_runtime_v4(
+        query=str(inputs[""query""]),
+    ...<4 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 131, in run_runtime_v4
+    retrieval = discover_catalog_for_request(
+        request,
+    ...<3 lines>...
+        watched_ids=watched_ids,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 701, in discover_catalog_for_request
+    query_embedding, candidate_pool, request_relevance_method = _request_embedding_and_scores(candidate_pool, request)
+                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 611, in _request_embedding_and_scores
+    frame = frame.sort_values([""request_relevance"", ""predicted_preference"", ""source_id""], ascending=[False, False, True]).reset_index(drop=True)
+            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",CONSTRAINT,A high-B3 candidate that violates a hard constraint must never be selectable.,hard_constraint_first,"{'genres': [], 'decades': [], 'countries': [], 'languages': ['fr'], 'exclusions': ['Drama']}",hard_constraint_violating_high_b3_candidate_unavailable,hard_constraint_first,no_constraint_violation,unsupported,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,80.077751,0a2a4607-338b-5955-bcbf-fdb36324337c,01a10229-d3ba-7cc3-a3a6-370772ea9ac4
+"I want a film about performers, fame, and show business, preferably with a period setting.",V06,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    result = run_runtime_v4(
+        query=str(inputs[""query""]),
+    ...<4 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 131, in run_runtime_v4
+    retrieval = discover_catalog_for_request(
+        request,
+    ...<3 lines>...
+        watched_ids=watched_ids,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 701, in discover_catalog_for_request
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 611, in _request_embedding_and_scores
+    frame[""request_relevance_score""] = relevance
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",GENERAL_DISCOVERY,"Show-business claims must be grounded in film text, not associative chains.",no_associative_rationalization,"{'genres': [], 'decades': [], 'countries': [], 'languages': [], 'exclusions': []}",request_concept_outside_taxonomy_must_still_ground_in_film_text,no_associative_rationalization,request_claims_grounded_in_film_text_only,strong_or_partial_only_if_grounded,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,45.322453,1f06002e-c3fe-5981-9727-3af6ee4ea3ad,01a1022b-1402-7cf3-88bc-4e1605c63676
+I want something so specific that the catalog probably has no grounded match.,V03,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    
+    
+    ...<6 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+        ^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 131, in run_runtime_v4
+    retrieval = discover_catalog_for_request(
+        request,
+    ...<3 lines>...
+        watched_ids=watched_ids,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 701, in discover_catalog_for_request
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 611, in _request_embedding_and_scores
+    frame[""request_relevance_score""] = relevance
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",GENERAL_DISCOVERY,No-match must remain a valid output.,abstain,"{'genres': ['Animation'], 'decades': ['1940s'], 'countries': ['IS'], 'languages': ['is'], 'exclusions': []}",no_strong_catalog_match,abstain,explicit_no_match_or_abstention,unsupported,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,36.830312,35c54cdb-4479-55b1-a2a9-cd54636bc82b,01a1022b-cc0d-7e62-9f39-f90dfc1c039b
+"I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",V11,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    
+    
+    ...<6 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+        ^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 131, in run_runtime_v4
+    retrieval = discover_catalog_for_request(
+        request,
+    ...<3 lines>...
+        watched_ids=watched_ids,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 701, in discover_catalog_for_request
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 611, in _request_embedding_and_scores
+    frame[""request_relevance_score""] = relevance
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",GENERAL_DISCOVERY,This is the canonical anti-rationalization check.,no_post_hoc_rationalization,"{'genres': [], 'decades': [], 'countries': [], 'languages': [], 'exclusions': []}",conceptual_h11_failure_must_not_recur,no_post_hoc_rationalization,show_business_claims_must_be_grounded,unsupported_if_only_associative,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,36.756552,36949944-0d50-5905-9621-7f9b88bc5351,01a1022c-6212-7e71-b46e-1cf25e5d91e2
+Show me something different from what I normally watch.,V09,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    
+    
+    ...<6 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+        ^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 131, in run_runtime_v4
+    retrieval = discover_catalog_for_request(
+        request,
+    ...<3 lines>...
+        watched_ids=watched_ids,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 701, in discover_catalog_for_request
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 611, in _request_embedding_and_scores
+    frame[""request_relevance_score""] = relevance
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",NOVELTY,"Novelty should use user-history distance, not B3 inversion.",novelty_ranked,"{'genres': [], 'decades': [], 'countries': [], 'languages': [], 'exclusions': []}",novelty_diagnostic_independent_of_b3,novelty_ranked,novelty_must_not_be_equated_with_low_b3,strong_or_partial,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,34.632605,476d7a7e-12b6-5705-a18d-f06baaafe195,01a1022c-f792-7572-a03e-bd659bf279c0
+Recommend me something to watch.,V10,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    
+    
+    ...<6 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+        ^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 171, in run_runtime_v4
+    qualified_frame, qualification_records = qualify_candidates(
+                                             ~~~~~~~~~~~~~~~~~~^
+        request,
+        ^^^^^^^^
+        retrieval.catalog_frame,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+        max_candidates=max(candidate_context_size * 2, 20),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/qualification_chain.py"", line 336, in qualify_candidates
+    frame = frame.sort_values(
+            ~~~~~~~~~~~~~~~~~^
+        [""request_relevance"", ""predicted_preference"", ""source_id""],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ascending=[False, False, True],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).reset_index(drop=True)
+    ^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",GENERAL_DISCOVERY,Generic discovery should use broad retrieval and B3 personalization after qualification.,generic_discovery_personalized,"{'genres': [], 'decades': [], 'countries': [], 'languages': [], 'exclusions': []}",broad_catalog_sample,generic_discovery_personalized,generic_discovery_grounded,strong,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,33.862763,64cc338a-c2e2-52e4-8663-59ceeb365efe,01a1022d-83a8-75e3-9daf-16b49592c0ab
+I want something melancholic but still a little intimate.,V04,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    
+    
+    ...<6 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+        ^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 131, in run_runtime_v4
+    retrieval = discover_catalog_for_request(
+        request,
+    ...<3 lines>...
+        watched_ids=watched_ids,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 701, in discover_catalog_for_request
+    candidate_pool[""raw_rank""] = candidate_pool[""rank""]
+    
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 611, in _request_embedding_and_scores
+    frame[""request_relevance_score""] = relevance
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",MOOD_THEME,Partial matches must keep explicit caveats.,partial_match_caveat_preserved,"{'genres': [], 'decades': [], 'countries': [], 'languages': [], 'exclusions': []}",partial_match_with_caveat,partial_match_caveat_preserved,caveat_preserved,partial,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,48.303373,8b79b14a-6dd3-5b84-be9c-ae8e8585794a,01a1022e-0f59-7432-9cc5-2ab02cac7c56
+Recommend something like an imaginary film title that TMDB cannot resolve.,V08,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    
+    
+    ...<6 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+        ^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 131, in run_runtime_v4
+    retrieval = discover_catalog_for_request(
+        request,
+    ...<3 lines>...
+        watched_ids=watched_ids,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 701, in discover_catalog_for_request
+    candidate_pool[""raw_rank""] = candidate_pool[""rank""]
+    
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 611, in _request_embedding_and_scores
+    frame[""request_relevance_score""] = relevance
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",GENERAL_DISCOVERY,Unresolved references must not produce fabricated metadata.,no_invented_knowledge,"{'genres': [], 'decades': [], 'countries': [], 'languages': [], 'exclusions': []}",reference_film_unresolved,no_invented_knowledge,unresolved_reference_does_not_invent_facts,unsupported_or_contextual_without_invented_facts,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,67.925198,c6a8e9c3-3298-58ee-bc94-c61514429e2f,01a1022e-d239-7ed2-9894-d9e42f596d96
+"Recommend something that is very high-B3 compatible, but it must not actually be about performers, fame, or show business.",V01,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    
+    
+    ...<6 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+        ^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 131, in run_runtime_v4
+    retrieval = discover_catalog_for_request(
+        request,
+    ...<3 lines>...
+        watched_ids=watched_ids,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 701, in discover_catalog_for_request
+    candidate_pool[""raw_rank""] = candidate_pool[""rank""]
+    
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 611, in _request_embedding_and_scores
+    frame[""request_relevance_score""] = relevance
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",GENERAL_DISCOVERY,High historical compatibility must not compensate for request irrelevance.,abstain_or_fewer_recommendations,"{'genres': [], 'decades': [], 'countries': [], 'languages': [], 'exclusions': ['performers', 'fame', 'show business']}",high_b3_irrelevant_candidate_rejected,abstain_or_fewer_recommendations,no_unsupported_request_match,unsupported,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,33.784725,d705cf7f-266c-5c79-844d-2a774b372e06,01a1022f-e051-7c30-9d44-154e5da7f637
+I want a strong request match even if it is only modestly compatible with my historical taste.,V02,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    
+    
+    ...<6 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+        ^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 131, in run_runtime_v4
+    retrieval = discover_catalog_for_request(
+        request,
+    ...<3 lines>...
+        watched_ids=watched_ids,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 701, in discover_catalog_for_request
+    candidate_pool[""raw_rank""] = candidate_pool[""rank""]
+    
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 611, in _request_embedding_and_scores
+    frame[""request_relevance_score""] = relevance
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",MOOD_THEME,Request fit should outrank B3 veto power.,request_fit_before_b3,"{'genres': [], 'decades': [], 'countries': [], 'languages': [], 'exclusions': []}",strong_request_match_lower_b3_remains_eligible,request_fit_before_b3,grounded_request_match,strong,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,44.345768,f3265bf8-bece-520f-b5b1-7da8930a736c,01a10230-69fd-7231-bef2-21f844f8ae59
+Recommend something like Jeanne Dielman.,V07,,,"KeyError('predicted_preference')
+
+Traceback (most recent call last):
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative/langsmith_evaluation.py"", line 414, in _runtime_v4_target
+    
+    
+    ...<6 lines>...
+        recommendation_prompt_version=DEFAULT_V4_RECOMMENDATION_PROMPT_VERSION,
+        ^
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/generative_v4/runtime.py"", line 131, in run_runtime_v4
+    retrieval = discover_catalog_for_request(
+        request,
+    ...<3 lines>...
+        watched_ids=watched_ids,
+    )
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 701, in discover_catalog_for_request
+    candidate_pool[""raw_rank""] = candidate_pool[""rank""]
+    
+  File ""/Users/marc.tanguy/Desktop/IRONHACK/Capstone/taste-agent/mvp/src/retrieval/catalog_retrieval.py"", line 611, in _request_embedding_and_scores
+    frame[""request_relevance_score""] = relevance
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/frame.py"", line 7194, in sort_values
+    keys = [self._get_label_or_level_values(x, axis=axis) for x in by]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.13/site-packages/pandas/core/generic.py"", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'predicted_preference'
+",GENERAL_DISCOVERY,"If the reference resolves, it must be used as grounded context.",reference_context_used,"{'genres': [], 'decades': [], 'countries': [], 'languages': [], 'exclusions': []}",reference_film_resolved_through_tmdb,reference_context_used,reference_not_invented,reference_grounded,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,42.837449,f891d739-7b6b-5253-ab43-00f33b731c4e,01a10231-1d6b-7c72-b8d2-18ee09f2f213

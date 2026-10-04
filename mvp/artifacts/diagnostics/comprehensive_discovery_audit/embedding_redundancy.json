@@ -1,0 +1,65 @@
+{
+  "candidate_pool": {
+    "mean_pairwise_cosine_similarity": 0.35524864127809985,
+    "median_pairwise_cosine_similarity": 0.350294548620753,
+    "max_pairwise_cosine_similarity": 0.8556957828839695,
+    "mean_nearest_neighbor_cosine_similarity": 0.5924175995951582,
+    "median_nearest_neighbor_cosine_similarity": 0.5737416427824729,
+    "embedding_diversity": 0.6447513587219001,
+    "count": 259
+  },
+  "top100": {
+    "mean_pairwise_cosine_similarity": 0.31917742863011506,
+    "median_pairwise_cosine_similarity": 0.3114110335447719,
+    "max_pairwise_cosine_similarity": 0.8556957828839695,
+    "mean_nearest_neighbor_cosine_similarity": 0.552085199131466,
+    "median_nearest_neighbor_cosine_similarity": 0.530389730049434,
+    "embedding_diversity": 0.680822571369885,
+    "count": 100
+  },
+  "top50": {
+    "mean_pairwise_cosine_similarity": 0.3300908544190462,
+    "median_pairwise_cosine_similarity": 0.3176335769487898,
+    "max_pairwise_cosine_similarity": 0.8556957828839695,
+    "mean_nearest_neighbor_cosine_similarity": 0.5649777261731436,
+    "median_nearest_neighbor_cosine_similarity": 0.53741313750869,
+    "embedding_diversity": 0.6699091455809538,
+    "count": 50
+  },
+  "top20": {
+    "mean_pairwise_cosine_similarity": 0.3550250320155106,
+    "median_pairwise_cosine_similarity": 0.3476265652231967,
+    "max_pairwise_cosine_similarity": 0.7950954045767789,
+    "mean_nearest_neighbor_cosine_similarity": 0.5134450809309901,
+    "median_nearest_neighbor_cosine_similarity": 0.4598794092014268,
+    "embedding_diversity": 0.6449749679844894,
+    "count": 20
+  },
+  "top10": {
+    "mean_pairwise_cosine_similarity": 0.36103591248580247,
+    "median_pairwise_cosine_similarity": 0.35444153871873424,
+    "max_pairwise_cosine_similarity": 0.7950954045767789,
+    "mean_nearest_neighbor_cosine_similarity": 0.5439965257191843,
+    "median_nearest_neighbor_cosine_similarity": 0.5069148105165693,
+    "embedding_diversity": 0.6389640875141975,
+    "count": 10
+  },
+  "historical_positive": {
+    "mean_pairwise_cosine_similarity": 0.36548364371800396,
+    "median_pairwise_cosine_similarity": 0.36184923613635694,
+    "max_pairwise_cosine_similarity": 0.8398378429821745,
+    "mean_nearest_neighbor_cosine_similarity": 0.5700594319470809,
+    "median_nearest_neighbor_cosine_similarity": 0.562768757111255,
+    "embedding_diversity": 0.634516356281996,
+    "count": 311
+  },
+  "historical_strong_positive": {
+    "mean_pairwise_cosine_similarity": 0.36369930605070105,
+    "median_pairwise_cosine_similarity": 0.3602826205607152,
+    "max_pairwise_cosine_similarity": 0.8398378429821745,
+    "mean_nearest_neighbor_cosine_similarity": 0.5641478454564959,
+    "median_nearest_neighbor_cosine_similarity": 0.5539010369074852,
+    "embedding_diversity": 0.636300693949299,
+    "count": 230
+  }
+}

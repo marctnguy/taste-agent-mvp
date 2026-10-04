@@ -1,0 +1,201 @@
+[
+  {
+    "case_id": "V01",
+    "query": "Recommend something that is very high-B3 compatible, but it must not actually be about performers, fame, or show business.",
+    "candidate_id": null,
+    "expected_request_mode": "contextual",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": ["performers", "fame", "show business"]
+    },
+    "expected_retrieval_behavior": "high_b3_irrelevant_candidate_rejected",
+    "expected_qualification_status": "unsupported",
+    "expected_selection_behavior": "abstain_or_fewer_recommendations",
+    "expected_explanation_behavior": "no_unsupported_request_match",
+    "evaluation_notes": "High historical compatibility must not compensate for request irrelevance."
+  },
+  {
+    "case_id": "V02",
+    "query": "I want a strong request match even if it is only modestly compatible with my historical taste.",
+    "candidate_id": null,
+    "expected_request_mode": "contextual",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_retrieval_behavior": "strong_request_match_lower_b3_remains_eligible",
+    "expected_qualification_status": "strong",
+    "expected_selection_behavior": "request_fit_before_b3",
+    "expected_explanation_behavior": "grounded_request_match",
+    "evaluation_notes": "Request fit should outrank B3 veto power."
+  },
+  {
+    "case_id": "V03",
+    "query": "I want something so specific that the catalog probably has no grounded match.",
+    "candidate_id": null,
+    "expected_request_mode": "contextual",
+    "expected_hard_constraints": {
+      "genres": ["Animation"],
+      "languages": ["is"],
+      "countries": ["IS"],
+      "decades": ["1940s"],
+      "exclusions": []
+    },
+    "expected_retrieval_behavior": "no_strong_catalog_match",
+    "expected_qualification_status": "unsupported",
+    "expected_selection_behavior": "abstain",
+    "expected_explanation_behavior": "explicit_no_match_or_abstention",
+    "evaluation_notes": "No-match must remain a valid output."
+  },
+  {
+    "case_id": "V04",
+    "query": "I want something melancholic but still a little intimate.",
+    "candidate_id": null,
+    "expected_request_mode": "contextual",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_retrieval_behavior": "partial_match_with_caveat",
+    "expected_qualification_status": "partial",
+    "expected_selection_behavior": "partial_match_caveat_preserved",
+    "expected_explanation_behavior": "caveat_preserved",
+    "evaluation_notes": "Partial matches must keep explicit caveats."
+  },
+  {
+    "case_id": "V05",
+    "query": "I want a French film tonight, but absolutely no drama.",
+    "candidate_id": null,
+    "expected_request_mode": "contextual",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": ["fr"],
+      "countries": [],
+      "decades": [],
+      "exclusions": ["Drama"]
+    },
+    "expected_retrieval_behavior": "hard_constraint_violating_high_b3_candidate_unavailable",
+    "expected_qualification_status": "unsupported",
+    "expected_selection_behavior": "hard_constraint_first",
+    "expected_explanation_behavior": "no_constraint_violation",
+    "evaluation_notes": "A high-B3 candidate that violates a hard constraint must never be selectable."
+  },
+  {
+    "case_id": "V06",
+    "query": "I want a film about performers, fame, and show business, preferably with a period setting.",
+    "candidate_id": null,
+    "expected_request_mode": "contextual",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_retrieval_behavior": "request_concept_outside_taxonomy_must_still_ground_in_film_text",
+    "expected_qualification_status": "strong_or_partial_only_if_grounded",
+    "expected_selection_behavior": "no_associative_rationalization",
+    "expected_explanation_behavior": "request_claims_grounded_in_film_text_only",
+    "evaluation_notes": "Show-business claims must be grounded in film text, not associative chains."
+  },
+  {
+    "case_id": "V07",
+    "query": "Recommend something like Jeanne Dielman.",
+    "candidate_id": null,
+    "expected_request_mode": "reference",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_retrieval_behavior": "reference_film_resolved_through_tmdb",
+    "expected_qualification_status": "reference_grounded",
+    "expected_selection_behavior": "reference_context_used",
+    "expected_explanation_behavior": "reference_not_invented",
+    "evaluation_notes": "If the reference resolves, it must be used as grounded context."
+  },
+  {
+    "case_id": "V08",
+    "query": "Recommend something like an imaginary film title that TMDB cannot resolve.",
+    "candidate_id": null,
+    "expected_request_mode": "reference",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_retrieval_behavior": "reference_film_unresolved",
+    "expected_qualification_status": "unsupported_or_contextual_without_invented_facts",
+    "expected_selection_behavior": "no_invented_knowledge",
+    "expected_explanation_behavior": "unresolved_reference_does_not_invent_facts",
+    "evaluation_notes": "Unresolved references must not produce fabricated metadata."
+  },
+  {
+    "case_id": "V09",
+    "query": "Show me something different from what I normally watch.",
+    "candidate_id": null,
+    "expected_request_mode": "novelty",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_retrieval_behavior": "novelty_diagnostic_independent_of_b3",
+    "expected_qualification_status": "strong_or_partial",
+    "expected_selection_behavior": "novelty_ranked",
+    "expected_explanation_behavior": "novelty_must_not_be_equated_with_low_b3",
+    "evaluation_notes": "Novelty should use user-history distance, not B3 inversion."
+  },
+  {
+    "case_id": "V10",
+    "query": "Recommend me something to watch.",
+    "candidate_id": null,
+    "expected_request_mode": "generic",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_retrieval_behavior": "broad_catalog_sample",
+    "expected_qualification_status": "strong",
+    "expected_selection_behavior": "generic_discovery_personalized",
+    "expected_explanation_behavior": "generic_discovery_grounded",
+    "evaluation_notes": "Generic discovery should use broad retrieval and B3 personalization after qualification."
+  },
+  {
+    "case_id": "V11",
+    "query": "I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",
+    "candidate_id": null,
+    "expected_request_mode": "reference",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_retrieval_behavior": "conceptual_h11_failure_must_not_recur",
+    "expected_qualification_status": "unsupported_if_only_associative",
+    "expected_selection_behavior": "no_post_hoc_rationalization",
+    "expected_explanation_behavior": "show_business_claims_must_be_grounded",
+    "evaluation_notes": "This is the canonical anti-rationalization check."
+  }
+]
+

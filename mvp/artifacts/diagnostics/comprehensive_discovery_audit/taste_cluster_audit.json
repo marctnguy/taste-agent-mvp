@@ -1,0 +1,757 @@
+{
+  "available": true,
+  "selected_k": 5,
+  "silhouette_scores": [
+    {
+      "k": 4,
+      "silhouette": 0.15498993755502438
+    },
+    {
+      "k": 5,
+      "silhouette": 0.16215915672524314
+    },
+    {
+      "k": 6,
+      "silhouette": 0.13656752598127017
+    },
+    {
+      "k": 7,
+      "silhouette": 0.11667035390727029
+    },
+    {
+      "k": 8,
+      "silhouette": 0.11475801829340056
+    },
+    {
+      "k": 9,
+      "silhouette": 0.11912722409995055
+    },
+    {
+      "k": 10,
+      "silhouette": 0.12983838424817587
+    }
+  ],
+  "cluster_records": [
+    {
+      "cluster_id": 1,
+      "cluster_name": "Taste Cluster 1",
+      "historical_count": 126,
+      "historical_share": 0.4421052631578947,
+      "representative_films": [
+        {
+          "title": "Tie Me Up! Tie Me Down!",
+          "source_id": "https://boxd.it/26FW",
+          "distance_to_centroid": 3.199720589798089
+        },
+        {
+          "title": "The Flower of My Secret",
+          "source_id": "https://boxd.it/24we",
+          "distance_to_centroid": 3.2947641936715732
+        },
+        {
+          "title": "Anatomy of a Fall",
+          "source_id": "https://boxd.it/yuDE",
+          "distance_to_centroid": 3.516279643377877
+        }
+      ],
+      "top_genres": [
+        [
+          "Drama",
+          117
+        ],
+        [
+          "Romance",
+          33
+        ],
+        [
+          "Comedy",
+          20
+        ],
+        [
+          "Thriller",
+          12
+        ],
+        [
+          "Crime",
+          9
+        ]
+      ],
+      "top_languages": [
+        [
+          "en",
+          48
+        ],
+        [
+          "fr",
+          30
+        ],
+        [
+          "es",
+          26
+        ],
+        [
+          "ja",
+          7
+        ],
+        [
+          "sv",
+          3
+        ]
+      ],
+      "top_countries": [
+        [
+          "US",
+          46
+        ],
+        [
+          "FR",
+          45
+        ],
+        [
+          "ES",
+          28
+        ],
+        [
+          "GB",
+          11
+        ],
+        [
+          "JP",
+          11
+        ]
+      ],
+      "top_semantic_dimensions": [
+        {
+          "dimension": "character_driven",
+          "mean_value": 0.7428571428571428
+        },
+        {
+          "dimension": "emotional_intensity",
+          "mean_value": 0.6698412698412696
+        },
+        {
+          "dimension": "naturalistic",
+          "mean_value": 0.6007936507936507
+        },
+        {
+          "dimension": "complex",
+          "mean_value": 0.5960317460317459
+        },
+        {
+          "dimension": "dialogue_heavy",
+          "mean_value": 0.5714285714285714
+        }
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "cluster_name": "Taste Cluster 2",
+      "historical_count": 64,
+      "historical_share": 0.22456140350877193,
+      "representative_films": [
+        {
+          "title": "Mamma Mia!",
+          "source_id": "https://boxd.it/1Tnq",
+          "distance_to_centroid": 3.021615152765325
+        },
+        {
+          "title": "Cars",
+          "source_id": "https://boxd.it/29ho",
+          "distance_to_centroid": 3.11019460130739
+        },
+        {
+          "title": "Happy 140",
+          "source_id": "https://boxd.it/aH1K",
+          "distance_to_centroid": 3.4185188179900843
+        }
+      ],
+      "top_genres": [
+        [
+          "Drama",
+          39
+        ],
+        [
+          "Comedy",
+          33
+        ],
+        [
+          "Romance",
+          18
+        ],
+        [
+          "Family",
+          17
+        ],
+        [
+          "Animation",
+          16
+        ]
+      ],
+      "top_languages": [
+        [
+          "en",
+          40
+        ],
+        [
+          "es",
+          11
+        ],
+        [
+          "fr",
+          6
+        ],
+        [
+          "ja",
+          4
+        ],
+        [
+          "it",
+          1
+        ]
+      ],
+      "top_countries": [
+        [
+          "US",
+          40
+        ],
+        [
+          "ES",
+          12
+        ],
+        [
+          "FR",
+          12
+        ],
+        [
+          "IT",
+          6
+        ],
+        [
+          "GB",
+          6
+        ]
+      ],
+      "top_semantic_dimensions": [
+        {
+          "dimension": "accessible",
+          "mean_value": 0.6203124999999999
+        },
+        {
+          "dimension": "character_driven",
+          "mean_value": 0.5734375
+        },
+        {
+          "dimension": "contemporary",
+          "mean_value": 0.54375
+        },
+        {
+          "dimension": "emotional_intensity",
+          "mean_value": 0.5359375000000001
+        },
+        {
+          "dimension": "conventional",
+          "mean_value": 0.5265624999999999
+        }
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "cluster_name": "Taste Cluster 3",
+      "historical_count": 43,
+      "historical_share": 0.15087719298245614,
+      "representative_films": [
+        {
+          "title": "The Adventures of Priscilla, Queen of the Desert",
+          "source_id": "https://boxd.it/26mg",
+          "distance_to_centroid": 3.6693016880331895
+        },
+        {
+          "title": "The Killing of a Sacred Deer",
+          "source_id": "https://boxd.it/dZ5G",
+          "distance_to_centroid": 3.796323706063493
+        },
+        {
+          "title": "Poor Things",
+          "source_id": "https://boxd.it/tNWU",
+          "distance_to_centroid": 3.894514120786406
+        }
+      ],
+      "top_genres": [
+        [
+          "Drama",
+          27
+        ],
+        [
+          "Thriller",
+          16
+        ],
+        [
+          "Comedy",
+          13
+        ],
+        [
+          "Crime",
+          10
+        ],
+        [
+          "Science Fiction",
+          8
+        ]
+      ],
+      "top_languages": [
+        [
+          "en",
+          31
+        ],
+        [
+          "es",
+          5
+        ],
+        [
+          "fr",
+          3
+        ],
+        [
+          "ko",
+          1
+        ],
+        [
+          "de",
+          1
+        ]
+      ],
+      "top_countries": [
+        [
+          "US",
+          32
+        ],
+        [
+          "GB",
+          9
+        ],
+        [
+          "FR",
+          6
+        ],
+        [
+          "ES",
+          5
+        ],
+        [
+          "IE",
+          4
+        ]
+      ],
+      "top_semantic_dimensions": [
+        {
+          "dimension": "character_driven",
+          "mean_value": 0.7
+        },
+        {
+          "dimension": "emotional_intensity",
+          "mean_value": 0.6883720930232559
+        },
+        {
+          "dimension": "morally_ambiguous",
+          "mean_value": 0.6860465116279071
+        },
+        {
+          "dimension": "contemporary",
+          "mean_value": 0.6581395348837209
+        },
+        {
+          "dimension": "visual",
+          "mean_value": 0.6395348837209303
+        }
+      ]
+    },
+    {
+      "cluster_id": 0,
+      "cluster_name": "Taste Cluster 4",
+      "historical_count": 39,
+      "historical_share": 0.1368421052631579,
+      "representative_films": [
+        {
+          "title": "Shōgun",
+          "source_id": "https://boxd.it/LciY",
+          "distance_to_centroid": 4.28222617573602
+        },
+        {
+          "title": "Incendies",
+          "source_id": "https://boxd.it/Msm",
+          "distance_to_centroid": 4.541975065366506
+        },
+        {
+          "title": "Flamenco Flamenco",
+          "source_id": "https://boxd.it/3dXg",
+          "distance_to_centroid": 4.613362279861288
+        }
+      ],
+      "top_genres": [
+        [
+          "Drama",
+          20
+        ],
+        [
+          "Thriller",
+          11
+        ],
+        [
+          "Crime",
+          8
+        ],
+        [
+          "Horror",
+          8
+        ],
+        [
+          "Mystery",
+          6
+        ]
+      ],
+      "top_languages": [
+        [
+          "en",
+          25
+        ],
+        [
+          "es",
+          5
+        ],
+        [
+          "fr",
+          5
+        ],
+        [
+          "ja",
+          2
+        ],
+        [
+          "sv",
+          1
+        ]
+      ],
+      "top_countries": [
+        [
+          "US",
+          24
+        ],
+        [
+          "FR",
+          7
+        ],
+        [
+          "ES",
+          5
+        ],
+        [
+          "GB",
+          4
+        ],
+        [
+          "JP",
+          2
+        ]
+      ],
+      "top_semantic_dimensions": [
+        {
+          "dimension": "emotional_intensity",
+          "mean_value": 0.5641025641025642
+        },
+        {
+          "dimension": "character_driven",
+          "mean_value": 0.5641025641025641
+        },
+        {
+          "dimension": "morally_ambiguous",
+          "mean_value": 0.5128205128205128
+        },
+        {
+          "dimension": "contemporary",
+          "mean_value": 0.4974358974358975
+        },
+        {
+          "dimension": "tense",
+          "mean_value": 0.4974358974358974
+        }
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "cluster_name": "Taste Cluster 5",
+      "historical_count": 13,
+      "historical_share": 0.0456140350877193,
+      "representative_films": [
+        {
+          "title": "Finding Nemo",
+          "source_id": "https://boxd.it/72i",
+          "distance_to_centroid": 3.071315089511995
+        },
+        {
+          "title": "The Talented Mr. Ripley",
+          "source_id": "https://boxd.it/2924",
+          "distance_to_centroid": 3.071315089511996
+        },
+        {
+          "title": "Pam & Tommy",
+          "source_id": "https://boxd.it/yMAy",
+          "distance_to_centroid": 3.071315089511996
+        }
+      ],
+      "top_genres": [
+        [
+          "Drama",
+          5
+        ],
+        [
+          "Comedy",
+          5
+        ],
+        [
+          "Adventure",
+          2
+        ],
+        [
+          "Romance",
+          2
+        ],
+        [
+          "Documentary",
+          2
+        ]
+      ],
+      "top_languages": [
+        [
+          "en",
+          7
+        ],
+        [
+          "es",
+          5
+        ],
+        [
+          "fr",
+          1
+        ]
+      ],
+      "top_countries": [
+        [
+          "US",
+          6
+        ],
+        [
+          "ES",
+          5
+        ],
+        [
+          "FR",
+          2
+        ],
+        [
+          "GB",
+          2
+        ],
+        [
+          "DE",
+          1
+        ]
+      ],
+      "top_semantic_dimensions": [
+        {
+          "dimension": "moderate",
+          "mean_value": 0.15384615384615385
+        },
+        {
+          "dimension": "accessible",
+          "mean_value": 0.13846153846153847
+        },
+        {
+          "dimension": "emotional_intensity",
+          "mean_value": 0.13076923076923078
+        },
+        {
+          "dimension": "plot_driven",
+          "mean_value": 0.12307692307692308
+        },
+        {
+          "dimension": "love_desire",
+          "mean_value": 0.11538461538461539
+        }
+      ]
+    }
+  ],
+  "cluster_distribution": {
+    "historical_positive": {
+      "distribution": {
+        "Taste Cluster 1": {
+          "count": 126,
+          "share": 0.4421052631578947
+        },
+        "Taste Cluster 2": {
+          "count": 64,
+          "share": 0.22456140350877193
+        },
+        "Taste Cluster 3": {
+          "count": 43,
+          "share": 0.15087719298245614
+        },
+        "Taste Cluster 4": {
+          "count": 39,
+          "share": 0.1368421052631579
+        },
+        "Taste Cluster 5": {
+          "count": 13,
+          "share": 0.0456140350877193
+        }
+      },
+      "represented_clusters": 5,
+      "absent_clusters": [],
+      "entropy": 2.012000362790204,
+      "normalized_entropy": 0.8665213910889032,
+      "hhi": 0.289455216989843
+    },
+    "candidate_pool": {
+      "distribution": {
+        "Taste Cluster 4": {
+          "count": 95,
+          "share": 0.3667953667953668
+        },
+        "Taste Cluster 2": {
+          "count": 81,
+          "share": 0.3127413127413127
+        },
+        "Taste Cluster 1": {
+          "count": 34,
+          "share": 0.13127413127413126
+        },
+        "Taste Cluster 3": {
+          "count": 33,
+          "share": 0.1274131274131274
+        },
+        "Taste Cluster 5": {
+          "count": 16,
+          "share": 0.06177606177606178
+        }
+      },
+      "represented_clusters": 5,
+      "absent_clusters": [],
+      "entropy": 2.066604134920395,
+      "normalized_entropy": 0.8900379557277579,
+      "hhi": 0.2696292541852387
+    },
+    "top100": {
+      "distribution": {
+        "Taste Cluster 2": {
+          "count": 39,
+          "share": 0.39
+        },
+        "Taste Cluster 4": {
+          "count": 19,
+          "share": 0.19
+        },
+        "Taste Cluster 1": {
+          "count": 19,
+          "share": 0.19
+        },
+        "Taste Cluster 3": {
+          "count": 16,
+          "share": 0.16
+        },
+        "Taste Cluster 5": {
+          "count": 7,
+          "share": 0.07
+        }
+      },
+      "represented_clusters": 5,
+      "absent_clusters": [],
+      "entropy": 2.131822024765853,
+      "normalized_entropy": 0.9181257720512094,
+      "hhi": 0.2548
+    },
+    "top50": {
+      "distribution": {
+        "Taste Cluster 2": {
+          "count": 16,
+          "share": 0.32
+        },
+        "Taste Cluster 4": {
+          "count": 13,
+          "share": 0.26
+        },
+        "Taste Cluster 1": {
+          "count": 10,
+          "share": 0.2
+        },
+        "Taste Cluster 3": {
+          "count": 9,
+          "share": 0.18
+        },
+        "Taste Cluster 5": {
+          "count": 2,
+          "share": 0.04
+        }
+      },
+      "represented_clusters": 5,
+      "absent_clusters": [],
+      "entropy": 2.126769743820952,
+      "normalized_entropy": 0.9159498730834394,
+      "hhi": 0.244
+    },
+    "top20": {
+      "distribution": {
+        "Taste Cluster 4": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 2": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 3": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 1": {
+          "count": 4,
+          "share": 0.2
+        },
+        "Taste Cluster 5": {
+          "count": 1,
+          "share": 0.05
+        }
+      },
+      "represented_clusters": 5,
+      "absent_clusters": [],
+      "entropy": 2.1804820237218405,
+      "normalized_entropy": 0.939082492917429,
+      "hhi": 0.23
+    },
+    "top10": {
+      "distribution": {
+        "Taste Cluster 2": {
+          "count": 3,
+          "share": 0.3
+        },
+        "Taste Cluster 3": {
+          "count": 3,
+          "share": 0.3
+        },
+        "Taste Cluster 4": {
+          "count": 2,
+          "share": 0.2
+        },
+        "Taste Cluster 1": {
+          "count": 2,
+          "share": 0.2
+        }
+      },
+      "represented_clusters": 4,
+      "absent_clusters": [
+        "Taste Cluster 5"
+      ],
+      "entropy": 1.9709505944546688,
+      "normalized_entropy": 0.9854752972273344,
+      "hhi": 0.26
+    }
+  }
+}

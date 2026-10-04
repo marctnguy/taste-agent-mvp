@@ -1,0 +1,99 @@
+{
+  "candidate_pool": {
+    "candidate_limit": 300,
+    "before_deduplication": 500,
+    "after_deduplication": 319,
+    "before_exclusion": 300,
+    "removed_watched": 41,
+    "after_exclusion": 259,
+    "strategy_counts": {
+      "popular": 60,
+      "top_rated": 60,
+      "recent": 40,
+      "genre_diverse": 240,
+      "seeded_recommendations": 100
+    },
+    "exclusion_report": {
+      "consumed_film_rows": 663,
+      "tmdb_exclusions": 647,
+      "fallback_exclusions": 16,
+      "unique_exclusion_keys": 662
+    },
+    "watched_tmdb_ids": 646,
+    "watched_title_year_keys": 662,
+    "enrichment_failures": 0
+  },
+  "embedding": {
+    "provider": "openai",
+    "model": "text-embedding-3-small",
+    "embedding_dim": 1536,
+    "coverage": 1.0,
+    "successful": 259,
+    "failed": 0,
+    "cache_status": "miss",
+    "cache_hits": 0,
+    "cache_misses": 259
+  },
+  "semantic_classification": {
+    "semantic_classified": 20,
+    "semantic_total": 20,
+    "coverage": 1.0,
+    "newly_classified": 20,
+    "failures": []
+  },
+  "top_k_diagnostics": {
+    "genre_distribution": {
+      "Drama": 13,
+      "Documentary": 6,
+      "Crime": 4,
+      "Action": 3,
+      "Comedy": 2,
+      "History": 2,
+      "Romance": 2,
+      "Thriller": 2,
+      "War": 2,
+      "Adventure": 1,
+      "Animation": 1,
+      "Family": 1,
+      "Fantasy": 1,
+      "Music": 1,
+      "Mystery": 1,
+      "Science Fiction": 1
+    },
+    "decade_distribution": {
+      "1950s": 2,
+      "1960s": 3,
+      "1970s": 5,
+      "1980s": 6,
+      "1990s": 2,
+      "2000s": 2
+    },
+    "language_distribution": {
+      "en": 13,
+      "ja": 4,
+      "it": 1,
+      "pt": 1,
+      "fr": 1
+    },
+    "country_distribution": {
+      "US": 12,
+      "IT": 4,
+      "JP": 4,
+      "FR": 3,
+      "GB": 2,
+      "BR": 1,
+      "CA": 1
+    },
+    "predicted_preference": {
+      "mean": 0.618280025947749,
+      "min": 0.562762856154503,
+      "max": 0.808861177978014
+    }
+  },
+  "selected_model": {
+    "architecture": "B3",
+    "status": "exploratory_candidate_mvp",
+    "selected_pca_dim": 16,
+    "selected_alpha": 316.22776601683796
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "selected_architecture": "c1",
+  "reason": "Selected by training-only 5-fold stratified CV on the 393 frozen training films, using mean Spearman as the primary criterion and mean NDCG@10 as the tie-breaker.",
+  "cv_result_path": "mvp/artifacts/experiments/condition_c_goodreads_crossmedia/cv_results.json",
+  "holdout_used_for_selection": false
+}

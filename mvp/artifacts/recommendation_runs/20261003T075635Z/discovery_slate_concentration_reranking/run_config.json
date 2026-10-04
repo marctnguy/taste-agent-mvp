@@ -1,0 +1,41 @@
+{
+  "run_dir": "mvp/artifacts/recommendation_runs/20261003T075635Z",
+  "output_dir": "mvp/artifacts/recommendation_runs/20261003T075635Z/discovery_slate_concentration_reranking",
+  "candidate_count": 259,
+  "top_k": 20,
+  "lambda_scenarios": {
+    "RAW_B3": 0.0,
+    "CONCENTRATION_005": 0.05,
+    "CONCENTRATION_010": 0.1,
+    "CONCENTRATION_020": 0.2
+  },
+  "scales": {
+    "decade": 0.06944444444444442,
+    "genre": 0.125,
+    "language": 0.05500000000000016,
+    "country": 0.05500000000000016,
+    "source": 0.05500000000000016
+  },
+  "ranking_model": "B3",
+  "ranking_model_status": "exploratory_candidate_mvp",
+  "slate_strategy": "distribution_aware_concentration_reranking",
+  "slate_strategy_status": "exploratory_product_layer",
+  "direct_optimization_dimensions": [
+    "decade_concentration",
+    "genre_concentration",
+    "language_concentration",
+    "country_concentration",
+    "retrieval_provenance_concentration"
+  ],
+  "directly_optimized_for_recency": false,
+  "directly_optimized_for_specific_genres": false,
+  "directly_optimized_for_specific_languages": false,
+  "directly_optimized_for_specific_countries": false,
+  "embedding_similarity_affects_ranking": false,
+  "mmr_used": false,
+  "reference_scale_summary_path": "mvp/artifacts/recommendation_runs/20261003T075635Z/discovery_slate_concentration_reranking/family_penalty_scales.csv",
+  "raw_slate_path": "mvp/artifacts/recommendation_runs/20261003T075635Z/discovery_slate_concentration_reranking/raw_b3_top20.csv",
+  "comparison_path": "mvp/artifacts/recommendation_runs/20261003T075635Z/discovery_slate_concentration_reranking/slate_comparison.csv",
+  "family_summary_path": "mvp/artifacts/recommendation_runs/20261003T075635Z/discovery_slate_concentration_reranking/family_concentration_summary.csv",
+  "family_distribution_path": "mvp/artifacts/recommendation_runs/20261003T075635Z/discovery_slate_concentration_reranking/family_category_distributions.csv"
+}

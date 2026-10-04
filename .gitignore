@@ -1,0 +1,30 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary
+*.tmp
+*.log
+
+# Keep evidence and model artifacts tracked
+
+# Temporary rollback snapshot created before Git
+evaluation/diagnostics/pre_final_root_repair_snapshot/

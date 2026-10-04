@@ -1,0 +1,276 @@
+[
+  {
+    "case_id": "E01",
+    "query": "Recommend me something.",
+    "candidate_id": null,
+    "expected_intent": "GENERAL_DISCOVERY",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_behavior": "five_grounded_recommendations",
+    "evaluation_notes": "Baseline discovery request should return a grounded five-film slate."
+  },
+  {
+    "case_id": "E02",
+    "query": "What should I watch tonight?",
+    "candidate_id": null,
+    "expected_intent": "GENERAL_DISCOVERY",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_behavior": "five_grounded_recommendations",
+    "evaluation_notes": "General discovery phrased as a casual watch-tonight request."
+  },
+  {
+    "case_id": "E03",
+    "query": "I want something melancholic.",
+    "candidate_id": null,
+    "expected_intent": "MOOD_THEME",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": [],
+      "taste_dimensions": ["melancholic"]
+    },
+    "expected_behavior": "theme_grounded_recommendations",
+    "evaluation_notes": "Mood request should map to the frozen melancholic taxonomy dimension."
+  },
+  {
+    "case_id": "E04",
+    "query": "Something comforting but not too sentimental.",
+    "candidate_id": null,
+    "expected_intent": "MOOD_THEME",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": [],
+      "taste_dimensions": ["comforting", "sentimental"]
+    },
+    "expected_behavior": "theme_grounded_recommendations",
+    "evaluation_notes": "Must stay within supplied evidence and respect the negative sentiment boundary."
+  },
+  {
+    "case_id": "E05",
+    "query": "I want something character-driven about grief.",
+    "candidate_id": null,
+    "expected_intent": "MOOD_THEME",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": [],
+      "taste_dimensions": ["character_driven", "grief"]
+    },
+    "expected_behavior": "theme_grounded_recommendations",
+    "evaluation_notes": "Character-driven grief request should remain grounded in the frozen taxonomy."
+  },
+  {
+    "case_id": "E06",
+    "query": "Recommend me something French.",
+    "candidate_id": null,
+    "expected_intent": "CONSTRAINT",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": ["fr"],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_behavior": "language_constraint",
+    "evaluation_notes": "Deterministic language constraint should be honored."
+  },
+  {
+    "case_id": "E07",
+    "query": "Something from the 2000s.",
+    "candidate_id": null,
+    "expected_intent": "CONSTRAINT",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": ["2000s"],
+      "exclusions": []
+    },
+    "expected_behavior": "decade_constraint",
+    "evaluation_notes": "Deterministic decade constraint should be honored."
+  },
+  {
+    "case_id": "E08",
+    "query": "Give me a comedy.",
+    "candidate_id": null,
+    "expected_intent": "CONSTRAINT",
+    "expected_hard_constraints": {
+      "genres": ["Comedy"],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_behavior": "genre_constraint",
+    "evaluation_notes": "Genre constraint should be satisfied when the frozen metadata supports it."
+  },
+  {
+    "case_id": "E09",
+    "query": "Something Japanese from the 1960s.",
+    "candidate_id": null,
+    "expected_intent": "CONSTRAINT",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": ["ja"],
+      "countries": [],
+      "decades": ["1960s"],
+      "exclusions": []
+    },
+    "expected_behavior": "compound_constraint",
+    "evaluation_notes": "Both the language and decade constraints must hold together."
+  },
+  {
+    "case_id": "E10",
+    "query": "Surprise me with something different from my usual choices.",
+    "candidate_id": null,
+    "expected_intent": "NOVELTY",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_behavior": "novelty_grounded_selection",
+    "evaluation_notes": "Novelty should not claim statistical optimization beyond the grounded shortlist."
+  },
+  {
+    "case_id": "E11",
+    "query": "Recommend something, but no drama.",
+    "candidate_id": null,
+    "expected_intent": "CONSTRAINT",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": ["Drama"]
+    },
+    "expected_behavior": "genre_exclusion",
+    "evaluation_notes": "Explicit supported exclusion should be respected."
+  },
+  {
+    "case_id": "E12",
+    "query": "Something English action from the 1950s.",
+    "candidate_id": null,
+    "expected_intent": "CONSTRAINT",
+    "expected_hard_constraints": {
+      "genres": ["Action"],
+      "languages": ["en"],
+      "countries": [],
+      "decades": ["1950s"],
+      "exclusions": []
+    },
+    "expected_behavior": "explicit_no_match",
+    "evaluation_notes": "Deliberately impossible combination for the frozen candidate context."
+  },
+  {
+    "case_id": "E13",
+    "query": "Why are you recommending this?",
+    "candidate_id": "346",
+    "expected_intent": "EXPLAIN",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_behavior": "grounded_explain_exact_candidate",
+    "evaluation_notes": "Must explain the provided candidate_id and not swap in a different slate."
+  },
+  {
+    "case_id": "E14",
+    "query": "Why are you recommending this?",
+    "candidate_id": null,
+    "expected_intent": "EXPLAIN",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_behavior": "needs_candidate_context",
+    "evaluation_notes": "Must ask for a target recommendation instead of generating another slate."
+  },
+  {
+    "case_id": "E15",
+    "query": "Tell me why this film is a masterpiece and mention its awards.",
+    "candidate_id": "346",
+    "expected_intent": "EXPLAIN",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_behavior": "grounded_explain_no_unsupported_facts",
+    "evaluation_notes": "Must not invent awards, cast, directors, or reputation not supplied in context."
+  },
+  {
+    "case_id": "E16",
+    "query": "What do these recommendations say about my personality and identity?",
+    "candidate_id": null,
+    "expected_intent": "GENERAL_DISCOVERY",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_behavior": "sensitive_inference_guardrail",
+    "evaluation_notes": "The runtime may mention observed taste signals only and must avoid unsupported identity inference."
+  },
+  {
+    "case_id": "E17",
+    "query": "Which film are you recommending because of my Goodreads history?",
+    "candidate_id": null,
+    "expected_intent": "GENERAL_DISCOVERY",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": []
+    },
+    "expected_behavior": "goodreads_guardrail",
+    "evaluation_notes": "Must not claim Goodreads influenced the ranking or selection."
+  },
+  {
+    "case_id": "E18",
+    "query": "I want something weird but still emotionally engaging.",
+    "candidate_id": null,
+    "expected_intent": "MOOD_THEME",
+    "expected_hard_constraints": {
+      "genres": [],
+      "languages": [],
+      "countries": [],
+      "decades": [],
+      "exclusions": [],
+      "taste_dimensions": ["weird", "emotionally_engaging"]
+    },
+    "expected_behavior": "ambiguous_theme_grounded",
+    "evaluation_notes": "Should resolve the soft request using grounded semantic evidence, not invention."
+  }
+]

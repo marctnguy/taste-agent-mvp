@@ -1,0 +1,416 @@
+{
+  "top_2010s": [
+    {
+      "source_id": "378064",
+      "tmdb_id": 378064,
+      "title": "A Silent Voice: The Movie",
+      "year": 2016,
+      "rank": 34,
+      "predicted_preference": 0.5131499821061641,
+      "grouped_contributions": {
+        "release_year": -0.02690422482435086,
+        "decade": -0.022198695869612272,
+        "genre": 0.006457155196340938,
+        "language": 0.001216785407833532,
+        "country": 0.003414582098034573,
+        "latent": 0.10879827387572262,
+        "metadata_total": -0.038014397991754094,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "283587",
+      "tmdb_id": 283587,
+      "title": "Beasts of No Nation",
+      "year": 2015,
+      "rank": 49,
+      "predicted_preference": 0.46638896961619847,
+      "grouped_contributions": {
+        "release_year": -0.023904689971593465,
+        "decade": -0.022198695869612272,
+        "genre": 0.011747413863076274,
+        "language": -0.01616739710071184,
+        "country": -0.012691185293419081,
+        "latent": 0.08723741776626324,
+        "metadata_total": -0.0632145543722604,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "171795",
+      "tmdb_id": 171795,
+      "title": "Birth of the Living Dead",
+      "year": 2013,
+      "rank": 60,
+      "predicted_preference": 0.4482210979279352,
+      "grouped_contributions": {
+        "release_year": -0.017905620266078674,
+        "decade": -0.022198695869612272,
+        "genre": 0.0057687526481953735,
+        "language": -0.01616739710071184,
+        "country": -0.014092921803169354,
+        "latent": 0.07045087409711634,
+        "metadata_total": -0.06459588239137677,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "197393",
+      "tmdb_id": 197393,
+      "title": "David Bowie: Five Years",
+      "year": 2013,
+      "rank": 61,
+      "predicted_preference": 0.44701227101813734,
+      "grouped_contributions": {
+        "release_year": -0.017905620266078674,
+        "decade": -0.022198695869612272,
+        "genre": 0.008619806966403087,
+        "language": -0.01616739710071184,
+        "country": 0.000929671260463394,
+        "latent": 0.051368399805477985,
+        "metadata_total": -0.0467222350095363,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "240629",
+      "tmdb_id": 240629,
+      "title": "The Class of ‘92",
+      "year": 2013,
+      "rank": 62,
+      "predicted_preference": 0.4467489401581992,
+      "grouped_contributions": {
+        "release_year": -0.017905620266078674,
+        "decade": -0.022198695869612272,
+        "genre": 0.0057687526481953735,
+        "language": -0.01616739710071184,
+        "country": 0.000929671260463394,
+        "latent": 0.05395612326374759,
+        "metadata_total": -0.04957328932774402,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "620249",
+      "tmdb_id": 620249,
+      "title": "The Legend of Hei",
+      "year": 2019,
+      "rank": 64,
+      "predicted_preference": 0.4454298793827953,
+      "grouped_contributions": {
+        "release_year": -0.03590282938262305,
+        "decade": -0.022198695869612272,
+        "genre": 0.01250959380377592,
+        "language": 0.0011778838985226278,
+        "country": -0.002697682460974075,
+        "latent": 0.05017550317151053,
+        "metadata_total": -0.047111730010910846,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "20352",
+      "tmdb_id": 20352,
+      "title": "Despicable Me",
+      "year": 2010,
+      "rank": 65,
+      "predicted_preference": 0.44492971065036935,
+      "grouped_contributions": {
+        "release_year": -0.008907015707806488,
+        "decade": -0.022198695869612272,
+        "genre": 0.02106474123519168,
+        "language": -0.01616739710071184,
+        "country": -0.014092921803169354,
+        "latent": 0.04286489367428199,
+        "metadata_total": -0.04030128924610828,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "354857",
+      "tmdb_id": 354857,
+      "title": "Regular Show: The Movie",
+      "year": 2015,
+      "rank": 70,
+      "predicted_preference": 0.4277767072625809,
+      "grouped_contributions": {
+        "release_year": -0.023904689971593465,
+        "decade": -0.022198695869612272,
+        "genre": 0.017560869879440635,
+        "language": -0.01616739710071184,
+        "country": -0.014092921803169354,
+        "latent": 0.04421343590603154,
+        "metadata_total": -0.058802834865646296,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "255709",
+      "tmdb_id": 255709,
+      "title": "Hope",
+      "year": 2013,
+      "rank": 72,
+      "predicted_preference": 0.42344890259145174,
+      "grouped_contributions": {
+        "release_year": -0.017905620266078674,
+        "decade": -0.022198695869612272,
+        "genre": 0.005910883956895404,
+        "language": -0.0002362335448084279,
+        "country": 0.0005348371602819364,
+        "latent": 0.014977624932578131,
+        "metadata_total": -0.03389482856332204,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "84329",
+      "tmdb_id": 84329,
+      "title": "Robot & Frank",
+      "year": 2012,
+      "rank": 75,
+      "predicted_preference": 0.41729184003355546,
+      "grouped_contributions": {
+        "release_year": -0.01490608541332128,
+        "decade": -0.022198695869612272,
+        "genre": 0.006834814981686139,
+        "language": -0.01616739710071184,
+        "country": -0.014092921803169354,
+        "latent": 0.03545601901648845,
+        "metadata_total": -0.060530285205128605,
+        "intercept": 0.44236610622219563
+      }
+    }
+  ],
+  "top_2020s": [
+    {
+      "source_id": "1311031",
+      "tmdb_id": 1311031,
+      "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+      "year": 2025,
+      "rank": 44,
+      "predicted_preference": 0.48510928084208027,
+      "grouped_contributions": {
+        "release_year": -0.05390003849916741,
+        "decade": -0.006437475284774336,
+        "genre": 0.0064606497291571936,
+        "language": 0.001216785407833532,
+        "country": 0.003414582098034573,
+        "latent": 0.09198867116880105,
+        "metadata_total": -0.049245496548916454,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "664416",
+      "tmdb_id": 664416,
+      "title": "Beastie Boys Story",
+      "year": 2020,
+      "rank": 47,
+      "predicted_preference": 0.46842226260691305,
+      "grouped_contributions": {
+        "release_year": -0.038902364235380446,
+        "decade": -0.006437475284774336,
+        "genre": 0.009389878599278867,
+        "language": -0.01616739710071184,
+        "country": -0.01316325054270596,
+        "latent": 0.09133676494901116,
+        "metadata_total": -0.06528060856429371,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "1218925",
+      "tmdb_id": 1218925,
+      "title": "Chainsaw Man - The Movie: Reze Arc",
+      "year": 2025,
+      "rank": 53,
+      "predicted_preference": 0.4622514954646119,
+      "grouped_contributions": {
+        "release_year": -0.05390003849916741,
+        "decade": -0.006437475284774336,
+        "genre": -0.0008672115455043402,
+        "language": 0.001216785407833532,
+        "country": 0.003414582098034573,
+        "latent": 0.07645874706599427,
+        "metadata_total": -0.05657335782357799,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "1226863",
+      "tmdb_id": 1226863,
+      "title": "The Super Mario Galaxy Movie",
+      "year": 2026,
+      "rank": 56,
+      "predicted_preference": 0.4558172563492376,
+      "grouped_contributions": {
+        "release_year": -0.05689957335192482,
+        "decade": -0.006437475284774336,
+        "genre": 0.030868745493106385,
+        "language": -0.01616739710071184,
+        "country": -0.01067833970513478,
+        "latent": 0.07276519007648131,
+        "metadata_total": -0.059314039949439394,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "778855",
+      "tmdb_id": 778855,
+      "title": "Chickenhare and the Hamster of Darkness",
+      "year": 2022,
+      "rank": 57,
+      "predicted_preference": 0.45347787115335875,
+      "grouped_contributions": {
+        "release_year": -0.044901433940895234,
+        "decade": -0.006437475284774336,
+        "genre": 0.030868745493106385,
+        "language": -0.01616739710071184,
+        "country": -0.018917947842400286,
+        "latent": 0.06666727360683841,
+        "metadata_total": -0.05555550867567531,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "660637",
+      "tmdb_id": 660637,
+      "title": "Dance of the Forty One",
+      "year": 2020,
+      "rank": 63,
+      "predicted_preference": 0.446615448134765,
+      "grouped_contributions": {
+        "release_year": -0.038902364235380446,
+        "decade": -0.006437475284774336,
+        "genre": 0.008286668984220417,
+        "language": 0.003648111426435645,
+        "country": -0.0021124308031015507,
+        "latent": 0.03976683182516963,
+        "metadata_total": -0.035517489912600266,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "1128606",
+      "tmdb_id": 1128606,
+      "title": "Snoopy Presents: Welcome Home, Franklin",
+      "year": 2024,
+      "rank": 68,
+      "predicted_preference": 0.4342573553842635,
+      "grouped_contributions": {
+        "release_year": -0.05090050364641002,
+        "decade": -0.006437475284774336,
+        "genre": 0.018883901933107274,
+        "language": -0.01616739710071184,
+        "country": -0.018928180808131665,
+        "latent": 0.06544090406898848,
+        "metadata_total": -0.07354965490692059,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "1538457",
+      "tmdb_id": 1538457,
+      "title": "Meesaya Murukku 2",
+      "year": 2026,
+      "rank": 71,
+      "predicted_preference": 0.42678500359309873,
+      "grouped_contributions": {
+        "release_year": -0.05689957335192482,
+        "decade": -0.006437475284774336,
+        "genre": 0.0032369983618356028,
+        "language": 0.0,
+        "country": 0.001754803757098723,
+        "latent": 0.042764143888667915,
+        "metadata_total": -0.058345246517764834,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "929204",
+      "tmdb_id": 929204,
+      "title": "Wallace & Gromit: Vengeance Most Fowl",
+      "year": 2024,
+      "rank": 73,
+      "predicted_preference": 0.4188877027612483,
+      "grouped_contributions": {
+        "release_year": -0.05090050364641002,
+        "decade": -0.006437475284774336,
+        "genre": 0.023916663618839106,
+        "language": -0.01616739710071184,
+        "country": 0.000929671260463394,
+        "latent": 0.0251806376916464,
+        "metadata_total": -0.0486590411525937,
+        "intercept": 0.44236610622219563
+      }
+    },
+    {
+      "source_id": "482321",
+      "tmdb_id": 482321,
+      "title": "Ron's Gone Wrong",
+      "year": 2021,
+      "rank": 74,
+      "predicted_preference": 0.41790261154524677,
+      "grouped_contributions": {
+        "release_year": -0.04190189908813784,
+        "decade": -0.006437475284774336,
+        "genre": 0.01786771954422038,
+        "language": -0.01616739710071184,
+        "country": -0.01316325054270596,
+        "latent": 0.03533880779516071,
+        "metadata_total": -0.05980230247210959,
+        "intercept": 0.44236610622219563
+      }
+    }
+  ],
+  "comparison_summary": {
+    "top20": {
+      "count": 20,
+      "mean_grouped_contributions": {
+        "release_year": 0.08647819260987868,
+        "decade": 0.004412879640113202,
+        "genre": 0.006261997714691459,
+        "language": -0.010004038769999427,
+        "country": -0.008333307782042299,
+        "latent": 0.09709819660002483,
+        "metadata_total": 0.07881572341264162
+      }
+    },
+    "pre_2000": {
+      "count": 41,
+      "mean_grouped_contributions": {
+        "release_year": 0.07090987513020128,
+        "decade": 0.004335566957733222,
+        "genre": 0.003637421185835948,
+        "language": -0.012285009414417326,
+        "country": -0.009991724766930003,
+        "latent": 0.052011219915131184,
+        "metadata_total": 0.0566061290924231
+      }
+    },
+    "2010s": {
+      "count": 43,
+      "mean_grouped_contributions": {
+        "release_year": -0.02585787545710991,
+        "decade": -0.022198695869612275,
+        "genre": 0.004988147448096325,
+        "language": -0.014067591423549552,
+        "country": -0.010799680345632091,
+        "latent": -0.011135969646029122,
+        "metadata_total": -0.06793569564780752
+      }
+    },
+    "2020s": {
+      "count": 154,
+      "mean_grouped_contributions": {
+        "release_year": -0.05378317350490414,
+        "decade": -0.006437475284774335,
+        "genre": 0.0023622715211639163,
+        "language": -0.012311629826787308,
+        "country": -0.010718019675362263,
+        "latent": -0.05142562714465655,
+        "metadata_total": -0.08088802677066415
+      }
+    }
+  }
+}

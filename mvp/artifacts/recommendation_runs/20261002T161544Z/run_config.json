@@ -1,0 +1,25 @@
+{
+  "run_id": "20261002T161544Z",
+  "candidate_generation_strategies": [
+    "popular",
+    "top_rated",
+    "recent",
+    "genre_diverse",
+    "seeded_recommendations"
+  ],
+  "candidate_limit": 300,
+  "counts_before_deduplication": 500,
+  "counts_after_deduplication": 316,
+  "watched_exclusions": 40,
+  "enrichment_failures": 0,
+  "embedding_cache_hits": 260,
+  "embedding_cache_misses": 0,
+  "final_scorable_count": 260,
+  "top_k": 20,
+  "deployment_model": {
+    "architecture": "B3",
+    "status": "b3_mvp",
+    "selected_pca_dim": 16,
+    "selected_alpha": 316.22776601683796
+  }
+}

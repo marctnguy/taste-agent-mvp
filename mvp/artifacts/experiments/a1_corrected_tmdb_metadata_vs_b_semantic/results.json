@@ -1,0 +1,547 @@
+{
+  "condition_a": {
+    "selected_alpha": 56.23413251903491,
+    "train_n": 393,
+    "test_n": 99,
+    "feature_count": 98,
+    "metrics": {
+      "n": 99.0,
+      "mae": 0.2912156160287155,
+      "rmse": 0.36950431126543576,
+      "pearson": 0.3406913581140012,
+      "spearman": 0.31855917126891675,
+      "ndcg_at_k": 0.8828584128736815
+    },
+    "prediction_stats": {
+      "actual_mean": 0.4328282828282828,
+      "actual_min": -0.8,
+      "actual_max": 1.0,
+      "pred_mean": 0.4302311382694886,
+      "pred_min": 0.1993167465444151,
+      "pred_max": 0.7925684337984387
+    },
+    "coefficients_sorted": [
+      {
+        "feature": "genre__animation",
+        "coefficient": 0.049260265075105863,
+        "abs_coefficient": 0.049260265075105863
+      },
+      {
+        "feature": "decade__2000s",
+        "coefficient": 0.04359916640941063,
+        "abs_coefficient": 0.04359916640941063
+      },
+      {
+        "feature": "genre__family",
+        "coefficient": 0.03706981584559328,
+        "abs_coefficient": 0.03706981584559328
+      },
+      {
+        "feature": "genre__documentary",
+        "coefficient": 0.036818136047148495,
+        "abs_coefficient": 0.036818136047148495
+      },
+      {
+        "feature": "genre__war",
+        "coefficient": 0.031152329565600725,
+        "abs_coefficient": 0.031152329565600725
+      },
+      {
+        "feature": "genre__adventure",
+        "coefficient": 0.030040860558330065,
+        "abs_coefficient": 0.030040860558330065
+      },
+      {
+        "feature": "genre__fantasy",
+        "coefficient": 0.029706297229386214,
+        "abs_coefficient": 0.029706297229386214
+      },
+      {
+        "feature": "genre__drama",
+        "coefficient": 0.02756776874110697,
+        "abs_coefficient": 0.02756776874110697
+      },
+      {
+        "feature": "country__jp",
+        "coefficient": 0.026726528220117205,
+        "abs_coefficient": 0.026726528220117205
+      },
+      {
+        "feature": "genre__music",
+        "coefficient": 0.023330327016757583,
+        "abs_coefficient": 0.023330327016757583
+      },
+      {
+        "feature": "decade__1990s",
+        "coefficient": 0.020344862791668042,
+        "abs_coefficient": 0.020344862791668042
+      },
+      {
+        "feature": "language__sv",
+        "coefficient": 0.01854643819796037,
+        "abs_coefficient": 0.01854643819796037
+      },
+      {
+        "feature": "language__ca",
+        "coefficient": 0.016764799167045413,
+        "abs_coefficient": 0.016764799167045413
+      },
+      {
+        "feature": "genre__comedy",
+        "coefficient": 0.016713375902693194,
+        "abs_coefficient": 0.016713375902693194
+      },
+      {
+        "feature": "decade__1970s",
+        "coefficient": 0.014308602363209959,
+        "abs_coefficient": 0.014308602363209959
+      },
+      {
+        "feature": "genre__history",
+        "coefficient": 0.013538985299201611,
+        "abs_coefficient": 0.013538985299201611
+      },
+      {
+        "feature": "country__hk",
+        "coefficient": 0.013169269937643382,
+        "abs_coefficient": 0.013169269937643382
+      },
+      {
+        "feature": "decade__1980s",
+        "coefficient": 0.013029955600073865,
+        "abs_coefficient": 0.013029955600073865
+      },
+      {
+        "feature": "language__fr",
+        "coefficient": 0.01230041215501166,
+        "abs_coefficient": 0.01230041215501166
+      },
+      {
+        "feature": "language__ja",
+        "coefficient": 0.012291069111769528,
+        "abs_coefficient": 0.012291069111769528
+      },
+      {
+        "feature": "genre__crime",
+        "coefficient": 0.01195678338029255,
+        "abs_coefficient": 0.01195678338029255
+      },
+      {
+        "feature": "country__in",
+        "coefficient": 0.010785457761139351,
+        "abs_coefficient": 0.010785457761139351
+      },
+      {
+        "feature": "language__hi",
+        "coefficient": 0.010785457761139351,
+        "abs_coefficient": 0.010785457761139351
+      },
+      {
+        "feature": "country__au",
+        "coefficient": 0.010630157211698094,
+        "abs_coefficient": 0.010630157211698094
+      },
+      {
+        "feature": "country__fr",
+        "coefficient": 0.0103612409087024,
+        "abs_coefficient": 0.0103612409087024
+      },
+      {
+        "feature": "country__se",
+        "coefficient": 0.008580643326452335,
+        "abs_coefficient": 0.008580643326452335
+      },
+      {
+        "feature": "country__pk",
+        "coefficient": 0.008561025944737975,
+        "abs_coefficient": 0.008561025944737975
+      },
+      {
+        "feature": "language__ur",
+        "coefficient": 0.008561025944737975,
+        "abs_coefficient": 0.008561025944737975
+      },
+      {
+        "feature": "country__br",
+        "coefficient": 0.0083369074297659,
+        "abs_coefficient": 0.0083369074297659
+      },
+      {
+        "feature": "language__cn",
+        "coefficient": 0.008155600883311827,
+        "abs_coefficient": 0.008155600883311827
+      },
+      {
+        "feature": "country__tr",
+        "coefficient": 0.007746394920703336,
+        "abs_coefficient": 0.007746394920703336
+      },
+      {
+        "feature": "country__tw",
+        "coefficient": 0.00657410629915263,
+        "abs_coefficient": 0.00657410629915263
+      },
+      {
+        "feature": "language__zh",
+        "coefficient": 0.00657410629915263,
+        "abs_coefficient": 0.00657410629915263
+      },
+      {
+        "feature": "country__cl",
+        "coefficient": 0.005685598862401171,
+        "abs_coefficient": 0.005685598862401171
+      },
+      {
+        "feature": "decade__1930s",
+        "coefficient": 0.005411328199145632,
+        "abs_coefficient": 0.005411328199145632
+      },
+      {
+        "feature": "country__sg",
+        "coefficient": 0.005013669054331557,
+        "abs_coefficient": 0.005013669054331557
+      },
+      {
+        "feature": "country__ua",
+        "coefficient": 0.004656150381404301,
+        "abs_coefficient": 0.004656150381404301
+      },
+      {
+        "feature": "language__uk",
+        "coefficient": 0.004656150381404301,
+        "abs_coefficient": 0.004656150381404301
+      },
+      {
+        "feature": "country__ch",
+        "coefficient": 0.004421117165703542,
+        "abs_coefficient": 0.004421117165703542
+      },
+      {
+        "feature": "country__ge",
+        "coefficient": 0.004122867190927457,
+        "abs_coefficient": 0.004122867190927457
+      },
+      {
+        "feature": "language__ka",
+        "coefficient": 0.004122867190927457,
+        "abs_coefficient": 0.004122867190927457
+      },
+      {
+        "feature": "decade__1950s",
+        "coefficient": 0.003662385479898783,
+        "abs_coefficient": 0.003662385479898783
+      },
+      {
+        "feature": "country__kr",
+        "coefficient": 0.0034879677994270044,
+        "abs_coefficient": 0.0034879677994270044
+      },
+      {
+        "feature": "genre__mystery",
+        "coefficient": 0.0033945009183014327,
+        "abs_coefficient": 0.0033945009183014327
+      },
+      {
+        "feature": "country__ru",
+        "coefficient": 0.002929021503500168,
+        "abs_coefficient": 0.002929021503500168
+      },
+      {
+        "feature": "language__ru",
+        "coefficient": 0.002929021503500168,
+        "abs_coefficient": 0.002929021503500168
+      },
+      {
+        "feature": "country__cm",
+        "coefficient": 0.0028821229651204215,
+        "abs_coefficient": 0.0028821229651204215
+      },
+      {
+        "feature": "country__ir",
+        "coefficient": 0.002633881159337581,
+        "abs_coefficient": 0.002633881159337581
+      },
+      {
+        "feature": "language__fa",
+        "coefficient": 0.002633881159337581,
+        "abs_coefficient": 0.002633881159337581
+      },
+      {
+        "feature": "language__it",
+        "coefficient": 0.0025294986510652445,
+        "abs_coefficient": 0.0025294986510652445
+      },
+      {
+        "feature": "language__pt",
+        "coefficient": 0.00244748501488814,
+        "abs_coefficient": 0.00244748501488814
+      },
+      {
+        "feature": "country__nl",
+        "coefficient": 0.0023851936289873503,
+        "abs_coefficient": 0.0023851936289873503
+      },
+      {
+        "feature": "country__an",
+        "coefficient": 0.0020684331273492125,
+        "abs_coefficient": 0.0020684331273492125
+      },
+      {
+        "feature": "country__gb",
+        "coefficient": 0.0011669227956456751,
+        "abs_coefficient": 0.0011669227956456751
+      },
+      {
+        "feature": "country__ar",
+        "coefficient": 0.00024669389637200915,
+        "abs_coefficient": 0.00024669389637200915
+      },
+      {
+        "feature": "country__cz",
+        "coefficient": 6.154125547734563e-05,
+        "abs_coefficient": 6.154125547734563e-05
+      },
+      {
+        "feature": "language__ko",
+        "coefficient": -0.00047995325577245446,
+        "abs_coefficient": 0.00047995325577245446
+      },
+      {
+        "feature": "country__lu",
+        "coefficient": -0.001003163783572889,
+        "abs_coefficient": 0.001003163783572889
+      },
+      {
+        "feature": "language__es",
+        "coefficient": -0.0017157999077593447,
+        "abs_coefficient": 0.0017157999077593447
+      },
+      {
+        "feature": "decade__1940s",
+        "coefficient": -0.002145302289632504,
+        "abs_coefficient": 0.002145302289632504
+      },
+      {
+        "feature": "genre__western",
+        "coefficient": -0.003489758175105787,
+        "abs_coefficient": 0.003489758175105787
+      },
+      {
+        "feature": "country__fi",
+        "coefficient": -0.004004177743353409,
+        "abs_coefficient": 0.004004177743353409
+      },
+      {
+        "feature": "country__no",
+        "coefficient": -0.004231895664055135,
+        "abs_coefficient": 0.004231895664055135
+      },
+      {
+        "feature": "genre__tv movie",
+        "coefficient": -0.004652476549498325,
+        "abs_coefficient": 0.004652476549498325
+      },
+      {
+        "feature": "country__ma",
+        "coefficient": -0.005095212768572271,
+        "abs_coefficient": 0.005095212768572271
+      },
+      {
+        "feature": "country__ie",
+        "coefficient": -0.005847606782559318,
+        "abs_coefficient": 0.005847606782559318
+      },
+      {
+        "feature": "country__de",
+        "coefficient": -0.006174039007738977,
+        "abs_coefficient": 0.006174039007738977
+      },
+      {
+        "feature": "language__de",
+        "coefficient": -0.00644231338441428,
+        "abs_coefficient": 0.00644231338441428
+      },
+      {
+        "feature": "language__no",
+        "coefficient": -0.007049184240267328,
+        "abs_coefficient": 0.007049184240267328
+      },
+      {
+        "feature": "country__il",
+        "coefficient": -0.007473612039483467,
+        "abs_coefficient": 0.007473612039483467
+      },
+      {
+        "feature": "decade__1900s",
+        "coefficient": -0.008501744886245832,
+        "abs_coefficient": 0.008501744886245832
+      },
+      {
+        "feature": "country__mt",
+        "coefficient": -0.008962259264602384,
+        "abs_coefficient": 0.008962259264602384
+      },
+      {
+        "feature": "language__xx",
+        "coefficient": -0.011013379706890735,
+        "abs_coefficient": 0.011013379706890735
+      },
+      {
+        "feature": "country__at",
+        "coefficient": -0.011184281520170446,
+        "abs_coefficient": 0.011184281520170446
+      },
+      {
+        "feature": "country__ph",
+        "coefficient": -0.01134981053248705,
+        "abs_coefficient": 0.01134981053248705
+      },
+      {
+        "feature": "language__tl",
+        "coefficient": -0.01134981053248705,
+        "abs_coefficient": 0.01134981053248705
+      },
+      {
+        "feature": "decade__1960s",
+        "coefficient": -0.01156632218271612,
+        "abs_coefficient": 0.01156632218271612
+      },
+      {
+        "feature": "country__dk",
+        "coefficient": -0.012182188062077909,
+        "abs_coefficient": 0.012182188062077909
+      },
+      {
+        "feature": "genre__science fiction",
+        "coefficient": -0.012542533942991292,
+        "abs_coefficient": 0.012542533942991292
+      },
+      {
+        "feature": "genre__horror",
+        "coefficient": -0.013048928516868601,
+        "abs_coefficient": 0.013048928516868601
+      },
+      {
+        "feature": "country__cn",
+        "coefficient": -0.01337829623651801,
+        "abs_coefficient": 0.01337829623651801
+      },
+      {
+        "feature": "country__es",
+        "coefficient": -0.014229627147425568,
+        "abs_coefficient": 0.014229627147425568
+      },
+      {
+        "feature": "country__ca",
+        "coefficient": -0.014303698787394846,
+        "abs_coefficient": 0.014303698787394846
+      },
+      {
+        "feature": "country__gr",
+        "coefficient": -0.016893468513789627,
+        "abs_coefficient": 0.016893468513789627
+      },
+      {
+        "feature": "country__ae",
+        "coefficient": -0.018347442876935762,
+        "abs_coefficient": 0.018347442876935762
+      },
+      {
+        "feature": "language__pl",
+        "coefficient": -0.018725923816392053,
+        "abs_coefficient": 0.018725923816392053
+      },
+      {
+        "feature": "country__mx",
+        "coefficient": -0.019244580644924823,
+        "abs_coefficient": 0.019244580644924823
+      },
+      {
+        "feature": "country__pl",
+        "coefficient": -0.024038964744285882,
+        "abs_coefficient": 0.024038964744285882
+      },
+      {
+        "feature": "country__it",
+        "coefficient": -0.02764948662079731,
+        "abs_coefficient": 0.02764948662079731
+      },
+      {
+        "feature": "decade__2020s",
+        "coefficient": -0.029692225714235194,
+        "abs_coefficient": 0.029692225714235194
+      },
+      {
+        "feature": "genre__action",
+        "coefficient": -0.03721764880371444,
+        "abs_coefficient": 0.03721764880371444
+      },
+      {
+        "feature": "country__be",
+        "coefficient": -0.041995153155296235,
+        "abs_coefficient": 0.041995153155296235
+      },
+      {
+        "feature": "country__us",
+        "coefficient": -0.042509928365999136,
+        "abs_coefficient": 0.042509928365999136
+      },
+      {
+        "feature": "genre__thriller",
+        "coefficient": -0.04306510179861064,
+        "abs_coefficient": 0.04306510179861064
+      },
+      {
+        "feature": "decade__2010s",
+        "coefficient": -0.048450705770577245,
+        "abs_coefficient": 0.048450705770577245
+      },
+      {
+        "feature": "genre__romance",
+        "coefficient": -0.05326647330210158,
+        "abs_coefficient": 0.05326647330210158
+      },
+      {
+        "feature": "language__en",
+        "coefficient": -0.05652144857726842,
+        "abs_coefficient": 0.05652144857726842
+      },
+      {
+        "feature": "release_year_z",
+        "coefficient": -0.09029500915012934,
+        "abs_coefficient": 0.09029500915012934
+      }
+    ]
+  },
+  "condition_b_reference": {
+    "selected_alpha": 5.623413251903491,
+    "train_n": 393,
+    "test_n": 99,
+    "feature_count": 62,
+    "metrics": {
+      "n": 99.0,
+      "mae": 0.31870240770704,
+      "rmse": 0.3897169816699715,
+      "pearson": 0.13792682508601142,
+      "spearman": 0.12991982880720185,
+      "ndcg_at_k": 0.6650767956314795
+    },
+    "prediction_stats": {
+      "actual_mean": 0.4328282828282828,
+      "actual_min": -0.8,
+      "actual_max": 1.0,
+      "pred_mean": 0.4274851389562896,
+      "pred_min": 0.2500745366835164,
+      "pred_max": 0.6217102148999141
+    }
+  },
+  "comparison": {
+    "mae_abs_diff": 0.027486791678324518,
+    "mae_pct_diff_vs_b": 8.624594924174884,
+    "rmse_abs_diff": 0.020212670404535726,
+    "rmse_pct_diff_vs_b": 5.186499781950137,
+    "pearson_abs_diff": 0.20276453302798977,
+    "spearman_abs_diff": 0.1886393424617149,
+    "ndcg_abs_diff": 0.21778161724220202
+  }
+}

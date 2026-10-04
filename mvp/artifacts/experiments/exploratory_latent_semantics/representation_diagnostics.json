@@ -1,0 +1,89 @@
+{
+  "embedding_provider": "openai",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dimensionality": 1536,
+  "embedding_coverage": 1.0,
+  "embedding_successful": 393,
+  "embedding_failed": 0,
+  "semantic_coverage": 1.0,
+  "semantic_successful": 393,
+  "semantic_failed": 0,
+  "document_template_version": "film_doc_v1",
+  "document_fields": [
+    "title",
+    "release_year",
+    "tmdb_genres",
+    "tmdb_original_language",
+    "tmdb_production_countries",
+    "tmdb_overview"
+  ],
+  "document_length": {
+    "min": 80,
+    "mean": 377.35368956743,
+    "max": 1056
+  },
+  "document_field_coverage": {
+    "release_year": 393,
+    "tmdb_genres": 391,
+    "tmdb_original_language": 393,
+    "tmdb_production_countries": 392,
+    "tmdb_overview": 392
+  },
+  "ndcg_audit": {
+    "historical_metric_behavior": "gains = max(y_true - min(y_true), 0), so negative preference_weight values are shifted upward by the fold minimum and then ranked non-negatively",
+    "historical_unchanged": true,
+    "diagnostic_variant": "not required because the historical implementation already performs a non-negative shift",
+    "example_historical_ndcg": 1.0,
+    "example_shifted_ndcg": 1.0
+  },
+  "outer_split_strata": {
+    "high": 207,
+    "low": 14,
+    "mid": 68,
+    "top": 104
+  },
+  "selected_pca_dims": {
+    "b2": [
+      32,
+      16,
+      32,
+      16,
+      16
+    ],
+    "b3": [
+      16,
+      16,
+      32,
+      16,
+      16
+    ]
+  },
+  "redundancy_b3": [
+    {
+      "mean_abs_max_corr": 0.3776472564024287,
+      "max_abs_corr": 0.6810096364365062,
+      "selected_metadata_features": 92
+    },
+    {
+      "mean_abs_max_corr": 0.3994574923158059,
+      "max_abs_corr": 0.6989230010755446,
+      "selected_metadata_features": 96
+    },
+    {
+      "mean_abs_max_corr": 0.3069773496994798,
+      "max_abs_corr": 0.6979570162859405,
+      "selected_metadata_features": 93
+    },
+    {
+      "mean_abs_max_corr": 0.38668291746235606,
+      "max_abs_corr": 0.7018603214258717,
+      "selected_metadata_features": 87
+    },
+    {
+      "mean_abs_max_corr": 0.394794547783174,
+      "max_abs_corr": 0.6485179081975179,
+      "selected_metadata_features": 92
+    }
+  ],
+  "holdout_used": false
+}

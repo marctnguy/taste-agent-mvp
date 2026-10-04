@@ -1,0 +1,1350 @@
+{
+  "RAW_B3": {
+    "embedding": {
+      "mean_pairwise_cosine_similarity": 0.3550250320155106,
+      "median_pairwise_cosine_similarity": 0.3476265652231967,
+      "max_pairwise_cosine_similarity": 0.7950954045767789,
+      "mean_nearest_neighbor_cosine_similarity": 0.5134450809309901,
+      "median_nearest_neighbor_cosine_similarity": 0.4598794092014268,
+      "embedding_diversity": 0.6449749679844894
+    },
+    "historical_taste_clusters": {
+      "distribution": {
+        "Taste Cluster 4": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 2": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 3": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 1": {
+          "count": 4,
+          "share": 0.2
+        },
+        "Taste Cluster 5": {
+          "count": 1,
+          "share": 0.05
+        }
+      },
+      "represented_clusters": 5,
+      "absent_clusters": [],
+      "entropy": 2.1804820237218405,
+      "normalized_entropy": 0.939082492917429,
+      "hhi": 0.23
+    },
+    "semantic": {
+      "semantic_dimensions_represented": 61,
+      "taste_dimensions_represented": 34
+    },
+    "taste_coverage": [
+      {
+        "dimension": "episodic",
+        "pearson_preference_association": 0.142163079762,
+        "evidence_count": 64,
+        "evidence_confidence": 0.770359610567,
+        "selected_coverage": 0.1,
+        "represented": true
+      },
+      {
+        "dimension": "historical",
+        "pearson_preference_association": 0.132372867143,
+        "evidence_count": 181,
+        "evidence_confidence": 0.803556462052,
+        "selected_coverage": 0.7,
+        "represented": true
+      },
+      {
+        "dimension": "moderate",
+        "pearson_preference_association": 0.11057977132,
+        "evidence_count": 422,
+        "evidence_confidence": 0.770687947878,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "atmospheric",
+        "pearson_preference_association": 0.110140379015,
+        "evidence_count": 415,
+        "evidence_confidence": 0.802120236643,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "niche",
+        "pearson_preference_association": 0.103926257995,
+        "evidence_count": 225,
+        "evidence_confidence": 0.773338797747,
+        "selected_coverage": 0.4,
+        "represented": true
+      },
+      {
+        "dimension": "abstract",
+        "pearson_preference_association": 0.094056629936,
+        "evidence_count": 71,
+        "evidence_confidence": 0.765198466464,
+        "selected_coverage": 0.2,
+        "represented": true
+      },
+      {
+        "dimension": "surreal",
+        "pearson_preference_association": 0.092472352257,
+        "evidence_count": 169,
+        "evidence_confidence": 0.797574211797,
+        "selected_coverage": 0.2,
+        "represented": true
+      },
+      {
+        "dimension": "absurd",
+        "pearson_preference_association": 0.092367712811,
+        "evidence_count": 53,
+        "evidence_confidence": 0.766899944915,
+        "selected_coverage": 0.0,
+        "represented": false
+      },
+      {
+        "dimension": "ethereal",
+        "pearson_preference_association": 0.092180812431,
+        "evidence_count": 176,
+        "evidence_confidence": 0.781339677711,
+        "selected_coverage": 0.3,
+        "represented": true
+      },
+      {
+        "dimension": "comforting",
+        "pearson_preference_association": 0.089279683484,
+        "evidence_count": 342,
+        "evidence_confidence": 0.795683596404,
+        "selected_coverage": 0.65,
+        "represented": true
+      },
+      {
+        "dimension": "melancholic",
+        "pearson_preference_association": 0.086104593986,
+        "evidence_count": 381,
+        "evidence_confidence": 0.816030256627,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "grief",
+        "pearson_preference_association": 0.082462356754,
+        "evidence_count": 330,
+        "evidence_confidence": 0.813635953914,
+        "selected_coverage": 0.75,
+        "represented": true
+      },
+      {
+        "dimension": "visual",
+        "pearson_preference_association": 0.081057420132,
+        "evidence_count": 418,
+        "evidence_confidence": 0.795403874117,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "morality",
+        "pearson_preference_association": 0.081006714565,
+        "evidence_count": 415,
+        "evidence_confidence": 0.787811222579,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "plot_driven",
+        "pearson_preference_association": 0.079298909696,
+        "evidence_count": 408,
+        "evidence_confidence": 0.791748297982,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "identity",
+        "pearson_preference_association": 0.076366947475,
+        "evidence_count": 404,
+        "evidence_confidence": 0.796302345295,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "ensemble",
+        "pearson_preference_association": 0.076074974314,
+        "evidence_count": 248,
+        "evidence_confidence": 0.787298970781,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "emotional_intensity",
+        "pearson_preference_association": 0.075959357406,
+        "evidence_count": 424,
+        "evidence_confidence": 0.803653757935,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "alienation",
+        "pearson_preference_association": 0.065740376743,
+        "evidence_count": 372,
+        "evidence_confidence": 0.820443770998,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "nostalgic",
+        "pearson_preference_association": 0.065365051319,
+        "evidence_count": 286,
+        "evidence_confidence": 0.790862577748,
+        "selected_coverage": 0.75,
+        "represented": true
+      },
+      {
+        "dimension": "class",
+        "pearson_preference_association": 0.063076199514,
+        "evidence_count": 359,
+        "evidence_confidence": 0.787811118597,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "outsider_protagonist",
+        "pearson_preference_association": 0.062447375249,
+        "evidence_count": 338,
+        "evidence_confidence": 0.811857531609,
+        "selected_coverage": 0.85,
+        "represented": true
+      },
+      {
+        "dimension": "joyful",
+        "pearson_preference_association": 0.061531342769,
+        "evidence_count": 252,
+        "evidence_confidence": 0.803702371644,
+        "selected_coverage": 0.5,
+        "represented": true
+      },
+      {
+        "dimension": "dialogue_heavy",
+        "pearson_preference_association": 0.061314042445,
+        "evidence_count": 411,
+        "evidence_confidence": 0.797116949974,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "conventional",
+        "pearson_preference_association": 0.057684343659,
+        "evidence_count": 395,
+        "evidence_confidence": 0.791725604711,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "naturalistic",
+        "pearson_preference_association": 0.057247984549,
+        "evidence_count": 415,
+        "evidence_confidence": 0.797118078185,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "contained",
+        "pearson_preference_association": 0.055890543538,
+        "evidence_count": 395,
+        "evidence_confidence": 0.792250492663,
+        "selected_coverage": 0.85,
+        "represented": true
+      },
+      {
+        "dimension": "challenging",
+        "pearson_preference_association": 0.055884516111,
+        "evidence_count": 367,
+        "evidence_confidence": 0.794215456417,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "coming_of_age",
+        "pearson_preference_association": 0.055388838786,
+        "evidence_count": 277,
+        "evidence_confidence": 0.811841857856,
+        "selected_coverage": 0.4,
+        "represented": true
+      },
+      {
+        "dimension": "slow_burn",
+        "pearson_preference_association": 0.055253915421,
+        "evidence_count": 391,
+        "evidence_confidence": 0.796852210201,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "maximalist",
+        "pearson_preference_association": 0.05433167571,
+        "evidence_count": 121,
+        "evidence_confidence": 0.792407436955,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "family",
+        "pearson_preference_association": 0.053575224065,
+        "evidence_count": 345,
+        "evidence_confidence": 0.809353969855,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "complex",
+        "pearson_preference_association": 0.05205905197,
+        "evidence_count": 420,
+        "evidence_confidence": 0.799008506913,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "bizarre",
+        "pearson_preference_association": 0.051226207606,
+        "evidence_count": 126,
+        "evidence_confidence": 0.789449252296,
+        "selected_coverage": 0.15,
+        "represented": true
+      },
+      {
+        "dimension": "playful",
+        "pearson_preference_association": 0.050053125338,
+        "evidence_count": 208,
+        "evidence_confidence": 0.794068809032,
+        "selected_coverage": 0.3,
+        "represented": true
+      }
+    ]
+  },
+  "CONCENTRATION_005": {
+    "slate_name": "CONCENTRATION_005",
+    "selected_count": 20,
+    "mean_predicted_preference": 0.618280025947749,
+    "median_predicted_preference": 0.6039170718371438,
+    "min_predicted_preference": 0.562762856154503,
+    "max_predicted_preference": 0.808861177978014,
+    "cumulative_predicted_preference": 12.36560051895498,
+    "mean_normalized_relevance": 0.7205239335413881,
+    "mean_raw_b3_rank": 10.5,
+    "median_raw_b3_rank": 10.5,
+    "worst_raw_b3_rank": 20,
+    "embedding": {
+      "mean_pairwise_cosine_similarity": 0.3550250320155106,
+      "median_pairwise_cosine_similarity": 0.3476265652231967,
+      "max_pairwise_cosine_similarity": 0.7950954045767789,
+      "mean_nearest_neighbor_cosine_similarity": 0.5134450809309901,
+      "median_nearest_neighbor_cosine_similarity": 0.4598794092014268,
+      "embedding_diversity": 0.6449749679844894
+    },
+    "historical_taste_clusters": {
+      "distribution": {
+        "Taste Cluster 4": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 2": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 3": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 1": {
+          "count": 4,
+          "share": 0.2
+        },
+        "Taste Cluster 5": {
+          "count": 1,
+          "share": 0.05
+        }
+      },
+      "represented_clusters": 5,
+      "absent_clusters": [],
+      "entropy": 2.1804820237218405,
+      "normalized_entropy": 0.939082492917429,
+      "hhi": 0.23
+    },
+    "semantic": {
+      "semantic_dimensions_represented": 61,
+      "taste_dimensions_represented": 34
+    },
+    "taste_coverage": [
+      {
+        "dimension": "episodic",
+        "pearson_preference_association": 0.142163079762,
+        "evidence_count": 64,
+        "evidence_confidence": 0.770359610567,
+        "selected_coverage": 0.1,
+        "represented": true
+      },
+      {
+        "dimension": "historical",
+        "pearson_preference_association": 0.132372867143,
+        "evidence_count": 181,
+        "evidence_confidence": 0.803556462052,
+        "selected_coverage": 0.7,
+        "represented": true
+      },
+      {
+        "dimension": "moderate",
+        "pearson_preference_association": 0.11057977132,
+        "evidence_count": 422,
+        "evidence_confidence": 0.770687947878,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "atmospheric",
+        "pearson_preference_association": 0.110140379015,
+        "evidence_count": 415,
+        "evidence_confidence": 0.802120236643,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "niche",
+        "pearson_preference_association": 0.103926257995,
+        "evidence_count": 225,
+        "evidence_confidence": 0.773338797747,
+        "selected_coverage": 0.4,
+        "represented": true
+      },
+      {
+        "dimension": "abstract",
+        "pearson_preference_association": 0.094056629936,
+        "evidence_count": 71,
+        "evidence_confidence": 0.765198466464,
+        "selected_coverage": 0.2,
+        "represented": true
+      },
+      {
+        "dimension": "surreal",
+        "pearson_preference_association": 0.092472352257,
+        "evidence_count": 169,
+        "evidence_confidence": 0.797574211797,
+        "selected_coverage": 0.2,
+        "represented": true
+      },
+      {
+        "dimension": "absurd",
+        "pearson_preference_association": 0.092367712811,
+        "evidence_count": 53,
+        "evidence_confidence": 0.766899944915,
+        "selected_coverage": 0.0,
+        "represented": false
+      },
+      {
+        "dimension": "ethereal",
+        "pearson_preference_association": 0.092180812431,
+        "evidence_count": 176,
+        "evidence_confidence": 0.781339677711,
+        "selected_coverage": 0.3,
+        "represented": true
+      },
+      {
+        "dimension": "comforting",
+        "pearson_preference_association": 0.089279683484,
+        "evidence_count": 342,
+        "evidence_confidence": 0.795683596404,
+        "selected_coverage": 0.65,
+        "represented": true
+      },
+      {
+        "dimension": "melancholic",
+        "pearson_preference_association": 0.086104593986,
+        "evidence_count": 381,
+        "evidence_confidence": 0.816030256627,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "grief",
+        "pearson_preference_association": 0.082462356754,
+        "evidence_count": 330,
+        "evidence_confidence": 0.813635953914,
+        "selected_coverage": 0.75,
+        "represented": true
+      },
+      {
+        "dimension": "visual",
+        "pearson_preference_association": 0.081057420132,
+        "evidence_count": 418,
+        "evidence_confidence": 0.795403874117,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "morality",
+        "pearson_preference_association": 0.081006714565,
+        "evidence_count": 415,
+        "evidence_confidence": 0.787811222579,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "plot_driven",
+        "pearson_preference_association": 0.079298909696,
+        "evidence_count": 408,
+        "evidence_confidence": 0.791748297982,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "identity",
+        "pearson_preference_association": 0.076366947475,
+        "evidence_count": 404,
+        "evidence_confidence": 0.796302345295,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "ensemble",
+        "pearson_preference_association": 0.076074974314,
+        "evidence_count": 248,
+        "evidence_confidence": 0.787298970781,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "emotional_intensity",
+        "pearson_preference_association": 0.075959357406,
+        "evidence_count": 424,
+        "evidence_confidence": 0.803653757935,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "alienation",
+        "pearson_preference_association": 0.065740376743,
+        "evidence_count": 372,
+        "evidence_confidence": 0.820443770998,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "nostalgic",
+        "pearson_preference_association": 0.065365051319,
+        "evidence_count": 286,
+        "evidence_confidence": 0.790862577748,
+        "selected_coverage": 0.75,
+        "represented": true
+      },
+      {
+        "dimension": "class",
+        "pearson_preference_association": 0.063076199514,
+        "evidence_count": 359,
+        "evidence_confidence": 0.787811118597,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "outsider_protagonist",
+        "pearson_preference_association": 0.062447375249,
+        "evidence_count": 338,
+        "evidence_confidence": 0.811857531609,
+        "selected_coverage": 0.85,
+        "represented": true
+      },
+      {
+        "dimension": "joyful",
+        "pearson_preference_association": 0.061531342769,
+        "evidence_count": 252,
+        "evidence_confidence": 0.803702371644,
+        "selected_coverage": 0.5,
+        "represented": true
+      },
+      {
+        "dimension": "dialogue_heavy",
+        "pearson_preference_association": 0.061314042445,
+        "evidence_count": 411,
+        "evidence_confidence": 0.797116949974,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "conventional",
+        "pearson_preference_association": 0.057684343659,
+        "evidence_count": 395,
+        "evidence_confidence": 0.791725604711,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "naturalistic",
+        "pearson_preference_association": 0.057247984549,
+        "evidence_count": 415,
+        "evidence_confidence": 0.797118078185,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "contained",
+        "pearson_preference_association": 0.055890543538,
+        "evidence_count": 395,
+        "evidence_confidence": 0.792250492663,
+        "selected_coverage": 0.85,
+        "represented": true
+      },
+      {
+        "dimension": "challenging",
+        "pearson_preference_association": 0.055884516111,
+        "evidence_count": 367,
+        "evidence_confidence": 0.794215456417,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "coming_of_age",
+        "pearson_preference_association": 0.055388838786,
+        "evidence_count": 277,
+        "evidence_confidence": 0.811841857856,
+        "selected_coverage": 0.4,
+        "represented": true
+      },
+      {
+        "dimension": "slow_burn",
+        "pearson_preference_association": 0.055253915421,
+        "evidence_count": 391,
+        "evidence_confidence": 0.796852210201,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "maximalist",
+        "pearson_preference_association": 0.05433167571,
+        "evidence_count": 121,
+        "evidence_confidence": 0.792407436955,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "family",
+        "pearson_preference_association": 0.053575224065,
+        "evidence_count": 345,
+        "evidence_confidence": 0.809353969855,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "complex",
+        "pearson_preference_association": 0.05205905197,
+        "evidence_count": 420,
+        "evidence_confidence": 0.799008506913,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "bizarre",
+        "pearson_preference_association": 0.051226207606,
+        "evidence_count": 126,
+        "evidence_confidence": 0.789449252296,
+        "selected_coverage": 0.15,
+        "represented": true
+      },
+      {
+        "dimension": "playful",
+        "pearson_preference_association": 0.050053125338,
+        "evidence_count": 208,
+        "evidence_confidence": 0.794068809032,
+        "selected_coverage": 0.3,
+        "represented": true
+      }
+    ],
+    "relevance_deltas_vs_raw": {
+      "mean_relevance_delta": 0.0,
+      "relative_mean_relevance_change": 0.0,
+      "cumulative_relevance_delta": 0.0
+    }
+  },
+  "CONCENTRATION_010": {
+    "slate_name": "CONCENTRATION_010",
+    "selected_count": 20,
+    "mean_predicted_preference": 0.618280025947749,
+    "median_predicted_preference": 0.6039170718371438,
+    "min_predicted_preference": 0.562762856154503,
+    "max_predicted_preference": 0.808861177978014,
+    "cumulative_predicted_preference": 12.36560051895498,
+    "mean_normalized_relevance": 0.7205239335413881,
+    "mean_raw_b3_rank": 10.5,
+    "median_raw_b3_rank": 10.5,
+    "worst_raw_b3_rank": 20,
+    "embedding": {
+      "mean_pairwise_cosine_similarity": 0.3550250320155106,
+      "median_pairwise_cosine_similarity": 0.3476265652231967,
+      "max_pairwise_cosine_similarity": 0.7950954045767789,
+      "mean_nearest_neighbor_cosine_similarity": 0.5134450809309901,
+      "median_nearest_neighbor_cosine_similarity": 0.4598794092014268,
+      "embedding_diversity": 0.6449749679844894
+    },
+    "historical_taste_clusters": {
+      "distribution": {
+        "Taste Cluster 4": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 2": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 3": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 1": {
+          "count": 4,
+          "share": 0.2
+        },
+        "Taste Cluster 5": {
+          "count": 1,
+          "share": 0.05
+        }
+      },
+      "represented_clusters": 5,
+      "absent_clusters": [],
+      "entropy": 2.1804820237218405,
+      "normalized_entropy": 0.939082492917429,
+      "hhi": 0.23
+    },
+    "semantic": {
+      "semantic_dimensions_represented": 61,
+      "taste_dimensions_represented": 34
+    },
+    "taste_coverage": [
+      {
+        "dimension": "episodic",
+        "pearson_preference_association": 0.142163079762,
+        "evidence_count": 64,
+        "evidence_confidence": 0.770359610567,
+        "selected_coverage": 0.1,
+        "represented": true
+      },
+      {
+        "dimension": "historical",
+        "pearson_preference_association": 0.132372867143,
+        "evidence_count": 181,
+        "evidence_confidence": 0.803556462052,
+        "selected_coverage": 0.7,
+        "represented": true
+      },
+      {
+        "dimension": "moderate",
+        "pearson_preference_association": 0.11057977132,
+        "evidence_count": 422,
+        "evidence_confidence": 0.770687947878,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "atmospheric",
+        "pearson_preference_association": 0.110140379015,
+        "evidence_count": 415,
+        "evidence_confidence": 0.802120236643,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "niche",
+        "pearson_preference_association": 0.103926257995,
+        "evidence_count": 225,
+        "evidence_confidence": 0.773338797747,
+        "selected_coverage": 0.4,
+        "represented": true
+      },
+      {
+        "dimension": "abstract",
+        "pearson_preference_association": 0.094056629936,
+        "evidence_count": 71,
+        "evidence_confidence": 0.765198466464,
+        "selected_coverage": 0.2,
+        "represented": true
+      },
+      {
+        "dimension": "surreal",
+        "pearson_preference_association": 0.092472352257,
+        "evidence_count": 169,
+        "evidence_confidence": 0.797574211797,
+        "selected_coverage": 0.2,
+        "represented": true
+      },
+      {
+        "dimension": "absurd",
+        "pearson_preference_association": 0.092367712811,
+        "evidence_count": 53,
+        "evidence_confidence": 0.766899944915,
+        "selected_coverage": 0.0,
+        "represented": false
+      },
+      {
+        "dimension": "ethereal",
+        "pearson_preference_association": 0.092180812431,
+        "evidence_count": 176,
+        "evidence_confidence": 0.781339677711,
+        "selected_coverage": 0.3,
+        "represented": true
+      },
+      {
+        "dimension": "comforting",
+        "pearson_preference_association": 0.089279683484,
+        "evidence_count": 342,
+        "evidence_confidence": 0.795683596404,
+        "selected_coverage": 0.65,
+        "represented": true
+      },
+      {
+        "dimension": "melancholic",
+        "pearson_preference_association": 0.086104593986,
+        "evidence_count": 381,
+        "evidence_confidence": 0.816030256627,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "grief",
+        "pearson_preference_association": 0.082462356754,
+        "evidence_count": 330,
+        "evidence_confidence": 0.813635953914,
+        "selected_coverage": 0.75,
+        "represented": true
+      },
+      {
+        "dimension": "visual",
+        "pearson_preference_association": 0.081057420132,
+        "evidence_count": 418,
+        "evidence_confidence": 0.795403874117,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "morality",
+        "pearson_preference_association": 0.081006714565,
+        "evidence_count": 415,
+        "evidence_confidence": 0.787811222579,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "plot_driven",
+        "pearson_preference_association": 0.079298909696,
+        "evidence_count": 408,
+        "evidence_confidence": 0.791748297982,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "identity",
+        "pearson_preference_association": 0.076366947475,
+        "evidence_count": 404,
+        "evidence_confidence": 0.796302345295,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "ensemble",
+        "pearson_preference_association": 0.076074974314,
+        "evidence_count": 248,
+        "evidence_confidence": 0.787298970781,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "emotional_intensity",
+        "pearson_preference_association": 0.075959357406,
+        "evidence_count": 424,
+        "evidence_confidence": 0.803653757935,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "alienation",
+        "pearson_preference_association": 0.065740376743,
+        "evidence_count": 372,
+        "evidence_confidence": 0.820443770998,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "nostalgic",
+        "pearson_preference_association": 0.065365051319,
+        "evidence_count": 286,
+        "evidence_confidence": 0.790862577748,
+        "selected_coverage": 0.75,
+        "represented": true
+      },
+      {
+        "dimension": "class",
+        "pearson_preference_association": 0.063076199514,
+        "evidence_count": 359,
+        "evidence_confidence": 0.787811118597,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "outsider_protagonist",
+        "pearson_preference_association": 0.062447375249,
+        "evidence_count": 338,
+        "evidence_confidence": 0.811857531609,
+        "selected_coverage": 0.85,
+        "represented": true
+      },
+      {
+        "dimension": "joyful",
+        "pearson_preference_association": 0.061531342769,
+        "evidence_count": 252,
+        "evidence_confidence": 0.803702371644,
+        "selected_coverage": 0.5,
+        "represented": true
+      },
+      {
+        "dimension": "dialogue_heavy",
+        "pearson_preference_association": 0.061314042445,
+        "evidence_count": 411,
+        "evidence_confidence": 0.797116949974,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "conventional",
+        "pearson_preference_association": 0.057684343659,
+        "evidence_count": 395,
+        "evidence_confidence": 0.791725604711,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "naturalistic",
+        "pearson_preference_association": 0.057247984549,
+        "evidence_count": 415,
+        "evidence_confidence": 0.797118078185,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "contained",
+        "pearson_preference_association": 0.055890543538,
+        "evidence_count": 395,
+        "evidence_confidence": 0.792250492663,
+        "selected_coverage": 0.85,
+        "represented": true
+      },
+      {
+        "dimension": "challenging",
+        "pearson_preference_association": 0.055884516111,
+        "evidence_count": 367,
+        "evidence_confidence": 0.794215456417,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "coming_of_age",
+        "pearson_preference_association": 0.055388838786,
+        "evidence_count": 277,
+        "evidence_confidence": 0.811841857856,
+        "selected_coverage": 0.4,
+        "represented": true
+      },
+      {
+        "dimension": "slow_burn",
+        "pearson_preference_association": 0.055253915421,
+        "evidence_count": 391,
+        "evidence_confidence": 0.796852210201,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "maximalist",
+        "pearson_preference_association": 0.05433167571,
+        "evidence_count": 121,
+        "evidence_confidence": 0.792407436955,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "family",
+        "pearson_preference_association": 0.053575224065,
+        "evidence_count": 345,
+        "evidence_confidence": 0.809353969855,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "complex",
+        "pearson_preference_association": 0.05205905197,
+        "evidence_count": 420,
+        "evidence_confidence": 0.799008506913,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "bizarre",
+        "pearson_preference_association": 0.051226207606,
+        "evidence_count": 126,
+        "evidence_confidence": 0.789449252296,
+        "selected_coverage": 0.15,
+        "represented": true
+      },
+      {
+        "dimension": "playful",
+        "pearson_preference_association": 0.050053125338,
+        "evidence_count": 208,
+        "evidence_confidence": 0.794068809032,
+        "selected_coverage": 0.3,
+        "represented": true
+      }
+    ],
+    "relevance_deltas_vs_raw": {
+      "mean_relevance_delta": 0.0,
+      "relative_mean_relevance_change": 0.0,
+      "cumulative_relevance_delta": 0.0
+    }
+  },
+  "CONCENTRATION_020": {
+    "slate_name": "CONCENTRATION_020",
+    "selected_count": 20,
+    "mean_predicted_preference": 0.618280025947749,
+    "median_predicted_preference": 0.6039170718371438,
+    "min_predicted_preference": 0.562762856154503,
+    "max_predicted_preference": 0.808861177978014,
+    "cumulative_predicted_preference": 12.36560051895498,
+    "mean_normalized_relevance": 0.7205239335413882,
+    "mean_raw_b3_rank": 10.5,
+    "median_raw_b3_rank": 10.5,
+    "worst_raw_b3_rank": 20,
+    "embedding": {
+      "mean_pairwise_cosine_similarity": 0.3550250320155106,
+      "median_pairwise_cosine_similarity": 0.3476265652231967,
+      "max_pairwise_cosine_similarity": 0.7950954045767789,
+      "mean_nearest_neighbor_cosine_similarity": 0.5134450809309901,
+      "median_nearest_neighbor_cosine_similarity": 0.4598794092014268,
+      "embedding_diversity": 0.6449749679844894
+    },
+    "historical_taste_clusters": {
+      "distribution": {
+        "Taste Cluster 4": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 2": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 3": {
+          "count": 5,
+          "share": 0.25
+        },
+        "Taste Cluster 1": {
+          "count": 4,
+          "share": 0.2
+        },
+        "Taste Cluster 5": {
+          "count": 1,
+          "share": 0.05
+        }
+      },
+      "represented_clusters": 5,
+      "absent_clusters": [],
+      "entropy": 2.1804820237218405,
+      "normalized_entropy": 0.939082492917429,
+      "hhi": 0.23
+    },
+    "semantic": {
+      "semantic_dimensions_represented": 61,
+      "taste_dimensions_represented": 34
+    },
+    "taste_coverage": [
+      {
+        "dimension": "episodic",
+        "pearson_preference_association": 0.142163079762,
+        "evidence_count": 64,
+        "evidence_confidence": 0.770359610567,
+        "selected_coverage": 0.1,
+        "represented": true
+      },
+      {
+        "dimension": "historical",
+        "pearson_preference_association": 0.132372867143,
+        "evidence_count": 181,
+        "evidence_confidence": 0.803556462052,
+        "selected_coverage": 0.7,
+        "represented": true
+      },
+      {
+        "dimension": "moderate",
+        "pearson_preference_association": 0.11057977132,
+        "evidence_count": 422,
+        "evidence_confidence": 0.770687947878,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "atmospheric",
+        "pearson_preference_association": 0.110140379015,
+        "evidence_count": 415,
+        "evidence_confidence": 0.802120236643,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "niche",
+        "pearson_preference_association": 0.103926257995,
+        "evidence_count": 225,
+        "evidence_confidence": 0.773338797747,
+        "selected_coverage": 0.4,
+        "represented": true
+      },
+      {
+        "dimension": "abstract",
+        "pearson_preference_association": 0.094056629936,
+        "evidence_count": 71,
+        "evidence_confidence": 0.765198466464,
+        "selected_coverage": 0.2,
+        "represented": true
+      },
+      {
+        "dimension": "surreal",
+        "pearson_preference_association": 0.092472352257,
+        "evidence_count": 169,
+        "evidence_confidence": 0.797574211797,
+        "selected_coverage": 0.2,
+        "represented": true
+      },
+      {
+        "dimension": "absurd",
+        "pearson_preference_association": 0.092367712811,
+        "evidence_count": 53,
+        "evidence_confidence": 0.766899944915,
+        "selected_coverage": 0.0,
+        "represented": false
+      },
+      {
+        "dimension": "ethereal",
+        "pearson_preference_association": 0.092180812431,
+        "evidence_count": 176,
+        "evidence_confidence": 0.781339677711,
+        "selected_coverage": 0.3,
+        "represented": true
+      },
+      {
+        "dimension": "comforting",
+        "pearson_preference_association": 0.089279683484,
+        "evidence_count": 342,
+        "evidence_confidence": 0.795683596404,
+        "selected_coverage": 0.65,
+        "represented": true
+      },
+      {
+        "dimension": "melancholic",
+        "pearson_preference_association": 0.086104593986,
+        "evidence_count": 381,
+        "evidence_confidence": 0.816030256627,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "grief",
+        "pearson_preference_association": 0.082462356754,
+        "evidence_count": 330,
+        "evidence_confidence": 0.813635953914,
+        "selected_coverage": 0.75,
+        "represented": true
+      },
+      {
+        "dimension": "visual",
+        "pearson_preference_association": 0.081057420132,
+        "evidence_count": 418,
+        "evidence_confidence": 0.795403874117,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "morality",
+        "pearson_preference_association": 0.081006714565,
+        "evidence_count": 415,
+        "evidence_confidence": 0.787811222579,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "plot_driven",
+        "pearson_preference_association": 0.079298909696,
+        "evidence_count": 408,
+        "evidence_confidence": 0.791748297982,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "identity",
+        "pearson_preference_association": 0.076366947475,
+        "evidence_count": 404,
+        "evidence_confidence": 0.796302345295,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "ensemble",
+        "pearson_preference_association": 0.076074974314,
+        "evidence_count": 248,
+        "evidence_confidence": 0.787298970781,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "emotional_intensity",
+        "pearson_preference_association": 0.075959357406,
+        "evidence_count": 424,
+        "evidence_confidence": 0.803653757935,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "alienation",
+        "pearson_preference_association": 0.065740376743,
+        "evidence_count": 372,
+        "evidence_confidence": 0.820443770998,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "nostalgic",
+        "pearson_preference_association": 0.065365051319,
+        "evidence_count": 286,
+        "evidence_confidence": 0.790862577748,
+        "selected_coverage": 0.75,
+        "represented": true
+      },
+      {
+        "dimension": "class",
+        "pearson_preference_association": 0.063076199514,
+        "evidence_count": 359,
+        "evidence_confidence": 0.787811118597,
+        "selected_coverage": 0.9,
+        "represented": true
+      },
+      {
+        "dimension": "outsider_protagonist",
+        "pearson_preference_association": 0.062447375249,
+        "evidence_count": 338,
+        "evidence_confidence": 0.811857531609,
+        "selected_coverage": 0.85,
+        "represented": true
+      },
+      {
+        "dimension": "joyful",
+        "pearson_preference_association": 0.061531342769,
+        "evidence_count": 252,
+        "evidence_confidence": 0.803702371644,
+        "selected_coverage": 0.5,
+        "represented": true
+      },
+      {
+        "dimension": "dialogue_heavy",
+        "pearson_preference_association": 0.061314042445,
+        "evidence_count": 411,
+        "evidence_confidence": 0.797116949974,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "conventional",
+        "pearson_preference_association": 0.057684343659,
+        "evidence_count": 395,
+        "evidence_confidence": 0.791725604711,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "naturalistic",
+        "pearson_preference_association": 0.057247984549,
+        "evidence_count": 415,
+        "evidence_confidence": 0.797118078185,
+        "selected_coverage": 0.95,
+        "represented": true
+      },
+      {
+        "dimension": "contained",
+        "pearson_preference_association": 0.055890543538,
+        "evidence_count": 395,
+        "evidence_confidence": 0.792250492663,
+        "selected_coverage": 0.85,
+        "represented": true
+      },
+      {
+        "dimension": "challenging",
+        "pearson_preference_association": 0.055884516111,
+        "evidence_count": 367,
+        "evidence_confidence": 0.794215456417,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "coming_of_age",
+        "pearson_preference_association": 0.055388838786,
+        "evidence_count": 277,
+        "evidence_confidence": 0.811841857856,
+        "selected_coverage": 0.4,
+        "represented": true
+      },
+      {
+        "dimension": "slow_burn",
+        "pearson_preference_association": 0.055253915421,
+        "evidence_count": 391,
+        "evidence_confidence": 0.796852210201,
+        "selected_coverage": 0.8,
+        "represented": true
+      },
+      {
+        "dimension": "maximalist",
+        "pearson_preference_association": 0.05433167571,
+        "evidence_count": 121,
+        "evidence_confidence": 0.792407436955,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "family",
+        "pearson_preference_association": 0.053575224065,
+        "evidence_count": 345,
+        "evidence_confidence": 0.809353969855,
+        "selected_coverage": 0.6,
+        "represented": true
+      },
+      {
+        "dimension": "complex",
+        "pearson_preference_association": 0.05205905197,
+        "evidence_count": 420,
+        "evidence_confidence": 0.799008506913,
+        "selected_coverage": 1.0,
+        "represented": true
+      },
+      {
+        "dimension": "bizarre",
+        "pearson_preference_association": 0.051226207606,
+        "evidence_count": 126,
+        "evidence_confidence": 0.789449252296,
+        "selected_coverage": 0.15,
+        "represented": true
+      },
+      {
+        "dimension": "playful",
+        "pearson_preference_association": 0.050053125338,
+        "evidence_count": 208,
+        "evidence_confidence": 0.794068809032,
+        "selected_coverage": 0.3,
+        "represented": true
+      }
+    ],
+    "relevance_deltas_vs_raw": {
+      "mean_relevance_delta": 1.1102230246251565e-16,
+      "relative_mean_relevance_change": 1.5408551651690325e-16,
+      "cumulative_relevance_delta": 1.7763568394002505e-15
+    }
+  }
+}

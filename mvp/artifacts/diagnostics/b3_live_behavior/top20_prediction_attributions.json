@@ -1,0 +1,1943 @@
+[
+  {
+    "source_id": "346",
+    "tmdb_id": 346,
+    "title": "Seven Samurai",
+    "year": 1954,
+    "rank": 1,
+    "predicted_preference": 0.8088611768759507,
+    "reconstructed_prediction": 0.8088611768759507,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.15906693604660765,
+      "decade": 0.0018958535086904945,
+      "genre": -0.001438498313434857,
+      "language": 0.001216785407833532,
+      "country": 0.003414582098034573,
+      "latent": 0.20233941190602373,
+      "metadata_total": 0.16415565874773141,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -3.085101451069604,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.15906693604660765
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.9633329872876317,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.04519964192041252
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": -1.660278395467661,
+        "coefficient": -0.02318304550752182,
+        "contribution": 0.03849030959728209
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": -1.176247404084889,
+        "coefficient": -0.03187785778436087,
+        "contribution": 0.03749624746664174
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.313475456050137,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.035258527425678
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_008",
+        "group": "latent",
+        "value": 1.5084029699367918,
+        "coefficient": -0.009474285201537438,
+        "contribution": -0.014291039936027268
+      },
+      {
+        "feature": "genre__action",
+        "group": "genre",
+        "value": 1.0,
+        "coefficient": -0.007349382270330261,
+        "contribution": -0.007349382270330261
+      },
+      {
+        "feature": "latent_pca_016",
+        "group": "latent",
+        "value": 1.2158445997800211,
+        "coefficient": -0.004854754411144864,
+        "contribution": -0.00590262693404872
+      },
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 0.11329747584441761,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.0024109132669528463
+      },
+      {
+        "feature": "latent_pca_004",
+        "group": "latent",
+        "value": -0.17986543540017935,
+        "coefficient": 0.002573741294583775,
+        "contribution": -0.00046292709855773193
+      }
+    ]
+  },
+  {
+    "source_id": "14537",
+    "tmdb_id": 14537,
+    "title": "Harakiri",
+    "year": 1962,
+    "rank": 2,
+    "predicted_preference": 0.7743872654226309,
+    "reconstructed_prediction": 0.7743872654226309,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.1350706572245485,
+      "decade": 0.00046137171011426955,
+      "genre": 0.0009372867138901573,
+      "language": 0.001216785407833532,
+      "country": 0.003414582098034573,
+      "latent": 0.19092047604601425,
+      "metadata_total": 0.14110068315442104,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -2.619693890867942,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.1350706572245485
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -2.7457712480455414,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.07370663106639459
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": -1.7312708148518632,
+        "coefficient": -0.02318304550752182,
+        "contribution": 0.04013613008655512
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": -1.8975282323325449,
+        "coefficient": -0.017753321842654365,
+        "contribution": 0.0336874294141227
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.4633556416873403,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.021740674680973467
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_008",
+        "group": "latent",
+        "value": 2.7368578853848344,
+        "coefficient": -0.009474285201537438,
+        "contribution": -0.025929772162212584
+      },
+      {
+        "feature": "genre__action",
+        "group": "genre",
+        "value": 1.0,
+        "coefficient": -0.007349382270330261,
+        "contribution": -0.007349382270330261
+      },
+      {
+        "feature": "latent_pca_007",
+        "group": "latent",
+        "value": 1.0651865095189612,
+        "coefficient": -0.002228537572991502,
+        "contribution": -0.0023738081587066752
+      },
+      {
+        "feature": "latent_pca_004",
+        "group": "latent",
+        "value": -0.14644604474708922,
+        "coefficient": 0.002573741294583775,
+        "contribution": -0.00037691423279404685
+      },
+      {
+        "feature": "latent_pca_016",
+        "group": "latent",
+        "value": 0.06638008241960208,
+        "coefficient": -0.004854754411144864,
+        "contribution": -0.00032225899793872283
+      }
+    ]
+  },
+  {
+    "source_id": "12493",
+    "tmdb_id": 12493,
+    "title": "High and Low",
+    "year": 1963,
+    "rank": 3,
+    "predicted_preference": 0.6909862138558344,
+    "reconstructed_prediction": 0.6909862138558344,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.13207112237179108,
+      "decade": 0.00046137171011426955,
+      "genre": 0.0010089728437642446,
+      "language": 0.001216785407833532,
+      "country": 0.003414582098034573,
+      "latent": 0.11044727320210103,
+      "metadata_total": 0.13817283443153772,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -2.5615179458427337,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.13207112237179108
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": -1.8166427521451076,
+        "coefficient": -0.017753321842654365,
+        "contribution": 0.03225144345195748
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.6330275181842324,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.029701689369380623
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.0816393787765466,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.029035191731691137
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": -0.9402421404056377,
+        "coefficient": -0.02318304550752182,
+        "contribution": 0.021797676329113617
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": 0.39814668238284934,
+        "coefficient": -0.03187785778436087,
+        "contribution": -0.012692063318315568
+      },
+      {
+        "feature": "latent_pca_008",
+        "group": "latent",
+        "value": 1.0201974256817645,
+        "coefficient": -0.009474285201537438,
+        "contribution": -0.009665641372783333
+      },
+      {
+        "feature": "latent_pca_016",
+        "group": "latent",
+        "value": 1.9200172200465153,
+        "coefficient": -0.004854754411144864,
+        "contribution": -0.009321212068494919
+      },
+      {
+        "feature": "genre__thriller",
+        "group": "genre",
+        "value": 1.0,
+        "coefficient": -0.00875163223636868,
+        "contribution": -0.00875163223636868
+      },
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 0.2197855099549783,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.00467692504078468
+      }
+    ]
+  },
+  {
+    "source_id": "94623",
+    "tmdb_id": 94623,
+    "title": "Directed by John Ford",
+    "year": 1971,
+    "rank": 4,
+    "predicted_preference": 0.6338240765056488,
+    "reconstructed_prediction": 0.6338240765056488,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.10807484354973193,
+      "decade": 0.004401503435591271,
+      "genre": 0.0057687526481953735,
+      "language": -0.01616739710071184,
+      "country": -0.014092921803169354,
+      "latent": 0.10347318955381575,
+      "metadata_total": 0.08798478072963738,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -2.0961103856410714,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.10807484354973193
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -2.066190279976575,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.055464170508598046
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": -2.1655972942914965,
+        "coefficient": -0.019268666402186493,
+        "contribution": 0.041728171825180536
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.6451044920020437,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.03026834171000506
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": -0.5020591945779806,
+        "coefficient": -0.03187785778436087,
+        "contribution": 0.01600457160408763
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": 0.5017075451414207,
+        "coefficient": -0.02318304550752182,
+        "contribution": -0.011631108850480612
+      },
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 0.535006067130332,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.011384659856994831
+      },
+      {
+        "feature": "latent_pca_005",
+        "group": "latent",
+        "value": 0.9337063201911515,
+        "coefficient": -0.009774946317151074,
+        "contribution": -0.009126929155853178
+      }
+    ]
+  },
+  {
+    "source_id": "240",
+    "tmdb_id": 240,
+    "title": "The Godfather Part II",
+    "year": 1974,
+    "rank": 5,
+    "predicted_preference": 0.6279469248173712,
+    "reconstructed_prediction": 0.6279469248173712,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.09907623899145974,
+      "decade": 0.004401503435591271,
+      "genre": 0.0091079056478667,
+      "language": -0.01616739710071184,
+      "country": -0.014092921803169354,
+      "latent": 0.10325548942413904,
+      "metadata_total": 0.08232532917103652,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -1.921582550565448,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.09907623899145974
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 1.1185505195345273,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.05248245790399411
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.1215212832750867,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.030105769196289284
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": -1.3223082170721479,
+        "coefficient": -0.019268666402186493,
+        "contribution": 0.02547911591563322
+      },
+      {
+        "feature": "latent_pca_015",
+        "group": "latent",
+        "value": 2.4835309387525135,
+        "coefficient": 0.006907245701744519,
+        "contribution": 0.017154358401847827
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 1.0271020833654398,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.021856215426203224
+      },
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": 0.7564815413442522,
+        "coefficient": -0.017753321842654365,
+        "contribution": -0.013430060271511753
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": 0.17991501985442593,
+        "coefficient": -0.03187785778436087,
+        "contribution": -0.005735305416189852
+      }
+    ]
+  },
+  {
+    "source_id": "238",
+    "tmdb_id": 238,
+    "title": "The Godfather",
+    "year": 1972,
+    "rank": 6,
+    "predicted_preference": 0.6267365130788065,
+    "reconstructed_prediction": 0.6267365130788065,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "top_rated",
+      "genre_diverse"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.10507530869697454,
+      "decade": 0.004401503435591271,
+      "genre": 0.0091079056478667,
+      "language": -0.01616739710071184,
+      "country": -0.014092921803169354,
+      "latent": 0.0960460079800595,
+      "metadata_total": 0.08832439887655132,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -2.0379344406158637,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.10507530869697454
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.8671317163072702,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.04068587247829685
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.5118664769336032,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.040584074407624
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": -1.803858502039003,
+        "coefficient": -0.019268666402186493,
+        "contribution": 0.034757947712537395
+      },
+      {
+        "feature": "latent_pca_015",
+        "group": "latent",
+        "value": 2.2251786256805346,
+        "coefficient": 0.006907245701744519,
+        "contribution": 0.015369855497845648
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 1.7602179471634294,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.03745655205392569
+      },
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": 0.4735838470012782,
+        "coefficient": -0.03187785778436087,
+        "contribution": -0.015096838523677264
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": 0.6871783208632662,
+        "coefficient": -0.017753321842654365,
+        "contribution": -0.012199697893580375
+      }
+    ]
+  },
+  {
+    "source_id": "11216",
+    "tmdb_id": 11216,
+    "title": "Cinema Paradiso",
+    "year": 1988,
+    "rank": 7,
+    "predicted_preference": 0.6164024518541995,
+    "reconstructed_prediction": 0.6164024518541995,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.05708275105285621,
+      "decade": 0.004988529744199129,
+      "genre": -0.00141697731776613,
+      "language": 0.0012165663771426729,
+      "country": -0.001446951093162863,
+      "latent": 0.11361242686873492,
+      "metadata_total": 0.06042391876326902,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 1.5763963011062203,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.0739646096157085
+      },
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -1.107119320212539,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.05708275105285621
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": -1.002293328402002,
+        "coefficient": -0.019268666402186493,
+        "contribution": 0.019312855782115328
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -0.5349015450145822,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.014358731035332174
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": -0.5650471024184923,
+        "coefficient": -0.02318304550752182,
+        "contribution": 0.01309951268926125
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_008",
+        "group": "latent",
+        "value": 1.2879642970083438,
+        "coefficient": -0.009474285201537438,
+        "contribution": -0.012202541079254722
+      },
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 0.3621227423080844,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.007705789711456526
+      },
+      {
+        "feature": "genre__romance",
+        "group": "genre",
+        "value": 1.0,
+        "coefficient": -0.007327861274661534,
+        "contribution": -0.007327861274661534
+      },
+      {
+        "feature": "country__it",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.005294389141178196,
+        "contribution": -0.005294389141178196
+      },
+      {
+        "feature": "latent_pca_011",
+        "group": "latent",
+        "value": -1.786239747874571,
+        "coefficient": 0.0020797836290056743,
+        "contribution": -0.0037149921851087563
+      }
+    ]
+  },
+  {
+    "source_id": "24128",
+    "tmdb_id": 24128,
+    "title": "Stop Making Sense",
+    "year": 1984,
+    "rank": 8,
+    "predicted_preference": 0.6124233137309758,
+    "reconstructed_prediction": 0.6124233137309758,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "genre_diverse"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.06908089046388578,
+      "decade": 0.004988529744199129,
+      "genre": 0.009389878599278867,
+      "language": -0.01616739710071184,
+      "country": -0.014092921803169354,
+      "latent": 0.11685822760529757,
+      "metadata_total": 0.05319897990348258,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -1.33982310031337,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.06908089046388578
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.9175505880318453,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.05147413275735016
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 1.0669214577199033,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.050060019206780604
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": -0.8157801346201179,
+        "coefficient": -0.017753321842654365,
+        "contribution": 0.014482807282754858
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": -0.7488997901415445,
+        "coefficient": -0.019268666402186493,
+        "contribution": 0.014430300224904893
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": 0.39623763777004645,
+        "coefficient": -0.03187785778436087,
+        "contribution": -0.012631207065644637
+      },
+      {
+        "feature": "latent_pca_015",
+        "group": "latent",
+        "value": -1.6787281048782996,
+        "coefficient": 0.006907245701744519,
+        "contribution": -0.011595387486818357
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": 0.22747586964106364,
+        "coefficient": -0.02318304550752182,
+        "contribution": -0.005273583437751879
+      }
+    ]
+  },
+  {
+    "source_id": "40096",
+    "tmdb_id": 40096,
+    "title": "A Dog's Will",
+    "year": 2000,
+    "rank": 9,
+    "predicted_preference": 0.6090595640641249,
+    "reconstructed_prediction": 0.6090595640641249,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.021088332819767464,
+      "decade": 0.010289753748443516,
+      "genre": 0.009172897847215988,
+      "language": 0.0006122212196718552,
+      "country": 0.001401736509750273,
+      "latent": 0.12412851569708011,
+      "metadata_total": 0.04256494214484909,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.9153370761915305,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.04294767087424716
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": -1.1357554603252744,
+        "coefficient": -0.03187785778436087,
+        "contribution": 0.03620545104206041
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": -1.530524416739607,
+        "coefficient": -0.02318304550752182,
+        "contribution": 0.0354822172036476
+      },
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -0.4090079799100453,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.021088332819767464
+      },
+      {
+        "feature": "decade__2000s",
+        "group": "decade",
+        "value": 1.0,
+        "coefficient": 0.010289753748443516,
+        "contribution": 0.010289753748443516
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "genre__romance",
+        "group": "genre",
+        "value": 1.0,
+        "coefficient": -0.007327861274661534,
+        "contribution": -0.007327861274661534
+      },
+      {
+        "feature": "latent_pca_001",
+        "group": "latent",
+        "value": -0.3597691823828261,
+        "coefficient": 0.01040285998992369,
+        "contribution": -0.0037426284330178607
+      },
+      {
+        "feature": "latent_pca_005",
+        "group": "latent",
+        "value": 0.2968701461422088,
+        "coefficient": -0.009774946317151074,
+        "contribution": -0.002901889741704885
+      },
+      {
+        "feature": "latent_pca_008",
+        "group": "latent",
+        "value": 0.22957597658948786,
+        "coefficient": -0.009474285201537438,
+        "contribution": -0.0021750682776302903
+      },
+      {
+        "feature": "latent_pca_015",
+        "group": "latent",
+        "value": -0.2990580014060381,
+        "coefficient": 0.006907245701744519,
+        "contribution": -0.002065667094784163
+      }
+    ]
+  },
+  {
+    "source_id": "82976",
+    "tmdb_id": 82976,
+    "title": "The Novices",
+    "year": 1970,
+    "rank": 10,
+    "predicted_preference": 0.6049943341602052,
+    "reconstructed_prediction": 0.6049943341602052,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "popular"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.11107437840248932,
+      "decade": 0.004401503435591271,
+      "genre": 0.010564859636497136,
+      "language": 0.0033994576811168377,
+      "country": -0.001446951093162863,
+      "latent": 0.03463497987547794,
+      "metadata_total": 0.12799324806253168,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -2.154286330666279,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.11107437840248932
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 1.2975038989036163,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.06087896126749355
+      },
+      {
+        "feature": "latent_pca_006",
+        "group": "latent",
+        "value": 2.3506453257637427,
+        "coefficient": 0.00949288504889523,
+        "contribution": 0.02231440586819809
+      },
+      {
+        "feature": "latent_pca_016",
+        "group": "latent",
+        "value": -1.336640335137952,
+        "coefficient": -0.004854754411144864,
+        "contribution": 0.0064890605631251225
+      },
+      {
+        "feature": "genre__drama",
+        "group": "genre",
+        "value": 1.0,
+        "coefficient": 0.005910883956895404,
+        "contribution": 0.005910883956895404
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 0.757476375330299,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.016118716053259298
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": 0.4802568382489935,
+        "coefficient": -0.03187785778436087,
+        "contribution": -0.015309559189668217
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": 0.6463274431800264,
+        "coefficient": -0.017753321842654365,
+        "contribution": -0.01147445911451491
+      },
+      {
+        "feature": "latent_pca_001",
+        "group": "latent",
+        "value": -0.904067835742846,
+        "coefficient": 0.01040285998992369,
+        "contribution": -0.009404891116626155
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": 0.2641032827815701,
+        "coefficient": -0.026843689589531348,
+        "contribution": -0.0070895065425646865
+      }
+    ]
+  },
+  {
+    "source_id": "389",
+    "tmdb_id": 389,
+    "title": "12 Angry Men",
+    "year": 1957,
+    "rank": 11,
+    "predicted_preference": 0.602839805724763,
+    "reconstructed_prediction": 0.602839805724763,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.15006833148833545,
+      "decade": 0.0018958535086904945,
+      "genre": 0.005910883956895404,
+      "language": -0.01616739710071184,
+      "country": -0.014092921803169354,
+      "latent": 0.03285894945252731,
+      "metadata_total": 0.12761475005004014,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -2.9105736159939806,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.15006833148833545
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": -2.197448836757,
+        "coefficient": -0.019268666402186493,
+        "contribution": 0.0423419085713434
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": -1.1142633857445652,
+        "coefficient": -0.02318304550752182,
+        "contribution": 0.025832018779081593
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.4200122428823536,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.01970699979238161
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -0.46968230650120896,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.012608006041413574
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 1.9511681234184284,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.0415198757054812
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": 0.653462255943279,
+        "coefficient": -0.03187785778436087,
+        "contribution": -0.020830976862407473
+      },
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_006",
+        "group": "latent",
+        "value": -0.8352307973830092,
+        "coefficient": 0.00949288504889523,
+        "contribution": -0.007928749948854008
+      }
+    ]
+  },
+  {
+    "source_id": "166607",
+    "tmdb_id": 166607,
+    "title": "Behold a Pale Horse",
+    "year": 1964,
+    "rank": 12,
+    "predicted_preference": 0.6005677100760176,
+    "reconstructed_prediction": 0.6005677100760176,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.1290715875190337,
+      "decade": 0.00046137171011426955,
+      "genre": 0.011747413863076274,
+      "language": -0.01616739710071184,
+      "country": -0.014092921803169354,
+      "latent": 0.047181549665478995,
+      "metadata_total": 0.11102005418834303,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -2.503342000817526,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.1290715875190337
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.5147187651857885,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.04066064034808553
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": -1.6356513178359615,
+        "coefficient": -0.019268666402186493,
+        "contribution": 0.03151681959367785
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.6055982443530017,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.028414706185300793
+      },
+      {
+        "feature": "latent_pca_005",
+        "group": "latent",
+        "value": -0.6911985764807492,
+        "coefficient": -0.009774946317151074,
+        "contribution": 0.006756428979590565
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 1.0125056764041602,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.021545611231974602
+      },
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": 0.8569019526209313,
+        "coefficient": -0.017753321842654365,
+        "contribution": -0.015212856152478355
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": 0.5394157035365182,
+        "coefficient": -0.02318304550752182,
+        "contribution": -0.012505298802559
+      }
+    ]
+  },
+  {
+    "source_id": "311",
+    "tmdb_id": 311,
+    "title": "Once Upon a Time in America",
+    "year": 1984,
+    "rank": 13,
+    "predicted_preference": 0.5794934671070716,
+    "reconstructed_prediction": 0.5794934671070716,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "top_rated"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.06908089046388578,
+      "decade": 0.004988529744199129,
+      "genre": 0.0091079056478667,
+      "language": -0.01616739710071184,
+      "country": -0.01938731094434755,
+      "latent": 0.08950474307398376,
+      "metadata_total": 0.04762261781089222,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -1.33982310031337,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.06908089046388578
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.8707803245111427,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.04085706539549079
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.4885191964619227,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.03995734725788248
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": -1.4070014797216852,
+        "coefficient": -0.019268666402186493,
+        "contribution": 0.027111042140139915
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": -0.550102525472464,
+        "coefficient": -0.02318304550752182,
+        "contribution": 0.012753051881830813
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": 0.7003755581909773,
+        "coefficient": -0.03187785778436087,
+        "contribution": -0.022326472439654334
+      },
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 0.5357920686095887,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.011401385572903865
+      },
+      {
+        "feature": "latent_pca_005",
+        "group": "latent",
+        "value": 0.6608020560344229,
+        "coefficient": -0.009774946317151074,
+        "contribution": -0.0064593046239995395
+      }
+    ]
+  },
+  {
+    "source_id": "233651",
+    "tmdb_id": 233651,
+    "title": "Sex Rider: Wet Highway",
+    "year": 1971,
+    "rank": 14,
+    "predicted_preference": 0.5729050817059705,
+    "reconstructed_prediction": 0.5729050817059705,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "popular"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.10807484354973193,
+      "decade": 0.004401503435591271,
+      "genre": -0.00875163223636868,
+      "language": 0.001216785407833532,
+      "country": 0.003414582098034573,
+      "latent": 0.022182893228952304,
+      "metadata_total": 0.10835608225482263,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -2.0961103856410714,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.10807484354973193
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.7195057434387226,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.033759252919053455
+      },
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": -0.864394957914048,
+        "coefficient": -0.021279496731803287,
+        "contribution": 0.018393889681919223
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": -0.9070489805321451,
+        "coefficient": -0.017753321842654365,
+        "contribution": 0.016103132478438704
+      },
+      {
+        "feature": "latent_pca_006",
+        "group": "latent",
+        "value": 1.538989755673623,
+        "coefficient": 0.00949288504889523,
+        "contribution": 0.014609452842037057
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_008",
+        "group": "latent",
+        "value": 2.072844791070405,
+        "coefficient": -0.009474285201537438,
+        "contribution": -0.0196387227291223
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": 0.9527723354699871,
+        "coefficient": -0.019268666402186493,
+        "contribution": -0.0183586522894033
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": 0.5525611007585204,
+        "coefficient": -0.03187785778436087,
+        "contribution": -0.01761446418715001
+      },
+      {
+        "feature": "genre__thriller",
+        "group": "genre",
+        "value": 1.0,
+        "coefficient": -0.00875163223636868,
+        "contribution": -0.00875163223636868
+      },
+      {
+        "feature": "latent_pca_007",
+        "group": "latent",
+        "value": 2.1060957290134947,
+        "coefficient": -0.002228537572991502,
+        "contribution": -0.004693513464423501
+      }
+    ]
+  },
+  {
+    "source_id": "72680",
+    "tmdb_id": 72680,
+    "title": "The Curse of the Dragon",
+    "year": 1993,
+    "rank": 15,
+    "predicted_preference": 0.5716178984446493,
+    "reconstructed_prediction": 0.5716178984446493,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.04208507678906923,
+      "decade": 0.00528178375725105,
+      "genre": 0.0057687526481953735,
+      "language": -0.01616739710071184,
+      "country": -0.014092921803169354,
+      "latent": 0.1063764979318192,
+      "metadata_total": 0.022875294290634465,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -0.8162395950864999,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.04208507678906923
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.7051417931045291,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.033085295502214486
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.1434131711726792,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.030693428239541073
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": -0.5567857984120822,
+        "coefficient": -0.03187785778436087,
+        "contribution": 0.017749138498132176
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": -0.6553843985945051,
+        "coefficient": -0.017753321842654365,
+        "contribution": 0.011635250158902722
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": 0.2546236181649278,
+        "coefficient": -0.019268666402186493,
+        "contribution": -0.004906257556537706
+      },
+      {
+        "feature": "latent_pca_015",
+        "group": "latent",
+        "value": -0.6369612856563339,
+        "coefficient": 0.006907245701744519,
+        "contribution": -0.0043996481025273745
+      },
+      {
+        "feature": "latent_pca_008",
+        "group": "latent",
+        "value": 0.2522102254516952,
+        "coefficient": -0.009474285201537438,
+        "contribution": -0.0023895116066734168
+      }
+    ]
+  },
+  {
+    "source_id": "97537",
+    "tmdb_id": 97537,
+    "title": "Beefcake",
+    "year": 1998,
+    "rank": 16,
+    "predicted_preference": 0.5701871472961569,
+    "reconstructed_prediction": 0.5701871472961569,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "genre_diverse"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.027087402525282255,
+      "decade": 0.00528178375725105,
+      "genre": 0.014055421632415792,
+      "language": -0.01616739710071184,
+      "country": -0.019445460640831136,
+      "latent": 0.1170092909005552,
+      "metadata_total": 0.010811750173406118,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.9468450614144657,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.05226050450752201
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 1.0415029006345349,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.04886737897380457
+      },
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -0.5253598699604609,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.027087402525282255
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": -0.6315344174523574,
+        "coefficient": -0.02318304550752182,
+        "contribution": 0.014640891139364284
+      },
+      {
+        "feature": "latent_pca_006",
+        "group": "latent",
+        "value": 1.263431118241708,
+        "coefficient": 0.00949288504889523,
+        "contribution": 0.01199360637266569
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": 0.6729184544308702,
+        "coefficient": -0.03187785778436087,
+        "contribution": -0.0214511987908192
+      },
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_005",
+        "group": "latent",
+        "value": 0.9775060247599332,
+        "coefficient": -0.009774946317151074,
+        "contribution": -0.009555068916720096
+      },
+      {
+        "feature": "latent_pca_015",
+        "group": "latent",
+        "value": -1.2205168399996067,
+        "coefficient": 0.006907245701744519,
+        "contribution": -0.008430409696994086
+      }
+    ]
+  },
+  {
+    "source_id": "20561",
+    "tmdb_id": 20561,
+    "title": "28 Up",
+    "year": 1984,
+    "rank": 17,
+    "predicted_preference": 0.5701638531117739,
+    "reconstructed_prediction": 0.5701638531117739,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.06908089046388578,
+      "decade": 0.004988529744199129,
+      "genre": 0.0057687526481953735,
+      "language": -0.01616739710071184,
+      "country": 0.000929671260463394,
+      "latent": 0.0631972998735464,
+      "metadata_total": 0.06460044701603183,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -1.33982310031337,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.06908089046388578
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.2315552534907068,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.03305948693706113
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": -1.8573595631716995,
+        "coefficient": -0.017753321842654365,
+        "contribution": 0.0329743021025191
+      },
+      {
+        "feature": "latent_pca_013",
+        "group": "latent",
+        "value": -0.7455936426665587,
+        "coefficient": -0.019268666402186493,
+        "contribution": 0.014366595172132962
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.21110025672543445,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.009904836789781648
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 0.6291151196157628,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.01338725313179166
+      },
+      {
+        "feature": "latent_pca_015",
+        "group": "latent",
+        "value": -1.673650867394188,
+        "coefficient": 0.006907245701744519,
+        "contribution": -0.01156031776002949
+      },
+      {
+        "feature": "latent_pca_005",
+        "group": "latent",
+        "value": 0.9709348681437386,
+        "coefficient": -0.009774946317151074,
+        "contribution": -0.009490836213555202
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": 0.11117054460083242,
+        "coefficient": -0.02318304550752182,
+        "contribution": -0.002577271794577082
+      }
+    ]
+  },
+  {
+    "source_id": "39787",
+    "tmdb_id": 39787,
+    "title": "Jacknife",
+    "year": 1989,
+    "rank": 18,
+    "predicted_preference": 0.5648555997591915,
+    "reconstructed_prediction": 0.5648555997591915,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.054083216200098816,
+      "decade": 0.004988529744199129,
+      "genre": 0.011747413863076274,
+      "language": -0.01616739710071184,
+      "country": -0.014092921803169354,
+      "latent": 0.08193065263350283,
+      "metadata_total": 0.04055884090349302,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -1.0489433751873312,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.054083216200098816
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.944387722372732,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.04431072894687065
+      },
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.2321558325177528,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.03307560869403713
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": -1.3412606424001148,
+        "coefficient": -0.017753321842654365,
+        "contribution": 0.023811831859414583
+      },
+      {
+        "feature": "latent_pca_001",
+        "group": "latent",
+        "value": 0.7790807495857576,
+        "coefficient": 0.01040285998992369,
+        "contribution": 0.008104667958785436
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": 0.8749119418924264,
+        "coefficient": -0.03187785778436087,
+        "contribution": -0.02789031845748577
+      },
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": 0.4327250363554115,
+        "coefficient": -0.02318304550752182,
+        "contribution": -0.010031884210071538
+      },
+      {
+        "feature": "latent_pca_007",
+        "group": "latent",
+        "value": 1.4798389493958866,
+        "coefficient": -0.002228537572991502,
+        "contribution": -0.003297876700705003
+      }
+    ]
+  },
+  {
+    "source_id": "130824",
+    "tmdb_id": 130824,
+    "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+    "year": 2000,
+    "rank": 19,
+    "predicted_preference": 0.5645852691359042,
+    "reconstructed_prediction": 0.5645852691359042,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.021088332819767464,
+      "decade": 0.010289753748443516,
+      "genre": 0.0057687526481953735,
+      "language": -0.01616739710071184,
+      "country": -0.014092921803169354,
+      "latent": 0.11533264260118344,
+      "metadata_total": 0.006886520312525157,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "latent_pca_010",
+        "group": "latent",
+        "value": -1.6918159209681671,
+        "coefficient": -0.026843689589531348,
+        "contribution": 0.04541458142509658
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.9415219460942708,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.044176266550876954
+      },
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": -1.2163853801508155,
+        "coefficient": -0.021279496731803287,
+        "contribution": 0.025884068721532576
+      },
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -0.4090079799100453,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.021088332819767464
+      },
+      {
+        "feature": "latent_pca_009",
+        "group": "latent",
+        "value": -1.0977064442280604,
+        "coefficient": -0.017753321842654365,
+        "contribution": 0.01948793579313648
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": 0.7817016773219672,
+        "coefficient": -0.02318304550752182,
+        "contribution": -0.0181222255586613
+      },
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_015",
+        "group": "latent",
+        "value": -1.6212104171865296,
+        "coefficient": 0.006907245701744519,
+        "contribution": -0.011198098685735094
+      },
+      {
+        "feature": "latent_pca_008",
+        "group": "latent",
+        "value": 1.1480640138171987,
+        "coefficient": -0.009474285201537438,
+        "contribution": -0.01087708589652596
+      }
+    ]
+  },
+  {
+    "source_id": "1857",
+    "tmdb_id": 1857,
+    "title": "The Transformers: The Movie",
+    "year": 1986,
+    "rank": 20,
+    "predicted_preference": 0.5627628579699953,
+    "reconstructed_prediction": 0.5627628579699953,
+    "prediction_error": 0.0,
+    "candidate_sources": [
+      "seeded_recommendations"
+    ],
+    "grouped_contributions": {
+      "release_year": 0.063081820758371,
+      "decade": 0.004988529744199129,
+      "genre": 0.011913305668907114,
+      "language": -0.01616739710071184,
+      "country": -0.014092921803169354,
+      "latent": 0.07067341448020356,
+      "metadata_total": 0.04972333726759604,
+      "intercept": 0.44236610622219563
+    },
+    "top_positive_features": [
+      {
+        "feature": "release_year_z",
+        "group": "release_year",
+        "value": -1.2234712102629546,
+        "coefficient": -0.0515597099704644,
+        "contribution": 0.063081820758371
+      },
+      {
+        "feature": "latent_pca_003",
+        "group": "latent",
+        "value": -1.4026945838969387,
+        "coefficient": -0.03187785778436087,
+        "contribution": 0.04471489846035986
+      },
+      {
+        "feature": "latent_pca_002",
+        "group": "latent",
+        "value": 0.5234326610607625,
+        "coefficient": 0.046920060370482075,
+        "contribution": 0.024559492056853056
+      },
+      {
+        "feature": "latent_pca_001",
+        "group": "latent",
+        "value": 1.9590670251202726,
+        "coefficient": 0.01040285998992369,
+        "contribution": 0.020379899973202515
+      },
+      {
+        "feature": "latent_pca_006",
+        "group": "latent",
+        "value": 1.6717220573427878,
+        "coefficient": 0.00949288504889523,
+        "contribution": 0.015869465324057724
+      }
+    ],
+    "top_negative_features": [
+      {
+        "feature": "latent_pca_012",
+        "group": "latent",
+        "value": 0.7638663447397038,
+        "coefficient": -0.021279496731803287,
+        "contribution": -0.01625469138642305
+      },
+      {
+        "feature": "language__en",
+        "group": "language",
+        "value": 1.0,
+        "coefficient": -0.01616739710071184,
+        "contribution": -0.01616739710071184
+      },
+      {
+        "feature": "country__us",
+        "group": "country",
+        "value": 1.0,
+        "coefficient": -0.014092921803169354,
+        "contribution": -0.014092921803169354
+      },
+      {
+        "feature": "latent_pca_014",
+        "group": "latent",
+        "value": 0.5405434805825434,
+        "coefficient": -0.02318304550752182,
+        "contribution": -0.012531444109139341
+      },
+      {
+        "feature": "genre__action",
+        "group": "genre",
+        "value": 1.0,
+        "coefficient": -0.007349382270330261,
+        "contribution": -0.007349382270330261
+      }
+    ]
+  }
+]

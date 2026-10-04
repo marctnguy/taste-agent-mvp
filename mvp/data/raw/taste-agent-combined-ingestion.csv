@@ -1,0 +1,715 @@
+media_type,title,creator,year,rating,preference_weight,liked,consumed_date,source_record_date,source,source_id,is_trainable
+film,Barbie,,2023,,,True,,2024-10-30,letterboxd,https://boxd.it/bCLK,False
+film,Parasite,,2019,3.5,0.25,False,,2024-10-30,letterboxd,https://boxd.it/hTha,True
+film,Fight Club,,1999,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2a9q,True
+film,Everything Everywhere All at Once,,2022,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/jUk4,True
+film,La La Land,,2016,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/a5fa,True
+film,Interstellar,,2014,,,True,,2024-10-30,letterboxd,https://boxd.it/4VZ8,False
+film,Oppenheimer,,2023,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/wUow,True
+film,Joker,,2019,3.5,0.25,False,,2024-10-30,letterboxd,https://boxd.it/h4cS,True
+film,Pulp Fiction,,1994,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/29Pq,True
+film,Dune,,2021,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/fA7G,True
+film,Get Out,,2017,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/eOCm,True
+film,Midsommar,,2019,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/jhxe,True
+film,The Truman Show,,1998,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/18U8,True
+film,Inception,,2010,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1skk,True
+film,Saltburn,,2023,2.0,-0.6,False,,2024-10-30,letterboxd,https://boxd.it/z4eg,True
+film,Poor Things,,2023,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/tNWU,True
+film,American Psycho,,2000,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/28Vs,True
+film,Lady Bird,,2017,,,True,,2024-10-30,letterboxd,https://boxd.it/dGNE,False
+film,Eternal Sunshine of the Spotless Mind,,2004,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/6YK,True
+film,Dune: Part Two,,2024,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/pUfA,True
+film,The Wolf of Wall Street,,2013,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/3C1m,True
+film,The Grand Budapest Hotel,,2014,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/3ZqO,True
+film,Spirited Away,,2001,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2b4m,True
+film,Gone Girl,,2014,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/6hQu,True
+film,Black Swan,,2010,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/Sw0,True
+film,Once Upon a Time... in Hollywood,,2019,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/gH0O,True
+film,Little Women,,2019,,,True,,2024-10-30,letterboxd,https://boxd.it/aSVk,False
+film,Se7en,,1995,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/29zs,True
+film,10 Things I Hate About You,,1999,,,True,,2024-10-30,letterboxd,https://boxd.it/23AO,False
+film,The Silence of the Lambs,,1991,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2aHW,True
+film,Challengers,,2024,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/zld0,True
+film,Kill Bill: Vol. 1,,2003,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/70w,True
+film,Shutter Island,,2010,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1U82,True
+film,Call Me by Your Name,,2017,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/dYmm,True
+film,Baby Driver,,2017,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/bhF2,True
+film,Django Unchained,,2012,3.5,0.25,False,,2024-10-30,letterboxd,https://boxd.it/2cCk,True
+film,Ratatouille,,2007,,,True,,2024-10-30,letterboxd,https://boxd.it/27ww,False
+film,Hereditary,,2018,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/hNVe,True
+film,Her,,2013,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/4O24,True
+film,The Social Network,,2010,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/17ue,True
+film,The Matrix,,1999,,,True,,2024-10-30,letterboxd,https://boxd.it/2a1m,False
+film,Inside Out,,2015,,,True,,2024-10-30,letterboxd,https://boxd.it/4KHC,False
+film,The Perks of Being a Wallflower,,2012,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2ZA8,True
+film,Inside Out 2,,2024,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/CFrC,True
+film,(500) Days of Summer,,2009,,,True,,2024-10-30,letterboxd,https://boxd.it/1EmM,False
+film,Past Lives,,2023,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/oNB8,True
+film,Titanic,,1997,,,True,,2024-10-30,letterboxd,https://boxd.it/2a2k,False
+film,Mad Max: Fury Road,,2015,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2DjO,True
+film,Mean Girls,,2004,,,True,,2024-10-30,letterboxd,https://boxd.it/1VNg,False
+film,Coraline,,2009,,,True,,2024-10-30,letterboxd,https://boxd.it/1NhQ,False
+film,Up,,2009,,,True,,2024-10-30,letterboxd,https://boxd.it/1OEc,False
+film,Don't Look Up,,2021,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/o0Hc,True
+film,Anatomy of a Fall,,2023,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/yuDE,True
+film,Drive,,2011,,,False,,2024-10-30,letterboxd,https://boxd.it/IG,False
+film,Howl's Moving Castle,,2004,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/23De,True
+film,Us,,2019,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/gnV6,True
+film,Back to the Future,,1985,,,True,,2024-10-30,letterboxd,https://boxd.it/2b8e,False
+film,X,,2022,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/sxVa,True
+film,Little Miss Sunshine,,2006,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/29EW,True
+film,Harry Potter and the Prisoner of Azkaban,,2004,,,True,,2024-10-30,letterboxd,https://boxd.it/29Qy,False
+film,Aftersun,,2022,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/Arw0,True
+film,The Hunger Games,,2012,,,True,,2024-10-30,letterboxd,https://boxd.it/2uds,False
+film,Avatar: The Way of Water,,2022,,,True,,2024-10-30,letterboxd,https://boxd.it/2E2E,False
+film,WALL·E,,2008,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/1VEo,True
+film,The Lighthouse,,2019,5.0,1.0,True,2024-12-11,2024-10-30,letterboxd,https://boxd.it/icFU,True
+film,Bottoms,,2023,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/uGf2,True
+film,The Devil Wears Prada,,2006,,,True,,2024-10-30,letterboxd,https://boxd.it/2awE,False
+film,No Country for Old Men,,2007,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/21ew,True
+film,Avatar,,2009,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/1Efm,True
+film,Memento,,2000,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2bcK,True
+film,Moonlight,,2016,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/d6bE,True
+film,Shrek,,2001,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/29zi,True
+film,The Substance,,2024,,,True,,2024-10-30,letterboxd,https://boxd.it/zanS,False
+film,The Skin I Live In,,2011,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/99A,True
+film,All About My Mother,,1999,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2b9c,True
+film,Women on the Verge of a Nervous Breakdown,,1988,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/24GI,True
+film,Pain and Glory,,2019,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/iOBQ,True
+film,Volver,,2006,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2aQO,True
+film,Parallel Mothers,,2021,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/sOP4,True
+film,Strange Way of Life,,2023,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/Aomw,True
+film,Bad Education,,2004,,,True,,2024-10-30,letterboxd,https://boxd.it/2b2K,False
+film,Talk to Her,,2002,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2beG,True
+film,Tie Me Up! Tie Me Down!,,1989,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/26FW,True
+film,Julieta,,2016,2.0,-0.6,False,,2024-10-30,letterboxd,https://boxd.it/aY26,True
+film,The Flower of My Secret,,1995,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/24we,True
+film,"Pepi, Luci, Bom",,1980,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/24ek,True
+film,Vicky Cristina Barcelona,,2008,3.5,0.25,True,2025-04-19,2024-10-30,letterboxd,https://boxd.it/23rW,True
+film,Blue Jasmine,,2013,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/50MI,True
+film,Match Point,,2005,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2b6s,True
+film,Scoop,,2006,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/2aeg,True
+film,A Rainy Day in New York,,2019,,,False,,2024-10-30,letterboxd,https://boxd.it/h2z6,False
+film,To Rome with Love,,2012,,,False,,2024-10-30,letterboxd,https://boxd.it/2REG,False
+film,Annie Hall,,1977,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/29M2,True
+film,Schindler's List,,1993,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2aq2,True
+film,I May Destroy You,,2020,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/qX9i,True
+film,Grave of the Fireflies,,1988,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/1RUM,True
+film,The Apartment,,1960,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2aGE,True
+film,Portrait of a Lady on Fire,,2019,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/jkPq,True
+film,Veneno,,2020,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/srim,True
+film,Shōgun,,2024,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/LciY,True
+film,Persona,,1966,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/29B4,True
+film,Normal People,,2020,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/q2VY,True
+film,Incendies,,2010,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/Msm,True
+film,The Handmaiden,,2016,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/948A,True
+film,A Woman Under the Influence,,1974,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/1myg,True
+film,In the Mood for Love,,2000,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/29tE,True
+film,"Paris, Texas",,1984,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/29Ts,True
+film,Oldboy,,2003,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/29R2,True
+film,The Pianist,,2002,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2aqc,True
+film,Princess Mononoke,,1997,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2b4w,True
+film,One Flew Over the Cuckoo's Nest,,1975,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2aeA,True
+film,The Midnight Gospel,,2020,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/xlUa,True
+film,Big Little Lies,,2017,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/fYde,True
+film,It's a Sin,,2021,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/tEyu,True
+film,Brief Encounter,,1945,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/29sm,True
+film,Mommy,,2014,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/7Uau,True
+film,Lady Gaga Presents: The Monster Ball Tour at Madison Square Garden,,2011,,,True,,2024-10-30,letterboxd,https://boxd.it/6LG,False
+film,Shoplifters,,2018,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/ifY6,True
+film,Akira,,1988,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2b1i,True
+film,Some Like It Hot,,1959,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2aNA,True
+film,Mulholland Drive,,2001,,,True,,2024-10-30,letterboxd,https://boxd.it/297o,False
+film,Blue Velvet,,1986,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/29BI,True
+film,Rear Window,,1954,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2a6Q,True
+film,Millennium Actress,,2001,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1fK0,True
+film,The Piano Teacher,,2001,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2886,True
+film,Amour,,2012,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/34Q6,True
+film,Magnolia,,1999,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2aze,True
+film,Happy Together,,1997,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/1Ha0,True
+film,Tropico,,2013,,,True,,2024-10-30,letterboxd,https://boxd.it/135Xc,False
+film,Your Name.,,2016,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/cUqs,True
+film,Fargo,,1996,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2aHM,True
+film,Trainspotting,,1996,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/29XY,True
+film,Y Tu Mamá También,,2001,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/28QM,True
+film,Drive My Car,,2021,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/sv94,True
+film,Cléo from 5 to 7,,1962,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2agm,True
+film,Mysterious Skin,,2004,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/1UsG,True
+film,My Neighbor Totoro,,1988,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/20eA,True
+film,Sense8: Amor Vincit Omnia,,2018,,,True,,2024-10-30,letterboxd,https://boxd.it/rP4Q,False
+film,Amélie,,2001,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2aUc,True
+film,A Summer's Tale,,1996,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/183e,True
+film,My Night at Maud's,,1969,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/Hwo,True
+film,Pauline at the Beach,,1983,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/1WC4,True
+film,Scenes from a Marriage,,2021,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/wzSU,True
+film,Amores Perros,,2000,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2bfu,True
+film,Birdman or (The Unexpected Virtue of Ignorance),,2014,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/5RFA,True
+film,Babel,,2006,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/292o,True
+film,Mustang,,2015,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/baaw,True
+film,12 Years a Slave,,2013,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2D2e,True
+film,Society of the Snow,,2023,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/y9aw,True
+film,Joyland,,2022,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/AlzM,True
+film,The Last Movie Stars,,2022,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/Azw8,True
+film,Midnight Cowboy,,1969,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/25Hi,True
+film,Wild Tales,,2014,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/7UmK,True
+film,A Clockwork Orange,,1971,,,True,,2024-10-30,letterboxd,https://boxd.it/2aVE,False
+film,Eyes Wide Shut,,1999,,,True,,2024-10-30,letterboxd,https://boxd.it/2axs,False
+film,Brokeback Mountain,,2005,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2b2q,True
+film,The Worst Person in the World,,2021,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/oyws,True
+film,Pride & Prejudice,,2005,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/24u8,True
+film,Close,,2022,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/y4qa,True
+film,The Florida Project,,2017,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/dMG0,True
+film,Tangerine,,2015,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/9QRe,True
+film,The Great Beauty,,2013,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/5ty6,True
+film,Requiem for a Dream,,2000,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/29VI,True
+film,Roma,,2018,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/f69M,True
+film,Petite Maman,,2021,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/s6je,True
+film,Minari,,2020,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/mL9M,True
+film,Spotlight,,2015,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/a84k,True
+film,Certified Copy,,2010,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/IMW,True
+film,Ghost in the Shell,,1995,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1YYc,True
+film,"Monsters, Inc.",,2001,5.0,1.0,True,2025-06-23,2024-10-30,letterboxd,https://boxd.it/2a46,True
+film,Nowhere,,1997,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/286E,True
+film,All of Us Strangers,,2023,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/Bz3C,True
+film,Passages,,2023,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/xX9c,True
+film,Bones and All,,2022,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/tLd4,True
+film,Triangle of Sadness,,2022,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/hXlq,True
+film,"tick, tick... BOOM!",,2021,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/jz2e,True
+film,Spencer,,2021,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/qPMG,True
+film,The Lost Daughter,,2021,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/kgww,True
+film,Titane,,2021,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/nlQC,True
+film,"The French Dispatch of the Liberty, Kansas Evening Sun",,2021,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/jLP8,True
+film,Luca,,2021,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/ipjC,True
+film,Cruella,,2021,,,True,,2024-10-30,letterboxd,https://boxd.it/bbKg,False
+film,Nomadland,,2020,2.5,-0.25,True,,2024-10-30,letterboxd,https://boxd.it/lnRy,True
+film,Shiva Baby,,2020,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/oIv0,True
+film,The King,,2019,,,False,,2024-10-30,letterboxd,https://boxd.it/ieZs,False
+film,Marriage Story,,2019,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/hJAw,True
+film,Matthias & Maxime,,2019,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/iOQ2,True
+film,Laurence Anyways,,2012,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/3HQu,True
+film,I Killed My Mother,,2009,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/1ubO,True
+film,It's Only the End of the World,,2016,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/be0K,True
+film,Maniac,,2018,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/jX9y,True
+film,The Favourite,,2018,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/d2hI,True
+film,The Lobster,,2015,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/7tnw,True
+film,The Killing of a Sacred Deer,,2017,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/dZ5G,True
+film,Crazy Rich Asians,,2018,,,False,,2024-10-30,letterboxd,https://boxd.it/gfnK,False
+film,Climax,,2018,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/ikvo,True
+film,Enter the Void,,2009,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1dy2,True
+film,Irreversible,,2002,5.0,1.0,True,2024-10-29,2024-10-30,letterboxd,https://boxd.it/29as,True
+film,Vortex,,2021,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/uoni,True
+film,"Love, Simon",,2018,,,False,,2024-10-30,letterboxd,https://boxd.it/g02s,False
+film,mother!,,2017,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/dgRU,True
+film,God's Own Country,,2017,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/faZM,True
+film,Split,,2016,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/dgSy,True
+film,Lion,,2016,,,True,,2024-10-30,letterboxd,https://boxd.it/b2La,False
+film,Nocturnal Animals,,2016,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/bkFu,True
+film,Raw,,2016,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/dLd2,True
+film,Room,,2015,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/7T0y,True
+film,Carol,,2015,,,True,,2024-10-30,letterboxd,https://boxd.it/7DPK,False
+film,Big Eyes,,2014,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/36ms,True
+film,Still Alice,,2014,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/8Nhq,True
+film,Force Majeure,,2014,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/7UcA,True
+film,Boyhood,,2014,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/3178,True
+film,Nymphomaniac: Vol. I,,2013,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/7DiG,True
+film,Melancholia,,2011,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/bPI,True
+film,Nymphomaniac: Vol. II,,2013,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/7j9Y,True
+film,Dallas Buyers Club,,2013,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/4O8G,True
+film,Blue Is the Warmest Color,,2013,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/4O40,True
+film,Stranger by the Lake,,2013,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/5Fji,True
+film,The Bling Ring,,2013,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/3lPY,True
+film,Lost in Translation,,2003,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2b0E,True
+film,Priscilla,,2023,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/Cz3k,True
+film,The Virgin Suicides,,1999,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/28JG,True
+film,Marie Antoinette,,2006,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/27Wa,True
+film,Somewhere,,2010,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/14du,True
+film,Frances Ha,,2012,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/41Xg,True
+film,Spring Breakers,,2012,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/421s,True
+film,Romeo + Juliet,,1996,,,True,,2024-10-30,letterboxd,https://boxd.it/2ama,False
+film,The Great Gatsby,,2013,,,False,,2024-10-30,letterboxd,https://boxd.it/JY,False
+film,The Help,,2011,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/EDm,True
+film,Tomboy,,2011,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/49U,True
+film,Girlhood,,2014,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/7WyI,True
+film,Three Steps Above Heaven,,2010,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/cpG,True
+film,We Need to Talk About Kevin,,2011,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2pTS,True
+film,Into the Wild,,2007,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/22m2,True
+film,The Dreamers,,2003,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/28X4,True
+film,Elephant,,2003,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/287i,True
+film,My Own Private Idaho,,1991,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/2ak4,True
+film,The Hours,,2002,,,False,,2024-10-30,letterboxd,https://boxd.it/2a3s,False
+film,Sexy Beast,,2000,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/1SZS,True
+film,The Talented Mr. Ripley,,1999,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/2924,True
+film,American Beauty,,1999,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/71Y,True
+film,Revolutionary Road,,2008,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/24Le,True
+film,Léon: The Professional,,1994,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/2b8S,True
+film,Reservoir Dogs,,1992,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2agc,True
+film,Night on Earth,,1991,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2ayq,True
+film,Christiane F.,,1981,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1YiA,True
+film,"Salò, or the 120 Days of Sodom",,1975,,,False,,2024-10-30,letterboxd,https://boxd.it/237s,False
+film,The Gospel According to St. Matthew,,1964,,,True,,2024-10-30,letterboxd,https://boxd.it/1y7c,False
+film,Grey Gardens,,1975,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/1INM,True
+film,Blow-Up,,1966,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2966,True
+film,Gone with the Wind,,1939,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/29Fq,True
+film,Ministry of Oneiric Affairs,,2025,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/QnjS,True
+film,A Streetcar Named Desire,,1951,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/29Mc,True
+film,Jamon Jamon,,1992,,,True,,2024-10-30,letterboxd,https://boxd.it/24dQ,False
+film,Golden Balls,,1993,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/K3Y,True
+film,Take My Eyes,,2003,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/28Ne,True
+film,Blood Wedding,,1981,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/XDU,True
+film,Flamenco,,1995,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/1t64,True
+film,Flamenco Flamenco,,2010,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/3dXg,True
+film,The Discreet Charm of the Bourgeoisie,,1972,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2440,True
+film,Magical Girl,,2014,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/8JQG,True
+film,We Are Who We Are,,2020,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/n6GW,True
+film,Under the Silver Lake,,2018,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/dSAs,True
+film,Victoria,,2015,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/amSe,True
+film,The Spectacular Now,,2013,,,False,,2024-10-30,letterboxd,https://boxd.it/4VSG,False
+film,Beasts of the Southern Wild,,2012,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/2XPK,True
+film,The Tree of Life,,2011,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1Zu8,True
+film,Chungking Express,,1994,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1UDa,True
+film,Kids,,1995,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/1YUY,True
+film,"The Adventures of Priscilla, Queen of the Desert",,1994,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/26mg,True
+film,The Neon Demon,,2016,,,False,,2024-10-30,letterboxd,https://boxd.it/9AnW,False
+film,The Swimming Pool,,1969,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/23BC,True
+film,A Bigger Splash,,2015,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/azgs,True
+film,Gattaca,,1997,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/29Du,True
+film,I Origins,,2014,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/7aRM,True
+film,"Germany, Year Zero",,1948,4.0,0.6,False,,2024-10-30,letterboxd,https://boxd.it/20FG,True
+film,Don Jon,,2013,,,False,,2024-10-30,letterboxd,https://boxd.it/4sdk,False
+film,The Doom Generation,,1995,,,False,,2024-10-30,letterboxd,https://boxd.it/1PVe,False
+film,Lolita,,1962,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/29Ag,True
+film,Band of Outsiders,,1964,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/20Aw,True
+film,The 400 Blows,,1959,,,True,,2024-10-30,letterboxd,https://boxd.it/2b1C,False
+film,Cell 211,,2009,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1fPa,True
+film,Sex and Lucía,,2001,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/28UE,True
+film,The Day of the Beast,,1995,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1Vyg,True
+film,The Bar,,2017,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/eRT6,True
+film,Perfect Strangers,,2017,,,False,,2024-10-30,letterboxd,https://boxd.it/fru2,False
+film,Thesis,,1996,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1Z1U,True
+film,"Lots of Kids, a Monkey and a Castle",,2017,5.0,1.0,True,,2024-10-30,letterboxd,https://boxd.it/gY52,True
+film,Everybody Knows,,2018,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/e6AG,True
+film,The Days to Come,,2019,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/l8c6,True
+film,The August Virgin,,2019,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/kAU4,True
+film,Suro,,2022,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/vvb6,True
+film,7 Virgins,,2005,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2aiC,True
+film,Alone,,1999,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2OJ4,True
+film,Carmina or Blow Up,,2012,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/3E2m,True
+film,Carmina and Amen,,2014,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/772Q,True
+film,My Life Without Me,,2003,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/710,True
+film,La Vie en Rose,,2007,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/28OQ,True
+film,Butterfly,,1999,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1k2s,True
+film,The Sea Inside,,2004,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/27S8,True
+film,Mondays in the Sun,,2002,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/tWs,True
+film,Open Your Eyes,,1997,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/27TU,True
+film,Lullaby,,2022,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/vvUA,True
+film,Elisa & Marcela,,2019,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/jukM,True
+film,Common Wealth,,2000,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/1TL8,True
+film,Nobody Will Speak of Us When We're Dead,,1995,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/2yNE,True
+film,The Diving Bell and the Butterfly,,2007,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/27Di,True
+film,Standing Tall,,2015,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/aNqm,True
+film,Rebel Without a Cause,,1955,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2aQu,True
+film,To Kill a Mockingbird,,1962,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2a2E,True
+film,Mary Poppins,,1964,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/2aoA,True
+film,Snatch,,2000,,,False,,2024-10-30,letterboxd,https://boxd.it/2b7U,False
+film,High Fidelity,,2000,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/2aMW,True
+film,"Girl, Interrupted",,1999,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/25ds,True
+film,Happy 140,,2015,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/aH1K,True
+film,The Bride,,2015,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/bN6I,True
+film,Slumdog Millionaire,,2008,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1S3E,True
+film,BPM (Beats per Minute),,2017,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/g796,True
+film,Saint Laurent,,2014,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/6zHA,True
+film,Sibyl,,2019,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/kum6,True
+film,Wolf,,2021,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/p5vW,True
+film,A Faithful Man,,2018,,,False,,2024-10-30,letterboxd,https://boxd.it/jgbc,False
+film,Madly in Life,,2020,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/s3M8,True
+film,Martin (Hache),,1997,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/Uve,True
+film,May December,,2023,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/vEE2,True
+film,I'm So Excited!,,2013,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/4BRI,True
+film,High & Low – John Galliano,,2023,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/GGts,True
+film,On the Fringe,,2022,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/qKO8,True
+film,Eat Pray Love,,2010,,,True,,2024-10-30,letterboxd,https://boxd.it/16Cc,False
+film,Being the Ricardos,,2021,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/iJQc,True
+film,Mouth to Mouth,,1995,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/bsY,True
+film,Love Can Seriously Damage Your Health,,1997,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/2zss,True
+film,Overdose,,1983,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/3owK,True
+film,Twilight,,2008,4.0,0.6,True,2024-10-30,2024-10-30,letterboxd,https://boxd.it/1Zui,True
+film,Café Society,,2016,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/bhEy,True
+film,Clouds of Sils Maria,,2014,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/7f62,True
+film,On the Road,,2012,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/2WCK,True
+film,Silver Linings Playbook,,2012,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/2TTo,True
+film,American Hustle,,2013,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/5dz8,True
+film,Joy,,2015,3.0,0.0,False,,2024-10-30,letterboxd,https://boxd.it/8kEU,True
+film,Gia,,1998,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/1NUo,True
+film,By the Sea,,2015,2.5,-0.25,False,,2024-10-30,letterboxd,https://boxd.it/a86q,True
+film,Mr. & Mrs. Smith,,2005,,,True,,2024-10-30,letterboxd,https://boxd.it/29CG,False
+film,Pink Flamingos,,1972,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/29NO,True
+film,Grease,,1978,,,True,,2024-10-30,letterboxd,https://boxd.it/29YW,False
+film,The Curious Case of Benjamin Button,,2008,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/23Fk,True
+film,"Where'd You Go, Bernadette",,2019,2.5,-0.25,True,,2024-10-30,letterboxd,https://boxd.it/efuC,True
+film,Babylon,,2022,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/mM02,True
+film,Bombshell,,2019,3.5,0.25,True,,2024-10-30,letterboxd,https://boxd.it/j5YC,True
+film,The Others,,2001,,,True,,2024-10-30,letterboxd,https://boxd.it/27Po,False
+film,The Undoing,,2020,3.0,0.0,True,,2024-10-30,letterboxd,https://boxd.it/rlRo,True
+film,Santa Claus Is a Stinker,,1982,4.5,0.8,True,,2024-10-30,letterboxd,https://boxd.it/1NFe,True
+film,The Dinner Game,,1998,4.0,0.6,True,,2024-10-30,letterboxd,https://boxd.it/1YJ2,True
+film,A Star Is Born,,2018,2.5,-0.25,False,,2024-10-31,letterboxd,https://boxd.it/aXgc,True
+film,The Water,,2022,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/zirS,True
+film,The Notebook,,2004,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/1UNE,True
+film,Julia's Eyes,,2010,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/zoG,True
+film,Enemy,,2013,,,False,,2024-10-31,letterboxd,https://boxd.it/5xtO,False
+film,The Butterfly Effect,,2004,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/27M0,True
+film,Corpse Bride,,2005,,,True,,2024-10-31,letterboxd,https://boxd.it/24WQ,False
+film,Heartbreaker,,2010,,,True,,2024-10-31,letterboxd,https://boxd.it/ZVm,False
+film,The Spanish Apartment,,2002,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/28Cq,True
+film,Russian Dolls,,2005,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/284S,True
+film,Chinese Puzzle,,2013,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/6bCc,True
+film,Cloud Atlas,,2012,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/2W60,True
+film,Goldfinger,,1964,,,True,,2024-10-31,letterboxd,https://boxd.it/29SY,False
+film,GoldenEye,,1995,,,True,,2024-10-31,letterboxd,https://boxd.it/29KU,False
+film,Octopussy,,1983,,,True,,2024-10-31,letterboxd,https://boxd.it/29Mw,False
+film,Licence to Kill,,1989,,,True,,2024-10-31,letterboxd,https://boxd.it/29L4,False
+film,Lara Croft: Tomb Raider,,2001,,,True,,2024-10-31,letterboxd,https://boxd.it/27G2,False
+film,Lara Croft: Tomb Raider – The Cradle of Life,,2003,,,True,,2024-10-31,letterboxd,https://boxd.it/27FS,False
+film,Someone Has to Die,,2020,1.5,-0.8,False,,2024-10-31,letterboxd,https://boxd.it/skxk,True
+film,Alcarràs,,2022,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/uh2i,True
+film,Summer 1993,,2017,4.5,0.8,True,,2024-10-31,letterboxd,https://boxd.it/fAfK,True
+film,Kill Your Darlings,,2013,,,False,,2024-10-31,letterboxd,https://boxd.it/4VRS,False
+film,Suicide Room,,2011,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/2oiG,True
+film,Life Is Beautiful,,1997,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/29Wm,True
+film,The Wave,,2008,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/20OS,True
+film,Billy Elliot,,2000,4.5,0.8,True,,2024-10-31,letterboxd,https://boxd.it/2bdy,True
+film,Divines,,2016,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/dLDY,True
+film,The Class,,2008,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/1ZMc,True
+film,El Bola,,2000,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/1flY,True
+film,The Shape of Water,,2017,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/dZ5m,True
+film,Hugo,,2011,,,True,,2024-10-31,letterboxd,https://boxd.it/R08,False
+film,House of Gucci,,2021,2.5,-0.25,False,,2024-10-31,letterboxd,https://boxd.it/nVkC,True
+film,Soul,,2020,,,True,,2024-10-31,letterboxd,https://boxd.it/ioLA,False
+film,I Care a Lot,,2020,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/mcHk,True
+film,Ad Astra,,2019,2.5,-0.25,False,,2024-10-31,letterboxd,https://boxd.it/ePzI,True
+film,Alita: Battle Angel,,2019,,,True,,2024-10-31,letterboxd,https://boxd.it/e0rS,False
+film,The Danish Girl,,2015,3.0,0.0,True,,2024-10-31,letterboxd,https://boxd.it/9Ohy,True
+film,The Theory of Everything,,2014,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/7YtA,True
+film,Carrie,,2013,,,False,,2024-10-31,letterboxd,https://boxd.it/4kC2,False
+film,Palo Alto,,2013,1.0,-1.0,False,,2024-10-31,letterboxd,https://boxd.it/5Nzy,True
+film,Moneyball,,2011,,,False,,2024-10-31,letterboxd,https://boxd.it/glS,False
+film,The Secret World of Arrietty,,2010,3.5,0.25,False,,2024-10-31,letterboxd,https://boxd.it/AF4,True
+film,How to Train Your Dragon,,2010,,,True,,2024-10-31,letterboxd,https://boxd.it/1WRy,False
+film,The Twilight Saga: New Moon,,2009,,,True,,2024-10-31,letterboxd,https://boxd.it/1Hj2,False
+film,Mamma Mia!,,2008,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/1Tnq,True
+film,Jumper,,2008,2.5,-0.25,False,,2024-10-31,letterboxd,https://boxd.it/20ss,True
+film,Bee Movie,,2007,,,True,,2024-10-31,letterboxd,https://boxd.it/22Vw,False
+film,Cars,,2006,4.5,0.8,True,,2024-10-31,letterboxd,https://boxd.it/29ho,True
+film,The Polar Express,,2004,,,True,,2024-10-31,letterboxd,https://boxd.it/23am,False
+film,Sideways,,2004,2.5,-0.25,False,,2024-10-31,letterboxd,https://boxd.it/1Y5c,True
+film,Love Actually,,2003,,,True,,2024-10-31,letterboxd,https://boxd.it/2aeU,False
+film,Finding Nemo,,2003,4.5,0.8,True,,2024-10-31,letterboxd,https://boxd.it/72i,True
+film,Legally Blonde,,2001,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/1ZNa,True
+film,Toy Story 2,,1999,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/29qq,True
+film,Matilda,,1996,,,True,,2024-10-31,letterboxd,https://boxd.it/1VhY,False
+film,Toy Story,,1995,,,True,,2024-10-31,letterboxd,https://boxd.it/29qA,False
+film,Pretty Woman,,1990,,,True,,2024-10-31,letterboxd,https://boxd.it/2b6M,False
+film,E.T. the Extra-Terrestrial,,1982,,,True,,2024-10-31,letterboxd,https://boxd.it/2a1G,False
+film,A Trip to the Moon,,1902,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/29EC,True
+film,Barrio,,1998,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/1hGY,True
+film,Deep Red,,1975,2.5,-0.25,False,,2024-10-31,letterboxd,https://boxd.it/1E1E,True
+film,Mr. Nobody,,2009,,,True,,2024-10-31,letterboxd,https://boxd.it/1k44,False
+film,The Reader,,2008,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/20Dq,True
+film,Swarm,,2023,2.0,-0.6,False,,2024-10-31,letterboxd,https://boxd.it/FIFe,True
+film,The Queen's Gambit,,2020,,,True,,2024-10-31,letterboxd,https://boxd.it/s1Ym,False
+film,Pam & Tommy,,2022,3.5,0.25,True,,2024-10-31,letterboxd,https://boxd.it/yMAy,True
+film,The Watcher,,2022,3.0,0.0,False,,2024-10-31,letterboxd,https://boxd.it/Daja,True
+film,The Impossible,,2012,3.0,0.0,True,,2024-10-31,letterboxd,https://boxd.it/2N9k,True
+film,DOA: Dead or Alive,,2006,,,True,,2024-10-31,letterboxd,https://boxd.it/1ZhI,False
+film,"Crazy, Stupid, Love.",,2011,,,True,,2024-10-31,letterboxd,https://boxd.it/D9A,False
+film,The Incredibles,,2004,4.5,0.8,True,,2024-10-31,letterboxd,https://boxd.it/1XLm,True
+film,The Little Mermaid,,2023,,,True,,2024-10-31,letterboxd,https://boxd.it/fVum,False
+film,The Sixth Sense,,1999,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/29Js,True
+film,Million Dollar Baby,,2004,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/2bdI,True
+film,Samsara,,2023,4.0,0.6,True,,2024-10-31,letterboxd,https://boxd.it/EL1a,True
+film,Patti Smith: Electric Poet,,2022,,,True,,2024-10-31,letterboxd,https://boxd.it/yOvq,False
+film,The Nun,,2018,1.5,-0.8,False,2024-11-01,2024-11-01,letterboxd,https://boxd.it/fBkw,True
+film,La Joia: Bad Gyal,,2024,2.5,-0.25,False,,2024-11-01,letterboxd,https://boxd.it/Qjnm,True
+film,Anora,,2024,4.0,0.6,True,2024-11-02,2024-11-02,letterboxd,https://boxd.it/Egcw,True
+film,The Room Next Door,,2024,2.0,-0.6,False,2024-11-02,2024-11-02,letterboxd,https://boxd.it/Fb4k,True
+film,The Conjuring,,2013,,,False,,2024-11-02,letterboxd,https://boxd.it/4sr2,False
+film,Blonde,,2022,3.0,0.0,False,,2024-11-03,letterboxd,https://boxd.it/9AG0,True
+film,Home Alone,,1990,,,True,,2024-11-03,letterboxd,https://boxd.it/29Fg,False
+film,The Names of Love,,2010,3.0,0.0,False,,2024-11-03,letterboxd,https://boxd.it/CHQ,True
+film,Shark Tale,,2004,,,True,,2024-11-03,letterboxd,https://boxd.it/1VYe,False
+film,The Fifth Element,,1997,4.0,0.6,True,,2024-11-03,letterboxd,https://boxd.it/71k,True
+film,Valerian and the City of a Thousand Planets,,2017,,,True,,2024-11-03,letterboxd,https://boxd.it/biYY,False
+film,Lucy,,2014,2.0,-0.6,False,,2024-11-03,letterboxd,https://boxd.it/75hu,True
+film,Atlantis: The Lost Empire,,2001,4.0,0.6,True,,2024-11-03,letterboxd,https://boxd.it/1Vck,True
+film,Grace of Monaco,,2014,,,False,,2024-11-03,letterboxd,https://boxd.it/6pkw,False
+film,A Perfect Man,,2015,3.0,0.0,True,,2024-11-03,letterboxd,https://boxd.it/asgK,True
+film,The Martian,,2015,4.0,0.6,True,,2024-11-03,letterboxd,https://boxd.it/8SeG,True
+film,"Red, White & Royal Blue",,2023,,,True,,2024-11-03,letterboxd,https://boxd.it/z3iG,False
+film,Four Weddings and a Funeral,,1994,,,True,,2024-11-03,letterboxd,https://boxd.it/29KA,False
+film,Malcolm & Marie,,2021,1.0,-1.0,False,,2024-11-03,letterboxd,https://boxd.it/r5cO,True
+film,I Lost My Body,,2019,4.0,0.6,True,,2024-11-03,letterboxd,https://boxd.it/lAYs,True
+film,Beautiful Boy,,2018,2.5,-0.25,False,,2024-11-03,letterboxd,https://boxd.it/g76Q,True
+film,Carnage,,2011,4.0,0.6,True,,2024-11-03,letterboxd,https://boxd.it/2peU,True
+film,Notting Hill,,1999,,,True,,2024-11-03,letterboxd,https://boxd.it/2aeK,False
+film,Don't Worry Darling,,2022,2.5,-0.25,False,,2024-11-03,letterboxd,https://boxd.it/mViu,True
+film,The Southern Charm,,2003,,,True,,2024-11-03,letterboxd,https://boxd.it/7CSo,False
+film,Marshland,,2014,3.5,0.25,True,,2024-11-03,letterboxd,https://boxd.it/6Yjo,True
+film,Flowers,,2014,3.0,0.0,False,,2024-11-03,letterboxd,https://boxd.it/7ImI,True
+film,Casino,,1995,4.0,0.6,True,,2024-11-03,letterboxd,https://boxd.it/2ads,True
+film,Robot Dreams,,2023,5.0,1.0,True,2024-11-03,2024-11-04,letterboxd,https://boxd.it/vBZm,True
+film,Hannah Arendt,,2012,3.0,0.0,False,,2024-11-05,letterboxd,https://boxd.it/41I6,True
+film,Zero Fucks Given,,2021,3.0,0.0,False,,2024-11-05,letterboxd,https://boxd.it/vqk8,True
+film,Tomorrow,,2015,,,True,,2024-11-05,letterboxd,https://boxd.it/cT6G,False
+film,School's Out,,2018,,,False,,2024-11-05,letterboxd,https://boxd.it/h5oA,False
+film,Cristóbal Balenciaga,,2024,4.0,0.6,True,,2024-11-05,letterboxd,https://boxd.it/KSe8,True
+film,Monster House,,2006,4.0,0.6,True,,2024-11-05,letterboxd,https://boxd.it/1Z2e,True
+film,Cast Away,,2000,3.5,0.25,False,,2024-11-05,letterboxd,https://boxd.it/20i8,True
+film,Argentina 1985,,2022,4.0,0.6,True,,2024-11-05,letterboxd,https://boxd.it/qLxM,True
+film,Gaga: Five Foot Two,,2017,,,True,,2024-11-05,letterboxd,https://boxd.it/gWwK,False
+film,Ghost in the Shell 2: Innocence,,2004,4.0,0.6,True,,2024-11-05,letterboxd,https://boxd.it/1SrG,True
+film,La Haine,,1995,5.0,1.0,True,,2024-11-08,letterboxd,https://boxd.it/2as8,True
+film,How to Have Sex,,2023,3.0,0.0,True,,2024-11-08,letterboxd,https://boxd.it/EFIM,True
+film,Project X,,2012,,,True,,2024-11-08,letterboxd,https://boxd.it/neO,False
+film,Midnight in Paris,,2011,3.0,0.0,False,,2024-11-08,letterboxd,https://boxd.it/i4a,True
+film,Irrational Man,,2015,3.0,0.0,True,,2024-11-08,letterboxd,https://boxd.it/8JOq,True
+film,Wonder Wheel,,2017,3.5,0.25,True,,2024-11-08,letterboxd,https://boxd.it/fcGC,True
+film,Rifkin’s Festival,,2020,2.5,-0.25,False,,2024-11-08,letterboxd,https://boxd.it/mp8s,True
+film,What Have I Done to Deserve This?,,1984,4.0,0.6,True,,2024-11-08,letterboxd,https://boxd.it/20t6,True
+film,Kika,,1993,,,False,,2024-11-08,letterboxd,https://boxd.it/20sM,False
+film,Lemonade,,2016,,,True,,2024-11-08,letterboxd,https://boxd.it/dMMM,False
+film,Peter Pan,,2003,4.0,0.6,True,,2024-11-08,letterboxd,https://boxd.it/1VQY,True
+film,Super 8,,2011,3.0,0.0,True,,2024-11-08,letterboxd,https://boxd.it/dVI,True
+film,Bohemian Rhapsody,,2018,2.5,-0.25,False,,2024-11-08,letterboxd,https://boxd.it/f1TK,True
+film,The Fault in Our Stars,,2014,,,True,,2024-11-08,letterboxd,https://boxd.it/6BQa,False
+film,Autodefensa,,2022,4.0,0.6,True,,2024-11-08,letterboxd,https://boxd.it/EB36,True
+film,selftape,,2023,4.0,0.6,True,,2024-11-08,letterboxd,https://boxd.it/IiB2,True
+film,Punch-Drunk Love,,2002,4.0,0.6,True,,2024-11-08,letterboxd,https://boxd.it/20E4,True
+film,The Truth,,2019,2.5,-0.25,False,,2024-11-08,letterboxd,https://boxd.it/iKOQ,True
+film,Troy,,2004,,,False,,2024-11-08,letterboxd,https://boxd.it/29TW,False
+film,Contagion,,2011,,,False,,2024-11-09,letterboxd,https://boxd.it/13rq,False
+film,Elysium,,2013,,,True,,2024-11-09,letterboxd,https://boxd.it/2cBm,False
+film,Focus,,2015,2.0,-0.6,False,,2024-11-09,letterboxd,https://boxd.it/7zl2,True
+film,The Party,,1980,,,True,,2024-11-09,letterboxd,https://boxd.it/2aYy,False
+film,Dope,,2015,,,True,,2024-11-09,letterboxd,https://boxd.it/9Tho,False
+film,The Circle,,2017,1.5,-0.8,False,,2024-11-09,letterboxd,https://boxd.it/bj1I,True
+film,Carol & the End of the World,,2023,4.0,0.6,True,,2024-11-09,letterboxd,https://boxd.it/KihU,True
+film,The Beasts,,2022,4.0,0.6,True,2024-11-09,2024-11-10,letterboxd,https://boxd.it/w1L6,True
+film,Millennium Mambo,,2001,4.0,0.6,True,2024-11-09,2024-11-10,letterboxd,https://boxd.it/1Tzw,True
+film,Superbad,,2007,,,True,2024-11-16,2024-11-16,letterboxd,https://boxd.it/20hO,False
+film,Le Bonheur,,1965,4.0,0.6,True,2024-11-16,2024-11-17,letterboxd,https://boxd.it/xyk,True
+film,Pearl,,2022,,,True,2024-11-17,2024-11-17,letterboxd,https://boxd.it/zPbe,False
+film,Sharp Objects,,2018,3.0,0.0,False,,2024-11-17,letterboxd,https://boxd.it/j3NM,True
+film,The Pope: Answers,,2023,,,True,,2024-11-21,letterboxd,https://boxd.it/FonO,False
+film,Romeo and Juliet,,1968,3.0,0.0,True,,2024-11-21,letterboxd,https://boxd.it/22cQ,True
+film,Charlie and the Chocolate Factory,,2005,4.0,0.6,True,,2024-11-21,letterboxd,https://boxd.it/2b68,True
+film,Modern Times,,1936,4.5,0.8,True,,2024-11-21,letterboxd,https://boxd.it/25MC,True
+film,Enchanted,,2007,,,True,,2024-11-21,letterboxd,https://boxd.it/24co,False
+film,Ineffable,,2021,,,True,,2024-11-21,letterboxd,https://boxd.it/uYyQ,False
+film,I'm Thinking of Ending Things,,2020,2.0,-0.6,False,,2024-11-21,letterboxd,https://boxd.it/i4IQ,True
+film,Soul Blackout,,2020,5.0,1.0,True,2024-11-20,2024-11-21,letterboxd,https://boxd.it/QFPi,True
+film,The Hand of God,,2021,4.0,0.6,True,2024-11-21,2024-11-22,letterboxd,https://boxd.it/r5uI,True
+film,Miracle in Cell No. 7,,2019,2.5,-0.25,False,,2024-11-22,letterboxd,https://boxd.it/nFrM,True
+film,Smiley Face,,2007,,,True,2024-11-23,2024-11-24,letterboxd,https://boxd.it/1QG0,False
+film,House,,1977,4.5,0.8,True,2024-11-24,2024-11-25,letterboxd,https://boxd.it/1vsm,True
+film,Kiki: Love to Love,,2016,2.5,-0.25,True,,2024-11-25,letterboxd,https://boxd.it/cRO2,True
+film,My Mexican Bretzel,,2019,4.0,0.6,True,,2024-11-25,letterboxd,https://boxd.it/oFDK,True
+film,Cyrano de Bergerac,,1990,,,True,,2024-11-25,letterboxd,https://boxd.it/1TgY,False
+film,Whiplash,,2014,4.0,0.6,True,,2024-11-25,letterboxd,https://boxd.it/7bQA,True
+film,Wicked,,2024,,,True,2024-11-27,2024-11-28,letterboxd,https://boxd.it/e8ME,False
+film,Bird,,2024,4.5,0.8,True,2024-11-30,2024-12-01,letterboxd,https://boxd.it/GGhm,True
+film,Jawbreaker,,1999,3.5,0.25,True,2024-12-01,2024-12-02,letterboxd,https://boxd.it/1G7a,True
+film,Beau Travail,,1999,5.0,1.0,True,2024-12-03,2024-12-04,letterboxd,https://boxd.it/1NI8,True
+film,The Witch,,2015,3.0,0.0,False,2024-12-06,2024-12-06,letterboxd,https://boxd.it/9X0m,True
+film,Kinds of Kindness,,2024,2.5,-0.25,False,2024-12-12,2024-12-13,letterboxd,https://boxd.it/CWPw,True
+film,Rotting in the Sun,,2023,4.0,0.6,True,2024-12-13,2024-12-14,letterboxd,https://boxd.it/E37y,True
+film,American Honey,,2016,,,True,,2024-12-15,letterboxd,https://boxd.it/bk7C,False
+film,Funeral Parade of Roses,,1969,3.5,0.25,True,2024-12-14,2024-12-15,letterboxd,https://boxd.it/28Cg,True
+film,Zola,,2020,2.5,-0.25,True,2024-12-15,2024-12-15,letterboxd,https://boxd.it/jEWQ,True
+film,The Northman,,2022,3.5,0.25,True,2024-12-19,2024-12-20,letterboxd,https://boxd.it/nK2s,True
+film,Nightmare Alley,,2021,3.5,0.25,True,,2024-12-22,letterboxd,https://boxd.it/m0HC,True
+film,Barb & Star Go to Vista Del Mar,,2021,4.5,0.8,True,2024-12-22,2024-12-22,letterboxd,https://boxd.it/lX9M,True
+film,No Skin Off My Ass,,1991,,,True,2024-12-25,2024-12-26,letterboxd,https://boxd.it/19Is,False
+film,Nosferatu,,2024,4.5,0.8,True,2024-12-26,2024-12-27,letterboxd,https://boxd.it/f5eG,True
+film,City of God,,2002,4.5,0.8,True,2024-12-28,2024-12-29,letterboxd,https://boxd.it/2a2a,True
+film,The Green Ray,,1986,5.0,1.0,True,2024-12-29,2024-12-29,letterboxd,https://boxd.it/t8W,True
+film,The Other Way Around,,2024,2.5,-0.25,True,2024-12-29,2024-12-30,letterboxd,https://boxd.it/K448,True
+film,Daisies,,1966,5.0,1.0,True,2025-01-01,2025-01-02,letterboxd,https://boxd.it/LZk,True
+film,The Color of Pomegranates,,1969,,,True,2025-01-02,2025-01-03,letterboxd,https://boxd.it/1u94,False
+film,Suspiria,,1977,3.0,0.0,False,2025-01-03,2025-01-04,letterboxd,https://boxd.it/1SNW,True
+film,And Then We Danced,,2019,4.0,0.6,True,2025-01-05,2025-01-06,letterboxd,https://boxd.it/m0e6,True
+film,Bridesmaids,,2011,,,True,2025-01-08,2025-01-09,letterboxd,https://boxd.it/rac,False
+film,Fish Tank,,2009,4.0,0.6,True,2025-01-11,2025-01-12,letterboxd,https://boxd.it/1xBg,True
+film,The Golden Compass,,2007,,,True,,2025-01-16,letterboxd,https://boxd.it/272Q,False
+film,The Rocky Horror Picture Show,,1975,,,True,2025-01-18,2025-01-18,letterboxd,https://boxd.it/1a3q,False
+film,High School Musical 2,,2007,,,True,,2025-01-18,letterboxd,https://boxd.it/1PIu,False
+film,La Chimera,,2023,4.5,0.8,True,2025-01-18,2025-01-19,letterboxd,https://boxd.it/vzVi,True
+film,Contempt,,1963,,,False,2025-01-25,2025-01-26,letterboxd,https://boxd.it/2aJe,False
+film,Thelma & Louise,,1991,4.5,0.8,True,2025-02-02,2025-02-03,letterboxd,https://boxd.it/28Ew,True
+film,Possession,,1981,5.0,1.0,True,2025-02-15,2025-02-16,letterboxd,https://boxd.it/1BPm,True
+film,The Hunchback of Notre Dame,,1996,4.5,0.8,True,,2025-02-16,letterboxd,https://boxd.it/1VZQ,True
+film,Night on Earth,,2020,5.0,1.0,True,,2025-02-16,letterboxd,https://boxd.it/oYdw,True
+film,Emilia Pérez,,2024,0.5,-1.0,False,2025-02-23,2025-02-23,letterboxd,https://boxd.it/AP3G,True
+film,A Real Pain,,2024,3.0,0.0,False,2025-03-07,2025-03-07,letterboxd,https://boxd.it/CjNG,True
+film,Dancer in the Dark,,2000,,,False,2025-03-08,2025-03-09,letterboxd,https://boxd.it/71E,False
+film,Queer,,2024,2.0,-0.6,False,2025-03-13,2025-03-14,letterboxd,https://boxd.it/E4RW,True
+film,The Royal Tenenbaums,,2001,,,True,2025-03-15,2025-03-15,letterboxd,https://boxd.it/1YHU,False
+film,Speak,,2004,2.0,-0.6,False,,2025-03-20,letterboxd,https://boxd.it/1MTO,True
+film,Only Lovers Left Alive,,2013,3.0,0.0,True,2025-03-22,2025-03-22,letterboxd,https://boxd.it/4O1U,True
+film,Adolescence,,2025,4.0,0.6,True,2025-03-27,2025-03-27,letterboxd,https://boxd.it/TFGw,True
+film,La Dolce Vita,,1960,5.0,1.0,True,2025-04-05,2025-04-05,letterboxd,https://boxd.it/2anC,True
+film,Before Sunrise,,1995,3.5,0.25,True,2025-04-12,2025-04-13,letterboxd,https://boxd.it/2bcU,True
+film,Hedwig and the Angry Inch,,2001,4.5,0.8,True,2025-04-18,2025-04-19,letterboxd,https://boxd.it/1Qfe,True
+film,Hopelessly Devout,,2018,2.0,-0.6,False,,2025-04-20,letterboxd,https://boxd.it/iINm,True
+film,Rapture,,1979,5.0,1.0,True,2025-04-19,2025-04-20,letterboxd,https://boxd.it/24f8,True
+film,Cria!,,1976,4.5,0.8,False,2025-04-21,2025-04-22,letterboxd,https://boxd.it/AoC,True
+film,"One Sings, the Other Doesn't",,1977,4.5,0.8,True,2025-04-26,2025-04-25,letterboxd,https://boxd.it/98s,True
+film,"Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",,1975,,,True,2025-04-28,2025-04-27,letterboxd,https://boxd.it/T18,False
+film,Conclave,,2024,2.5,-0.25,False,2025-05-04,2025-05-04,letterboxd,https://boxd.it/AO8q,True
+film,The White Ribbon,,2009,4.0,0.6,True,2025-05-11,2025-05-10,letterboxd,https://boxd.it/17eU,True
+film,The Young Girls of Rochefort,,1967,5.0,1.0,True,2025-05-24,2025-05-24,letterboxd,https://boxd.it/26K8,True
+film,Walkabout,,1971,,,False,2025-05-31,2025-06-01,letterboxd,https://boxd.it/1bsG,False
+film,Still Walking,,2008,4.5,0.8,False,,2025-06-02,letterboxd,https://boxd.it/1wvm,True
+film,Sirāt,,2025,4.0,0.6,True,2025-06-12,2025-06-13,letterboxd,https://boxd.it/HxJo,True
+film,Easy A,,2010,,,True,2025-06-23,2025-06-23,letterboxd,https://boxd.it/17DK,False
+film,A Separation,,2011,4.0,0.6,False,2025-07-06,2025-07-07,letterboxd,https://boxd.it/gvo,True
+film,I'm Still Here,,2024,4.5,0.8,True,2025-07-07,2025-07-08,letterboxd,https://boxd.it/BPEO,True
+film,Girlfriends,,1978,4.5,0.8,True,2025-07-12,2025-07-12,letterboxd,https://boxd.it/3JYU,True
+film,Chocolat,,1988,4.5,0.8,True,2025-07-13,2025-07-14,letterboxd,https://boxd.it/Y7g,True
+film,Materialists,,2025,3.0,0.0,True,2025-08-23,2025-08-23,letterboxd,https://boxd.it/GZlW,True
+film,Burning,,2018,5.0,1.0,True,2025-08-24,2025-08-25,letterboxd,https://boxd.it/hHUa,True
+film,My Name Is Juani,,2006,4.0,0.6,True,2025-08-27,2025-08-28,letterboxd,https://boxd.it/2zO4,True
+film,Boogie Nights,,1997,4.0,0.6,True,2025-08-31,2025-09-01,letterboxd,https://boxd.it/23um,True
+film,Romería,,2025,3.0,0.0,False,2025-09-12,2025-09-13,letterboxd,https://boxd.it/IR3k,True
+film,Lilya 4-ever,,2002,4.5,0.8,True,2025-09-21,2025-09-22,letterboxd,https://boxd.it/1SyW,True
+film,Coffee and Cigarettes,,2003,4.5,0.8,True,2025-09-28,2025-09-29,letterboxd,https://boxd.it/29nc,True
+film,Thunderball,,1965,,,False,,2025-09-29,letterboxd,https://boxd.it/29SE,False
+film,Tomorrow Never Dies,,1997,,,False,,2025-09-29,letterboxd,https://boxd.it/29Kg,False
+film,Die Another Day,,2002,,,False,,2025-09-29,letterboxd,https://boxd.it/1a5G,False
+film,Casino Royale,,2006,,,False,,2025-09-29,letterboxd,https://boxd.it/1alk,False
+film,Quantum of Solace,,2008,,,False,,2025-09-29,letterboxd,https://boxd.it/1Vs8,False
+film,Skyfall,,2012,,,True,,2025-09-29,letterboxd,https://boxd.it/17Fc,False
+film,Spectre,,2015,,,False,,2025-09-29,letterboxd,https://boxd.it/6bXY,False
+film,Strange River,,2025,,,True,2025-10-04,2025-10-04,letterboxd,https://boxd.it/CMv2,False
+film,One Battle After Another,,2025,4.0,0.6,True,2025-10-05,2025-10-06,letterboxd,https://boxd.it/DUHM,True
+film,Belle de Jour,,1967,,,True,2025-10-05,2025-10-06,letterboxd,https://boxd.it/29Uq,False
+film,Snow White and the Seven Dwarfs,,1937,,,True,,2025-10-12,letterboxd,https://boxd.it/2arO,False
+film,Pinocchio,,1940,,,True,,2025-10-12,letterboxd,https://boxd.it/1V8C,False
+film,Cinderella,,1950,,,True,,2025-10-12,letterboxd,https://boxd.it/1Uki,False
+film,One Hundred and One Dalmatians,,1961,,,True,,2025-10-12,letterboxd,https://boxd.it/1SeC,False
+film,Peter Pan,,1953,,,True,,2025-10-12,letterboxd,https://boxd.it/1VCC,False
+film,Sleeping Beauty,,1959,,,True,,2025-10-12,letterboxd,https://boxd.it/1V9A,False
+film,Aladdin and the King of Thieves,,1996,,,True,,2025-10-12,letterboxd,https://boxd.it/1Ui2,False
+film,Pocahontas,,1995,4.5,0.8,True,,2025-10-12,letterboxd,https://boxd.it/1W2g,True
+film,Brother Bear,,2003,4.5,0.8,True,,2025-10-12,letterboxd,https://boxd.it/1Xjs,True
+film,The Lion King,,1994,4.5,0.8,True,,2025-10-12,letterboxd,https://boxd.it/201Q,True
+film,Toy Story 3,,2010,4.5,0.8,True,,2025-10-12,letterboxd,https://boxd.it/1WRe,True
+film,Toy Story 4,,2019,,,True,,2025-10-12,letterboxd,https://boxd.it/9ALu,False
+film,The Little Mermaid,,1989,4.0,0.6,True,,2025-10-12,letterboxd,https://boxd.it/1WYO,True
+film,The Nightmare Before Christmas,,1993,,,True,,2025-10-12,letterboxd,https://boxd.it/1YzQ,False
+film,Hercules,,1997,,,True,,2025-10-12,letterboxd,https://boxd.it/1SDW,False
+film,Treasure Planet,,2002,4.5,0.8,True,,2025-10-12,letterboxd,https://boxd.it/1Znm,True
+film,The Jungle Book,,1967,4.0,0.6,True,,2025-10-12,letterboxd,https://boxd.it/1YY2,True
+film,Chicken Little,,2005,,,True,,2025-10-12,letterboxd,https://boxd.it/1Xnu,False
+film,"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",,2005,4.0,0.6,True,,2025-10-12,letterboxd,https://boxd.it/2ark,True
+film,Meet the Robinsons,,2007,,,True,,2025-10-12,letterboxd,https://boxd.it/28Ym,False
+film,Hannah Montana: The Movie,,2009,,,True,,2025-10-12,letterboxd,https://boxd.it/1Hx4,False
+film,Monsters University,,2013,,,False,,2025-10-12,letterboxd,https://boxd.it/bQm,False
+film,Maleficent,,2014,,,False,,2025-10-12,letterboxd,https://boxd.it/3v1u,False
+film,Finding Dory,,2016,3.0,0.0,False,,2025-10-12,letterboxd,https://boxd.it/4aAA,True
+film,Coco,,2017,,,False,,2025-10-12,letterboxd,https://boxd.it/bYJQ,False
+film,Incredibles 2,,2018,2.5,-0.25,False,,2025-10-12,letterboxd,https://boxd.it/7IPg,True
+film,Ralph Breaks the Internet,,2018,,,True,,2025-10-12,letterboxd,https://boxd.it/edAy,False
+film,Columbus,,2017,3.5,0.25,True,2025-10-12,2025-10-13,letterboxd,https://boxd.it/eCuA,True
+film,Our Planet,,2019,5.0,1.0,True,,2025-10-15,letterboxd,https://boxd.it/mwuq,True
+film,Cowspiracy: The Sustainability Secret,,2014,,,True,,2025-10-15,letterboxd,https://boxd.it/8I92,False
+film,The Sweet East,,2023,4.5,0.8,True,2025-11-01,2025-11-02,letterboxd,https://boxd.it/CcHw,True
+film,Perfect Days,,2023,4.5,0.8,True,2025-11-16,2025-11-17,letterboxd,https://boxd.it/ATh8,True
+film,Bugonia,,2025,3.5,0.25,True,2025-11-20,2025-11-21,letterboxd,https://boxd.it/qeWY,True
+film,In Time,,2011,2.0,-0.6,True,2025-11-23,2025-11-23,letterboxd,https://boxd.it/FPS,True
+film,Wicked: For Good,,2025,1.5,-0.8,False,2025-11-26,2025-11-27,letterboxd,https://boxd.it/AyfK,True
+film,Scavengers Reign,,2023,5.0,1.0,True,2025-11-26,2025-11-27,letterboxd,https://boxd.it/K7fI,True
+film,Copacabana Mon Amour,,1970,4.5,0.8,True,2025-11-30,2025-12-01,letterboxd,https://boxd.it/5Oh6,True
+film,Kirikou and the Sorceress,,1998,4.5,0.8,True,,2025-12-15,letterboxd,https://boxd.it/1C3y,True
+film,Sentimental Value,,2025,3.0,0.0,False,2025-12-26,2025-12-26,letterboxd,https://boxd.it/GwcG,True
+film,Sinners,,2025,3.5,0.25,True,2025-12-27,2025-12-28,letterboxd,https://boxd.it/KQMM,True
+film,Yi Yi,,2000,5.0,1.0,True,2025-12-27,2025-12-28,letterboxd,https://boxd.it/1vCw,True
+film,Uncut Gems,,2019,4.0,0.6,True,2026-01-05,2026-01-06,letterboxd,https://boxd.it/gXGc,True
+film,Avatar: Fire and Ash,,2025,,,True,2026-01-18,2026-01-19,letterboxd,https://boxd.it/2W7s,False
+film,Weapons,,2025,3.5,0.25,True,2026-01-24,2026-01-25,letterboxd,https://boxd.it/EMTM,True
+film,Marty Supreme,,2025,4.5,0.8,True,2026-02-07,2026-02-08,letterboxd,https://boxd.it/Off0,True
+film,Anyone But You,,2023,,,False,,2026-02-27,letterboxd,https://boxd.it/EzA8,False
+film,Cathedral,,1971,5.0,1.0,True,2026-03-01,2026-03-01,letterboxd,https://boxd.it/sJTA,True
+film,Maps to the Stars,,2014,3.0,0.0,False,2026-03-08,2026-03-12,letterboxd,https://boxd.it/4WCu,True
+film,Made in Abyss,,2017,4.5,0.8,True,2026-03-14,2026-03-15,letterboxd,https://boxd.it/pE50,True
+film,Made in Abyss: Dawn of the Deep Soul,,2020,4.5,0.8,True,2026-03-14,2026-03-15,letterboxd,https://boxd.it/l4h2,True
+film,L'Eclisse,,1962,4.5,0.8,True,2026-04-04,2026-04-05,letterboxd,https://boxd.it/1CoG,True
+film,Go,,1999,5.0,1.0,True,2026-04-05,2026-04-06,letterboxd,https://boxd.it/1YHA,True
+film,Jaws,,1975,3.5,0.25,True,2026-04-19,2026-04-20,letterboxd,https://boxd.it/2a5e,True
+film,The Devil Wears Prada 2,,2026,,,True,2026-05-05,2026-05-06,letterboxd,https://boxd.it/Oags,False
+film,Waves,,2019,4.0,0.6,True,2026-05-10,2026-05-11,letterboxd,https://boxd.it/jpmy,True
+film,The Drama,,2026,4.0,0.6,True,2026-05-30,2026-05-31,letterboxd,https://boxd.it/OA2w,True
+film,Hoppers,,2026,,,True,2026-06-07,2026-06-07,letterboxd,https://boxd.it/OFpg,False
+film,Meet the Parents,,2000,,,True,,2026-06-14,letterboxd,https://boxd.it/28vE,False
+film,Meet the Fockers,,2004,,,True,,2026-06-14,letterboxd,https://boxd.it/29NE,False
+film,Backrooms,,2026,4.5,0.8,True,2026-06-19,2026-06-20,letterboxd,https://boxd.it/EY6W,True
+film,Starlet,,2012,3.5,0.25,True,2026-06-20,2026-06-21,letterboxd,https://boxd.it/3dvG,True
+film,The Secret Agent,,2025,3.5,0.25,True,2026-06-25,2026-06-25,letterboxd,https://boxd.it/KkUE,True
+film,Obsession,,2025,3.0,0.0,True,2026-07-02,2026-07-02,letterboxd,https://boxd.it/PNqo,True
+film,Before Night Falls,,2000,3.5,0.25,True,2026-07-05,2026-07-06,letterboxd,https://boxd.it/23to,True
+film,mid90s,,2018,4.0,0.6,True,2026-07-12,2026-07-12,letterboxd,https://boxd.it/fxIa,True
+film,Pillion,,2025,,,True,2026-08-02,2026-08-03,letterboxd,https://boxd.it/N6Pw,False
+film,Spider-Man: Brand New Day,,2026,4.0,0.6,True,2026-08-03,2026-08-04,letterboxd,https://boxd.it/ACJE,True
+film,The Odyssey,,2026,4.5,0.8,True,2026-08-09,2026-08-10,letterboxd,https://boxd.it/QFQU,True
+film,"Our Hero, Balthazar",,2025,2.5,-0.25,False,2026-09-06,2026-09-07,letterboxd,https://boxd.it/UjYU,True
+film,La Bola Negra,,2026,5.0,1.0,True,2026-09-25,2026-09-26,letterboxd,https://boxd.it/SDaQ,True
+book,Le Chuchoteur (Mila Vasquez #1),Donato Carrisi,2009,3.0,0.0,,2022-10-01,2026-09-29,goodreads,8625703,True
+book,Blackouts,Justin Torres,2023,2.0,-0.6,,2024-11-01,2026-09-22,goodreads,65215321,True
+book,Arv og miljø,Vigdis Hjorth,2016,4.0,0.6,,2024-07-01,2026-09-17,goodreads,32055463,True
+book,Temporada de huracanes,Fernanda Melchor,2017,4.0,0.6,,2025-07-01,2026-09-19,goodreads,34847511,True
+book,Facendera,Óscar García Sierra,2022,2.0,-0.6,,2025-12-01,2026-09-19,goodreads,60818212,True
+book,Los guapos,Esther García Llovet,2024,2.0,-0.6,,2024-10-01,2026-09-19,goodreads,205456472,True
+book,Tirant lo Blanc. Episodis Amorosos,Joanot Martorell,2012,2.0,-0.6,,2017-02-01,2026-09-19,goodreads,17229864,True
+book,Soumission,Michel Houellebecq,2015,3.0,0.0,,2016-04-01,2026-09-19,goodreads,23929479,True
+book,"Covarda, vella, tan salvatge",Arià Paco Abenoza,2022,2.0,-0.6,,2025-05-01,2026-09-19,goodreads,61675614,True
+book,Être écoféministe: Théories et pratiques,Jeanne Burgart Goutal,2020,4.0,0.6,,2021-08-01,2026-09-19,goodreads,53305090,True
+book,La Communale,Marc Faysse,2019,2.0,-0.6,,2020-04-01,2026-09-19,goodreads,50111524,True
+book,Vers la beauté,David Foenkinos,2018,2.0,-0.6,,2024-03-01,2026-09-19,goodreads,39329210,True
+book,The Wind-Up Bird Chronicle,Haruki Murakami,1994,4.0,0.6,,2017-11-01,2026-09-17,goodreads,11275,True
+book,The Metamorphosis,Franz Kafka,1915,4.0,0.6,,2015-01-01,2026-09-17,goodreads,485894,True
+book,La plaça del Diamant,Mercè Rodoreda,1962,4.0,0.6,,2014-04-01,2026-09-17,goodreads,75515,True
+book,Mirall trencat,Mercè Rodoreda,1974,4.0,0.6,,2015-05-01,2026-09-17,goodreads,41594920,True
+book,Cloud Atlas,David  Mitchell,2004,5.0,1.0,,2015-08-01,2026-09-17,goodreads,49628,True
+book,Middlesex,Jeffrey Eugenides,2002,4.0,0.6,,2019-01-01,2026-09-17,goodreads,2187,True
+book,Just Kids,Patti Smith,2010,5.0,1.0,,2019-09-01,2026-09-17,goodreads,206318521,True
+book,Kala,Colin Walsh,2023,4.0,0.6,,2024-06-01,2026-09-17,goodreads,63184768,True
+book,Los renglones torcidos de Dios,Torcuato Luca de Tena,1979,4.0,0.6,,2023-01-01,2026-09-17,goodreads,67006,True
+book,The Brothers Karamazov,Fyodor Dostoevsky,1879,3.0,0.0,,2023-07-01,2026-09-17,goodreads,4934,True
+book,Poeta chileno,Alejandro Zambra,2020,4.0,0.6,,2025-06-01,2026-09-17,goodreads,50272339,True
+book,Solitud,Víctor Català,1905,5.0,1.0,,2017-01-01,2026-09-17,goodreads,35900906,True
+book,El metro de platino iridiado,Álvaro Pombo,1990,5.0,1.0,,2026-01-01,2026-09-17,goodreads,1081379,True
+book,Crime and Punishment,Fyodor Dostoevsky,1866,4.0,0.6,,2025-12-01,2026-09-17,goodreads,7144,True
+book,Bajar es lo peor,Mariana Enriquez,1995,4.0,0.6,,2026-06-01,2026-09-17,goodreads,17558411,True
+book,To Paradise,Hanya Yanagihara,2022,4.0,0.6,,2023-10-01,2026-09-17,goodreads,57739876,True
+book,A Little Life,Hanya Yanagihara,2015,5.0,1.0,,2023-09-01,2026-09-17,goodreads,22822858,True
+book,"Children of Dune (Dune, #3)",Frank Herbert,1976,3.0,0.0,,2024-10-01,2026-09-17,goodreads,44492286,True
+book,Dune Messiah (Dune #2),Frank Herbert,1969,4.0,0.6,,2024-09-01,2026-09-17,goodreads,44492285,True
+book,"Dune (Dune, #1)",Frank Herbert,1965,5.0,1.0,,2024-06-01,2026-09-17,goodreads,44767458,True
+book,"The Story of the Lost Child (Neapolitan Novels, #4)",Elena Ferrante,2014,5.0,1.0,,2022-08-01,2026-09-17,goodreads,25242224,True
+book,"Those Who Leave and Those Who Stay (Neapolitan Novels, #3)",Elena Ferrante,2013,5.0,1.0,,2022-07-01,2026-09-17,goodreads,23156040,True
+book,"The Story of a New Name (Neapolitan Novels, #2)",Elena Ferrante,2012,5.0,1.0,,2022-06-01,2026-09-17,goodreads,17465515,True
+book,"My Brilliant Friend (Neapolitan Novels, #1)",Elena Ferrante,2011,5.0,1.0,,2022-05-01,2026-09-17,goodreads,35036409,True
+book,"1Q84 (1Q84, #1-3)",Haruki Murakami,2009,5.0,1.0,,2016-02-01,2026-09-17,goodreads,10357575,True
+book,Young Mungo,Douglas   Stuart,2022,4.0,0.6,,2024-04-01,2026-09-17,goodreads,58891551,True
+book,On the Road,Jack Kerouac,1957,5.0,1.0,,2018-04-01,2026-09-17,goodreads,70401,True
+book,Todos los fines del mundo,Andrea Chapela,2025,4.0,0.6,,2026-08-01,2026-09-17,goodreads,231517013,True
+book,Chamanes eléctricos en la fiesta del sol,Mónica Ojeda,2024,3.0,0.0,,2026-05-01,2026-09-17,goodreads,202633889,True
+book,The Year of Magical Thinking,Joan Didion,2005,5.0,1.0,,2024-12-01,2026-09-17,goodreads,7815,True
+book,Dracula,Bram Stoker,1897,5.0,1.0,,2025-02-01,2026-09-17,goodreads,17245,True
+book,Pearl,Siân Hughes,2023,5.0,1.0,,2024-10-01,2026-09-17,goodreads,122758113,True
+book,El verano en que mi madre tuvo los ojos verdes,Tatiana Țîbuleac,2017,4.0,0.6,,2023-11-01,2026-09-17,goodreads,44289602,True
+book,My Year of Rest and Relaxation,Ottessa Moshfegh,2018,5.0,1.0,,2024-06-01,2026-09-17,goodreads,44279110,True
+book,The Girls,Emma Cline,2016,3.0,0.0,,2025-07-01,2026-09-17,goodreads,26893819,True
+book,Severance,Ling  Ma,2018,4.0,0.6,,2026-03-01,2026-09-17,goodreads,36348525,True
+book,Nuestra parte de noche,Mariana Enriquez,2019,5.0,1.0,,2025-05-01,2026-09-17,goodreads,48758708,True
+book,We Do Not Part,Han Kang,2025,3.0,0.0,,2025-08-01,2026-09-17,goodreads,205436018,True
+book,The Vegetarian,Han Kang,2007,3.0,0.0,,2026-02-01,2026-09-17,goodreads,25489025,True

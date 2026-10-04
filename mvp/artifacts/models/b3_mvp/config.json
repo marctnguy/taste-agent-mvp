@@ -1,0 +1,21 @@
+{
+  "model_status": "exploratory_candidate_mvp",
+  "architecture": "B3",
+  "training_population": 393,
+  "target": "preference_weight",
+  "embedding_model": "text-embedding-3-small",
+  "original_embedding_dimensionality": 1536,
+  "selected_pca_dimensionality": 16,
+  "selected_ridge_alpha": 316.22776601683796,
+  "metadata_feature_families": [
+    "genre",
+    "language",
+    "country",
+    "year",
+    "decade"
+  ],
+  "source_experiment": "exploratory_latent_semantics",
+  "fit_timestamp": "2026-10-02T16:16:51.390930+00:00",
+  "holdout_used": false,
+  "holdout_confirmation": "The frozen 99-film holdout was never used."
+}
