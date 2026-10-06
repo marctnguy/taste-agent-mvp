@@ -31,6 +31,7 @@ from mvp.src.taste_profile import build_taste_profile
 
 RAW_INGESTION_PATH = Path("mvp/data/raw/taste-agent-combined-ingestion.csv")
 CONDITION_A_PATH = Path("mvp/data/processed/condition_a_enriched.csv")
+WATCHED_OVERRIDE_PATH = Path("mvp/data/processed/watched_override_confirmations.csv")
 SEMANTIC_CACHE_PATH = Path("mvp/artifacts/semantic_vectors/semantic_vectors.csv")
 RECOMMENDATION_RUNS_DIR = Path("mvp/artifacts/recommendation_runs")
 RECOMMENDATION_CACHE_DIR = MODEL_DIR / "candidate_embedding_cache"
@@ -183,6 +184,96 @@ def load_condition_a_enriched(path: str | Path = CONDITION_A_PATH) -> pd.DataFra
     if "tmdb_id" in frame.columns:
         frame["tmdb_id"] = frame["tmdb_id"].astype("Int64")
     return frame
+
+
+def load_watched_override_confirmations(
+    path: str | Path = WATCHED_OVERRIDE_PATH,
+    *,
+    include_pending: bool = False,
+) -> pd.DataFrame:
+    if not Path(path).exists():
+        columns = ["status", "source_id", "title", "year", "tmdb_id", "source_uri", "provenance", "note"]
+        return pd.DataFrame(columns=columns)
+    frame = pd.read_csv(path)
+    frame = _ensure_columns(frame)
+    for column in ["status", "source_id", "title", "source_uri", "provenance", "note"]:
+        if column not in frame.columns:
+            frame[column] = pd.NA
+    if "year" in frame.columns:
+        frame["year"] = pd.to_numeric(frame["year"], errors="coerce").astype("Int64")
+    else:
+        frame["year"] = pd.Series(dtype="Int64")
+    if "tmdb_id" in frame.columns:
+        frame["tmdb_id"] = pd.to_numeric(frame["tmdb_id"], errors="coerce").astype("Int64")
+    else:
+        frame["tmdb_id"] = pd.Series(dtype="Int64")
+    frame["status"] = frame["status"].fillna("confirmed").astype(str).str.lower()
+    if not include_pending:
+        frame = frame.loc[frame["status"] == "confirmed"].copy()
+    if "source_id" in frame.columns:
+        frame["source_id"] = frame["source_id"].astype(str)
+    frame["title"] = frame["title"].astype(str)
+    frame["source_uri"] = frame["source_uri"].astype(str)
+    frame["provenance"] = frame["provenance"].astype(str)
+    frame["note"] = frame["note"].astype(str)
+    return frame.reset_index(drop=True)
+
+
+def load_watched_override_registry(path: str | Path = WATCHED_OVERRIDE_PATH) -> pd.DataFrame:
+    overrides = load_watched_override_confirmations(path)
+    if overrides.empty:
+        return pd.DataFrame(
+            columns=[
+                "source_id",
+                "canonical_id",
+                "title",
+                "year",
+                "release_year",
+                "rating",
+                "preference_weight",
+                "liked",
+                "consumed_date",
+                "source_record_date",
+                "source",
+                "is_trainable",
+                "tmdb_id",
+                "status",
+                "source_uri",
+                "provenance",
+                "note",
+            ]
+        )
+    rows: list[dict[str, Any]] = []
+    for _, row in overrides.iterrows():
+        tmdb_id = row.get("tmdb_id")
+        source_id = row.get("source_id")
+        if pd.isna(source_id) or not str(source_id).strip():
+            source_id = f"tmdb:{int(tmdb_id)}" if pd.notna(tmdb_id) else ""
+        rows.append(
+            {
+                "source_id": str(source_id),
+                "canonical_id": str(source_id),
+                "title": row.get("title"),
+                "year": int(row["year"]) if pd.notna(row.get("year")) else pd.NA,
+                "release_year": int(row["year"]) if pd.notna(row.get("year")) else pd.NA,
+                "rating": pd.NA,
+                "preference_weight": pd.NA,
+                "liked": pd.NA,
+                "consumed_date": pd.NA,
+                "source_record_date": pd.NA,
+                "source": row.get("source_uri") or row.get("source_id") or pd.NA,
+                "is_trainable": False,
+                "tmdb_id": int(tmdb_id) if pd.notna(tmdb_id) else pd.NA,
+                "status": row.get("status"),
+                "source_uri": row.get("source_uri"),
+                "provenance": row.get("provenance"),
+                "note": row.get("note"),
+            }
+        )
+    frame = pd.DataFrame(rows)
+    frame["source_id"] = frame["source_id"].astype(str)
+    frame["canonical_id"] = frame["canonical_id"].astype(str)
+    return frame.drop_duplicates(subset=["tmdb_id", "source_id", "title", "year"], keep="first").reset_index(drop=True)
 
 
 def _tmdb_request(client: TMDBClient, endpoint: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
@@ -364,7 +455,26 @@ def build_watched_exclusions(
     consumed_films: pd.DataFrame,
     enriched_films: pd.DataFrame,
     client: TMDBClient | None = None,
+    watched_overrides: pd.DataFrame | None = None,
 ) -> tuple[pd.DataFrame, dict[str, Any]]:
+    override_rows = watched_overrides.copy().reset_index(drop=True) if watched_overrides is not None and not watched_overrides.empty else pd.DataFrame()
+    if not override_rows.empty:
+        override_rows = override_rows.loc[:, [column for column in ["source_id", "title", "year", "release_year", "tmdb_id", "source_uri", "provenance"] if column in override_rows.columns]].copy()
+        override_rows["source_id"] = override_rows["source_id"].astype(str)
+        override_rows["title"] = override_rows["title"].astype(str)
+        if "year" not in override_rows.columns:
+            override_rows["year"] = pd.NA
+        if "release_year" not in override_rows.columns:
+            override_rows["release_year"] = override_rows["year"]
+        if "tmdb_id" not in override_rows.columns:
+            override_rows["tmdb_id"] = pd.NA
+        if "title" in override_rows.columns and "year" in override_rows.columns:
+            override_rows["source_id"] = override_rows["source_id"].where(override_rows["source_id"].str.strip() != "", override_rows["tmdb_id"].apply(lambda value: f"tmdb:{int(value)}" if pd.notna(value) else ""))
+    if override_rows.empty:
+        watched_frame = consumed_films.copy().reset_index(drop=True)
+    else:
+        watched_frame = pd.concat([consumed_films.copy().reset_index(drop=True), override_rows], ignore_index=True, sort=False)
+
     enriched_lookup = enriched_films.loc[:, [column for column in ["source_id", "tmdb_id"] if column in enriched_films.columns]].copy()
     if not enriched_lookup.empty:
         enriched_lookup["source_id"] = enriched_lookup["source_id"].astype(str)
@@ -374,7 +484,7 @@ def build_watched_exclusions(
     exclusions: list[dict[str, Any]] = []
     tmdb_matches = 0
     title_year_fallbacks = 0
-    for _, row in consumed_films.iterrows():
+    for _, row in watched_frame.iterrows():
         source_id = str(row.get("source_id", ""))
         title = row.get("title")
         year = row.get("year") if pd.notna(row.get("year")) else row.get("release_year")
@@ -420,6 +530,7 @@ def build_watched_exclusions(
     frame = pd.DataFrame(exclusions).drop_duplicates(subset=["exclusion_key"], keep="first").reset_index(drop=True)
     report = {
         "consumed_film_rows": int(len(consumed_films)),
+        "override_rows": int(len(override_rows)),
         "tmdb_exclusions": int(tmdb_matches),
         "fallback_exclusions": int(title_year_fallbacks),
         "unique_exclusion_keys": int(len(frame)),
@@ -449,8 +560,9 @@ def generate_candidate_pool(
 
     client = TMDBClient(api_key=keys.tmdb_api_key)
     consumed = load_consumption_history(raw_path)
+    watched_overrides = load_watched_override_registry()
     enriched = load_condition_a_enriched(condition_a_path)
-    exclusions, exclusion_report = build_watched_exclusions(consumed, enriched, client=client)
+    exclusions, exclusion_report = build_watched_exclusions(consumed, enriched, client=client, watched_overrides=watched_overrides)
     watched_tmdb_ids = set(pd.to_numeric(exclusions["tmdb_id"], errors="coerce").dropna().astype(int).tolist())
     watched_title_year = set(exclusions["normalized_title_year"].astype(str).tolist())
 

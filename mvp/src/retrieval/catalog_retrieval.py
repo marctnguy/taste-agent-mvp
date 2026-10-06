@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from functools import lru_cache
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
@@ -74,6 +75,121 @@ class CatalogRetrievalResult:
     request_embedding: np.ndarray | None
     retrieval_diagnostics: CatalogRetrievalDiagnostics
     augmentation_report: dict[str, Any]
+
+
+SEQUEL_ELIGIBILITY_RULES: tuple[dict[str, Any], ...] = (
+    {
+        "candidate_tmdb_id": 21521,
+        "candidate_title": "Project A - Part II",
+        "candidate_year": 1987,
+        "required_prerequisites": [{"title": "Project A", "year": 1983}],
+    },
+    {
+        "candidate_tmdb_id": 9714,
+        "candidate_title": "Home Alone 3",
+        "candidate_year": 1997,
+        "required_prerequisites": [{"title": "Home Alone 2: Lost in New York", "year": 1992}],
+    },
+    {
+        "candidate_tmdb_id": 1084244,
+        "candidate_title": "Toy Story 5",
+        "candidate_year": 2026,
+        "required_prerequisites": [
+            {"tmdb_id": 862, "title": "Toy Story", "year": 1995},
+            {"tmdb_id": 863, "title": "Toy Story 2", "year": 1999},
+            {"tmdb_id": 10193, "title": "Toy Story 3", "year": 2010},
+            {"tmdb_id": 301528, "title": "Toy Story 4", "year": 2019},
+        ],
+    },
+)
+
+
+def _normalize_year(value: Any) -> int | None:
+    try:
+        if value is None or pd.isna(value):
+            return None
+        return int(float(value))
+    except Exception:
+        return None
+
+
+def _title_year_key(title: Any, year: Any) -> str | None:
+    normalized_title = _normalize_text(title)
+    normalized_year = _normalize_year(year)
+    if not normalized_title or normalized_year is None:
+        return None
+    return f"{normalized_title}__{normalized_year}"
+
+
+def _candidate_identity_keys(row: pd.Series | dict[str, Any]) -> set[str]:
+    payload = row.to_dict() if isinstance(row, pd.Series) else dict(row)
+    keys: set[str] = set()
+    tmdb_id = payload.get("tmdb_id")
+    if tmdb_id is not None and not pd.isna(tmdb_id):
+        try:
+            keys.add(str(int(float(tmdb_id))))
+        except Exception:
+            pass
+    source_id = payload.get("source_id")
+    if source_id is not None and str(source_id).strip():
+        keys.add(str(source_id).strip())
+    title_year = _title_year_key(payload.get("title"), payload.get("year") or payload.get("release_year"))
+    if title_year:
+        keys.add(title_year)
+    return keys
+
+
+@lru_cache(maxsize=1)
+def _series_prerequisite_rules() -> tuple[dict[str, Any], ...]:
+    return SEQUEL_ELIGIBILITY_RULES
+
+
+def _prerequisite_satisfied(prerequisite: dict[str, Any], watched_keys: set[str]) -> bool:
+    tmdb_id = prerequisite.get("tmdb_id")
+    if tmdb_id is not None and str(tmdb_id) in watched_keys:
+        return True
+    title = prerequisite.get("title")
+    year = prerequisite.get("year")
+    title_year = _title_year_key(title, year)
+    return bool(title_year and title_year in watched_keys)
+
+
+def _apply_series_prerequisite_filters(frame: pd.DataFrame, watched_keys: set[str]) -> tuple[pd.DataFrame, dict[str, Any]]:
+    if frame.empty:
+        return frame.copy(), {"series_prerequisite_blocked": 0, "series_prerequisite_blocked_titles": []}
+    filtered = frame.copy().reset_index(drop=True)
+    blocked_titles: list[str] = []
+    keep_mask: list[bool] = []
+    rules = _series_prerequisite_rules()
+    for _, row in filtered.iterrows():
+        row_keys = _candidate_identity_keys(row)
+        rule = next(
+            (
+                item
+                for item in rules
+                if (
+                    (item.get("candidate_tmdb_id") is not None and str(item["candidate_tmdb_id"]) in row_keys)
+                    or (
+                        item.get("candidate_title")
+                        and item.get("candidate_year") is not None
+                        and _title_year_key(item["candidate_title"], item["candidate_year"]) in row_keys
+                    )
+                )
+            ),
+            None,
+        )
+        if rule is None:
+            keep_mask.append(True)
+            continue
+        required = rule.get("required_prerequisites", [])
+        satisfied = all(_prerequisite_satisfied(prereq, watched_keys) for prereq in required)
+        keep_mask.append(bool(satisfied))
+        if not satisfied:
+            blocked_titles.append(str(row.get("title") or rule.get("candidate_title") or ""))
+    if len(keep_mask) != len(filtered):
+        keep_mask = [True for _ in range(len(filtered))]
+    kept = filtered.loc[keep_mask].reset_index(drop=True)
+    return kept, {"series_prerequisite_blocked": int(len(blocked_titles)), "series_prerequisite_blocked_titles": blocked_titles}
 
 
 def _http_json(url: str, headers: dict[str, str] | None = None, timeout: int = 60) -> dict[str, Any]:
@@ -402,6 +518,8 @@ def _augment_with_reference_candidates(request: RequestUnderstanding, client: TM
         candidate["candidate_source_ranks"] = ["1"]
         rows.append(candidate)
     frame = pd.DataFrame(rows)
+    if frame.empty:
+        frame = pd.DataFrame(columns=["source_id"])
     return frame, {"reference_candidates": int(len(frame))}
 
 
@@ -456,10 +574,13 @@ def _augment_with_semantic_keyword_candidates(request: RequestUnderstanding, cli
 
     if frames:
         combined = pd.concat(frames, ignore_index=True)
-        combined["source_id"] = combined["source_id"].astype(str)
-        combined = combined.drop_duplicates(subset=["source_id"], keep="first").reset_index(drop=True)
+        if "source_id" not in combined.columns or combined.empty:
+            combined = pd.DataFrame(columns=["source_id"])
+        else:
+            combined["source_id"] = combined["source_id"].astype(str)
+            combined = combined.drop_duplicates(subset=["source_id"], keep="first").reset_index(drop=True)
     else:
-        combined = pd.DataFrame()
+        combined = pd.DataFrame(columns=["source_id"])
     return combined, {"semantic_keyword_candidates": int(len(combined)), "resolved_keywords": resolved_keywords}
 
 
@@ -591,10 +712,13 @@ def _augment_with_constraint_candidates(request: RequestUnderstanding, client: T
 
     if frames:
         combined = pd.concat(frames, ignore_index=True)
-        combined["source_id"] = combined["source_id"].astype(str)
-        combined = combined.drop_duplicates(subset=["source_id"], keep="first").reset_index(drop=True)
+        if combined.empty or "source_id" not in combined.columns:
+            combined = pd.DataFrame(columns=["source_id"])
+        else:
+            combined["source_id"] = combined["source_id"].astype(str)
+            combined = combined.drop_duplicates(subset=["source_id"], keep="first").reset_index(drop=True)
     else:
-        combined = pd.DataFrame()
+        combined = pd.DataFrame(columns=["source_id"])
     return combined, counts
 
 
@@ -758,10 +882,23 @@ def discover_catalog_for_request(
         candidate_pool = candidate_pool.copy().reset_index(drop=True)
         pool_report = {"candidate_limit": int(candidate_limit), "provided_pool": int(len(candidate_pool))}
 
+    if "source_id" not in candidate_pool.columns:
+        candidate_pool["source_id"] = pd.Series(dtype=str)
     candidate_pool["source_id"] = candidate_pool["source_id"].astype(str)
     if watched_ids is not None and "source_id" in candidate_pool.columns:
-        watched = {str(value) for value in watched_ids}
-        candidate_pool = candidate_pool.loc[~candidate_pool["source_id"].isin(watched)].copy().reset_index(drop=True)
+        watched = {str(value) for value in watched_ids if str(value).strip()}
+        watched_tmdb: set[str] = set()
+        for value in watched:
+            match = re.search(r"(?:tmdb:)?(\d+)$", value)
+            if match:
+                watched_tmdb.add(match.group(1))
+        watched_title_year = {value for value in watched if "__" in value}
+        title_year_mask = candidate_pool.apply(lambda row: _title_year_key(row.get("title"), row.get("year") or row.get("release_year")) in watched_title_year, axis=1)
+        if "tmdb_id" in candidate_pool.columns:
+            tmdb_mask = candidate_pool["tmdb_id"].astype(str).isin(watched_tmdb)
+        else:
+            tmdb_mask = pd.Series([False] * len(candidate_pool), index=candidate_pool.index)
+        candidate_pool = candidate_pool.loc[~candidate_pool["source_id"].isin(watched) & ~tmdb_mask & ~title_year_mask].copy().reset_index(drop=True)
 
     augmentation_frames: list[pd.DataFrame] = []
     augmentation_report: dict[str, Any] = {"query_aware_augmentation_used": False}
@@ -788,6 +925,8 @@ def discover_catalog_for_request(
         candidate_pool["source_id"] = candidate_pool["source_id"].astype(str)
 
     candidate_pool = candidate_pool.drop_duplicates(subset=["source_id"], keep="first").reset_index(drop=True)
+    watched_key_set = {str(value) for value in watched_ids if str(value).strip()} if watched_ids is not None else set()
+    candidate_pool, sequel_report = _apply_series_prerequisite_filters(candidate_pool, watched_key_set)
     if "rank" not in candidate_pool.columns:
         candidate_pool["rank"] = np.arange(1, len(candidate_pool) + 1)
     else:
@@ -842,5 +981,5 @@ def discover_catalog_for_request(
         documents=documents,
         request_embedding=query_embedding,
         retrieval_diagnostics=diagnostics,
-        augmentation_report={**pool_report, **augmentation_report, **embedding_report},
+        augmentation_report={**pool_report, **augmentation_report, **embedding_report, **sequel_report},
     )

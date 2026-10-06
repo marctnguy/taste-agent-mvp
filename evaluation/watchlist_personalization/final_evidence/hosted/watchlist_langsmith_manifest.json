@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-10-05T22:39:47.365820+00:00",
+  "dataset_name": "taste-agent-reversible-history-watchlist-h12",
+  "dataset_id": null,
+  "dataset_status": "langsmith_dataset",
+  "experiment_prefix": "taste-agent-reversible-history-watchlist",
+  "input_hashes": {
+    "prompt_manifest": "7c29554262d7e1a239f74e5df0a0ac8fdcba04bc7587e7dafe789b1a66b23760",
+    "prompt_source_set": "3550d9049863f16d8cb6f869e480e57feea112eca28453b957d3b1fcf3d06b9d"
+  },
+  "code_hashes": {
+    "watchlist_service": "854492b14afd50e1d7bc6bd98589682af47917ff1d5111209aa847d47f02ff09",
+    "watchlist_langsmith_evaluation": "f2dce53d7d0accb442e2aab259b90f1ad51abb786ea1c101553d1477793d575e",
+    "watchlist_experiment_script": "f91d28c81b5451a3b236880849891be6abf837ec3cfef10d1d831ddeefd66a3a",
+    "watchlist_isolated_experiment_script": "9637329708dabe2cf29a13821795f7a2191e5949202156cae2d9558ae62b5e45"
+  },
+  "case_ids": [
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05",
+    "H06",
+    "H07",
+    "H08",
+    "H09",
+    "H10",
+    "H11",
+    "H12"
+  ],
+  "example_ids": [
+    "b444d3ee-25e6-539e-993f-ca085be17f2d",
+    "a4536eb5-12ba-55de-8b1a-6d30a809099f",
+    "b4f6d0d3-48ca-5291-809b-461942083481",
+    "add78cdf-039f-5b4e-ab34-ecdf03957b70",
+    "12166874-347b-55db-b121-9f8a4787ead2",
+    "f54c209d-6ace-541e-8ace-cb1d7c4e5de0",
+    "e71a0cb2-4635-5a81-8311-15d3ac1de65e",
+    "6cebeabf-ada1-5cd9-9c84-1ae1466a39eb",
+    "680125ff-d391-5fe5-816b-c5a801cf2b06",
+    "ef9f4471-8c62-56b4-9031-7a362bac1ac9",
+    "c863348b-3758-5e4e-a7e7-21e11ac28c88",
+    "e812e6a7-7737-5adc-8198-28f2565b1d75"
+  ],
+  "experiments": [
+    {
+      "variant": "A",
+      "scenario_label": "full_watchlist",
+      "experiment_name": "taste-agent-reversible-history-watchlist-full_watchlist-A-7b82a5b3",
+      "experiment_id": "58573429-ac4f-4049-8df1-a52d64402aa0",
+      "experiment_url": "https://smith.langchain.com/o/3f29c78e-95c7-4ff0-864f-65906dfd0c74/datasets/bef1646f-945a-4579-9eac-550f3f27bf12/compare?selectedSessions=58573429-ac4f-4049-8df1-a52d64402aa0",
+      "results_path": "mvp/artifacts/generative/langsmith/reversible_history_watchlist_live_2026_10_06/experiment_results_full_watchlist_A.csv",
+      "row_count": 12
+    },
+    {
+      "variant": "B",
+      "scenario_label": "full_watchlist",
+      "experiment_name": "taste-agent-reversible-history-watchlist-full_watchlist-B-ed5cc0f2",
+      "experiment_id": "4e2dac1e-9a34-49d6-bfa3-39c76bcc6cf5",
+      "experiment_url": "https://smith.langchain.com/o/3f29c78e-95c7-4ff0-864f-65906dfd0c74/datasets/bef1646f-945a-4579-9eac-550f3f27bf12/compare?selectedSessions=4e2dac1e-9a34-49d6-bfa3-39c76bcc6cf5",
+      "results_path": "mvp/artifacts/generative/langsmith/reversible_history_watchlist_live_2026_10_06/experiment_results_full_watchlist_B.csv",
+      "row_count": 12
+    },
+    {
+      "variant": "A",
+      "scenario_label": "empty_watchlist",
+      "experiment_name": "taste-agent-reversible-history-watchlist-empty_watchlist-A-b715b24d",
+      "experiment_id": "fca7fb9b-333f-452f-b8eb-4efa64d9d9df",
+      "experiment_url": "https://smith.langchain.com/o/3f29c78e-95c7-4ff0-864f-65906dfd0c74/datasets/bef1646f-945a-4579-9eac-550f3f27bf12/compare?selectedSessions=fca7fb9b-333f-452f-b8eb-4efa64d9d9df",
+      "results_path": "mvp/artifacts/generative/langsmith/reversible_history_watchlist_live_2026_10_06/experiment_results_empty_watchlist_A.csv",
+      "row_count": 12
+    },
+    {
+      "variant": "B",
+      "scenario_label": "empty_watchlist",
+      "experiment_name": "taste-agent-reversible-history-watchlist-empty_watchlist-B-b14451d5",
+      "experiment_id": "06f14041-0525-4493-aec4-873b187dd594",
+      "experiment_url": "https://smith.langchain.com/o/3f29c78e-95c7-4ff0-864f-65906dfd0c74/datasets/bef1646f-945a-4579-9eac-550f3f27bf12/compare?selectedSessions=06f14041-0525-4493-aec4-873b187dd594",
+      "results_path": "mvp/artifacts/generative/langsmith/reversible_history_watchlist_live_2026_10_06/experiment_results_empty_watchlist_B.csv",
+      "row_count": 12
+    }
+  ]
+}

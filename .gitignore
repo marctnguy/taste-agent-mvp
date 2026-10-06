@@ -23,6 +23,22 @@ venv/
 # Temporary
 *.tmp
 *.log
+*.zip
+exports/
+mvp/artifacts/watchlist_personalization/cache/
+mvp/artifacts/generative/langsmith/reversible_history_watchlist_debug*/
+mvp/artifacts/generative/langsmith/reversible_history_watchlist_live_2026_10_06/
+mvp/artifacts/generative/langsmith/runtime_v1_baseline/
+mvp/artifacts/generative/langsmith/runtime_v2_iteration/
+mvp/artifacts/generative/langsmith/runtime_v2_iteration_hosted/
+mvp/artifacts/generative/langsmith/runtime_v4_corrected/
+mvp/artifacts/generative/langsmith/runtime_v4_corrected_final/
+mvp/artifacts/generative/langsmith/runtime_v4_corrected_rerun/
+mvp/artifacts/generative/langsmith/runtime_v4_corrected_surgical_final/
+mvp/artifacts/generative/langsmith/runtime_v4_final_*/
+mvp/artifacts/generative/langsmith/runtime_v4_hosted/
+mvp/artifacts/generative/langsmith/runtime_v4_hosted_final/
+mvp/artifacts/generative/langsmith/runtime_v4_interaction_routing_fix/
 
 # Keep evidence and model artifacts tracked
 

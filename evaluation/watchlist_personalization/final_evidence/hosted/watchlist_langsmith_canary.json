@@ -1,0 +1,35 @@
+[
+  {
+    "hitl_id": "H03",
+    "scenario_label": "full_watchlist",
+    "variant": "A",
+    "selected_count": 5,
+    "eligible_count": 17,
+    "generation_status": "generated",
+    "validation_passed": true,
+    "grounded_selected_count": 5,
+    "prompt": "I want something comforting but not cheesy."
+  },
+  {
+    "hitl_id": "H11",
+    "scenario_label": "full_watchlist",
+    "variant": "A",
+    "selected_count": 5,
+    "eligible_count": 13,
+    "generation_status": "generated",
+    "validation_passed": true,
+    "grounded_selected_count": 5,
+    "prompt": "I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting."
+  },
+  {
+    "hitl_id": "H12",
+    "scenario_label": "full_watchlist",
+    "variant": "A",
+    "selected_count": 0,
+    "eligible_count": 0,
+    "generation_status": "no_match",
+    "validation_passed": false,
+    "grounded_selected_count": 0,
+    "prompt": "Based on what you know about my taste, recommend something I might not discover on my own."
+  }
+]

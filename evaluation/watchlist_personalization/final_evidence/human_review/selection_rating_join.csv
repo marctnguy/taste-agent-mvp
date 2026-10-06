@@ -1,0 +1,195 @@
+prompt_id,scenario,variant,selected_position,candidate_id,title,review_id,would_watch_yes_no_unsure,request_fit_raw,taste_fit_raw,already_watched_raw
+H05,full_watchlist,A,1,422,8½,anon-0020,yes,5,5,no
+H05,full_watchlist,A,2,12197,Reprise,anon-0021,yes,5,5,no
+H05,full_watchlist,A,3,17962,After Life,anon-0022,yes,5,5,no
+H05,full_watchlist,A,4,458737,First Reformed,anon-0023,yes,2,5,no
+H05,full_watchlist,A,5,1507877,Another Day,anon-0024,yes,4,5,no
+H09,full_watchlist,A,1,1118770,Nineteen,anon-0040,yes,5,4,no
+H09,full_watchlist,A,2,481432,Happy as Lazzaro,anon-0041,yes,5,5,no
+H09,full_watchlist,A,3,44018,Vagabond,anon-0042,yes,5,5,yes
+H09,full_watchlist,A,4,81803,First Love,anon-0043,unsure,dont know,3,no
+H09,full_watchlist,A,5,1277872,Enzo,anon-0044,yes,5,4,no
+H08,full_watchlist,A,1,2786,Pierrot le Fou,anon-0035,yes,5,5,no
+H08,full_watchlist,A,2,1802,La Cérémonie,anon-0036,yes,5,5,no
+H08,full_watchlist,A,3,5544,Hiroshima Mon Amour,anon-0037,yes,5,5,no
+H08,full_watchlist,A,4,4837,La Collectionneuse,anon-0038,yes,5,5,no
+H08,full_watchlist,A,5,445,Caché,anon-0039,yes,5,5,no
+H02,full_watchlist,A,1,1022256,Selena Gomez: My Mind & Me,anon-0006,no,2,2,yes but not logged in letterboxd!
+H02,full_watchlist,A,2,1507877,Another Day,anon-0007,yes,5,4,no
+H02,full_watchlist,A,3,1517123,On the Road,anon-0008,yes,5,5,no
+H02,full_watchlist,A,4,1466115,Even If This Love Disappears Tonight,anon-0009,no,4,2,no
+H02,full_watchlist,A,5,122906,About Time,anon-0010,unsure,4,3,no
+H04,full_watchlist,A,1,145623,The Games of Angels,anon-0016,yes,3,5,no
+H04,full_watchlist,A,2,1033148,Die My Love,anon-0017,yes,5,5,no
+H04,full_watchlist,A,3,1289893,Somnium,anon-0018,unsure,5,3,no
+H04,full_watchlist,A,4,1074313,Falling in Love Like in Movies,anon-0019,no,1,3,no
+H01,full_watchlist,A,1,238,The Godfather,anon-0001,yes,5,4,no
+H01,full_watchlist,A,2,278,The Shawshank Redemption,anon-0002,yes,5,5,no
+H01,full_watchlist,A,3,1218925,Chainsaw Man - The Movie: Reze Arc,anon-0003,yes,5,5,no
+H01,full_watchlist,A,4,1084244,Toy Story 5,anon-0004,yes,5,4,no
+H01,full_watchlist,A,5,429,"The Good, the Bad and the Ugly",anon-0005,yes,5,4,no
+H03,full_watchlist,A,1,1330021,Remarkably Bright Creatures,anon-0011,yes,5,4,no
+H03,full_watchlist,A,2,74126,Record of a Tenement Gentleman,anon-0012,yes,5,5,no
+H03,full_watchlist,A,3,43316,All That Heaven Allows,anon-0013,yes,5,4,no
+H03,full_watchlist,A,4,10882,Sleeping Beauty,anon-0014,yes,2,4,yes but not logged in letterboxd!
+H03,full_watchlist,A,5,1022787,Elio,anon-0015,no,3,2,no
+H11,full_watchlist,A,1,660637,Dance of the Forty One,anon-0047,yes,4,3,no
+H11,full_watchlist,A,2,1125,Dreamgirls,anon-0048,unsure,3,3,no
+H11,full_watchlist,A,3,16858,All That Jazz,anon-0049,yes,4,5,no
+H11,full_watchlist,A,4,22692,A Star Is Born,anon-0050,yes,5,4,no
+H11,full_watchlist,A,5,282041,"Electric Boogaloo: The Wild, Untold Story of Cannon Films",anon-0051,no,2,2,no
+H07,full_watchlist,A,1,1124,The Prestige,anon-0030,yes,4,5,no
+H07,full_watchlist,A,2,264660,Ex Machina,anon-0031,yes,5,5,no
+H07,full_watchlist,A,3,29452,The Face of Another,anon-0032,yes,5,5,no
+H07,full_watchlist,A,4,38810,Dogtooth,anon-0033,yes,5,5,no
+H07,full_watchlist,A,5,1307118,Soulm8te,anon-0034,no,3,3,no
+H10,full_watchlist,A,1,21521,Project A - Part II,anon-0045,no,4,2,no
+H10,full_watchlist,A,2,429,"The Good, the Bad and the Ugly",anon-0046,yes,5,5,no
+H06,full_watchlist,A,1,811703,The Year Earth Changed,anon-0025,yes,5,5,no
+H06,full_watchlist,A,2,1191077,"What the Blood Moon Brings: Messiah of Evil, A New American Nightmare",anon-0026,unsure,5,3,no
+H06,full_watchlist,A,3,1448497,Ocean with David Attenborough,anon-0027,yes,5,5,no
+H06,full_watchlist,A,4,11634,Show Me Love,anon-0028,yes,3,5,no
+H06,full_watchlist,A,5,1330021,Remarkably Bright Creatures,anon-0029,yes,5,4,no
+H05,full_watchlist,B,1,17962,After Life,anon-0022,yes,5,5,no
+H05,full_watchlist,B,2,12197,Reprise,anon-0021,yes,5,5,no
+H05,full_watchlist,B,3,422,8½,anon-0020,yes,5,5,no
+H05,full_watchlist,B,4,378064,A Silent Voice: The Movie,anon-0059,yes,3,4,yes but not logged in letterboxd!
+H05,full_watchlist,B,5,1507877,Another Day,anon-0024,yes,4,5,no
+H09,full_watchlist,B,1,481432,Happy as Lazzaro,anon-0041,yes,5,5,no
+H09,full_watchlist,B,2,1118770,Nineteen,anon-0040,yes,5,4,no
+H09,full_watchlist,B,3,81803,First Love,anon-0043,unsure,dont know,3,no
+H09,full_watchlist,B,4,44018,Vagabond,anon-0042,yes,5,5,yes
+H09,full_watchlist,B,5,299710,Being 14,anon-0068,unsure,5,3,no
+H08,full_watchlist,B,1,2786,Pierrot le Fou,anon-0035,yes,5,5,no
+H08,full_watchlist,B,2,4837,La Collectionneuse,anon-0038,yes,5,5,no
+H08,full_watchlist,B,3,5544,Hiroshima Mon Amour,anon-0037,yes,5,5,no
+H08,full_watchlist,B,4,64437,L'été en pente douce,anon-0066,yes,5,4,no
+H08,full_watchlist,B,5,49650,Daguerréotypes,anon-0067,yes,5,5,no
+H02,full_watchlist,B,1,1022256,Selena Gomez: My Mind & Me,anon-0006,no,2,2,yes but not logged in letterboxd!
+H02,full_watchlist,B,2,1507877,Another Day,anon-0007,yes,5,4,no
+H02,full_watchlist,B,3,1517123,On the Road,anon-0008,yes,5,5,no
+H02,full_watchlist,B,4,1466115,Even If This Love Disappears Tonight,anon-0009,no,4,2,no
+H02,full_watchlist,B,5,122906,About Time,anon-0010,unsure,4,3,no
+H04,full_watchlist,B,1,145623,The Games of Angels,anon-0016,yes,3,5,no
+H04,full_watchlist,B,2,1033148,Die My Love,anon-0017,yes,5,5,no
+H04,full_watchlist,B,3,1289893,Somnium,anon-0018,unsure,5,3,no
+H04,full_watchlist,B,4,1074313,Falling in Love Like in Movies,anon-0019,no,1,3,no
+H01,full_watchlist,B,1,60142,"Master, a Building in Copacabana",anon-0052,yes,5,5,no
+H01,full_watchlist,B,2,10494,Perfect Blue,anon-0053,yes,5,5,no
+H01,full_watchlist,B,3,18148,Tokyo Story,anon-0054,yes,5,5,no
+H01,full_watchlist,B,4,106380,Taipei Story,anon-0055,yes,5,5,no
+H01,full_watchlist,B,5,14696,Ugetsu,anon-0056,yes,5,5,no
+H03,full_watchlist,B,1,74126,Record of a Tenement Gentleman,anon-0012,yes,5,5,no
+H03,full_watchlist,B,2,862,Toy Story,anon-0057,yes,5,5,"yes and logged, but no rating"
+H03,full_watchlist,B,3,10882,Sleeping Beauty,anon-0014,yes,2,4,yes but not logged in letterboxd!
+H03,full_watchlist,B,4,11619,Flushed Away,anon-0058,yes,5,5,yes but not logged in letterboxd!
+H03,full_watchlist,B,5,43316,All That Heaven Allows,anon-0013,yes,5,4,no
+H11,full_watchlist,B,1,262,The King of Comedy,anon-0069,yes,4,3,no
+H11,full_watchlist,B,2,16858,All That Jazz,anon-0049,yes,4,5,no
+H11,full_watchlist,B,3,282041,"Electric Boogaloo: The Wild, Untold Story of Cannon Films",anon-0051,no,2,2,no
+H11,full_watchlist,B,4,1125,Dreamgirls,anon-0048,unsure,3,3,no
+H11,full_watchlist,B,5,660637,Dance of the Forty One,anon-0047,yes,4,3,no
+H07,full_watchlist,B,1,29452,The Face of Another,anon-0032,yes,5,5,no
+H07,full_watchlist,B,2,167468,Movie Dementia,anon-0064,yes,5,5,no
+H07,full_watchlist,B,3,1124,The Prestige,anon-0030,yes,4,5,no
+H07,full_watchlist,B,4,264660,Ex Machina,anon-0031,yes,5,5,no
+H07,full_watchlist,B,5,16306,Fantastic Planet,anon-0065,yes,5,5,no
+H10,full_watchlist,B,1,21521,Project A - Part II,anon-0045,no,4,2,no
+H10,full_watchlist,B,2,429,"The Good, the Bad and the Ugly",anon-0046,yes,5,5,no
+H06,full_watchlist,B,1,42695,I Am Curious (Yellow),anon-0060,yes,5,5,no
+H06,full_watchlist,B,2,1191077,"What the Blood Moon Brings: Messiah of Evil, A New American Nightmare",anon-0026,unsure,5,3,no
+H06,full_watchlist,B,3,694,The Shining,anon-0061,yes,3,5,no
+H06,full_watchlist,B,4,1437195,Livestream from Hell,anon-0062,no,5,0,no
+H06,full_watchlist,B,5,207,Dead Poets Society,anon-0063,yes,5,5,no
+H05,empty_watchlist,A,1,1507877,Another Day,anon-0024,yes,4,5,no
+H05,empty_watchlist,A,2,378064,A Silent Voice: The Movie,anon-0059,yes,3,4,yes but not logged in letterboxd!
+H05,empty_watchlist,A,3,1641629,You+Me - Against the World,anon-0071,no,1,1,no
+H05,empty_watchlist,A,4,1074313,Falling in Love Like in Movies,anon-0072,no,i don't know,3,no
+H09,empty_watchlist,A,1,44018,Vagabond,anon-0042,yes,5,5,yes
+H09,empty_watchlist,A,2,81803,First Love,anon-0043,unsure,dont know,3,no
+H09,empty_watchlist,A,3,299710,Being 14,anon-0068,unsure,5,3,no
+H09,empty_watchlist,A,4,1641629,You+Me - Against the World,anon-0078,no,1,1,no
+H08,empty_watchlist,A,1,741110,Dreamchild,anon-0074,unsure,5,3,no
+H08,empty_watchlist,A,2,1165366,De Gaulle: Résistance,anon-0075,unsure,5,3,no
+H08,empty_watchlist,A,3,77338,The Intouchables,anon-0076,yes,5,4,no
+H08,empty_watchlist,A,4,64437,L'été en pente douce,anon-0066,yes,5,4,no
+H08,empty_watchlist,A,5,1507877,Another Day,anon-0077,yes,5,5,no
+H02,empty_watchlist,A,1,1022256,Selena Gomez: My Mind & Me,anon-0006,no,2,2,yes but not logged in letterboxd!
+H02,empty_watchlist,A,2,1507877,Another Day,anon-0007,yes,5,4,no
+H02,empty_watchlist,A,3,1517123,On the Road,anon-0008,yes,5,5,no
+H02,empty_watchlist,A,4,1466115,Even If This Love Disappears Tonight,anon-0009,no,4,2,no
+H02,empty_watchlist,A,5,122906,About Time,anon-0010,unsure,4,3,no
+H04,empty_watchlist,A,1,145623,The Games of Angels,anon-0016,yes,3,5,no
+H04,empty_watchlist,A,2,1033148,Die My Love,anon-0017,yes,5,5,no
+H04,empty_watchlist,A,3,1289893,Somnium,anon-0018,unsure,5,3,no
+H04,empty_watchlist,A,4,1074313,Falling in Love Like in Movies,anon-0019,no,1,3,no
+H01,empty_watchlist,A,1,238,The Godfather,anon-0001,yes,5,4,no
+H01,empty_watchlist,A,2,278,The Shawshank Redemption,anon-0002,yes,5,5,no
+H01,empty_watchlist,A,3,1218925,Chainsaw Man - The Movie: Reze Arc,anon-0003,yes,5,5,no
+H01,empty_watchlist,A,4,1084244,Toy Story 5,anon-0004,yes,5,4,no
+H01,empty_watchlist,A,5,429,"The Good, the Bad and the Ugly",anon-0005,yes,5,4,no
+H03,empty_watchlist,A,1,1330021,Remarkably Bright Creatures,anon-0011,yes,5,4,no
+H03,empty_watchlist,A,2,10882,Sleeping Beauty,anon-0014,yes,2,4,yes but not logged in letterboxd!
+H03,empty_watchlist,A,3,1022787,Elio,anon-0015,no,3,2,no
+H03,empty_watchlist,A,4,1072790,Anyone but You,anon-0070,yes,4,4,"yes and logged, but no rating"
+H03,empty_watchlist,A,5,862,Toy Story,anon-0057,yes,5,5,"yes and logged, but no rating"
+H11,empty_watchlist,A,1,660637,Dance of the Forty One,anon-0047,yes,4,3,no
+H11,empty_watchlist,A,2,1125,Dreamgirls,anon-0048,unsure,3,3,no
+H11,empty_watchlist,A,3,16858,All That Jazz,anon-0049,yes,4,5,no
+H11,empty_watchlist,A,4,22692,A Star Is Born,anon-0050,yes,5,4,no
+H11,empty_watchlist,A,5,282041,"Electric Boogaloo: The Wild, Untold Story of Cannon Films",anon-0051,no,2,2,no
+H07,empty_watchlist,A,1,1124,The Prestige,anon-0030,yes,4,5,no
+H07,empty_watchlist,A,2,1307118,Soulm8te,anon-0034,no,3,3,no
+H10,empty_watchlist,A,1,21521,Project A - Part II,anon-0045,no,4,2,no
+H10,empty_watchlist,A,2,429,"The Good, the Bad and the Ugly",anon-0046,yes,5,5,no
+H06,empty_watchlist,A,1,811703,The Year Earth Changed,anon-0025,yes,5,5,no
+H06,empty_watchlist,A,2,1448497,Ocean with David Attenborough,anon-0027,yes,5,5,no
+H06,empty_watchlist,A,3,1330021,Remarkably Bright Creatures,anon-0029,yes,5,4,no
+H06,empty_watchlist,A,4,1522126,1000 Men and Me: The Bonnie Blue Story,anon-0073,unsure,5,3,no
+H06,empty_watchlist,A,5,1437195,Livestream from Hell,anon-0062,no,5,0,no
+H05,empty_watchlist,B,1,1507877,Another Day,anon-0024,yes,4,5,no
+H05,empty_watchlist,B,2,378064,A Silent Voice: The Movie,anon-0059,yes,3,4,yes but not logged in letterboxd!
+H05,empty_watchlist,B,3,1641629,You+Me - Against the World,anon-0071,no,1,1,no
+H05,empty_watchlist,B,4,1074313,Falling in Love Like in Movies,anon-0072,no,i don't know,3,no
+H09,empty_watchlist,B,1,44018,Vagabond,anon-0042,yes,5,5,yes
+H09,empty_watchlist,B,2,81803,First Love,anon-0043,unsure,dont know,3,no
+H09,empty_watchlist,B,3,299710,Being 14,anon-0068,unsure,5,3,no
+H09,empty_watchlist,B,4,1641629,You+Me - Against the World,anon-0078,no,1,1,no
+H08,empty_watchlist,B,1,741110,Dreamchild,anon-0074,unsure,5,3,no
+H08,empty_watchlist,B,2,64437,L'été en pente douce,anon-0066,yes,5,4,no
+H08,empty_watchlist,B,3,77338,The Intouchables,anon-0076,yes,5,4,no
+H08,empty_watchlist,B,4,299710,Being 14,anon-0084,unsure,5,3,no
+H08,empty_watchlist,B,5,1165366,De Gaulle: Résistance,anon-0075,unsure,5,3,no
+H02,empty_watchlist,B,1,1022256,Selena Gomez: My Mind & Me,anon-0006,no,2,2,yes but not logged in letterboxd!
+H02,empty_watchlist,B,2,1507877,Another Day,anon-0007,yes,5,4,no
+H02,empty_watchlist,B,3,1517123,On the Road,anon-0008,yes,5,5,no
+H02,empty_watchlist,B,4,1466115,Even If This Love Disappears Tonight,anon-0009,no,4,2,no
+H02,empty_watchlist,B,5,122906,About Time,anon-0010,unsure,4,3,no
+H04,empty_watchlist,B,1,145623,The Games of Angels,anon-0016,yes,3,5,no
+H04,empty_watchlist,B,2,1033148,Die My Love,anon-0017,yes,5,5,no
+H04,empty_watchlist,B,3,1289893,Somnium,anon-0018,unsure,5,3,no
+H04,empty_watchlist,B,4,1074313,Falling in Love Like in Movies,anon-0019,no,1,3,no
+H01,empty_watchlist,B,1,1084244,Toy Story 5,anon-0004,yes,5,4,no
+H01,empty_watchlist,B,2,671,Harry Potter and the Philosopher's Stone,anon-0079,yes,5,5,yes but not logged in letterboxd!
+H01,empty_watchlist,B,3,346,Seven Samurai,anon-0080,yes,5,4,no
+H01,empty_watchlist,B,4,1218925,Chainsaw Man - The Movie: Reze Arc,anon-0003,yes,5,5,no
+H01,empty_watchlist,B,5,378064,A Silent Voice: The Movie,anon-0081,yes,4,4,yes but not logged in letterboxd!
+H03,empty_watchlist,B,1,862,Toy Story,anon-0057,yes,5,5,"yes and logged, but no rating"
+H03,empty_watchlist,B,2,10882,Sleeping Beauty,anon-0014,yes,2,4,yes but not logged in letterboxd!
+H03,empty_watchlist,B,3,11619,Flushed Away,anon-0058,yes,5,5,yes but not logged in letterboxd!
+H03,empty_watchlist,B,4,1072790,Anyone but You,anon-0070,yes,4,4,"yes and logged, but no rating"
+H03,empty_watchlist,B,5,9714,Home Alone 3,anon-0082,unsure,4,3,no
+H11,empty_watchlist,B,1,282041,"Electric Boogaloo: The Wild, Untold Story of Cannon Films",anon-0051,no,2,2,no
+H11,empty_watchlist,B,2,16858,All That Jazz,anon-0049,yes,4,5,no
+H11,empty_watchlist,B,3,262,The King of Comedy,anon-0069,yes,4,3,no
+H11,empty_watchlist,B,4,1125,Dreamgirls,anon-0048,unsure,3,3,no
+H11,empty_watchlist,B,5,660637,Dance of the Forty One,anon-0047,yes,4,3,no
+H07,empty_watchlist,B,1,1124,The Prestige,anon-0030,yes,4,5,no
+H07,empty_watchlist,B,2,1307118,Soulm8te,anon-0034,no,3,3,no
+H10,empty_watchlist,B,1,21521,Project A - Part II,anon-0045,no,4,2,no
+H10,empty_watchlist,B,2,429,"The Good, the Bad and the Ugly",anon-0046,yes,5,5,no
+H06,empty_watchlist,B,1,1341284,Missing Child Videotape,anon-0083,unsure,5,3,no
+H06,empty_watchlist,B,2,1437195,Livestream from Hell,anon-0062,no,5,0,no
+H06,empty_watchlist,B,3,1522126,1000 Men and Me: The Bonnie Blue Story,anon-0073,unsure,5,3,no
+H06,empty_watchlist,B,4,1448497,Ocean with David Attenborough,anon-0027,yes,5,5,no
+H06,empty_watchlist,B,5,1330021,Remarkably Bright Creatures,anon-0029,yes,5,4,no

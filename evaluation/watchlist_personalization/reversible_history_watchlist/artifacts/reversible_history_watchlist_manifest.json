@@ -1,0 +1,57 @@
+{
+  "seed": 20261005,
+  "input_hashes": {
+    "watchlist_zip": "af54ad6c826766669ec7f9976969b07381e93a171b9981e28b1cbe05ee27a50f",
+    "condition_a_enriched": "03851dba26da31a3ca4655a6b6f77c201b619fb5ff3af4c64ed4245a1e6f6ba0",
+    "primary_holdout_split": "46ec87783cb9d9e9594a818551240e78898469863dad1565c37f4305d484aaef",
+    "train_embeddings": "017fc063b3e8157785c8e4ff742af98e11a9ea5d10b466e44b8a6f61f964b65c",
+    "prompt_manifest": "7c29554262d7e1a239f74e5df0a0ac8fdcba04bc7587e7dafe789b1a66b23760",
+    "prompt_source_set": "3550d9049863f16d8cb6f869e480e57feea112eca28453b957d3b1fcf3d06b9d"
+  },
+  "code_hashes": {
+    "run_reversible_history_watchlist_experiment": "f91d28c81b5451a3b236880849891be6abf837ec3cfef10d1d831ddeefd66a3a",
+    "run_isolated_experiment": "117b39cb74cc20a1cc67d6bb7afb13314f0d55521b2cd4767f5a8d6e1e3c7705",
+    "generative_v4_runtime": "d430622b542bece063366b969da79e85f36c9e4c1bac7f108456d306430df56b",
+    "generative_v4_intent_chain": "42cc6ceeaf8b71a017e34382197a175c081e5a47fc9097a6818d845fa568052f",
+    "generative_v4_qualification_chain": "dafc2378f113d8d2070e7e8707cdcd12fb05ecede46a6e01ecec2ef114d2cd90",
+    "catalog_retrieval": "7d37ba5feeadc35a62a4c2f1837dac0615d461087b34dcf00158bc1c29185006"
+  },
+  "repo_status": "## runtime-v4-quality-hardening\n M mvp/artifacts/generative/runtime_v4_manifest.json\n M mvp/artifacts/generative/runtime_v4_selected_semantic_vectors.csv\n M mvp/artifacts/models/b3_mvp/candidate_embedding_cache/candidate_embedding_manifest.csv\n M mvp/artifacts/models/b3_mvp/candidate_embedding_cache/candidate_embeddings.csv\n?? evaluation/quality_hardening/hosted_final/\n?? evaluation/watchlist_personalization/\n?? exports/\n?? mvp/artifacts/generative/langsmith/runtime_v4_hosted_final/experiment_traces.json\n",
+  "scenario_settings": {
+    "slate_size": 5,
+    "request_external_limit": 12,
+    "history_external_limit": 12,
+    "watchlist_limit": 12,
+    "sparse_watchlist_limit": 8,
+    "history_seed_limit": 5,
+    "history_recommendation_limit": 5
+  },
+  "preflight": {
+    "credentials": {
+      "tmdb_api_key": true,
+      "openai_api_key": true
+    },
+    "services": {
+      "tmdb": {
+        "state": "ok",
+        "http_status": 200,
+        "message": "ok"
+      },
+      "openai": {
+        "state": "ok",
+        "http_status": 200,
+        "message": "ok"
+      }
+    }
+  },
+  "watchlist_resolution": {
+    "resolved_watchlist_candidates": 391,
+    "unresolved_watchlist_candidates": 8
+  },
+  "training_population": {
+    "train_count": 393,
+    "test_count": 99,
+    "positive_examples": 230,
+    "negative_examples": 42
+  }
+}

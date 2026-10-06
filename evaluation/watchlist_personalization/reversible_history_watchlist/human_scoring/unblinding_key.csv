@@ -1,0 +1,61 @@
+hitl_id,prompt,anon_label,candidate_id,title,year,variant,selected_rank,route_memberships,request_relevance,direct_taste_score,predicted_preference
+H01,Recommend me something to watch.,H01-F01,639988,No Other Choice,2025.0,A,1,['watchlist'],0.2914911468184502,0.01752139736607128,0.4324338135219254
+H01,Recommend me something to watch.,H01-F02,38810,Dogtooth,2009.0,A,2,['watchlist'],0.2894187759574794,0.011205105123419268,0.4980840872174519
+H01,Recommend me something to watch.,H01-F03,399019,The Beguiled,2017.0,A,3,['watchlist'],0.28646290385544326,0.043147190280767134,0.21295542262672604
+H01,Recommend me something to watch.,H01-F04,429200,Good Time,2017.0,A,4,['watchlist'],0.28430419030117055,-0.000633622908122522,0.35769463427539017
+H01,Recommend me something to watch.,H01-F05,428449,A Ghost Story,2017.0,A,5,['watchlist'],0.2833761543269158,0.029033910988907452,0.31453037441889664
+H01,Recommend me something to watch.,H01-F06,87516,Oldboy,2013.0,B,1,['history_external'],0.2773817957866999,0.15903089681896615,0.4289369005039736
+H01,Recommend me something to watch.,H01-F07,457136,Mary Queen of Scots,2018.0,B,2,['history_external'],0.24371198342633466,0.07930950006714033,0.2559778126897634
+H01,Recommend me something to watch.,H01-F08,837,Videodrome,1983.0,B,3,['watchlist'],0.27012308358376264,0.07436558284167838,0.5023618645771654
+H01,Recommend me something to watch.,H01-F09,586592,Come to Daddy,2019.0,B,4,['history_external'],0.2751120618420943,0.06478416119961466,0.3344634691255535
+H01,Recommend me something to watch.,H01-F10,667216,Infinity Pool,2023.0,B,5,['watchlist'],0.279362198225153,0.06457199277790582,0.27013510641560823
+H02,I want something melancholic and intimate.,H02-F01,1058642,Slow,2023.0,A,1,['watchlist'],0.28549670723622034,0.017558845782982002,0.32475592161141453
+H02,I want something melancholic and intimate.,H02-F02,383,Mala Noche,1987.0,A,2,['watchlist'],0.3299513278449676,0.07516467312617342,0.4806765908154431
+H02,I want something melancholic and intimate.,H02-F03,41050,La Notte,1961.0,A,3,['watchlist'],0.31956278009837047,0.08612288181046285,0.5995067362431115
+H02,I want something melancholic and intimate.,H02-F04,1200774,Un amor,2023.0,A,4,['watchlist'],0.30897566817206157,0.015015456597715637,0.3226997853304324
+H02,I want something melancholic and intimate.,H02-F05,10239,An Autumn Tale,1998.0,A,5,['watchlist'],0.3049926429659089,0.11186542975122155,0.5220581259271568
+H02,I want something melancholic and intimate.,H02-F06,1937,Bonjour Tristesse,1958.0,B,5,['watchlist'],0.29238802868216973,0.09836373446685065,0.578215535403477
+H03,I want something comforting but not cheesy.,H03-F01,587701,Comforting A Dying Rabbit,2016.0,A,1,['request_external'],0.3129483541719044,0.0068525252912782775,0.47885248724205104
+H04,"Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",H04-F01,1301254,Anxious.,2024.0,A,1,['request_external'],0.43413631616156784,0.02352873320763732,0.27552287920486374
+H04,"Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",H04-F02,838177,Anxious Body,2021.0,A,2,['request_external'],0.43394571799698994,0.051817497143911206,0.4699454995509862
+H04,"Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",H04-F03,11482,The Tenant,1976.0,A,3,['watchlist'],0.38799809363127835,0.07370546989732779,0.5344032908037385
+H04,"Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",H04-F04,40723,Trouble Every Day,2001.0,A,4,['watchlist'],0.38790330096398845,0.0351426111255384,0.5328275274482254
+H04,"Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",H04-F05,445,Caché,2005.0,A,5,['watchlist'],0.3677965282322915,0.04395425867326214,0.4579689253529281
+H04,"Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",H04-F06,1626,Vivre Sa Vie,1962.0,B,4,['watchlist'],0.3395707316694862,0.132199425719785,0.6629391756081559
+H04,"Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",H04-F07,1802,La Cérémonie,1995.0,B,5,['watchlist'],0.3527799986465803,0.06941872211152489,0.545734885710782
+H05,"I want something quiet, contemplative and character-driven.",H05-F01,302031,"Mindful Movements: Gentle, Contemplative Exercises with the Monks and Nuns of Plum Village",1998.0,A,1,['request_external'],0.3618986489905954,0.06944488833566131,0.6014092564184724
+H05,"I want something quiet, contemplative and character-driven.",H05-F02,1217494,"Sometimes, Watching Contemplatively",1994.0,A,2,['request_external'],0.35003316844069354,0.09503279706719064,0.5798944217432103
+H05,"I want something quiet, contemplative and character-driven.",H05-F03,1535854,Chalice of Repose: A Contemplative Musician's Approach to Death and Dying,1997.0,A,3,['request_external'],0.30257218738668895,0.05987476926029894,0.5312570258233709
+H05,"I want something quiet, contemplative and character-driven.",H05-F04,1057302,FLOW: A Meditative Experience,,A,4,['request_external'],0.2868253934022289,0.03779216083995518,0.45399354220920884
+H05,"I want something quiet, contemplative and character-driven.",H05-F05,197227,The Contemplative Films of Oskar Fischinger,2004.0,A,5,['request_external'],0.2597536996345678,0.03590953620878978,0.5408391777681716
+H05,"I want something quiet, contemplative and character-driven.",H05-F06,17962,After Life,1999.0,B,4,['watchlist'],0.21380662025710798,0.07749677128733257,0.5828665327406837
+H05,"I want something quiet, contemplative and character-driven.",H05-F07,106380,Taipei Story,1985.0,B,5,['history_external'],0.18198812928880934,0.17579621696662245,0.5826806173746735
+H07,"I want to be mind-blown, recommend me something totally out there that surprises me.",H07-F01,429691,Mind Blown,2016.0,A,1,['request_external'],0.40744319747432906,-0.0015800408477215089,0.28381701311317564
+H07,"I want to be mind-blown, recommend me something totally out there that surprises me.",H07-F02,264660,Ex Machina,2015.0,A,2,['watchlist'],0.272715354329913,0.02629020343918903,0.2865366127831389
+H07,"I want to be mind-blown, recommend me something totally out there that surprises me.",H07-F03,1317641,I don't love you anymore (but you keep blowing my mind),2025.0,A,3,['request_external'],0.2669272936864568,0.011773653393195471,0.270214429209389
+H07,"I want to be mind-blown, recommend me something totally out there that surprises me.",H07-F04,1124,The Prestige,2006.0,A,4,['request_external'],0.24033034684836416,0.03966619449353315,0.38024156054194436
+H07,"I want to be mind-blown, recommend me something totally out there that surprises me.",H07-F05,29452,The Face of Another,1966.0,A,5,['watchlist'],0.22630696053467317,0.06551447933155413,0.6128320952615549
+H07,"I want to be mind-blown, recommend me something totally out there that surprises me.",H07-F06,16306,Fantastic Planet,1973.0,B,3,['watchlist'],0.21061459378569983,0.06557644594710843,0.6489605076911468
+H07,"I want to be mind-blown, recommend me something totally out there that surprises me.",H07-F07,452,The Idiots,1998.0,B,5,['watchlist'],0.20674973189343818,0.1173076295548347,0.5281046197894047
+H08,I want a French film tonight.,H08-F01,1289888,French Lover,2025.0,A,1,['request_external'],0.5840437051121677,0.013508399468606824,0.3522834696545341
+H08,I want a French film tonight.,H08-F02,1573926,This is Not a French Film,2026.0,A,2,['request_external'],0.5736713271275308,0.053138068562834206,0.43306200010242296
+H08,I want a French film tonight.,H08-F03,739936,French Lolita,1998.0,A,3,['request_external'],0.5718054083097045,0.08758033769608375,0.5317538680565501
+H08,I want a French film tonight.,H08-F04,843271,French Film,,A,4,['request_external'],0.5713024792815504,0.036114555079694965,0.5139891427712062
+H08,I want a French film tonight.,H08-F05,1802,La Cérémonie,1995.0,A,5,['watchlist'],0.5485283942597007,0.06943153468511859,0.5457080059086896
+H08,I want a French film tonight.,H08-F06,64437,L'été en pente douce,1987.0,B,1,['request_external'],0.5218914301860827,0.12001942040140623,0.57307663033312
+H08,I want a French film tonight.,H08-F07,78377,Idiot in Paris,1967.0,B,2,['request_external'],0.50944835410433,0.15982042500032295,0.7422010126379361
+H08,I want a French film tonight.,H08-F08,2786,Pierrot le Fou,1965.0,B,3,['watchlist'],0.5305687948518831,0.10107990041471404,0.698884875040538
+H08,I want a French film tonight.,H08-F09,147,The 400 Blows,1959.0,B,5,['watchlist'],0.49912109581947517,0.12762005195454346,0.7334944212946009
+H09,I want a European movie that feels like freedom and youthful.,H09-F01,57106,Freedom,2009.0,A,1,['request_external'],0.3551623489979692,0.0629204795487665,0.5481642371100357
+H09,I want a European movie that feels like freedom and youthful.,H09-F02,1277872,Enzo,2025.0,A,2,['watchlist'],0.3058663087939506,0.008578471372276963,0.4095719729028753
+H09,I want a European movie that feels like freedom and youthful.,H09-F03,1118770,Nineteen,2025.0,A,3,['watchlist'],0.2926567493115814,-0.0016715225371237152,0.3237303316935728
+H09,I want a European movie that feels like freedom and youthful.,H09-F04,451955,Double Lover,2017.0,B,2,['history_external'],0.1793599313157216,-0.0018915487482612514,0.3079906645168188
+H10,"I want a good old classic, but no drama.",H10-F01,115994,Muppet Classic Theater,1994.0,A,1,['request_external'],0.2872478797118165,0.08040708689608728,0.6115774539379037
+H10,"I want a good old classic, but no drama.",H10-F02,9582,A Guy Thing,2003.0,B,2,['history_external'],0.2534309792395471,0.054741395937349,0.4171990683772808
+H11,"I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",H11-F01,173842,Show Business,1944.0,A,1,['request_external'],0.36307257518362074,0.050685676064614216,0.6368705445579497
+H11,"I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",H11-F02,403974,Show Business,2016.0,A,2,['request_external'],0.38709532842224,0.040755835892044956,0.3372986844578061
+H11,"I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",H11-F03,370126,Show Business,1938.0,A,3,['request_external'],0.38530102279126577,0.054034418824919384,0.6489210830715364
+H11,"I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",H11-F04,271555,Show Business,1932.0,A,4,['request_external'],0.38472309011881145,0.09189010517694629,0.6930820995684024
+H11,"I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",H11-F05,880048,Sweet Performers,2020.0,A,5,['request_external'],0.38216275546400214,0.024835552275015327,0.38305826590941394
+H11,"I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",H11-F06,30707,Star 80,1983.0,B,2,['history_external'],0.28672055959736475,0.04982887561220223,0.49221748129524795
+H11,"I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",H11-F07,1192237,Playboy: Celebrity Centerfolds,2006.0,B,5,['request_external'],0.36910018044122783,0.05645093213657998,0.4128426091657559

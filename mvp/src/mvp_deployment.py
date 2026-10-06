@@ -245,8 +245,12 @@ def _load_embedding_cache(path: Path) -> pd.DataFrame:
 
 def _write_embedding_cache(embeddings: pd.DataFrame, manifest: pd.DataFrame, cache_path: Path) -> None:
     cache_path.parent.mkdir(parents=True, exist_ok=True)
-    embeddings.to_csv(cache_path, index=False, float_format="%.8f")
-    manifest.to_csv(cache_path.with_name("candidate_embedding_manifest.csv"), index=False)
+    embeddings_tmp = cache_path.with_suffix(cache_path.suffix + ".tmp")
+    manifest_tmp = cache_path.with_name("candidate_embedding_manifest.csv.tmp")
+    embeddings.to_csv(embeddings_tmp, index=False, float_format="%.8f")
+    manifest.to_csv(manifest_tmp, index=False)
+    embeddings_tmp.replace(cache_path)
+    manifest_tmp.replace(cache_path.with_name("candidate_embedding_manifest.csv"))
 
 
 def _embed_texts(texts: list[str], api_key: str, model: str) -> list[list[float]]:
@@ -274,96 +278,148 @@ def load_or_generate_candidate_embeddings(
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, Any]]:
     cache_path = Path(cache_path)
     cached = _load_embedding_cache(cache_path)
+    if not documents.empty:
+        documents = documents.copy()
+        documents["source_id"] = documents["source_id"].astype(str)
     if not cached.empty and {"source_id", "document_hash", "embedding_model"}.issubset(cached.columns):
-        current = documents.loc[:, ["source_id", "document_hash"]].copy()
-        cached_keys = cached.loc[:, ["source_id", "document_hash", "embedding_model"]].copy()
-        if (
-            set(cached_keys["source_id"].astype(str)) == set(current["source_id"].astype(str))
-            and set(cached_keys["document_hash"].astype(str)) == set(current["document_hash"].astype(str))
-            and cached_keys["embedding_model"].nunique() == 1
-            and cached_keys["embedding_model"].iloc[0] == OPENAI_EMBEDDING_MODEL
-        ):
-            manifest = cached.loc[:, ["source_id", "title", "document_hash", "embedding_model", "embedding_dim", "status"]].copy()
-            manifest["error"] = ""
-            _write_embedding_cache(cached, manifest, cache_path)
-            return cached, manifest, {
-                "provider": "openai",
-                "model": OPENAI_EMBEDDING_MODEL,
-                "embedding_dim": int(cached["embedding_dim"].iloc[0]),
-                "coverage": 1.0,
-                "successful": int((cached["status"] == "success").sum()),
-                "failed": int((cached["status"] != "success").sum()),
-                "cache_status": "hit",
-                "cache_hits": int(len(documents)),
-                "cache_misses": 0,
-            }
+        cached = cached.copy()
+        cached["source_id"] = cached["source_id"].astype(str)
+        cached["document_hash"] = cached["document_hash"].astype(str)
+        cached["embedding_model"] = cached["embedding_model"].astype(str)
+        cached = cached.loc[cached["embedding_model"] == OPENAI_EMBEDDING_MODEL].copy().reset_index(drop=True)
+    else:
+        cached = pd.DataFrame()
 
-    keys = get_api_keys()
-    if not keys.openai_api_key:
-        raise RuntimeError("OPENAI_API_KEY is required to generate candidate embeddings.")
+    current_keys = pd.DataFrame(columns=["source_id", "document_hash"])
+    if not documents.empty:
+        current_keys = documents.loc[:, ["source_id", "document_hash"]].copy()
+        current_keys["source_id"] = current_keys["source_id"].astype(str)
+        current_keys["document_hash"] = current_keys["document_hash"].astype(str)
 
-    vector_rows: list[dict[str, Any]] = []
-    manifest_rows: list[dict[str, Any]] = []
-    batch_size = 32
-    embedding_dim = None
-    for start in range(0, len(documents), batch_size):
-        batch = documents.iloc[start : start + batch_size].reset_index(drop=True)
-        try:
-            embeddings = _embed_texts_with_fallback(batch["document_text"].tolist(), keys.openai_api_key, OPENAI_EMBEDDING_MODEL)
-        except Exception as exc:
-            for _, row in batch.iterrows():
-                manifest_rows.append(
-                    {
-                        "source_id": row["source_id"],
-                        "title": row["title"],
-                        "document_hash": row["document_hash"],
-                        "embedding_model": OPENAI_EMBEDDING_MODEL,
-                        "embedding_dim": pd.NA,
-                        "status": "failed",
-                        "error": str(exc),
-                    }
-                )
-            continue
+    if not cached.empty and not current_keys.empty:
+        merged_keys = current_keys.merge(
+            cached.loc[:, ["source_id", "document_hash"]],
+            on=["source_id", "document_hash"],
+            how="left",
+            indicator=True,
+        )
+        missing_mask = merged_keys["_merge"].eq("left_only")
+        missing_documents = documents.loc[missing_mask.to_numpy()].copy().reset_index(drop=True)
+    else:
+        missing_documents = documents.copy().reset_index(drop=True) if not documents.empty else pd.DataFrame()
 
-        if embeddings and embedding_dim is None:
-            embedding_dim = len(embeddings[0])
-        for row, vector in zip(batch.to_dict(orient="records"), embeddings, strict=True):
-            vector_row = {
-                "source_id": row["source_id"],
-                "title": row["title"],
-                "document_hash": row["document_hash"],
-                "embedding_model": OPENAI_EMBEDDING_MODEL,
-                "embedding_dim": len(vector),
-                "status": "success",
-            }
-            vector_row.update({f"emb_{index:04d}": float(value) for index, value in enumerate(vector)})
-            vector_rows.append(vector_row)
-            manifest_rows.append(
-                {
+    if not missing_documents.empty:
+        keys = get_api_keys()
+        if not keys.openai_api_key:
+            raise RuntimeError("OPENAI_API_KEY is required to generate candidate embeddings.")
+        vector_rows: list[dict[str, Any]] = []
+        manifest_rows: list[dict[str, Any]] = []
+        batch_size = 32
+        embedding_dim = None
+        for start in range(0, len(missing_documents), batch_size):
+            batch = missing_documents.iloc[start : start + batch_size].reset_index(drop=True)
+            try:
+                embeddings = _embed_texts_with_fallback(batch["document_text"].tolist(), keys.openai_api_key, OPENAI_EMBEDDING_MODEL)
+            except Exception as exc:
+                for _, row in batch.iterrows():
+                    manifest_rows.append(
+                        {
+                            "source_id": row["source_id"],
+                            "title": row["title"],
+                            "document_hash": row["document_hash"],
+                            "embedding_model": OPENAI_EMBEDDING_MODEL,
+                            "embedding_dim": pd.NA,
+                            "status": "failed",
+                            "error": str(exc),
+                        }
+                    )
+                continue
+
+            if embeddings and embedding_dim is None:
+                embedding_dim = len(embeddings[0])
+            for row, vector in zip(batch.to_dict(orient="records"), embeddings, strict=True):
+                vector_row = {
                     "source_id": row["source_id"],
                     "title": row["title"],
                     "document_hash": row["document_hash"],
                     "embedding_model": OPENAI_EMBEDDING_MODEL,
                     "embedding_dim": len(vector),
                     "status": "success",
-                    "error": "",
                 }
-            )
-        _write_embedding_cache(pd.DataFrame(vector_rows), pd.DataFrame(manifest_rows), cache_path)
+                vector_row.update({f"emb_{index:04d}": float(value) for index, value in enumerate(vector)})
+                vector_rows.append(vector_row)
+                manifest_rows.append(
+                    {
+                        "source_id": row["source_id"],
+                        "title": row["title"],
+                        "document_hash": row["document_hash"],
+                        "embedding_model": OPENAI_EMBEDDING_MODEL,
+                        "embedding_dim": len(vector),
+                        "status": "success",
+                        "error": "",
+                    }
+                )
 
-    embeddings = pd.DataFrame(vector_rows)
-    manifest = pd.DataFrame(manifest_rows)
-    _write_embedding_cache(embeddings, manifest, cache_path)
-    return embeddings, manifest, {
+        new_embeddings = pd.DataFrame(vector_rows)
+        new_manifest = pd.DataFrame(manifest_rows)
+        if cached.empty:
+            merged_cache = new_embeddings.copy()
+        else:
+            merged_cache = pd.concat([cached, new_embeddings], ignore_index=True)
+            if not merged_cache.empty:
+                merged_cache = merged_cache.drop_duplicates(subset=["source_id", "document_hash", "embedding_model"], keep="last").reset_index(drop=True)
+        if not merged_cache.empty:
+            manifest = merged_cache.loc[:, ["source_id", "title", "document_hash", "embedding_model", "embedding_dim", "status"]].copy()
+            if not new_manifest.empty:
+                manifest = pd.concat([manifest, new_manifest], ignore_index=True)
+            _write_embedding_cache(merged_cache, manifest, cache_path)
+        else:
+            manifest = new_manifest
+        if not documents.empty and not merged_cache.empty:
+            current_embeddings = merged_cache.merge(current_keys, on=["source_id", "document_hash"], how="inner")
+            current_embeddings = current_embeddings.loc[:, merged_cache.columns].copy()
+        else:
+            current_embeddings = pd.DataFrame(columns=merged_cache.columns if not merged_cache.empty else new_embeddings.columns)
+        report = {
+            "provider": "openai",
+            "model": OPENAI_EMBEDDING_MODEL,
+            "embedding_dim": int(embedding_dim or (current_embeddings["embedding_dim"].iloc[0] if not current_embeddings.empty else 0)),
+            "coverage": float(len(current_embeddings) / len(documents)) if len(documents) else 0.0,
+            "successful": int((current_embeddings["status"] == "success").sum()) if not current_embeddings.empty else 0,
+            "failed": int((current_embeddings["status"] != "success").sum()) if not current_embeddings.empty else int((new_manifest["status"] != "success").sum()) if not new_manifest.empty else 0,
+            "cache_status": "partial" if not cached.empty else "miss",
+            "cache_hits": int(len(documents) - len(missing_documents)),
+            "cache_misses": int(len(missing_documents)),
+        }
+        return current_embeddings.reset_index(drop=True), manifest.reset_index(drop=True), report
+    if not documents.empty and not cached.empty:
+        current_embeddings = cached.merge(current_keys, on=["source_id", "document_hash"], how="inner")
+        current_embeddings = current_embeddings.loc[:, cached.columns].copy()
+    else:
+        current_embeddings = pd.DataFrame(columns=cached.columns if not cached.empty else ["source_id", "title", "document_hash", "embedding_model", "embedding_dim", "status"])
+    manifest = cached.loc[:, ["source_id", "title", "document_hash", "embedding_model", "embedding_dim", "status"]].copy() if not cached.empty else pd.DataFrame(columns=["source_id", "title", "document_hash", "embedding_model", "embedding_dim", "status"])
+    if not current_embeddings.empty:
+        return current_embeddings.reset_index(drop=True), manifest.reset_index(drop=True), {
+            "provider": "openai",
+            "model": OPENAI_EMBEDDING_MODEL,
+            "embedding_dim": int(current_embeddings["embedding_dim"].iloc[0]),
+            "coverage": float(len(current_embeddings) / len(documents)) if len(documents) else 0.0,
+            "successful": int((current_embeddings["status"] == "success").sum()),
+            "failed": int((current_embeddings["status"] != "success").sum()),
+            "cache_status": "hit",
+            "cache_hits": int(len(documents)),
+            "cache_misses": 0,
+        }
+    return current_embeddings.reset_index(drop=True), manifest.reset_index(drop=True), {
         "provider": "openai",
         "model": OPENAI_EMBEDDING_MODEL,
-        "embedding_dim": int(embedding_dim or 0),
-        "coverage": float(len(embeddings) / len(documents)) if len(documents) else 0.0,
-        "successful": int(len(embeddings)),
-        "failed": int((manifest["status"] != "success").sum()) if not manifest.empty else 0,
-        "cache_status": "miss",
+        "embedding_dim": 0,
+        "coverage": 0.0,
+        "successful": 0,
+        "failed": 0,
+        "cache_status": "empty",
         "cache_hits": 0,
-        "cache_misses": int(len(documents)),
+        "cache_misses": 0,
     }
 
 

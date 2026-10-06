@@ -26,7 +26,8 @@ from mvp.src.generative_v4.schemas import (
 
 
 DEFAULT_QUALIFICATION_MODEL = GENERATION_MODEL
-SEMANTIC_QUALIFICATION_SHORTLIST_SIZE = 20
+SEMANTIC_QUALIFICATION_SHORTLIST_SIZE = 48
+SEMANTIC_QUALIFICATION_BATCH_SIZE = 6
 
 ASPECT_SYNONYMS: dict[str, list[str]] = {
     "comforting": ["comforting", "comfort", "cozy", "coziness", "warm", "gentle", "soothing"],
@@ -132,6 +133,7 @@ class QualificationBatch(BaseModel):
 
 @dataclass(frozen=True)
 class QualificationOutput:
+    candidate_id: str
     status: QualificationStatus
     supported_required_aspects: list[str]
     unsupported_required_aspects: list[str]
@@ -146,7 +148,50 @@ class QualificationOutput:
 
 
 def _normalize_text(value: Any) -> str:
-    return " ".join(str(value or "").lower().split())
+    if value is None:
+        return ""
+    try:
+        if pd.isna(value):
+            return ""
+    except Exception:
+        pass
+    return " ".join(str(value).lower().split())
+
+
+def _is_missing_value(value: Any) -> bool:
+    if value is None:
+        return True
+    if isinstance(value, (list, tuple, set, dict)):
+        return False
+    try:
+        return bool(pd.isna(value))
+    except Exception:
+        return False
+
+
+def _first_populated(*values: Any) -> Any:
+    for value in values:
+        if isinstance(value, list):
+            cleaned = [item for item in value if not _is_missing_value(item) and str(item).strip()]
+            if cleaned:
+                return cleaned
+            continue
+        if not _is_missing_value(value) and str(value).strip():
+            return value
+    return None
+
+
+def _normalize_list(value: Any) -> list[str]:
+    if isinstance(value, list):
+        return [str(item).strip() for item in value if not _is_missing_value(item) and str(item).strip()]
+    if _is_missing_value(value):
+        return []
+    text = str(value).strip()
+    if not text:
+        return []
+    text = text.strip("[]")
+    parts = [part.strip().strip("'\"") for part in text.split("|")] if "|" in text else [part.strip().strip("'\"") for part in text.split(",")]
+    return [part for part in parts if part]
 
 
 def _split_values(value: Any) -> list[str]:
@@ -207,7 +252,7 @@ def _semantic_value(concept: SemanticConcept | str | None) -> str | None:
 
 
 def _split_semantic_phrase(value: str | None) -> tuple[str | None, str | None]:
-    normalized = _normalize_text(value or "").replace("_", " ")
+    normalized = _normalize_text(value).replace("_", " ")
     if not normalized:
         return None, None
     for prefix in ("not ", "no ", "without ", "avoid ", "exclude ", "excluding ", "must not ", "do not want ", "don't want "):
@@ -219,7 +264,7 @@ def _split_semantic_phrase(value: str | None) -> tuple[str | None, str | None]:
 
 def _candidate_year(candidate: RetrievedCandidate | pd.Series | dict[str, Any]) -> int | None:
     payload = candidate.model_dump() if isinstance(candidate, RetrievedCandidate) else candidate.to_dict() if isinstance(candidate, pd.Series) else candidate
-    year = payload.get("year") or payload.get("release_year")
+    year = _first_populated(payload.get("year"), payload.get("release_year"))
     if year is None:
         return None
     try:
@@ -238,7 +283,7 @@ def _candidate_payload(candidate: RetrievedCandidate | pd.Series | dict[str, Any
 
 def _candidate_field_text(candidate: RetrievedCandidate | pd.Series | dict[str, Any], field: str) -> str:
     payload = _candidate_payload(candidate)
-    value = payload.get(field)
+    value = _first_populated(payload.get(field))
     if value is None:
         fallback_fields = {
             "overview": "tmdb_overview",
@@ -248,7 +293,9 @@ def _candidate_field_text(candidate: RetrievedCandidate | pd.Series | dict[str, 
         }
         fallback_field = fallback_fields.get(field)
         if fallback_field:
-            value = payload.get(fallback_field)
+            value = _first_populated(payload.get(fallback_field))
+    if value is None:
+        return ""
     if isinstance(value, list):
         return _normalize_text(" ".join(str(item) for item in value if str(item).strip()))
     return _normalize_text(value)
@@ -318,20 +365,20 @@ def _candidate_text(candidate: RetrievedCandidate | pd.Series | dict[str, Any]) 
 
     def _join(value: Any) -> str:
         if isinstance(value, list):
-            return " ".join(str(item) for item in value if str(item).strip())
-        if value is None:
+            return " ".join(str(item) for item in value if not _is_missing_value(item) and str(item).strip())
+        if _is_missing_value(value):
             return ""
         return str(value)
 
     parts = [
-        f"Title: {payload.get('title') or ''}",
-        f"Year: {payload.get('year') or payload.get('release_year') or ''}",
-        f"Genres: {_join(payload.get('genres') or payload.get('tmdb_genres'))}",
-        f"Original language: {payload.get('original_language') or payload.get('tmdb_original_language') or ''}",
-        f"Production countries: {_join(payload.get('production_countries') or payload.get('tmdb_production_countries'))}",
-        f"Overview: {payload.get('overview') or payload.get('tmdb_overview') or ''}",
-        f"Document: {payload.get('document_text') or ''}",
-        f"Candidate provenance: {_join(payload.get('candidate_provenance') or payload.get('candidate_sources'))}",
+        f"Title: {_normalize_text(payload.get('title'))}",
+        f"Year: {_normalize_text(_first_populated(payload.get('year'), payload.get('release_year')))}",
+        f"Genres: {_join(_first_populated(payload.get('genres'), payload.get('tmdb_genres')))}",
+        f"Original language: {_normalize_text(_first_populated(payload.get('original_language'), payload.get('tmdb_original_language')))}",
+        f"Production countries: {_join(_first_populated(payload.get('production_countries'), payload.get('tmdb_production_countries')))}",
+        f"Overview: {_normalize_text(_first_populated(payload.get('overview'), payload.get('tmdb_overview')))}",
+        f"Document: {_normalize_text(payload.get('document_text'))}",
+        f"Candidate provenance: {_join(_first_populated(payload.get('candidate_provenance'), payload.get('candidate_sources')))}",
     ]
     return _normalize_text(" ".join(parts))
 
@@ -341,11 +388,13 @@ def _structured_constraint_satisfied(candidate: RetrievedCandidate | pd.Series |
     supported: list[str] = []
     unsupported: list[str] = []
 
-    languages = {str(item).lower() for item in _split_values(payload.get("production_countries") or payload.get("tmdb_production_countries"))}
-    original_language = str(payload.get("original_language") or payload.get("tmdb_original_language") or "").lower()
-    genres = {str(item).lower() for item in _split_values(payload.get("genres") or payload.get("tmdb_genres"))}
-    countries = {str(item).upper() for item in _split_values(payload.get("production_countries") or payload.get("tmdb_production_countries"))}
-    year = payload.get("year") or payload.get("release_year")
+    original_language_value = _first_populated(payload.get("original_language"), payload.get("tmdb_original_language"))
+    genres_value = _first_populated(payload.get("genres"), payload.get("tmdb_genres"))
+    countries_value = _first_populated(payload.get("production_countries"), payload.get("tmdb_production_countries"))
+    year = _first_populated(payload.get("year"), payload.get("release_year"))
+    original_language = str(original_language_value or "").lower()
+    genres = {str(item).lower() for item in _normalize_list(genres_value)}
+    countries = {str(item).upper() for item in _normalize_list(countries_value)}
 
     if constraints.required_languages:
         if original_language in {value.lower() for value in constraints.required_languages}:
@@ -401,17 +450,17 @@ def _structured_constraint_satisfied(candidate: RetrievedCandidate | pd.Series |
             if decade and decade in constraints.excluded_decades:
                 unsupported.extend([f"excluded_decade:{value}" for value in constraints.excluded_decades])
 
-    if constraints.min_year is not None and year is not None:
+    if constraints.min_year is not None:
         try:
-            if int(float(year)) >= int(constraints.min_year):
+            if year is not None and int(float(year)) >= int(constraints.min_year):
                 supported.append(f"min_year:{constraints.min_year}")
             else:
                 unsupported.append(f"min_year:{constraints.min_year}")
         except Exception:
             unsupported.append(f"min_year:{constraints.min_year}")
-    if constraints.max_year is not None and year is not None:
+    if constraints.max_year is not None:
         try:
-            if int(float(year)) <= int(constraints.max_year):
+            if year is not None and int(float(year)) <= int(constraints.max_year):
                 supported.append(f"max_year:{constraints.max_year}")
             else:
                 unsupported.append(f"max_year:{constraints.max_year}")
@@ -495,6 +544,7 @@ def _request_spec(request: RequestUnderstanding) -> RequestSpec:
 
 def _fallback_qualification_output(request: RequestUnderstanding, candidate: RetrievedCandidate | pd.Series | dict[str, Any]) -> QualificationOutput:
     spec = _request_spec(request)
+    candidate_id = str(_normalize_candidate_payload(candidate).get("candidate_id") or _normalize_candidate_payload(candidate).get("source_id") or "")
     candidate_text = _candidate_text(candidate)
     structured_ok, structured_supported, structured_unsupported = _structured_constraint_satisfied(candidate, spec.structured_constraints)
     groups = _semantic_requirement_groups(spec)
@@ -566,7 +616,8 @@ def _fallback_qualification_output(request: RequestUnderstanding, candidate: Ret
             violated_exclusions.append(concept)
             evidence_details.append({"aspect_id": concept, "field": "overview", "evidence": synonym or concept})
 
-    if spec.reference.resolution_status == "resolved" and any("reference_recommendations" in str(value) for value in _split_values(candidate.model_dump().get("candidate_sources") if isinstance(candidate, RetrievedCandidate) else candidate.get("candidate_sources") if isinstance(candidate, dict) else candidate.to_dict().get("candidate_sources"))):
+    candidate_sources_value = candidate.model_dump().get("candidate_sources") if isinstance(candidate, RetrievedCandidate) else candidate.get("candidate_sources") if isinstance(candidate, dict) else candidate.to_dict().get("candidate_sources")
+    if spec.reference.resolution_status == "resolved" and any("reference_recommendations" in str(value) for value in _split_values(candidate_sources_value)):
         supported_preferred.append("reference_similarity")
         evidence.append("reference_recommendations provenance")
         evidence_details.append({"aspect_id": "reference_similarity", "field": "candidate_sources", "evidence": "reference_recommendations"})
@@ -630,6 +681,7 @@ def _fallback_qualification_output(request: RequestUnderstanding, candidate: Ret
         caveat = None
 
     return QualificationOutput(
+        candidate_id=candidate_id,
         status=status,
         supported_required_aspects=list(dict.fromkeys(supported_required)),
         unsupported_required_aspects=list(dict.fromkeys(unsupported_required)),
@@ -646,6 +698,23 @@ def _fallback_qualification_output(request: RequestUnderstanding, candidate: Ret
 
 def _normalize_candidate_payload(row: pd.Series | dict[str, Any]) -> dict[str, Any]:
     payload = row.to_dict() if isinstance(row, pd.Series) else dict(row)
+
+    def _clean(value: Any) -> Any:
+        if isinstance(value, list):
+            cleaned = []
+            for item in value:
+                normalized = _clean(item)
+                if normalized is not None:
+                    cleaned.append(normalized)
+            return cleaned
+        try:
+            if value is None or pd.isna(value):
+                return None
+        except Exception:
+            pass
+        return value
+
+    payload = {key: _clean(value) for key, value in payload.items()}
     for key in ("genres", "tmdb_genres", "production_countries", "tmdb_production_countries", "candidate_provenance", "candidate_sources", "candidate_source_ranks"):
         if key in payload:
             payload[key] = _split_values(payload[key])
@@ -677,10 +746,10 @@ def _normalize_candidate_payload(row: pd.Series | dict[str, Any]) -> dict[str, A
 def _build_candidate_document(candidate: dict[str, Any]) -> str:
     parts = [
         f"Title: {candidate.get('title') or ''}",
-        f"Year: {candidate.get('year') or candidate.get('release_year') or ''}",
-        f"Structured facts: genres={candidate.get('genres') or candidate.get('tmdb_genres') or []}; language={candidate.get('original_language') or candidate.get('tmdb_original_language') or ''}; countries={candidate.get('production_countries') or candidate.get('tmdb_production_countries') or []}.",
-        f"Subject / content evidence: {candidate.get('overview') or candidate.get('tmdb_overview') or ''}",
-        f"Candidate provenance: {candidate.get('candidate_provenance') or candidate.get('candidate_sources') or []}",
+        f"Year: {_first_populated(candidate.get('year'), candidate.get('release_year')) or ''}",
+        f"Structured facts: genres={_first_populated(candidate.get('genres'), candidate.get('tmdb_genres')) or []}; language={_first_populated(candidate.get('original_language'), candidate.get('tmdb_original_language')) or ''}; countries={_first_populated(candidate.get('production_countries'), candidate.get('tmdb_production_countries')) or []}.",
+        f"Subject / content evidence: {_first_populated(candidate.get('overview'), candidate.get('tmdb_overview')) or ''}",
+        f"Candidate provenance: {_first_populated(candidate.get('candidate_provenance'), candidate.get('candidate_sources')) or []}",
     ]
     return _normalize_text(" ".join(str(part) for part in parts if str(part).strip()))
 
@@ -690,13 +759,13 @@ def _candidate_payload_for_llm(candidate: dict[str, Any]) -> dict[str, Any]:
         "candidate_id": candidate.get("candidate_id") or candidate.get("source_id"),
         "title": candidate.get("title"),
         "structured_facts": {
-            "year": candidate.get("year"),
-            "genres": candidate.get("genres") or candidate.get("tmdb_genres") or [],
-            "original_language": candidate.get("original_language") or candidate.get("tmdb_original_language"),
-            "production_countries": candidate.get("production_countries") or candidate.get("tmdb_production_countries") or [],
+            "year": _first_populated(candidate.get("year"), candidate.get("release_year")),
+            "genres": _normalize_list(_first_populated(candidate.get("genres"), candidate.get("tmdb_genres"))),
+            "original_language": _first_populated(candidate.get("original_language"), candidate.get("tmdb_original_language")),
+            "production_countries": _normalize_list(_first_populated(candidate.get("production_countries"), candidate.get("tmdb_production_countries"))),
         },
-        "subject_evidence": candidate.get("overview") or candidate.get("tmdb_overview") or "",
-        "candidate_provenance": candidate.get("candidate_provenance") or candidate.get("candidate_sources") or [],
+        "subject_evidence": _first_populated(candidate.get("overview"), candidate.get("tmdb_overview")) or "",
+        "candidate_provenance": _first_populated(candidate.get("candidate_provenance"), candidate.get("candidate_sources")) or [],
         "document_text": _build_candidate_document(candidate),
     }
 
@@ -708,6 +777,7 @@ def _request_payload_for_llm(request: RequestUnderstanding) -> dict[str, Any]:
         "intent_type": spec.intent_type,
         "mode": spec.mode,
         "structured_constraints": spec.structured_constraints.model_dump(),
+        "semantic_requirement_groups": [group.model_dump() for group in spec.semantic_requirement_groups],
         "semantic_requirements": [concept.model_dump() for concept in spec.semantic_requirements],
         "semantic_exclusions": [concept.model_dump() for concept in spec.semantic_exclusions],
         "reference": spec.reference.model_dump(),
@@ -779,7 +849,7 @@ def _qualify_with_llm(request: RequestUnderstanding, candidate_rows: list[dict[s
             ]
         )
     except Exception:
-        return None, 0, None, None, None
+        return None, 1, None, None, None
     parsed = result.get("parsed") if isinstance(result, dict) else result
     raw = result.get("raw") if isinstance(result, dict) else None
     usage_metadata = getattr(raw, "usage_metadata", None) if raw is not None else None
@@ -788,21 +858,25 @@ def _qualify_with_llm(request: RequestUnderstanding, candidate_rows: list[dict[s
     total_tokens = usage_metadata.get("total_tokens") if isinstance(usage_metadata, dict) else None
     if parsed is None:
         return None, 1, input_tokens, output_tokens, total_tokens
-    items = [QualificationOutput(
-        status=item.qualification_status,
-        supported_required_aspects=list(item.supported_required_aspects),
-        unsupported_required_aspects=list(item.unsupported_required_aspects),
-        supported_preferred_aspects=list(item.supported_preferred_aspects),
-        unsupported_preferred_aspects=list(item.unsupported_preferred_aspects),
-        violated_semantic_exclusions=list(item.violated_semantic_exclusions),
-        grounded_evidence=[f"{evidence.aspect_id}:{evidence.field}:{evidence.evidence}" for evidence in item.grounded_evidence],
-        grounded_evidence_details=[evidence.model_dump() for evidence in item.grounded_evidence],
-        qualification_reason=item.reason,
-        request_match=f"Supported request aspects: {', '.join(item.supported_required_aspects[:5])}" if item.supported_required_aspects else (
-            f"Supported request aspects: {', '.join(item.supported_preferred_aspects[:5])}" if item.supported_preferred_aspects else None
-        ),
-        caveat=item.required_caveat,
-    ) for item in parsed.items]
+    items = [
+        QualificationOutput(
+            candidate_id=str(item.candidate_id),
+            status=item.qualification_status,
+            supported_required_aspects=list(item.supported_required_aspects),
+            unsupported_required_aspects=list(item.unsupported_required_aspects),
+            supported_preferred_aspects=list(item.supported_preferred_aspects),
+            unsupported_preferred_aspects=list(item.unsupported_preferred_aspects),
+            violated_semantic_exclusions=list(item.violated_semantic_exclusions),
+            grounded_evidence=[f"{evidence.aspect_id}:{evidence.field}:{evidence.evidence}" for evidence in item.grounded_evidence],
+            grounded_evidence_details=[evidence.model_dump() for evidence in item.grounded_evidence],
+            qualification_reason=item.reason,
+            request_match=f"Supported request aspects: {', '.join(item.supported_required_aspects[:5])}" if item.supported_required_aspects else (
+                f"Supported request aspects: {', '.join(item.supported_preferred_aspects[:5])}" if item.supported_preferred_aspects else None
+            ),
+            caveat=item.required_caveat,
+        )
+        for item in parsed.items
+    ]
     return items, 1, input_tokens, output_tokens, total_tokens
 
 
@@ -850,37 +924,106 @@ def qualify_candidates(
     else:
         frame = frame.sort_values(["predicted_preference", "source_id"], ascending=[False, True], na_position="last").reset_index(drop=True)
 
-    candidate_subset = frame.head(max_candidates).copy().reset_index(drop=True)
-    candidate_payloads = [_candidate_payload_for_llm(_normalize_candidate_payload(row)) for _, row in candidate_subset.iterrows()]
-    _, llm_call_count, input_tokens, output_tokens, total_tokens = _qualify_with_llm(request, candidate_payloads)
+    spec = _request_spec(request)
 
     records: list[QualificationRecord] = []
     qualified_rows = []
-    llm_used = llm_call_count > 0
-    for _, row in candidate_subset.iterrows():
-        candidate = RetrievedCandidate.model_validate(_normalize_candidate_payload(row))
-        output = _fallback_qualification_output(request, candidate)
-        record = _record_from_output(candidate.candidate_id, output, llm_used=llm_used)
-        records.append(record)
-        candidate.qualification_status = record.qualification_status
-        candidate.supported_required_aspects = record.supported_required_aspects
-        candidate.unsupported_required_aspects = record.unsupported_required_aspects
-        candidate.supported_preferred_aspects = record.supported_preferred_aspects
-        candidate.unsupported_preferred_aspects = record.unsupported_preferred_aspects
-        candidate.supported_request_aspects = record.supported_request_aspects
-        candidate.unsupported_request_aspects = record.unsupported_request_aspects
-        candidate.grounded_evidence = record.grounded_evidence
-        candidate.qualification_reason = record.qualification_reason
-        candidate.request_match = record.request_match
-        candidate.caveat = record.caveat
-        if record.qualification_status != "unsupported":
-            qualified_rows.append(candidate.model_dump())
+    total_llm_call_count = 0
+    total_input_tokens: int | None = None
+    total_output_tokens: int | None = None
+    total_tokens: int | None = None
+    candidate_subset = frame.head(max_candidates).copy().reset_index(drop=True)
+    if candidate_subset.empty:
+        qualified_frame = base_frame = frame.iloc[0:0].copy()
+        qualified_frame.attrs["llm_usage"] = {"llm_call_count": 0, "runtime_input_tokens": None, "runtime_output_tokens": None, "runtime_total_tokens": None}
+        return qualified_frame, []
+
+    base_frame = candidate_subset.copy()
+    for start in range(0, len(candidate_subset), SEMANTIC_QUALIFICATION_BATCH_SIZE):
+        batch = candidate_subset.iloc[start : start + SEMANTIC_QUALIFICATION_BATCH_SIZE].copy().reset_index(drop=True)
+        candidate_payloads = [_candidate_payload_for_llm(_normalize_candidate_payload(row)) for _, row in batch.iterrows()]
+        candidate_ids = [str(payload.get("candidate_id") or payload.get("source_id") or "") for payload in candidate_payloads]
+        duplicate_ids = sorted({candidate_id for candidate_id in candidate_ids if candidate_ids.count(candidate_id) > 1})
+        if duplicate_ids:
+            raise RuntimeError(f"Qualification batch contains duplicate candidate IDs: {duplicate_ids}")
+        llm_outputs, llm_call_count, input_tokens, output_tokens, batch_total_tokens = _qualify_with_llm(request, candidate_payloads)
+        total_llm_call_count += int(llm_call_count or 0)
+        if total_input_tokens is None:
+            total_input_tokens = input_tokens
+        elif input_tokens is not None:
+            total_input_tokens += int(input_tokens)
+        if total_output_tokens is None:
+            total_output_tokens = output_tokens
+        elif output_tokens is not None:
+            total_output_tokens += int(output_tokens)
+        if total_tokens is None:
+            total_tokens = batch_total_tokens
+        elif batch_total_tokens is not None:
+            total_tokens += int(batch_total_tokens)
+        llm_used = llm_outputs is not None
+        output_lookup: dict[str, QualificationOutput] = {}
+        if llm_outputs is not None:
+            parsed_ids = [str(item.candidate_id) for item in llm_outputs]
+            parsed_lookup = {str(item.candidate_id): item for item in llm_outputs}
+            duplicate_parsed_ids = sorted({candidate_id for candidate_id in parsed_ids if parsed_ids.count(candidate_id) > 1})
+            missing_ids = sorted(set(candidate_ids).difference(parsed_lookup))
+            extra_ids = sorted(set(parsed_lookup).difference(candidate_ids))
+            if duplicate_parsed_ids or missing_ids or extra_ids:
+                raise RuntimeError(
+                    "Qualification LLM returned mismatched candidate IDs: "
+                    f"duplicates={duplicate_parsed_ids}, missing={missing_ids}, extra={extra_ids}"
+                )
+            output_lookup = parsed_lookup
+
+        for _, row in batch.iterrows():
+            candidate_payload = _normalize_candidate_payload(row)
+            if candidate_payload.get("predicted_preference") is None:
+                candidate_payload["predicted_preference"] = 0.0
+            if candidate_payload.get("raw_rank") is None:
+                candidate_payload["raw_rank"] = 0
+            if candidate_payload.get("request_relevance_score") is None:
+                candidate_payload["request_relevance_score"] = float(candidate_payload.get("request_relevance") or 0.0)
+            if candidate_payload.get("request_relevance_rank") is None:
+                candidate_payload["request_relevance_rank"] = 0
+            candidate = RetrievedCandidate.model_validate(candidate_payload)
+            output = output_lookup.get(candidate.candidate_id) if output_lookup else None
+            if output is None:
+                output = _fallback_qualification_output(request, candidate)
+            structured_ok, structured_supported, structured_unsupported = _structured_constraint_satisfied(candidate, spec.structured_constraints)
+            if (not structured_ok or output.violated_semantic_exclusions) and output.status != "unsupported":
+                violated = list(dict.fromkeys(output.violated_semantic_exclusions))
+                if not structured_ok:
+                    violated.extend(structured_unsupported)
+                output = QualificationOutput(
+                    candidate_id=output.candidate_id,
+                    status="unsupported",
+                    supported_required_aspects=list(dict.fromkeys([*output.supported_required_aspects, *structured_supported])),
+                    unsupported_required_aspects=list(dict.fromkeys([*output.unsupported_required_aspects, *structured_unsupported])),
+                    supported_preferred_aspects=output.supported_preferred_aspects,
+                    unsupported_preferred_aspects=output.unsupported_preferred_aspects,
+                    violated_semantic_exclusions=list(dict.fromkeys(violated)),
+                    grounded_evidence=output.grounded_evidence,
+                    grounded_evidence_details=output.grounded_evidence_details,
+                    qualification_reason="Candidate violates a structured hard constraint.",
+                    request_match=None,
+                    caveat=f"Unsupported structured constraints: {', '.join((structured_unsupported or structured_supported)[:5])}" if (structured_supported or structured_unsupported) else "Candidate violates a structured hard constraint.",
+                )
+            record = _record_from_output(candidate.candidate_id, output, llm_used=llm_used)
+            records.append(record)
+            qualified_row = dict(candidate_payload)
+            qualified_row.update(record.model_dump())
+            qualified_row["candidate_id"] = candidate.candidate_id
+            qualified_row["source_id"] = candidate.candidate_id
+            if record.qualification_status != "unsupported":
+                qualified_rows.append(qualified_row)
 
     qualified_frame = pd.DataFrame(qualified_rows)
+    if qualified_frame.empty:
+        qualified_frame = base_frame.iloc[0:0].copy()
     llm_usage = {
-        "llm_call_count": int(llm_call_count),
-        "runtime_input_tokens": input_tokens,
-        "runtime_output_tokens": output_tokens,
+        "llm_call_count": int(total_llm_call_count),
+        "runtime_input_tokens": total_input_tokens,
+        "runtime_output_tokens": total_output_tokens,
         "runtime_total_tokens": total_tokens,
     }
     if not qualified_frame.empty and "request_relevance" in qualified_frame.columns:

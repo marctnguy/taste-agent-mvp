@@ -147,6 +147,15 @@ _EXPLICIT_NOVELTY_PHRASES = (
     "not something i would normally watch",
 )
 
+_DISCOVERY_PROCESS_CONCEPTS = {
+    "discover_on_my_own",
+    "discover_on_their_own",
+    "discover_on_her_own",
+    "discover_on_his_own",
+    "discover_on_its_own",
+    "discover_on_our_own",
+}
+
 _VALID_INTENT_TYPES = {"GENERAL_DISCOVERY", "MOOD_THEME", "NOVELTY", "CONSTRAINT", "EXPLAIN"}
 _EXPLANATION_PHRASES = (
     "why are you recommending this",
@@ -915,6 +924,8 @@ def _extract_personalization_instruction(text: str) -> PersonalizationInstructio
         return PersonalizationInstruction(preference="modest historical taste compatibility", priority="current_request_primary")
     if "historical taste" in lower and "request match" in lower:
         return PersonalizationInstruction(preference="request match first, historical taste second", priority="current_request_primary")
+    if "discover on my own" in lower or "new to me" in lower or "might not discover" in lower:
+        return PersonalizationInstruction(preference="personalized discovery", priority="current_request_primary")
     return PersonalizationInstruction()
 
 
@@ -1081,6 +1092,7 @@ def _normalize_request_spec(spec: RequestSpec, query: str, client: TMDBClient | 
     semantic_exclusions = [
         SemanticConcept(aspect_id=concept, concept=concept, importance="required", source_span=query)
         for concept in semantic_exclusions
+        if concept not in _DISCOVERY_PROCESS_CONCEPTS
     ]
 
     reference = spec.reference.model_copy()
@@ -1103,6 +1115,9 @@ def _normalize_request_spec(spec: RequestSpec, query: str, client: TMDBClient | 
     novelty_goal = _novelty_goal_from_query(query, novelty_goal)
 
     semantic_requirements = _filter_reference_concepts(semantic_requirements, reference.title)
+    personalization_instruction = spec.personalization_instruction if (spec.personalization_instruction.preference or spec.personalization_instruction.priority) else fallback.personalization_instruction
+    if not personalization_instruction.preference:
+        personalization_instruction = _extract_personalization_instruction(query)
     semantic_requirement_groups = _canonicalize_semantic_groups(
         semantic_requirement_groups or _build_semantic_requirement_groups(semantic_requirements, semantic_exclusions, reference.title),
         query=query,
@@ -1135,7 +1150,7 @@ def _normalize_request_spec(spec: RequestSpec, query: str, client: TMDBClient | 
         semantic_exclusions=semantic_exclusions,
         reference=reference,
         novelty_goal=novelty_goal,
-        personalization_instruction=spec.personalization_instruction if (spec.personalization_instruction.preference or spec.personalization_instruction.priority) else fallback.personalization_instruction,
+        personalization_instruction=personalization_instruction,
         request_relevance_mode=request_relevance_mode,
         semantic_query_text=semantic_query_text,
         request_summary=spec.request_summary or query.strip(),

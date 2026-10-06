@@ -1,0 +1,101 @@
+{
+  "sources": [
+    {
+      "uploaded_source": "watchlist_langsmith_suite_summary(1).json",
+      "destination": "evaluation/watchlist_personalization/final_evidence/hosted/watchlist_langsmith_suite_summary.json",
+      "sha256": "abae4caac3d25a35e542477447931de5b513226f7460944508d2ce416e8b7c62",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "uploaded_source": "watchlist_langsmith_manifest(1).json",
+      "destination": "evaluation/watchlist_personalization/final_evidence/hosted/watchlist_langsmith_manifest.json",
+      "sha256": "e7a9afeafe1cc394b8d08a7d2bb6d0f07fb9a3099e8fd0e83ea5895609b11611",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "uploaded_source": "watchlist_langsmith_dataset(1).json",
+      "destination": "evaluation/watchlist_personalization/final_evidence/hosted/watchlist_langsmith_dataset.json",
+      "sha256": "b102c458dd8c6d8a37c571a9a693701d36d512a3d86327c80aeee3212f60fffc",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "uploaded_source": "watchlist_langsmith_canary.json",
+      "destination": "evaluation/watchlist_personalization/final_evidence/hosted/watchlist_langsmith_canary.json",
+      "sha256": "741168760914d4b51700790c582a5975641b559a4d6c080c6c1e76dca2c965a8",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "uploaded_source": "Taste_Agent_human_evaluation - Taste_Agent_human_evaluation.csv.csv",
+      "destination": "evaluation/watchlist_personalization/final_evidence/human_review/completed_human_ratings.csv",
+      "sha256": "5fbea04aae088a638616a99ad0504c26687b0bbf88833c2ad88c111d1b35fd4b",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "uploaded_source": "unblinding_key(4).csv",
+      "destination": "evaluation/watchlist_personalization/final_evidence/human_review/unblinding_key.csv",
+      "sha256": "1b7de6489172941f9a433f85b206d6e0ab839972eda10c179811373e30c4ead1",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "uploaded_source": "blinded_human_review_sheet.csv",
+      "destination": "evaluation/watchlist_personalization/final_evidence/human_review/original_blinded_sheet.csv",
+      "sha256": "d35288ff2c9d7d554149e81cddae28b956aa5c6d8908e4c4a2651c5615ef5325",
+      "transformation": "none; byte-identical"
+    },
+    {
+      "uploaded_source": "watchlist_langsmith_results(1).json",
+      "source_bytes": 61849439,
+      "source_sha256": "ffbd5560b85c442959aaf79f0f542d1d9873706f3ea97a86d39afb062d2be852",
+      "destination": "evaluation/watchlist_personalization/final_evidence/hosted/results_compact.json",
+      "transformation": "All 48 rows and top-level row fields retained. outputs.debug restricted to parsed_request, controlled_request_spec, request_corrections, prepared_fingerprint. Nonfinite JSON numbers normalized to null. Recommendations, order, feedback, IDs, runtime metadata and errors retained. Large embedding/context payloads omitted. This is a derived audit extract, not a full execution replay."
+    },
+    {
+      "uploaded_source": "taste-agent-mvp-freeze.zip:exports/taste-agent-mvp-freeze/freeze_manifest.json",
+      "destination": "evaluation/watchlist_personalization/final_evidence/runtime_freeze/freeze_manifest.json",
+      "sha256": "bcd28efd63d536fd459e9c01e3cfa77302db6990f31c94b111dc22646313fb57",
+      "transformation": "none; original pre-cleanup freeze evidence"
+    },
+    {
+      "uploaded_source": "taste-agent-mvp-freeze.zip:exports/taste-agent-mvp-freeze/targeted_h12_result.json",
+      "destination": "evaluation/watchlist_personalization/final_evidence/runtime_freeze/targeted_h12_result.json",
+      "sha256": "89aa58a62b3a5daf39b9816d9ac19a3319ca8e984cba724ce7034492bf15aeb1",
+      "transformation": "none; original pre-cleanup freeze evidence"
+    },
+    {
+      "uploaded_source": "taste-agent-mvp-freeze.zip:exports/taste-agent-mvp-freeze/runtime_contract.md",
+      "destination": "evaluation/watchlist_personalization/final_evidence/runtime_freeze/runtime_contract.md",
+      "sha256": "ee741797cab43619da36bf1d489b1499ab8cc8fdcb7a7a14d416c2409b505db4",
+      "transformation": "none; original pre-cleanup freeze evidence"
+    },
+    {
+      "uploaded_source": "taste-agent-mvp-freeze.zip:exports/taste-agent-mvp-freeze/verification_evidence.md",
+      "destination": "evaluation/watchlist_personalization/final_evidence/runtime_freeze/verification_evidence.md",
+      "sha256": "3768ba8d034cf74b9aef184dfdc989e00898c64af4648caaea60bdce51296748",
+      "transformation": "none; original pre-cleanup freeze evidence"
+    }
+  ],
+  "payload_sha256": {
+    "evaluation/watchlist_personalization/final_evidence/hosted/watchlist_langsmith_suite_summary.json": "abae4caac3d25a35e542477447931de5b513226f7460944508d2ce416e8b7c62",
+    "evaluation/watchlist_personalization/final_evidence/hosted/watchlist_langsmith_manifest.json": "e7a9afeafe1cc394b8d08a7d2bb6d0f07fb9a3099e8fd0e83ea5895609b11611",
+    "evaluation/watchlist_personalization/final_evidence/hosted/watchlist_langsmith_dataset.json": "b102c458dd8c6d8a37c571a9a693701d36d512a3d86327c80aeee3212f60fffc",
+    "evaluation/watchlist_personalization/final_evidence/hosted/watchlist_langsmith_canary.json": "741168760914d4b51700790c582a5975641b559a4d6c080c6c1e76dca2c965a8",
+    "evaluation/watchlist_personalization/final_evidence/human_review/completed_human_ratings.csv": "5fbea04aae088a638616a99ad0504c26687b0bbf88833c2ad88c111d1b35fd4b",
+    "evaluation/watchlist_personalization/final_evidence/human_review/unblinding_key.csv": "1b7de6489172941f9a433f85b206d6e0ab839972eda10c179811373e30c4ead1",
+    "evaluation/watchlist_personalization/final_evidence/human_review/original_blinded_sheet.csv": "d35288ff2c9d7d554149e81cddae28b956aa5c6d8908e4c4a2651c5615ef5325",
+    "evaluation/watchlist_personalization/final_evidence/hosted/results_compact.json": "647f33c3405201f1c498113c54106a4223bb4b3604eb98673ebf99327f1513c4",
+    "evaluation/watchlist_personalization/final_evidence/human_review/selection_rating_join.csv": "e668d60d1fd8ff2ae2b6e8ba11d6d9544c1f86c3dea3b9e78c7a0ba6a9f53170",
+    "evaluation/watchlist_personalization/final_evidence/human_review/review_summary.json": "ee8cf058d63ca66276173db877c66b7c5c93266199e376f41ce9107ee9333da2",
+    "evaluation/watchlist_personalization/final_evidence/runtime_freeze/freeze_manifest.json": "bcd28efd63d536fd459e9c01e3cfa77302db6990f31c94b111dc22646313fb57",
+    "evaluation/watchlist_personalization/final_evidence/runtime_freeze/targeted_h12_result.json": "89aa58a62b3a5daf39b9816d9ac19a3319ca8e984cba724ce7034492bf15aeb1",
+    "evaluation/watchlist_personalization/final_evidence/runtime_freeze/runtime_contract.md": "ee741797cab43619da36bf1d489b1499ab8cc8fdcb7a7a14d416c2409b505db4",
+    "evaluation/watchlist_personalization/final_evidence/runtime_freeze/verification_evidence.md": "3768ba8d034cf74b9aef184dfdc989e00898c64af4648caaea60bdce51296748",
+    "evaluation/watchlist_personalization/final_evidence/README.md": "e8105df63ca39345ec8c296bee460e3a237f4fb521a7a781303f88e5511e5462",
+    "APPLY_EVIDENCE_CORRECTION.md": "c3162f9bb201ab5b898cb53a1dd4b18216ba9fc573fb6e0626b9215c2307c552"
+  },
+  "derived_files": [
+    "hosted/results_compact.json",
+    "human_review/selection_rating_join.csv",
+    "human_review/review_summary.json",
+    "README.md"
+  ]
+}

@@ -102,6 +102,17 @@ def _candidate_lookup(payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return lookup
 
 
+def _coerce_year(value: Any) -> int | None:
+    if value is None:
+        return None
+    try:
+        if isinstance(value, float) and value != value:
+            return None
+        return int(float(value))
+    except Exception:
+        return None
+
+
 def _recommendations(payload: dict[str, Any]) -> list[dict[str, Any]]:
     response = _response_payload(payload)
     recs = response.get("recommendations", [])
@@ -245,7 +256,9 @@ def candidate_identity_integrity(run: Any, example: Any) -> EvaluationResult:
         if str(rec.get("title", "")) != str(candidate.get("title", "")):
             passed = False
             break
-        if rec.get("year") is not None and candidate.get("year") is not None and int(rec["year"]) != int(candidate["year"]):
+        rec_year = _coerce_year(rec.get("year"))
+        candidate_year = _coerce_year(candidate.get("year"))
+        if rec_year is not None and candidate_year is not None and rec_year != candidate_year:
             passed = False
             break
     return _score_result("candidate_identity_integrity", passed)

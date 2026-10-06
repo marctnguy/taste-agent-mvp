@@ -1,0 +1,20 @@
+{
+  "hitl_id": "H12",
+  "scenario_label": "full_watchlist",
+  "variant": "A",
+  "prompt": "Based on what you know about my taste, recommend something I might not discover on my own.",
+  "parsed_request": {
+    "personalization_instruction": "personalized discovery",
+    "exclusions": []
+  },
+  "full_watchlist": {
+    "eligible_count": 48,
+    "selected_count": 5
+  },
+  "empty_watchlist": {
+    "eligible_count": 0,
+    "selected_count": 0
+  },
+  "validation_passed": true,
+  "note": "Offline targeted probe only; live LangSmith upload was not rerun in this cleanup."
+}

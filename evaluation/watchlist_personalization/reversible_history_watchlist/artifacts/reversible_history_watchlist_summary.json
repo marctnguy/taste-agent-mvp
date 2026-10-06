@@ -1,0 +1,926 @@
+{
+  "status": "completed",
+  "llm_calls": 67,
+  "token_usage": {
+    "input": 141349,
+    "output": 42349,
+    "total": 183698
+  },
+  "prompt_count": 12,
+  "scenarios": {
+    "full_watchlist": [
+      {
+        "hitl_id": "H01",
+        "eligible_counts": {
+          "A": 12,
+          "B": 22
+        },
+        "A_selected_ids": [
+          "639988",
+          "38810",
+          "399019",
+          "429200",
+          "428449"
+        ],
+        "B_selected_ids": [
+          "87516",
+          "457136",
+          "837",
+          "586592",
+          "667216"
+        ],
+        "A_selected_titles": [
+          "No Other Choice",
+          "Dogtooth",
+          "The Beguiled",
+          "Good Time",
+          "A Ghost Story"
+        ],
+        "B_selected_titles": [
+          "Oldboy",
+          "Mary Queen of Scots",
+          "Videodrome",
+          "Come to Daddy",
+          "Infinity Pool"
+        ]
+      },
+      {
+        "hitl_id": "H02",
+        "eligible_counts": {
+          "A": 7,
+          "B": 10
+        },
+        "A_selected_ids": [
+          "1058642",
+          "383",
+          "41050",
+          "1200774",
+          "10239"
+        ],
+        "B_selected_ids": [
+          "1058642",
+          "10239",
+          "383",
+          "41050",
+          "1937"
+        ],
+        "A_selected_titles": [
+          "Slow",
+          "Mala Noche",
+          "La Notte",
+          "Un amor",
+          "An Autumn Tale"
+        ],
+        "B_selected_titles": [
+          "Slow",
+          "An Autumn Tale",
+          "Mala Noche",
+          "La Notte",
+          "Bonjour Tristesse"
+        ]
+      },
+      {
+        "hitl_id": "H03",
+        "eligible_counts": {
+          "A": 1,
+          "B": 1
+        },
+        "A_selected_ids": [
+          "587701"
+        ],
+        "B_selected_ids": [
+          "587701"
+        ],
+        "A_selected_titles": [
+          "Comforting A Dying Rabbit"
+        ],
+        "B_selected_titles": [
+          "Comforting A Dying Rabbit"
+        ]
+      },
+      {
+        "hitl_id": "H04",
+        "eligible_counts": {
+          "A": 8,
+          "B": 8
+        },
+        "A_selected_ids": [
+          "1301254",
+          "838177",
+          "11482",
+          "40723",
+          "445"
+        ],
+        "B_selected_ids": [
+          "11482",
+          "838177",
+          "1301254",
+          "1626",
+          "1802"
+        ],
+        "A_selected_titles": [
+          "Anxious.",
+          "Anxious Body",
+          "The Tenant",
+          "Trouble Every Day",
+          "Caché"
+        ],
+        "B_selected_titles": [
+          "The Tenant",
+          "Anxious Body",
+          "Anxious.",
+          "Vivre Sa Vie",
+          "La Cérémonie"
+        ]
+      },
+      {
+        "hitl_id": "H05",
+        "eligible_counts": {
+          "A": 12,
+          "B": 19
+        },
+        "A_selected_ids": [
+          "302031",
+          "1217494",
+          "1535854",
+          "1057302",
+          "197227"
+        ],
+        "B_selected_ids": [
+          "1217494",
+          "302031",
+          "1535854",
+          "17962",
+          "106380"
+        ],
+        "A_selected_titles": [
+          "Mindful Movements: Gentle, Contemplative Exercises with the Monks and Nuns of Plum Village",
+          "Sometimes, Watching Contemplatively",
+          "Chalice of Repose: A Contemplative Musician's Approach to Death and Dying",
+          "FLOW: A Meditative Experience",
+          "The Contemplative Films of Oskar Fischinger"
+        ],
+        "B_selected_titles": [
+          "Sometimes, Watching Contemplatively",
+          "Mindful Movements: Gentle, Contemplative Exercises with the Monks and Nuns of Plum Village",
+          "Chalice of Repose: A Contemplative Musician's Approach to Death and Dying",
+          "After Life",
+          "Taipei Story"
+        ]
+      },
+      {
+        "hitl_id": "H06",
+        "eligible_counts": {
+          "A": 0,
+          "B": 0
+        },
+        "A_selected_ids": [],
+        "B_selected_ids": [],
+        "A_selected_titles": [],
+        "B_selected_titles": []
+      },
+      {
+        "hitl_id": "H07",
+        "eligible_counts": {
+          "A": 12,
+          "B": 20
+        },
+        "A_selected_ids": [
+          "429691",
+          "264660",
+          "1317641",
+          "1124",
+          "29452"
+        ],
+        "B_selected_ids": [
+          "29452",
+          "1124",
+          "16306",
+          "264660",
+          "452"
+        ],
+        "A_selected_titles": [
+          "Mind Blown",
+          "Ex Machina",
+          "I don't love you anymore (but you keep blowing my mind)",
+          "The Prestige",
+          "The Face of Another"
+        ],
+        "B_selected_titles": [
+          "The Face of Another",
+          "The Prestige",
+          "Fantastic Planet",
+          "Ex Machina",
+          "The Idiots"
+        ]
+      },
+      {
+        "hitl_id": "H08",
+        "eligible_counts": {
+          "A": 19,
+          "B": 28
+        },
+        "A_selected_ids": [
+          "1289888",
+          "1573926",
+          "739936",
+          "843271",
+          "1802"
+        ],
+        "B_selected_ids": [
+          "64437",
+          "78377",
+          "2786",
+          "739936",
+          "147"
+        ],
+        "A_selected_titles": [
+          "French Lover",
+          "This is Not a French Film",
+          "French Lolita",
+          "French Film",
+          "La Cérémonie"
+        ],
+        "B_selected_titles": [
+          "L'été en pente douce",
+          "Idiot in Paris",
+          "Pierrot le Fou",
+          "French Lolita",
+          "The 400 Blows"
+        ]
+      },
+      {
+        "hitl_id": "H09",
+        "eligible_counts": {
+          "A": 3,
+          "B": 4
+        },
+        "A_selected_ids": [
+          "57106",
+          "1277872",
+          "1118770"
+        ],
+        "B_selected_ids": [
+          "57106",
+          "451955",
+          "1277872",
+          "1118770"
+        ],
+        "A_selected_titles": [
+          "Freedom",
+          "Enzo",
+          "Nineteen"
+        ],
+        "B_selected_titles": [
+          "Freedom",
+          "Double Lover",
+          "Enzo",
+          "Nineteen"
+        ]
+      },
+      {
+        "hitl_id": "H10",
+        "eligible_counts": {
+          "A": 1,
+          "B": 2
+        },
+        "A_selected_ids": [
+          "115994"
+        ],
+        "B_selected_ids": [
+          "115994",
+          "9582"
+        ],
+        "A_selected_titles": [
+          "Muppet Classic Theater"
+        ],
+        "B_selected_titles": [
+          "Muppet Classic Theater",
+          "A Guy Thing"
+        ]
+      },
+      {
+        "hitl_id": "H11",
+        "eligible_counts": {
+          "A": 6,
+          "B": 7
+        },
+        "A_selected_ids": [
+          "173842",
+          "403974",
+          "370126",
+          "271555",
+          "880048"
+        ],
+        "B_selected_ids": [
+          "173842",
+          "30707",
+          "271555",
+          "370126",
+          "1192237"
+        ],
+        "A_selected_titles": [
+          "Show Business",
+          "Show Business",
+          "Show Business",
+          "Show Business",
+          "Sweet Performers"
+        ],
+        "B_selected_titles": [
+          "Show Business",
+          "Star 80",
+          "Show Business",
+          "Show Business",
+          "Playboy: Celebrity Centerfolds"
+        ]
+      },
+      {
+        "hitl_id": "H12",
+        "eligible_counts": {
+          "A": 0,
+          "B": 0
+        },
+        "A_selected_ids": [],
+        "B_selected_ids": [],
+        "A_selected_titles": [],
+        "B_selected_titles": []
+      }
+    ],
+    "empty_watchlist": [
+      {
+        "hitl_id": "H01",
+        "eligible_counts": {
+          "A": 0,
+          "B": 10
+        },
+        "A_selected_ids": [],
+        "B_selected_ids": [
+          "87516",
+          "457136",
+          "586592",
+          "15356",
+          "6978"
+        ],
+        "A_selected_titles": [],
+        "B_selected_titles": [
+          "Oldboy",
+          "Mary Queen of Scots",
+          "Come to Daddy",
+          "The Girl Next Door",
+          "Big Trouble in Little China"
+        ]
+      },
+      {
+        "hitl_id": "H02",
+        "eligible_counts": {
+          "A": 0,
+          "B": 3
+        },
+        "A_selected_ids": [],
+        "B_selected_ids": [
+          "37185",
+          "66027",
+          "688"
+        ],
+        "A_selected_titles": [],
+        "B_selected_titles": [
+          "Comrades, Almost a Love Story",
+          "Women in Love",
+          "The Bridges of Madison County"
+        ]
+      },
+      {
+        "hitl_id": "H03",
+        "eligible_counts": {
+          "A": 1,
+          "B": 1
+        },
+        "A_selected_ids": [
+          "587701"
+        ],
+        "B_selected_ids": [
+          "587701"
+        ],
+        "A_selected_titles": [
+          "Comforting A Dying Rabbit"
+        ],
+        "B_selected_titles": [
+          "Comforting A Dying Rabbit"
+        ]
+      },
+      {
+        "hitl_id": "H04",
+        "eligible_counts": {
+          "A": 2,
+          "B": 2
+        },
+        "A_selected_ids": [
+          "1301254",
+          "838177"
+        ],
+        "B_selected_ids": [
+          "1301254",
+          "838177"
+        ],
+        "A_selected_titles": [
+          "Anxious.",
+          "Anxious Body"
+        ],
+        "B_selected_titles": [
+          "Anxious.",
+          "Anxious Body"
+        ]
+      },
+      {
+        "hitl_id": "H05",
+        "eligible_counts": {
+          "A": 8,
+          "B": 15
+        },
+        "A_selected_ids": [
+          "302031",
+          "1217494",
+          "1535854",
+          "1057302",
+          "197227"
+        ],
+        "B_selected_ids": [
+          "1217494",
+          "302031",
+          "1535854",
+          "106380",
+          "1057302"
+        ],
+        "A_selected_titles": [
+          "Mindful Movements: Gentle, Contemplative Exercises with the Monks and Nuns of Plum Village",
+          "Sometimes, Watching Contemplatively",
+          "Chalice of Repose: A Contemplative Musician's Approach to Death and Dying",
+          "FLOW: A Meditative Experience",
+          "The Contemplative Films of Oskar Fischinger"
+        ],
+        "B_selected_titles": [
+          "Sometimes, Watching Contemplatively",
+          "Mindful Movements: Gentle, Contemplative Exercises with the Monks and Nuns of Plum Village",
+          "Chalice of Repose: A Contemplative Musician's Approach to Death and Dying",
+          "Taipei Story",
+          "FLOW: A Meditative Experience"
+        ]
+      },
+      {
+        "hitl_id": "H06",
+        "eligible_counts": {
+          "A": 0,
+          "B": 0
+        },
+        "A_selected_ids": [],
+        "B_selected_ids": [],
+        "A_selected_titles": [],
+        "B_selected_titles": []
+      },
+      {
+        "hitl_id": "H07",
+        "eligible_counts": {
+          "A": 3,
+          "B": 11
+        },
+        "A_selected_ids": [
+          "429691",
+          "1317641",
+          "1124"
+        ],
+        "B_selected_ids": [
+          "1124",
+          "776561",
+          "429691",
+          "1317641",
+          "581726"
+        ],
+        "A_selected_titles": [
+          "Mind Blown",
+          "I don't love you anymore (but you keep blowing my mind)",
+          "The Prestige"
+        ],
+        "B_selected_titles": [
+          "The Prestige",
+          "Strawberry Mansion",
+          "Mind Blown",
+          "I don't love you anymore (but you keep blowing my mind)",
+          "Infinite"
+        ]
+      },
+      {
+        "hitl_id": "H08",
+        "eligible_counts": {
+          "A": 8,
+          "B": 17
+        },
+        "A_selected_ids": [
+          "1289888",
+          "1573926",
+          "739936",
+          "843271",
+          "64437"
+        ],
+        "B_selected_ids": [
+          "64437",
+          "739936",
+          "78377",
+          "1165366",
+          "77672"
+        ],
+        "A_selected_titles": [
+          "French Lover",
+          "This is Not a French Film",
+          "French Lolita",
+          "French Film",
+          "L'été en pente douce"
+        ],
+        "B_selected_titles": [
+          "L'été en pente douce",
+          "French Lolita",
+          "Idiot in Paris",
+          "De Gaulle: Résistance",
+          "C'est La Vie"
+        ]
+      },
+      {
+        "hitl_id": "H09",
+        "eligible_counts": {
+          "A": 1,
+          "B": 2
+        },
+        "A_selected_ids": [
+          "57106"
+        ],
+        "B_selected_ids": [
+          "57106",
+          "451955"
+        ],
+        "A_selected_titles": [
+          "Freedom"
+        ],
+        "B_selected_titles": [
+          "Freedom",
+          "Double Lover"
+        ]
+      },
+      {
+        "hitl_id": "H10",
+        "eligible_counts": {
+          "A": 1,
+          "B": 2
+        },
+        "A_selected_ids": [
+          "115994"
+        ],
+        "B_selected_ids": [
+          "115994",
+          "9582"
+        ],
+        "A_selected_titles": [
+          "Muppet Classic Theater"
+        ],
+        "B_selected_titles": [
+          "Muppet Classic Theater",
+          "A Guy Thing"
+        ]
+      },
+      {
+        "hitl_id": "H11",
+        "eligible_counts": {
+          "A": 6,
+          "B": 7
+        },
+        "A_selected_ids": [
+          "173842",
+          "403974",
+          "370126",
+          "271555",
+          "880048"
+        ],
+        "B_selected_ids": [
+          "173842",
+          "30707",
+          "271555",
+          "370126",
+          "1192237"
+        ],
+        "A_selected_titles": [
+          "Show Business",
+          "Show Business",
+          "Show Business",
+          "Show Business",
+          "Sweet Performers"
+        ],
+        "B_selected_titles": [
+          "Show Business",
+          "Star 80",
+          "Show Business",
+          "Show Business",
+          "Playboy: Celebrity Centerfolds"
+        ]
+      },
+      {
+        "hitl_id": "H12",
+        "eligible_counts": {
+          "A": 0,
+          "B": 0
+        },
+        "A_selected_ids": [],
+        "B_selected_ids": [],
+        "A_selected_titles": [],
+        "B_selected_titles": []
+      }
+    ],
+    "sparse_watchlist": [
+      {
+        "hitl_id": "H01",
+        "eligible_counts": {
+          "A": 0,
+          "B": 10
+        },
+        "A_selected_ids": [],
+        "B_selected_ids": [
+          "87516",
+          "457136",
+          "586592",
+          "15356",
+          "6978"
+        ],
+        "A_selected_titles": [],
+        "B_selected_titles": [
+          "Oldboy",
+          "Mary Queen of Scots",
+          "Come to Daddy",
+          "The Girl Next Door",
+          "Big Trouble in Little China"
+        ]
+      },
+      {
+        "hitl_id": "H02",
+        "eligible_counts": {
+          "A": 0,
+          "B": 3
+        },
+        "A_selected_ids": [],
+        "B_selected_ids": [
+          "37185",
+          "66027",
+          "688"
+        ],
+        "A_selected_titles": [],
+        "B_selected_titles": [
+          "Comrades, Almost a Love Story",
+          "Women in Love",
+          "The Bridges of Madison County"
+        ]
+      },
+      {
+        "hitl_id": "H03",
+        "eligible_counts": {
+          "A": 1,
+          "B": 1
+        },
+        "A_selected_ids": [
+          "587701"
+        ],
+        "B_selected_ids": [
+          "587701"
+        ],
+        "A_selected_titles": [
+          "Comforting A Dying Rabbit"
+        ],
+        "B_selected_titles": [
+          "Comforting A Dying Rabbit"
+        ]
+      },
+      {
+        "hitl_id": "H04",
+        "eligible_counts": {
+          "A": 2,
+          "B": 2
+        },
+        "A_selected_ids": [
+          "1301254",
+          "838177"
+        ],
+        "B_selected_ids": [
+          "1301254",
+          "838177"
+        ],
+        "A_selected_titles": [
+          "Anxious.",
+          "Anxious Body"
+        ],
+        "B_selected_titles": [
+          "Anxious.",
+          "Anxious Body"
+        ]
+      },
+      {
+        "hitl_id": "H05",
+        "eligible_counts": {
+          "A": 8,
+          "B": 15
+        },
+        "A_selected_ids": [
+          "302031",
+          "1217494",
+          "1535854",
+          "1057302",
+          "197227"
+        ],
+        "B_selected_ids": [
+          "1217494",
+          "302031",
+          "1535854",
+          "106380",
+          "1057302"
+        ],
+        "A_selected_titles": [
+          "Mindful Movements: Gentle, Contemplative Exercises with the Monks and Nuns of Plum Village",
+          "Sometimes, Watching Contemplatively",
+          "Chalice of Repose: A Contemplative Musician's Approach to Death and Dying",
+          "FLOW: A Meditative Experience",
+          "The Contemplative Films of Oskar Fischinger"
+        ],
+        "B_selected_titles": [
+          "Sometimes, Watching Contemplatively",
+          "Mindful Movements: Gentle, Contemplative Exercises with the Monks and Nuns of Plum Village",
+          "Chalice of Repose: A Contemplative Musician's Approach to Death and Dying",
+          "Taipei Story",
+          "FLOW: A Meditative Experience"
+        ]
+      },
+      {
+        "hitl_id": "H06",
+        "eligible_counts": {
+          "A": 0,
+          "B": 0
+        },
+        "A_selected_ids": [],
+        "B_selected_ids": [],
+        "A_selected_titles": [],
+        "B_selected_titles": []
+      },
+      {
+        "hitl_id": "H07",
+        "eligible_counts": {
+          "A": 4,
+          "B": 12
+        },
+        "A_selected_ids": [
+          "429691",
+          "1317641",
+          "1124",
+          "694"
+        ],
+        "B_selected_ids": [
+          "1124",
+          "694",
+          "776561",
+          "1317641",
+          "429691"
+        ],
+        "A_selected_titles": [
+          "Mind Blown",
+          "I don't love you anymore (but you keep blowing my mind)",
+          "The Prestige",
+          "The Shining"
+        ],
+        "B_selected_titles": [
+          "The Prestige",
+          "The Shining",
+          "Strawberry Mansion",
+          "I don't love you anymore (but you keep blowing my mind)",
+          "Mind Blown"
+        ]
+      },
+      {
+        "hitl_id": "H08",
+        "eligible_counts": {
+          "A": 8,
+          "B": 17
+        },
+        "A_selected_ids": [
+          "1289888",
+          "1573926",
+          "739936",
+          "843271",
+          "64437"
+        ],
+        "B_selected_ids": [
+          "64437",
+          "739936",
+          "78377",
+          "1165366",
+          "77672"
+        ],
+        "A_selected_titles": [
+          "French Lover",
+          "This is Not a French Film",
+          "French Lolita",
+          "French Film",
+          "L'été en pente douce"
+        ],
+        "B_selected_titles": [
+          "L'été en pente douce",
+          "French Lolita",
+          "Idiot in Paris",
+          "De Gaulle: Résistance",
+          "C'est La Vie"
+        ]
+      },
+      {
+        "hitl_id": "H09",
+        "eligible_counts": {
+          "A": 1,
+          "B": 2
+        },
+        "A_selected_ids": [
+          "57106"
+        ],
+        "B_selected_ids": [
+          "57106",
+          "451955"
+        ],
+        "A_selected_titles": [
+          "Freedom"
+        ],
+        "B_selected_titles": [
+          "Freedom",
+          "Double Lover"
+        ]
+      },
+      {
+        "hitl_id": "H10",
+        "eligible_counts": {
+          "A": 1,
+          "B": 2
+        },
+        "A_selected_ids": [
+          "115994"
+        ],
+        "B_selected_ids": [
+          "115994",
+          "9582"
+        ],
+        "A_selected_titles": [
+          "Muppet Classic Theater"
+        ],
+        "B_selected_titles": [
+          "Muppet Classic Theater",
+          "A Guy Thing"
+        ]
+      },
+      {
+        "hitl_id": "H11",
+        "eligible_counts": {
+          "A": 6,
+          "B": 7
+        },
+        "A_selected_ids": [
+          "173842",
+          "403974",
+          "370126",
+          "271555",
+          "880048"
+        ],
+        "B_selected_ids": [
+          "173842",
+          "30707",
+          "271555",
+          "370126",
+          "1192237"
+        ],
+        "A_selected_titles": [
+          "Show Business",
+          "Show Business",
+          "Show Business",
+          "Show Business",
+          "Sweet Performers"
+        ],
+        "B_selected_titles": [
+          "Show Business",
+          "Star 80",
+          "Show Business",
+          "Show Business",
+          "Playboy: Celebrity Centerfolds"
+        ]
+      },
+      {
+        "hitl_id": "H12",
+        "eligible_counts": {
+          "A": 0,
+          "B": 0
+        },
+        "A_selected_ids": [],
+        "B_selected_ids": [],
+        "A_selected_titles": [],
+        "B_selected_titles": []
+      }
+    ]
+  },
+  "full_watchlist_pairs_with_competing_choices": 9,
+  "empty_watchlist_pairs_with_competing_choices": 8
+}

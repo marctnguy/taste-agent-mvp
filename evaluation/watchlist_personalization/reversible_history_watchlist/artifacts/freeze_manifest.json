@@ -1,0 +1,19 @@
+{
+  "name": "taste-agent-watchlist-cleanup",
+  "status": "cleanup_complete",
+  "service_entrypoint": "mvp.src.watchlist_personalization.reversible_history_watchlist_service.load_reversible_history_watchlist_service()",
+  "default_variant": "A",
+  "canonical_pack": "evaluation/watchlist_personalization/reversible_history_watchlist",
+  "archive_path": "/private/tmp/taste-agent-cleanup-20261006-retired-outputs.zip",
+  "archive_manifest_path": "/private/tmp/taste-agent-cleanup-20261006-retired-outputs.manifest.json",
+  "retained_artifacts": [
+    "artifacts/reversible_history_watchlist_manifest.json",
+    "artifacts/reversible_history_watchlist_results.json",
+    "artifacts/reversible_history_watchlist_summary.json",
+    "artifacts/reversible_history_watchlist_technical_report.md",
+    "artifacts/runtime_contract.md",
+    "artifacts/verification_evidence.md",
+    "human_scoring/blinded_human_review_sheet.csv",
+    "human_scoring/unblinding_key.csv"
+  ]
+}

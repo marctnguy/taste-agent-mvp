@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from mvp.src.candidates import build_watched_exclusions
+from mvp.src.candidates import build_watched_exclusions, load_watched_override_confirmations, load_watched_override_registry
 from mvp.src.generative_v4.intent_chain import RequestUnderstanding, understand_request
 from mvp.src.generative_v4.qualification_chain import qualify_candidates
 from mvp.src.retrieval.catalog_retrieval import discover_catalog_for_request
@@ -190,3 +190,40 @@ def test_coordinated_semantic_exclusions_are_all_captured() -> None:
     assert request.spec is not None
     exclusions = {concept.concept for concept in request.spec.semantic_exclusions}
     assert {"drama", "violence", "show_business"}.issubset(exclusions)
+
+
+def test_h12_personalized_discovery_does_not_become_a_content_exclusion() -> None:
+    request = understand_request("Based on what you know about my taste, recommend something I might not discover on my own.")
+
+    assert request.spec is not None
+    exclusions = {concept.concept for concept in request.spec.semantic_exclusions}
+    assert "discover_on_my_own" not in exclusions
+    assert request.spec.personalization_instruction.preference == "personalized discovery"
+
+
+def test_watched_override_registry_includes_manual_confirmations_and_pending_clarification() -> None:
+    confirmed = load_watched_override_confirmations()
+    registry = load_watched_override_registry()
+
+    assert {"Anyone But You", "Toy Story", "Flushed Away", "Sleeping Beauty", "A Silent Voice: The Movie", "Harry Potter and the Philosopher's Stone", "Selena Gomez: My Mind & Me"}.issubset(set(confirmed["title"]))
+    assert "Vagabond" not in set(registry["title"])
+    assert {"1072790", "862", "11619", "10882", "378064", "671", "1022256"}.issubset({str(value) for value in pd.to_numeric(registry["tmdb_id"], errors="coerce").dropna().astype(int).astype(str)})
+
+
+def test_series_prerequisites_block_missing_installments_but_allow_toy_story_five() -> None:
+    request = understand_request("Recommend me something to watch.")
+    candidate_pool = pd.DataFrame(
+        [
+            {"source_id": "21521", "tmdb_id": 21521, "title": "Project A - Part II", "year": 1987, "release_year": 1987, "tmdb_genres": "Action", "tmdb_original_language": "cn", "tmdb_production_countries": "HK", "tmdb_overview": "Sequel", "candidate_sources": ["popular"], "candidate_source_ranks": ["1"]},
+            {"source_id": "9714", "tmdb_id": 9714, "title": "Home Alone 3", "year": 1997, "release_year": 1997, "tmdb_genres": "Comedy", "tmdb_original_language": "en", "tmdb_production_countries": "US", "tmdb_overview": "Sequel", "candidate_sources": ["popular"], "candidate_source_ranks": ["2"]},
+            {"source_id": "1084244", "tmdb_id": 1084244, "title": "Toy Story 5", "year": 2026, "release_year": 2026, "tmdb_genres": "Animation", "tmdb_original_language": "en", "tmdb_production_countries": "US", "tmdb_overview": "Sequel", "candidate_sources": ["popular"], "candidate_source_ranks": ["3"]},
+        ]
+    )
+
+    result = discover_catalog_for_request(
+        request,
+        candidate_pool=candidate_pool,
+        watched_ids={"862", "863", "10193", "301528"},
+    )
+
+    assert result.catalog_frame["title"].tolist() == ["Toy Story 5"]

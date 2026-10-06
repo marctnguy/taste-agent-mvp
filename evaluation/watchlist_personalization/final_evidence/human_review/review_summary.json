@@ -1,0 +1,88 @@
+{
+  "unique_prompt_film_pairs": 84,
+  "unique_pair_would_watch": {
+    "yes": 61,
+    "no": 11,
+    "unsure": 12
+  },
+  "experiment_appearance_counts": {
+    "full_watchlist/A": {
+      "prompt_rows": 12,
+      "selected_appearances": 51,
+      "would_watch": {
+        "yes": 39,
+        "unsure": 5,
+        "no": 7
+      },
+      "slate_counts": {
+        "5": 9,
+        "4": 1,
+        "0": 1,
+        "2": 1
+      }
+    },
+    "full_watchlist/B": {
+      "prompt_rows": 12,
+      "selected_appearances": 51,
+      "would_watch": {
+        "yes": 39,
+        "unsure": 6,
+        "no": 6
+      },
+      "slate_counts": {
+        "5": 9,
+        "4": 1,
+        "0": 1,
+        "2": 1
+      }
+    },
+    "empty_watchlist/A": {
+      "prompt_rows": 12,
+      "selected_appearances": 46,
+      "would_watch": {
+        "yes": 27,
+        "no": 11,
+        "unsure": 8
+      },
+      "slate_counts": {
+        "4": 3,
+        "5": 6,
+        "2": 2,
+        "0": 1
+      }
+    },
+    "empty_watchlist/B": {
+      "prompt_rows": 12,
+      "selected_appearances": 46,
+      "would_watch": {
+        "yes": 25,
+        "no": 10,
+        "unsure": 11
+      },
+      "slate_counts": {
+        "4": 3,
+        "5": 6,
+        "2": 2,
+        "0": 1
+      }
+    }
+  },
+  "invalid_numeric_ratings_preserved": [
+    {
+      "review_id": "anon-0072",
+      "field": "request_fit_1_to_5",
+      "raw_value": "i don't know"
+    },
+    {
+      "review_id": "anon-0062",
+      "field": "taste_fit_1_to_5",
+      "raw_value": "0"
+    },
+    {
+      "review_id": "anon-0043",
+      "field": "request_fit_1_to_5",
+      "raw_value": "dont know"
+    }
+  ],
+  "join_method": "review_id -> unblinding anon_label -> candidate_id, then (prompt_id, candidate_id) -> actual ordered recommendations per experiment row. Original rank_memberships is not used as selected rank. Shared films repeat across experiments; experiment totals are not independent ratings."
+}

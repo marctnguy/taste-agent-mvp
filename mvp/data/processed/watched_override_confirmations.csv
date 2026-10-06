@@ -1,0 +1,9 @@
+status,source_id,title,year,tmdb_id,source_uri,provenance,note
+confirmed,https://boxd.it/EzA8,Anyone But You,2023,1072790,https://boxd.it/EzA8,"watched.csv + explicit confirmation","Watched and logged, unrated"
+confirmed,https://boxd.it/29qA,Toy Story,1995,862,https://boxd.it/29qA,"watched.csv + explicit confirmation","Watched and logged, unrated"
+confirmed,tmdb:11619,Flushed Away,2006,11619,,"explicit confirmation","Watched, not logged"
+confirmed,https://boxd.it/1V9A,Sleeping Beauty,1959,10882,https://boxd.it/1V9A,"watched.csv + explicit confirmation","Watched, not logged"
+confirmed,tmdb:378064,A Silent Voice: The Movie,2016,378064,,"explicit confirmation","Watched, not logged"
+confirmed,tmdb:671,Harry Potter and the Philosopher's Stone,2001,671,,"explicit confirmation","Watched, not logged"
+confirmed,tmdb:1022256,Selena Gomez: My Mind & Me,2022,1022256,,"explicit confirmation","Watched, not logged"
+pending,tmdb:44018,Vagabond,1985,44018,,"pending clarification","Already watched=yes but conflicting note in review; do not auto-import"

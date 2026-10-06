@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-06T00:00:00+02:00",
+  "repo_commit": "1bf34d85ae6e095196978a0eecce171b6f148651",
+  "dirty_worktree": true,
+  "dirty_paths": [
+    "evaluation/langsmith/evaluators.py",
+    "mvp/artifacts/generative/runtime_v4_manifest.json",
+    "mvp/artifacts/generative/runtime_v4_selected_semantic_vectors.csv",
+    "mvp/artifacts/models/b3_mvp/candidate_embedding_cache/candidate_embedding_manifest.csv",
+    "mvp/artifacts/models/b3_mvp/candidate_embedding_cache/candidate_embeddings.csv",
+    "mvp/src/candidates.py",
+    "mvp/src/generative_v4/intent_chain.py",
+    "mvp/src/generative_v4/qualification_chain.py",
+    "mvp/src/mvp_deployment.py",
+    "mvp/src/retrieval/catalog_retrieval.py",
+    "mvp/tests/runtime_v4/test_hard_constraints.py",
+    "mvp/src/watchlist_personalization/reversible_history_watchlist_service.py",
+    "mvp/data/processed/watched_override_confirmations.csv"
+  ],
+  "source_hashes": {
+    "evaluation/langsmith/evaluators.py": "a19307b3edca092d4817da6b2f5df93a31baeb0016e23d9bfc6c773d1fa18de2",
+    "mvp/src/generative_v4/intent_chain.py": "50d2375d2817a9fe81501dfea70c4373354b24632d4b0eacc9f5c071fd4e26e2",
+    "mvp/src/generative_v4/qualification_chain.py": "c72f07f331f8d75478099fded14712a4f0076920ecf1d9c5a23109ff581e4549",
+    "mvp/src/mvp_deployment.py": "c48cbf5bd2fe1f12b71b856a6a6f2982cc61bdc3365711fa376945cbbaa4d455",
+    "mvp/src/retrieval/catalog_retrieval.py": "bb1daf9d26b4940e5a9c8693aa243d3d787530f71f22070a74138d2343166ca2",
+    "mvp/src/watchlist_personalization/reversible_history_watchlist_service.py": "3df71d92ce6de398dbc3950ffdb79f1d348ae55a05ec0526049f3b2df49ef7fd",
+    "mvp/src/candidates.py": "4ca764264fda51d12f50edf6848f264dbcf71bfad3013ff52d10307e6fa2e1ee",
+    "mvp/tests/runtime_v4/test_hard_constraints.py": "666c29b6d7409b7be1891a9cf301873893cf0944ffe8ed0559231cfcbb2be398",
+    "mvp/data/processed/watched_override_confirmations.csv": "9746bedac76e4498699f01b4a226f3bb1ea4f0598ac3ac54e5a91e40df6b75ad"
+  },
+  "artifact_paths": {
+    "baseline_suite_dir": "mvp/artifacts/generative/langsmith/reversible_history_watchlist_live_2026_10_06",
+    "suite_summary": "mvp/artifacts/generative/langsmith/reversible_history_watchlist_live_2026_10_06/watchlist_langsmith_suite_summary.json",
+    "canary": "mvp/artifacts/generative/langsmith/reversible_history_watchlist_live_2026_10_06/watchlist_langsmith_canary.json",
+    "blinded_review_sheet": "mvp/artifacts/generative/langsmith/reversible_history_watchlist_live_2026_10_06/blinded_human_review_sheet.csv",
+    "unblinding_key": "mvp/artifacts/generative/langsmith/reversible_history_watchlist_live_2026_10_06/unblinding_key.csv",
+    "targeted_h12_result": "exports/taste-agent-mvp-freeze/targeted_h12_result.json"
+  },
+  "verification": [
+    {
+      "command": "pytest -q mvp/tests/runtime_v4/test_hard_constraints.py",
+      "result": "13 passed, 1 warning"
+    },
+    {
+      "command": "pytest -q mvp/tests/watchlist_personalization/test_reversible_history_watchlist.py",
+      "result": "10 passed, 1 warning"
+    },
+    {
+      "command": "pytest -q mvp/tests/watchlist_personalization/test_watchlist_personalization_integration.py",
+      "result": "11 passed, 1 warning"
+    },
+    {
+      "command": "python - <<'PY' ... targeted H12 prepare_case ... PY",
+      "result": "full_watchlist A/B selected 5 each; empty_watchlist A/B selected 0 each"
+    }
+  ],
+  "git_checkpoint": "pending"
+}

@@ -1,0 +1,350 @@
+[
+  {
+    "id": "b444d3ee-25e6-539e-993f-ca085be17f2d",
+    "inputs": {
+      "case_id": "H01",
+      "hitl_id": "H01",
+      "prompt": "Recommend me something to watch.",
+      "query": "Recommend me something to watch."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "Recommend me something to watch.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H01",
+      "hitl_id": "H01",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "a4536eb5-12ba-55de-8b1a-6d30a809099f",
+    "inputs": {
+      "case_id": "H02",
+      "hitl_id": "H02",
+      "prompt": "I want something melancholic and intimate.",
+      "query": "I want something melancholic and intimate."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "I want something melancholic and intimate.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H02",
+      "hitl_id": "H02",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "b4f6d0d3-48ca-5291-809b-461942083481",
+    "inputs": {
+      "case_id": "H03",
+      "hitl_id": "H03",
+      "prompt": "I want something comforting but not cheesy.",
+      "query": "I want something comforting but not cheesy."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "I want something comforting but not cheesy.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H03",
+      "hitl_id": "H03",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "add78cdf-039f-5b4e-ab34-ecdf03957b70",
+    "inputs": {
+      "case_id": "H04",
+      "hitl_id": "H04",
+      "prompt": "Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",
+      "query": "Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "Give me something slow or alternative in atmosphere/pace but still extremely unsettling and anxiety-inducing, like Jeanne Dielman.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H04",
+      "hitl_id": "H04",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "12166874-347b-55db-b121-9f8a4787ead2",
+    "inputs": {
+      "case_id": "H05",
+      "hitl_id": "H05",
+      "prompt": "I want something quiet, contemplative and character-driven.",
+      "query": "I want something quiet, contemplative and character-driven."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "I want something quiet, contemplative and character-driven.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H05",
+      "hitl_id": "H05",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "f54c209d-6ace-541e-8ace-cb1d7c4e5de0",
+    "inputs": {
+      "case_id": "H06",
+      "hitl_id": "H06",
+      "prompt": "Show me something different from what I normally watch.",
+      "query": "Show me something different from what I normally watch."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "Show me something different from what I normally watch.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H06",
+      "hitl_id": "H06",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "e71a0cb2-4635-5a81-8311-15d3ac1de65e",
+    "inputs": {
+      "case_id": "H07",
+      "hitl_id": "H07",
+      "prompt": "I want to be mind-blown, recommend me something totally out there that surprises me.",
+      "query": "I want to be mind-blown, recommend me something totally out there that surprises me."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "I want to be mind-blown, recommend me something totally out there that surprises me.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H07",
+      "hitl_id": "H07",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "6cebeabf-ada1-5cd9-9c84-1ae1466a39eb",
+    "inputs": {
+      "case_id": "H08",
+      "hitl_id": "H08",
+      "prompt": "I want a French film tonight.",
+      "query": "I want a French film tonight."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "I want a French film tonight.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H08",
+      "hitl_id": "H08",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "680125ff-d391-5fe5-816b-c5a801cf2b06",
+    "inputs": {
+      "case_id": "H09",
+      "hitl_id": "H09",
+      "prompt": "I want a European movie that feels like freedom and youthful.",
+      "query": "I want a European movie that feels like freedom and youthful."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "I want a European movie that feels like freedom and youthful.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H09",
+      "hitl_id": "H09",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "ef9f4471-8c62-56b4-9031-7a362bac1ac9",
+    "inputs": {
+      "case_id": "H10",
+      "hitl_id": "H10",
+      "prompt": "I want a good old classic, but no drama.",
+      "query": "I want a good old classic, but no drama."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "I want a good old classic, but no drama.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H10",
+      "hitl_id": "H10",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "c863348b-3758-5e4e-a7e7-21e11ac28c88",
+    "inputs": {
+      "case_id": "H11",
+      "hitl_id": "H11",
+      "prompt": "I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",
+      "query": "I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "I just watched La Bola Negra and loved the Penelope Cruz character in it, I want something about performers, fame and/or show business preferably with a period setting.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H11",
+      "hitl_id": "H11",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  },
+  {
+    "id": "e812e6a7-7737-5adc-8198-28f2565b1d75",
+    "inputs": {
+      "case_id": "H12",
+      "hitl_id": "H12",
+      "prompt": "Based on what you know about my taste, recommend something I might not discover on my own.",
+      "query": "Based on what you know about my taste, recommend something I might not discover on my own."
+    },
+    "outputs": {
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2.",
+      "prompt": "Based on what you know about my taste, recommend something I might not discover on my own.",
+      "taste_fit_1_5": NaN,
+      "request_fit_1_5": NaN,
+      "discovery_value_1_5": NaN,
+      "explanation_usefulness_1_5": NaN,
+      "would_actually_watch": NaN,
+      "already_knew_titles": NaN,
+      "heard_of_titles": NaN,
+      "new_to_me_titles": NaN,
+      "best_recommendation": NaN,
+      "worst_recommendation": NaN,
+      "qualitative_feedback": NaN
+    },
+    "metadata": {
+      "case_id": "H12",
+      "hitl_id": "H12",
+      "test_purpose": "Final human-in-the-loop formative evaluation of frozen runtime_v2."
+    }
+  }
+]

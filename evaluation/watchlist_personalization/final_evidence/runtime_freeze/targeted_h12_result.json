@@ -1,0 +1,16 @@
+{
+  "case_id": "H12",
+  "parsed_exclusions": [],
+  "personalization": {
+    "preference": "personalized discovery",
+    "priority": "current_request_primary"
+  },
+  "eligible_full_a": 48,
+  "selected_full_a": 5,
+  "eligible_full_b": 48,
+  "selected_full_b": 5,
+  "eligible_empty_a": 0,
+  "selected_empty_a": 0,
+  "eligible_empty_b": 0,
+  "selected_empty_b": 0
+}
