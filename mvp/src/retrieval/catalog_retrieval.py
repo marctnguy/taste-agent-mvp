@@ -77,6 +77,12 @@ class CatalogRetrievalResult:
     augmentation_report: dict[str, Any]
 
 
+@dataclass(frozen=True)
+class QueryAwareAugmentation:
+    frame: pd.DataFrame
+    report: dict[str, Any]
+
+
 SEQUEL_ELIGIBILITY_RULES: tuple[dict[str, Any], ...] = (
     {
         "candidate_tmdb_id": 21521,
@@ -722,6 +728,54 @@ def _augment_with_constraint_candidates(request: RequestUnderstanding, client: T
     return combined, counts
 
 
+def build_query_aware_augmentation(
+    request: RequestUnderstanding,
+    client: TMDBClient | None,
+) -> QueryAwareAugmentation:
+    """Build request-only catalog augmentation once for reuse across route pools.
+
+    Reference, structured-constraint, and semantic-keyword augmentation depend only
+    on the parsed request and TMDB client, not on the base candidate pool. Keeping
+    this result immutable-by-convention lets request/history routes reuse the same
+    external lookup result while preserving their independent base pools.
+    """
+    augmentation_frames: list[pd.DataFrame] = []
+    augmentation_report: dict[str, Any] = {"query_aware_augmentation_used": False}
+
+    if _request_has_query_aware_signal(request):
+        ref_frame, ref_report = _augment_with_reference_candidates(request, client)
+        if not ref_frame.empty:
+            augmentation_frames.append(ref_frame)
+            augmentation_report.update(ref_report)
+            augmentation_report["query_aware_augmentation_used"] = True
+
+        constraint_frame, constraint_report = _augment_with_constraint_candidates(
+            request, client
+        )
+        if not constraint_frame.empty:
+            augmentation_frames.append(constraint_frame)
+            augmentation_report.update(constraint_report)
+            augmentation_report["query_aware_augmentation_used"] = True
+
+        keyword_frame, keyword_report = _augment_with_semantic_keyword_candidates(
+            request, client
+        )
+        if not keyword_frame.empty:
+            augmentation_frames.append(keyword_frame)
+            augmentation_report.update(keyword_report)
+            augmentation_report["query_aware_augmentation_used"] = True
+
+    if augmentation_frames:
+        frame = pd.concat(augmentation_frames, ignore_index=True)
+        if "source_id" in frame.columns:
+            frame["source_id"] = frame["source_id"].astype(str)
+    else:
+        frame = pd.DataFrame(columns=["source_id"])
+
+    return QueryAwareAugmentation(frame=frame, report=augmentation_report)
+
+
+
 def _filter_hard_constraints(frame: pd.DataFrame, request: RequestUnderstanding) -> pd.DataFrame:
     spec = _request_spec(request)
     constraints = spec.structured_constraints if spec is not None else None
@@ -871,6 +925,7 @@ def discover_catalog_for_request(
     candidate_pool: pd.DataFrame | None = None,
     watched_ids: Iterable[str] | None = None,
     client: TMDBClient | None = None,
+    precomputed_augmentation: QueryAwareAugmentation | None = None,
 ) -> CatalogRetrievalResult:
     keys = get_api_keys()
     client = client or (TMDBClient(api_key=keys.tmdb_api_key) if keys.tmdb_api_key else None)
@@ -900,28 +955,17 @@ def discover_catalog_for_request(
             tmdb_mask = pd.Series([False] * len(candidate_pool), index=candidate_pool.index)
         candidate_pool = candidate_pool.loc[~candidate_pool["source_id"].isin(watched) & ~tmdb_mask & ~title_year_mask].copy().reset_index(drop=True)
 
-    augmentation_frames: list[pd.DataFrame] = []
-    augmentation_report: dict[str, Any] = {"query_aware_augmentation_used": False}
-    spec = _request_spec(request)
-    if _request_has_query_aware_signal(request):
-        ref_frame, ref_report = _augment_with_reference_candidates(request, client)
-        if not ref_frame.empty:
-            augmentation_frames.append(ref_frame)
-            augmentation_report.update(ref_report)
-            augmentation_report["query_aware_augmentation_used"] = True
-        constraint_frame, constraint_report = _augment_with_constraint_candidates(request, client)
-        if not constraint_frame.empty:
-            augmentation_frames.append(constraint_frame)
-            augmentation_report.update(constraint_report)
-            augmentation_report["query_aware_augmentation_used"] = True
-        keyword_frame, keyword_report = _augment_with_semantic_keyword_candidates(request, client)
-        if not keyword_frame.empty:
-            augmentation_frames.append(keyword_frame)
-            augmentation_report.update(keyword_report)
-            augmentation_report["query_aware_augmentation_used"] = True
-
-    if augmentation_frames:
-        candidate_pool = pd.concat([candidate_pool, *augmentation_frames], ignore_index=True)
+    augmentation = (
+        precomputed_augmentation
+        if precomputed_augmentation is not None
+        else build_query_aware_augmentation(request, client)
+    )
+    augmentation_report = dict(augmentation.report)
+    augmentation_frame = augmentation.frame.copy()
+    if not augmentation_frame.empty:
+        candidate_pool = pd.concat(
+            [candidate_pool, augmentation_frame], ignore_index=True
+        )
         candidate_pool["source_id"] = candidate_pool["source_id"].astype(str)
 
     candidate_pool = candidate_pool.drop_duplicates(subset=["source_id"], keep="first").reset_index(drop=True)

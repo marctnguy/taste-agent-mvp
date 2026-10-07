@@ -17,7 +17,11 @@ from mvp.src.generative_v4.intent_chain import understand_request
 from mvp.src.generative_v4.qualification_chain import qualify_candidates
 from mvp.src.mvp_deployment import load_training_population
 from mvp.src.prepare import TMDBClient
-from mvp.src.retrieval.catalog_retrieval import discover_catalog_for_request, embed_text
+from mvp.src.retrieval.catalog_retrieval import (
+    build_query_aware_augmentation,
+    discover_catalog_for_request,
+    embed_text,
+)
 from mvp.src.semantics import SemanticVectorStore
 from mvp.src.taste_profile import build_taste_profile
 
@@ -995,8 +999,23 @@ class ReversibleHistoryWatchlistService:
             self.consumed_keys.get("tmdb", set()),
             self.consumed_keys.get("title_year", set()),
         )
-        request_result = discover_catalog_for_request(request, client=self.tmdb_client, candidate_pool=request_pool, watched_ids=watched_keys)
-        history_result = discover_catalog_for_request(request, client=self.tmdb_client, candidate_pool=history_pool, watched_ids=watched_keys)
+        shared_augmentation = build_query_aware_augmentation(
+            request, self.tmdb_client
+        )
+        request_result = discover_catalog_for_request(
+            request,
+            client=self.tmdb_client,
+            candidate_pool=request_pool,
+            watched_ids=watched_keys,
+            precomputed_augmentation=shared_augmentation,
+        )
+        history_result = discover_catalog_for_request(
+            request,
+            client=self.tmdb_client,
+            candidate_pool=history_pool,
+            watched_ids=watched_keys,
+            precomputed_augmentation=shared_augmentation,
+        )
 
         request_frame = request_result.catalog_frame.copy()
         history_frame = history_result.catalog_frame.copy()
