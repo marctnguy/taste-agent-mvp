@@ -5,9 +5,22 @@ Taste Agent is a movie recommendation capstone with a frozen watchlist personali
 ## Active Architecture
 
 - Service entrypoint: `mvp.src.watchlist_personalization.reversible_history_watchlist_service.load_reversible_history_watchlist_service()`
+- UI entrypoint: `streamlit run mvp/streamlit_app.py`
 - CLI / evaluation runner: `python -m mvp.src.watchlist_personalization.langsmith_evaluation`
 - Frozen offline runner: `python evaluation/watchlist_personalization/run_reversible_history_watchlist_experiment.py`
-- Future UI should call the service facade and its `recommend(...)` method, not the evaluation runner.
+- The Streamlit UI calls the service facade and its `recommend(...)` method; recommendation logic stays outside the presentation layer.
+
+## UI
+
+The demo UI opens on the interpretable 62-dimensional Taste Profile, then surfaces human-reviewed recommendation cards and an accessible conversational Taste Agent. Its visual system mirrors the POC presentation: dark graphite surfaces, restrained blue/green/orange accents, compact cards, and high-contrast typography.
+
+Run locally:
+
+```bash
+streamlit run mvp/streamlit_app.py
+```
+
+The dashboard/profile can render from tracked artifacts. Live agent recommendations additionally require the same environment and external Letterboxd watchlist ZIP used by the accepted service.
 
 ## Required Inputs
 
