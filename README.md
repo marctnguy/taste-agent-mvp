@@ -21,7 +21,7 @@ Round 1 validated semantic taste modelling through an n8n POC. Round 2 built and
 
 - [`poc/poc_documentation.md`](poc/poc_documentation.md) — no-code POC architecture, reproduction steps, limits and POC → MVP evolution
 - Canonical Round 1 n8n export and screenshots: `https://github.com/marctnguy/taste-agent-round1`
-- Required 2–5 minute POC recording: to be added with the final submission
+- POC demo recording: [Watch the narrated n8n walkthrough](https://drive.google.com/file/d/1xgIm0cDU0K1vI1VvIf0-W8gcnUDRVAK8/view?usp=sharing)
 
 ### Working MVP
 
