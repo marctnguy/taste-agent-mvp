@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <rect width="100%" height="100%" fill="#14181D"/>
+  <style>
+    text { font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; fill: #F2F2EF; }
+    .muted { fill: #9CA3AB; }
+    .title { font-size: 34px; font-weight: 650; letter-spacing: -1.2px; }
+    .sub { font-size: 16px; }
+    .axis { font-size: 14px; fill: #9CA3AB; }
+    .small { font-size: 12px; fill: #9CA3AB; }
+  </style>
+<text x="70" y="58" class="title">Prevalence vs preference association</text>
+<text x="70" y="88" class="sub muted">Notable Round 1 semantic signals; descriptive evidence, not causal effects</text>
+<line x1="110" y1="520.0" x2="1090" y2="520.0" stroke="#303640"/><text x="58" y="525" class="axis">-0.3</text>
+<line x1="110" y1="461.9" x2="1090" y2="461.9" stroke="#303640"/><text x="58" y="467" class="axis">-0.2</text>
+<line x1="110" y1="403.9" x2="1090" y2="403.9" stroke="#303640"/><text x="58" y="409" class="axis">-0.1</text>
+<line x1="110" y1="345.8" x2="1090" y2="345.8" stroke="#303640"/><text x="58" y="351" class="axis">0.0</text>
+<line x1="110" y1="287.7" x2="1090" y2="287.7" stroke="#303640"/><text x="58" y="293" class="axis">+0.1</text>
+<line x1="110" y1="229.7" x2="1090" y2="229.7" stroke="#303640"/><text x="58" y="235" class="axis">+0.2</text>
+<line x1="110" y1="171.6" x2="1090" y2="171.6" stroke="#303640"/><text x="58" y="177" class="axis">+0.3</text>
+<line x1="110" y1="160" x2="110" y2="520" stroke="#303640"/><text x="110" y="552" text-anchor="middle" class="axis">0.2</text>
+<line x1="411.5" y1="160" x2="411.5" y2="520" stroke="#303640"/><text x="411.5" y="552" text-anchor="middle" class="axis">0.4</text>
+<line x1="713.1" y1="160" x2="713.1" y2="520" stroke="#303640"/><text x="713.1" y="552" text-anchor="middle" class="axis">0.6</text>
+<line x1="1014.6" y1="160" x2="1014.6" y2="520" stroke="#303640"/><text x="1014.6" y="552" text-anchor="middle" class="axis">0.8</text>
+<circle cx="503.5" cy="178.6" r="7" fill="#E6924A"/><text x="513.5" y="171.6" class="small">friendship</text>
+<circle cx="785.4" cy="200.1" r="7" fill="#E6924A"/><text x="795.4" y="193.1" class="small">contemplative</text>
+<circle cx="651.3" cy="201.2" r="7" fill="#E6924A"/><text x="661.3" y="194.2" class="small">sentimental</text>
+<circle cx="527.6" cy="203" r="7" fill="#E6924A"/><text x="537.6" y="196" class="small">family</text>
+<circle cx="1014.6" cy="207" r="7" fill="#E6924A"/><text x="1024.6" y="200" class="small">character driven</text>
+<circle cx="636.2" cy="213.4" r="7" fill="#E6924A"/><text x="646.2" y="206.4" class="small">identity</text>
+<circle cx="693.5" cy="214.6" r="7" fill="#E6924A"/><text x="703.5" y="207.6" class="small">melancholic</text>
+<circle cx="235.1" cy="227.4" r="7" fill="#E6924A"/><text x="245.1" y="220.4" class="small">comforting</text>
+<circle cx="465.8" cy="229.7" r="7" fill="#E6924A"/><text x="475.8" y="222.7" class="small">grief</text>
+<circle cx="298.5" cy="232.6" r="7" fill="#E6924A"/><text x="308.5" y="225.6" class="small">niche</text>
+<circle cx="554.8" cy="497.4" r="7" fill="#6E8CF0"/><text x="564.8" y="490.4" class="small">plot driven</text>
+<circle cx="523.1" cy="478.8" r="7" fill="#6E8CF0"/><text x="533.1" y="471.8" class="small">suspense</text>
+<circle cx="648.2" cy="446.3" r="7" fill="#6E8CF0"/><text x="658.2" y="439.3" class="small">tense</text>
+<circle cx="483.9" cy="428.8" r="7" fill="#6E8CF0"/><text x="493.9" y="421.8" class="small">power</text>
+<circle cx="464.3" cy="415.5" r="7" fill="#6E8CF0"/><text x="474.3" y="408.5" class="small">morally ambiguous</text>
+<circle cx="491.4" cy="412" r="7" fill="#6E8CF0"/><text x="501.4" y="405" class="small">unsettling</text>
+<circle cx="539.7" cy="405" r="7" fill="#6E8CF0"/><text x="549.7" y="398" class="small">moderate</text>
+<circle cx="594" cy="402.7" r="7" fill="#6E8CF0"/><text x="604" y="395.7" class="small">dialogue heavy</text>
+<circle cx="230.6" cy="396.3" r="7" fill="#6E8CF0"/><text x="240.6" y="389.3" class="small">anti hero</text>
+<circle cx="162.8" cy="391.1" r="7" fill="#6E8CF0"/><text x="172.8" y="384.1" class="small">historical</text>
+<text x="600" y="585" text-anchor="middle" class="axis">Prevalence across analyzed works</text>
+<text x="24" y="340" text-anchor="middle" class="axis" transform="rotate(-90 24 340)">Preference association</text>
+</svg>
