@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <rect width="100%" height="100%" fill="#14181D"/>
+  <style>
+    text { font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; fill: #F2F2EF; }
+    .muted { fill: #9CA3AB; }
+    .title { font-size: 34px; font-weight: 650; letter-spacing: -1.2px; }
+    .sub { font-size: 16px; }
+    .axis { font-size: 14px; fill: #9CA3AB; }
+    .label { font-size: 15px; }
+    .small { font-size: 12px; fill: #9CA3AB; }
+  </style>
+<text x="70" y="58" class="title">Round 1 ROI scenarios</text>
+<text x="70" y="88" class="sub muted">Historical scenario model using the original top-down $45k implementation + $30k annual operating estimate</text>
+<line x1="110" y1="490" x2="1090" y2="490" stroke="#9CA3AB"/>
+<rect x="222" y="475" width="58" height="15" rx="6" fill="#E6924A"/><text x="251" y="463" text-anchor="middle" class="label">35%</text>
+<rect x="288" y="436" width="58" height="54" rx="6" fill="#5CAF5C"/><text x="317" y="424" text-anchor="middle" class="label">125%</text><text x="270" y="540" text-anchor="middle" class="label">Conservative</text>
+<rect x="552" y="407" width="58" height="83" rx="6" fill="#E6924A"/><text x="581" y="395" text-anchor="middle" class="label">190%</text>
+<rect x="618" y="323" width="58" height="167" rx="6" fill="#5CAF5C"/><text x="647" y="311" text-anchor="middle" class="label">383%</text><text x="600" y="540" text-anchor="middle" class="label">Base</text>
+<rect x="882" y="253" width="58" height="237" rx="6" fill="#E6924A"/><text x="911" y="241" text-anchor="middle" class="label">543%</text>
+<rect x="948" y="66" width="58" height="424" rx="6" fill="#5CAF5C"/><text x="977" y="54" text-anchor="middle" class="label">972%</text><text x="930" y="540" text-anchor="middle" class="label">Upside</text>
+<rect x="820" y="112" width="18" height="18" rx="4" fill="#E6924A"/><text x="847" y="126" class="axis">12 months</text>
+<rect x="950" y="112" width="18" height="18" rx="4" fill="#5CAF5C"/><text x="977" y="126" class="axis">36 months</text>
+<text x="70" y="595" class="small">Historical Round 1 chart retained for traceability. This cost basis was superseded after teacher feedback.</text>
+</svg>
