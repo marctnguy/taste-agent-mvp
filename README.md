@@ -1,26 +1,112 @@
 # Taste Agent
 
-Taste Agent is a movie recommendation capstone with a frozen watchlist personalization path and a separate evaluation harness.
+Taste Agent is a Letterboxd capstone that turns film-history signals, expressed watchlist intent and current user requests into contextual, explainable film discovery.
 
-## Active Architecture
+Round 1 validated semantic taste modelling through an n8n POC. Round 2 built and evaluated a functional Python/Streamlit MVP and packages the result as a client-facing consulting deliverable.
 
-- Service entrypoint: `mvp.src.watchlist_personalization.reversible_history_watchlist_service.load_reversible_history_watchlist_service()`
-- UI entrypoint: `streamlit run mvp/streamlit_app.py`
-- CLI / evaluation runner: `python -m mvp.src.watchlist_personalization.langsmith_evaluation`
-- Frozen offline runner: `python evaluation/watchlist_personalization/run_reversible_history_watchlist_experiment.py`
-- The Streamlit UI calls the service facade and its `recommend(...)` method; recommendation logic stays outside the presentation layer.
+---
 
-## UI
+## Round 2 Submission Map
 
-The demo UI opens on the interpretable 62-dimensional Taste Profile, then surfaces human-reviewed recommendation cards and an accessible conversational Taste Agent. Its visual system mirrors the POC presentation: dark graphite surfaces, restrained blue/green/orange accents, compact cards, and high-contrast typography.
+### Consulting Package
+
+- [`use_case_definition.md`](use_case_definition.md) — business problem, client profile, solution, stakeholders, success criteria, scope and Round 1 → Round 2 evolution
+- [`roi_risk_assessment.md`](roi_risk_assessment.md) — 12/36-month ROI, assumptions, break-even and risk matrix
+- [`compliance/eu_ai_act_compliance.md`](compliance/eu_ai_act_compliance.md) — AI Act classification, conformity summary and technical-documentation outline
+- [`compliance/gdpr_documentation.md`](compliance/gdpr_documentation.md) — data flows, processing register, lawful-basis candidates, short DPIA, rights and transfers
+- [`strategic_plan.md`](strategic_plan.md) — POC → MVP → Pilot → commercial experiment → full deployment
+- [`feedback/round1_decision.md`](feedback/round1_decision.md) — peer feedback and how Round 2 responded
+
+### POC
+
+- [`poc/poc_documentation.md`](poc/poc_documentation.md) — no-code POC architecture, reproduction steps, limits and POC → MVP evolution
+- Canonical Round 1 n8n export and screenshots: `https://github.com/marctnguy/taste-agent-round1`
+- Required 2–5 minute POC recording: to be added with the final submission
+
+### Working MVP
+
+- [`mvp_documentation.md`](mvp_documentation.md) — setup, architecture, error handling, testing, performance and limitations
+- UI entrypoint: `mvp/streamlit_app.py`
+- Requirements: `requirements.txt`
+- Environment template: `.env.example`
 
 Run locally:
 
 ```bash
-streamlit run mvp/streamlit_app.py
+PYTHONPATH=. streamlit run mvp/streamlit_app.py
 ```
 
-The dashboard/profile can render from tracked artifacts. Live agent recommendations additionally require the same environment and external Letterboxd watchlist ZIP used by the accepted service.
+### LangSmith / Evaluation
+
+- [`evaluation/langsmith.md`](evaluation/langsmith.md) — grader-facing Round 2 evaluation summary
+- `evaluation/langsmith/` — datasets, evaluators and evaluation plans
+- `evaluation/watchlist_personalization/final_evidence/` — canonical hosted comparison, human review and runtime-freeze evidence
+
+### Round 1
+
+The original discovery, sector research, charts, POC artifacts, evaluation plan and presentation remain available at:
+
+`https://github.com/marctnguy/taste-agent-round1`
+
+---
+
+## Product Evolution
+
+Round 1 proposed a semantic cross-media Taste Model.
+
+Round 2 tested that assumption rather than carrying it forward unchanged.
+
+The handcrafted 62-dimensional semantic representation remained useful for interpretation, but it did **not** outperform the metadata baseline as a preference predictor. Goodreads also did not demonstrate sufficient incremental predictive value to justify becoming a recommendation dependency.
+
+The active recommendation architecture therefore separates:
+
+```text
+Current Request
+      +
+Watchlist / Expressed Intent
+      +
+Historical Preference Compatibility
+      +
+Interpretable Taste Evidence
+      ↓
+Contextual Film Discovery
+```
+
+The 62D Taste Profile remains an explanation and interpretation layer rather than the sole ranking engine.
+
+---
+
+## Active Architecture
+
+- Service entrypoint: `mvp.src.watchlist_personalization.reversible_history_watchlist_service.load_reversible_history_watchlist_service()`
+- UI entrypoint: `mvp/streamlit_app.py`
+- LangSmith / evaluation runner: `python -m mvp.src.watchlist_personalization.langsmith_evaluation`
+- Frozen offline runner: `python evaluation/watchlist_personalization/run_reversible_history_watchlist_experiment.py`
+- The Streamlit UI calls the service facade and its `recommend(...)` method; recommendation logic stays outside the presentation layer.
+
+Request flow:
+
+```text
+USER REQUEST
+→ REQUEST UNDERSTANDING
+→ QUERY-AWARE CATALOG RETRIEVAL
+→ HARD CONSTRAINTS
+→ SEMANTIC CANDIDATE QUALIFICATION
+→ HISTORICAL PREFERENCE COMPATIBILITY
+→ SELECTION
+→ GROUNDED EXPLANATION
+→ VALIDATION / ABSTENTION
+```
+
+---
+
+## UI
+
+The demo opens on the interpretable Taste Profile, then surfaces recommendation cards and a conversational Taste Agent.
+
+The dashboard/profile can render from tracked artifacts. Live recommendations additionally require the configured environment and the external Letterboxd watchlist ZIP used by the accepted service.
+
+---
 
 ## Required Inputs
 
@@ -29,14 +115,43 @@ The dashboard/profile can render from tracked artifacts. Live agent recommendati
 - `mvp/data/processed/watched_override_confirmations.csv`
 - `mvp/artifacts/experiments/exploratory_latent_semantics/embedding_cache/film_embeddings.csv`
 - `evaluation/hitl/runtime_v4_final/05_run_manifest.json`
-- The Letterboxd watchlist ZIP in the repository parent directory when running the watchlist service.
+- Letterboxd watchlist ZIP in the repository parent directory when running the live watchlist service
 
-## Setup And Test
+---
 
-- Focused offline checks: `pytest -q mvp/tests/runtime_v4/test_hard_constraints.py`
-- Watchlist service checks: `pytest -q mvp/tests/watchlist_personalization/test_reversible_history_watchlist.py`
-- Runner checks: `pytest -q mvp/tests/watchlist_personalization/test_langsmith_evaluation_runner.py`
-- Offline check with service preflight: `python evaluation/watchlist_personalization/run_reversible_history_watchlist_experiment.py`
+## Setup and Test
+
+```bash
+pip install -r requirements.txt
+```
+
+Focused checks:
+
+```bash
+PYTHONPATH=. pytest -q \
+  mvp/tests/runtime_v4/test_hard_constraints.py \
+  mvp/tests/watchlist_personalization/test_reversible_history_watchlist.py
+```
+
+The final performance regression gate produced 22 passing tests and one known pre-existing H12 parser-label variation; its substantive exclusion invariant still passes.
+
+---
+
+## Performance
+
+Dedicated runtime optimization reduced measured recommendation latency from:
+
+```text
+160.72s baseline
+→
+48.35s median across three isolated runs
+```
+
+approximately **69.9% lower / 3.3× faster**.
+
+This is sufficient for MVP demonstration but not presented as a final production latency target.
+
+---
 
 ## Evidence
 
@@ -44,10 +159,16 @@ The dashboard/profile can render from tracked artifacts. Live agent recommendati
 - Hosted comparison: `evaluation/watchlist_personalization/final_evidence/hosted/`
 - Completed human review: `evaluation/watchlist_personalization/final_evidence/human_review/`
 - Runtime freeze evidence: `evaluation/watchlist_personalization/final_evidence/runtime_freeze/`
-- Historical cleanup evidence: `evaluation/watchlist_personalization/reversible_history_watchlist/artifacts/`
+
+---
 
 ## Known Limits
 
-- This cleanup does not claim a fresh live TMDB/OpenAI/LangSmith run.
-- The watchlist service still depends on the external Letterboxd ZIP input.
-- Variant A remains the default recommendation policy.
+- human evaluation is limited and does not establish statistical superiority
+- recommendation latency remains too high to assume production readiness
+- the live service depends on external APIs and the Letterboxd watchlist export
+- cross-media recommendation lift has not been demonstrated
+- business impact has not yet been tested with real users
+- LLM-backed stages introduce normal nondeterminism
+
+The next recommended stage is a **controlled Pilot**, not full deployment.
