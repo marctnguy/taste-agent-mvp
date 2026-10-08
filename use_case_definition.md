@@ -21,7 +21,7 @@ This matters because discovery is core to the product and paid membership is str
 
 ---
 
-## 2. Company Profile
+## 2. Company Profile and Strategic Context
 
 Letterboxd is a global social platform for film discovery, logging, rating, reviewing and discussion.
 
@@ -37,6 +37,54 @@ Its product already creates a strong preference-data asset:
 - social and discovery interactions
 
 Taste Agent is designed as an extension of that existing product model rather than as a separate standalone service.
+
+### Current scale and growth
+
+Tiny reported **30.7 million Letterboxd members at the end of Q2 2026**, representing **43% year-over-year growth** and **185% growth since Tiny Fund I acquired its interest**.
+
+This follows approximately 10 million members at the time of the 2023 investment, 26.1 million by Q4 2025 and 29 million by Q1 2026.
+
+The strategic implication is important: Taste Agent is being proposed for a product that has already demonstrated very strong audience growth. The question is therefore not whether Letterboxd can attract a film audience, but how it can turn a growing first-party preference-data asset into stronger discovery, engagement and monetisation.
+
+### Business model
+
+Letterboxd states that **membership fees are its chief source of income**.
+
+Its current public annual pricing is:
+
+- **Pro — $19/year**
+- **Patron — $49/year**
+
+Letterboxd also states that it measures success through:
+
+1. the size of its community
+2. the level of activity in that community
+3. the number of members who choose to support the service financially
+
+This makes paid feature differentiation directly relevant to the company's own success model.
+
+### Product direction
+
+Letterboxd's published product direction includes improving its native mobile apps and continuing to add features for Pro and Patron members.
+
+The platform has also expanded beyond pure social logging into a broader film-discovery and media role, including transactional film rentals and editorial/video activity.
+
+Taste Agent fits this direction as a **native premium discovery capability**, not as a separate AI product.
+
+Its strategic fit is threefold:
+
+- **Paid differentiation:** create a stronger reason to upgrade without changing Letterboxd's core identity
+- **Engagement and retention:** turn existing ratings, diary activity and watchlist behaviour into more useful recurring discovery
+- **First-party advantage:** create additional value from data Letterboxd already owns rather than depending on a new social graph or external identity profile
+
+### Public sources
+
+- Tiny Q2 2026 results: https://investors.tiny.com/news/news-details/2026/Tiny-Reports-Q2-2026-Results/default.aspx
+- Tiny 2025 Annual Shareholder Letter: https://s202.q4cdn.com/676416790/files/doc_financials/2025/sr/Tiny-Ltd-2025-Annual-Shareholder-Letter.pdf
+- Letterboxd Purpose: https://letterboxd.com/purpose/
+- Letterboxd paid subscriptions: https://letterboxd.com/about/pro/
+- Letterboxd Pro / Patron pricing: https://letterboxd.com/pro/
+- Tiny Q2 2025 update, including transactional-video plans: https://s202.q4cdn.com/676416790/files/doc_financials/2025/q2/Tiny-Ltd-Q2-2025-Earnings-Call-Presentation-vF-Read-Only.pdf
 
 ---
 
