@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <rect width="100%" height="100%" fill="#14181D"/>
+  <style>
+    text { font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; fill: #F2F2EF; }
+    .muted { fill: #9CA3AB; }
+    .title { font-size: 34px; font-weight: 650; letter-spacing: -1.2px; }
+    .sub { font-size: 16px; }
+    .axis { font-size: 14px; fill: #9CA3AB; }
+    .small { font-size: 12px; fill: #9CA3AB; }
+  </style>
+<text x="70" y="58" class="title">Round 1 preference associations</text>
+<text x="70" y="88" class="sub muted">Pearson association between semantic dimension and rating-derived preference weight</text>
+<line x1="610" y1="120" x2="610" y2="560" stroke="#9CA3AB" stroke-width="1"/>
+<rect x="550.7" y="120" width="59.3" height="13" rx="3" fill="#6E8CF0"/><text x="590" y="131" text-anchor="end" class="small">historical</text><text x="540.7" y="131" text-anchor="end" class="axis">-0.078</text>
+<rect x="543.9" y="140" width="66.1" height="13" rx="3" fill="#6E8CF0"/><text x="590" y="151" text-anchor="end" class="small">anti hero</text><text x="533.9" y="151" text-anchor="end" class="axis">-0.087</text>
+<rect x="535.5" y="160" width="74.5" height="13" rx="3" fill="#6E8CF0"/><text x="590" y="171" text-anchor="end" class="small">dialogue heavy</text><text x="525.5" y="171" text-anchor="end" class="axis">-0.098</text>
+<rect x="532.5" y="180" width="77.5" height="13" rx="3" fill="#6E8CF0"/><text x="590" y="191" text-anchor="end" class="small">moderate</text><text x="522.5" y="191" text-anchor="end" class="axis">-0.102</text>
+<rect x="523.4" y="200" width="86.6" height="13" rx="3" fill="#6E8CF0"/><text x="590" y="211" text-anchor="end" class="small">unsettling</text><text x="513.4" y="211" text-anchor="end" class="axis">-0.114</text>
+<rect x="518.8" y="220" width="91.2" height="13" rx="3" fill="#6E8CF0"/><text x="590" y="231" text-anchor="end" class="small">morally ambiguous</text><text x="508.8" y="231" text-anchor="end" class="axis">-0.120</text>
+<rect x="501.3" y="240" width="108.7" height="13" rx="3" fill="#6E8CF0"/><text x="590" y="251" text-anchor="end" class="small">power</text><text x="491.3" y="251" text-anchor="end" class="axis">-0.143</text>
+<rect x="478.5" y="260" width="131.5" height="13" rx="3" fill="#6E8CF0"/><text x="590" y="271" text-anchor="end" class="small">tense</text><text x="468.5" y="271" text-anchor="end" class="axis">-0.173</text>
+<rect x="436.0" y="280" width="174.0" height="13" rx="3" fill="#6E8CF0"/><text x="590" y="291" text-anchor="end" class="small">suspense</text><text x="426.0" y="291" text-anchor="end" class="axis">-0.229</text>
+<rect x="411.6" y="300" width="198.4" height="13" rx="3" fill="#6E8CF0"/><text x="590" y="311" text-anchor="end" class="small">plot driven</text><text x="401.6" y="311" text-anchor="end" class="axis">-0.261</text>
+<rect x="610" y="320" width="218.9" height="13" rx="3" fill="#E6924A"/><text x="630" y="331" class="small">friendship</text><text x="838.9" y="331" class="axis">+0.288</text>
+<rect x="610" y="340" width="190.8" height="13" rx="3" fill="#E6924A"/><text x="630" y="351" class="small">contemplative</text><text x="810.8" y="351" class="axis">+0.251</text>
+<rect x="610" y="360" width="189.2" height="13" rx="3" fill="#E6924A"/><text x="630" y="371" class="small">sentimental</text><text x="809.2" y="371" class="axis">+0.249</text>
+<rect x="610" y="380" width="187.0" height="13" rx="3" fill="#E6924A"/><text x="630" y="391" class="small">family</text><text x="807.0" y="391" class="axis">+0.246</text>
+<rect x="610" y="400" width="181.6" height="13" rx="3" fill="#E6924A"/><text x="630" y="411" class="small">character driven</text><text x="801.6" y="411" class="axis">+0.239</text>
+<rect x="610" y="420" width="173.3" height="13" rx="3" fill="#E6924A"/><text x="630" y="431" class="small">identity</text><text x="793.3" y="431" class="axis">+0.228</text>
+<rect x="610" y="440" width="171.8" height="13" rx="3" fill="#E6924A"/><text x="630" y="451" class="small">melancholic</text><text x="791.8" y="451" class="axis">+0.226</text>
+<rect x="610" y="460" width="155.0" height="13" rx="3" fill="#E6924A"/><text x="630" y="471" class="small">comforting</text><text x="775.0" y="471" class="axis">+0.204</text>
+<rect x="610" y="480" width="152.0" height="13" rx="3" fill="#E6924A"/><text x="630" y="491" class="small">grief</text><text x="772.0" y="491" class="axis">+0.200</text>
+<rect x="610" y="500" width="148.2" height="13" rx="3" fill="#E6924A"/><text x="630" y="511" class="small">niche</text><text x="768.2" y="511" class="axis">+0.195</text>
+<text x="70" y="595" class="small">Historical Round 1 POC evidence; associations are descriptive and not causal.</text>
+</svg>
