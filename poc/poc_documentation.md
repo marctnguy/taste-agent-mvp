@@ -153,13 +153,10 @@ The POC remains the **no-code feasibility artifact**. The Python/Streamlit appli
 
 ## 9. Demo Recording
 
-A **2–5 minute n8n walkthrough** should show:
+A narrated end-to-end POC walkthrough is available here:
 
-1. input records
-2. film/book routing
-3. metadata enrichment
-4. the quality gate
-5. structured semantic classification
-6. the final Taste Model output
+[Watch the POC demo](https://drive.google.com/file/d/1xgIm0cDU0K1vI1VvIf0-W8gcnUDRVAK8/view?usp=sharing)
+
+The recording covers the n8n flow, including the input records, film/book routing, metadata enrichment, quality gate, structured semantic classification and final Taste Model output.
 
 The recording is intentionally focused on the POC workflow; the MVP is demonstrated separately in the final presentation.
