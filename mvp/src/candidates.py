@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
 import json
 import re
 import time
@@ -40,6 +41,8 @@ TMDB_API_BASE = "https://api.themoviedb.org/3"
 
 DEFAULT_CANDIDATE_LIMIT = 300
 DEFAULT_TOP_K = 20
+CANDIDATE_ENRICHMENT_MAX_WORKERS = 8
+WATCHED_EXCLUSION_SEARCH_MAX_WORKERS = 8
 POPULAR_PAGES = 3
 TOP_RATED_PAGES = 3
 RECENT_PAGES = 2
@@ -456,6 +459,8 @@ def build_watched_exclusions(
     enriched_films: pd.DataFrame,
     client: TMDBClient | None = None,
     watched_overrides: pd.DataFrame | None = None,
+    *,
+    search_max_workers: int | None = None,
 ) -> tuple[pd.DataFrame, dict[str, Any]]:
     override_rows = watched_overrides.copy().reset_index(drop=True) if watched_overrides is not None and not watched_overrides.empty else pd.DataFrame()
     if not override_rows.empty:
@@ -481,18 +486,16 @@ def build_watched_exclusions(
         enriched_lookup["tmdb_id"] = pd.to_numeric(enriched_lookup["tmdb_id"], errors="coerce")
     enriched_lookup = enriched_lookup.set_index("source_id") if not enriched_lookup.empty else pd.DataFrame()
 
-    exclusions: list[dict[str, Any]] = []
-    tmdb_matches = 0
-    title_year_fallbacks = 0
-    for _, row in watched_frame.iterrows():
+    watched_rows = watched_frame.to_dict(orient="records")
+
+    def _resolve_watched_row(row: dict[str, Any]) -> dict[str, Any]:
         source_id = str(row.get("source_id", ""))
         title = row.get("title")
         year = row.get("year") if pd.notna(row.get("year")) else row.get("release_year")
         tmdb_id = pd.NA
         match_method = "title_year_fallback"
-        if not isinstance(enriched_lookup, pd.DataFrame) and source_id in enriched_lookup.index:
-            pass
-        if isinstance(enriched_lookup, pd.DataFrame) and not enriched_lookup.empty and source_id in enriched_lookup.index:
+
+        if not enriched_lookup.empty and source_id in enriched_lookup.index:
             matched = enriched_lookup.loc[source_id]
             if isinstance(matched, pd.Series):
                 tmdb_id = matched.get("tmdb_id", pd.NA)
@@ -500,6 +503,7 @@ def build_watched_exclusions(
                 tmdb_id = matched.iloc[0].get("tmdb_id", pd.NA)
             if pd.notna(tmdb_id):
                 match_method = "enriched_tmdb"
+
         if pd.isna(tmdb_id) and client is not None and title:
             try:
                 result = client.search_movie(str(title), year)
@@ -508,24 +512,36 @@ def build_watched_exclusions(
             if result and result.get("id") is not None:
                 tmdb_id = int(result["id"])
                 match_method = "tmdb_search"
-        if pd.notna(tmdb_id):
-            tmdb_matches += 1
-        else:
-            title_year_fallbacks += 1
+
         normalized_title = _normalize_title(title)
         normalized_title_year = f"{normalized_title}__{'' if pd.isna(year) else int(float(year))}"
-        exclusions.append(
-            {
-                "source_id": source_id,
-                "title": title,
-                "year": year,
-                "tmdb_id": int(tmdb_id) if pd.notna(tmdb_id) else pd.NA,
-                "match_method": match_method,
-                "normalized_title": normalized_title,
-                "normalized_title_year": normalized_title_year,
-                "exclusion_key": str(int(tmdb_id)) if pd.notna(tmdb_id) else normalized_title_year,
-            }
-        )
+        return {
+            "source_id": source_id,
+            "title": title,
+            "year": year,
+            "tmdb_id": int(tmdb_id) if pd.notna(tmdb_id) else pd.NA,
+            "match_method": match_method,
+            "normalized_title": normalized_title,
+            "normalized_title_year": normalized_title_year,
+            "exclusion_key": str(int(tmdb_id)) if pd.notna(tmdb_id) else normalized_title_year,
+        }
+
+    worker_limit = (
+        WATCHED_EXCLUSION_SEARCH_MAX_WORKERS
+        if search_max_workers is None
+        else max(1, int(search_max_workers))
+    )
+    worker_count = min(worker_limit, len(watched_rows)) if watched_rows else 1
+    if worker_count <= 1:
+        exclusions = [_resolve_watched_row(row) for row in watched_rows]
+    else:
+        with ThreadPoolExecutor(max_workers=worker_count) as executor:
+            # executor.map preserves input ordering, so drop_duplicates(keep="first")
+            # sees the same row order as the serial implementation.
+            exclusions = list(executor.map(_resolve_watched_row, watched_rows))
+
+    tmdb_matches = sum(1 for row in exclusions if pd.notna(row.get("tmdb_id")))
+    title_year_fallbacks = len(exclusions) - tmdb_matches
 
     frame = pd.DataFrame(exclusions).drop_duplicates(subset=["exclusion_key"], keep="first").reset_index(drop=True)
     report = {
@@ -547,6 +563,87 @@ def _candidate_source_order() -> list[tuple[str, str]]:
         ("seeded_recommendations", "seeded_recommendations"),
     ]
 
+
+
+def _enrich_candidate_record(
+    client: TMDBClient,
+    row: dict[str, Any],
+) -> tuple[dict[str, Any], bool]:
+    """Enrich one already-selected candidate without changing candidate identity/order."""
+    movie_payload = {
+        "id": int(row["tmdb_id"]) if pd.notna(row.get("tmdb_id")) else None,
+        "title": row.get("title"),
+    }
+    if pd.notna(row.get("year")):
+        movie_payload["release_date"] = f"{int(float(row['year']))}-01-01"
+
+    enriched = _enrich_movie_details(client, movie_payload) or {}
+    failed = not bool(enriched)
+    if failed:
+        enriched = {
+            "source_id": str(row.get("source_id")),
+            "tmdb_id": int(row["tmdb_id"]) if pd.notna(row.get("tmdb_id")) else pd.NA,
+            "canonical_id": str(row.get("source_id")),
+            "title": row.get("title"),
+            "release_year": row.get("release_year"),
+            "year": row.get("year"),
+            "tmdb_genres": pd.NA,
+            "tmdb_original_language": pd.NA,
+            "tmdb_production_countries": pd.NA,
+            "tmdb_overview": pd.NA,
+        }
+    else:
+        for field in [
+            "tmdb_genres",
+            "tmdb_original_language",
+            "tmdb_production_countries",
+            "tmdb_overview",
+        ]:
+            if field not in enriched:
+                enriched[field] = pd.NA
+
+    enriched["candidate_sources"] = _unique_list(
+        [str(value) for value in row.get("candidate_sources", [])]
+    )
+    enriched["candidate_source_ranks"] = _unique_list(
+        [str(value) for value in row.get("candidate_source_ranks", [])]
+    )
+    return enriched, failed
+
+
+def _enrich_candidate_records(
+    client: TMDBClient,
+    rows: list[dict[str, Any]],
+    *,
+    max_workers: int | None = None,
+) -> tuple[list[dict[str, Any]], int]:
+    """Enrich independent TMDB candidates concurrently while preserving input order."""
+    if not rows:
+        return [], 0
+
+    worker_limit = (
+        CANDIDATE_ENRICHMENT_MAX_WORKERS
+        if max_workers is None
+        else max(1, int(max_workers))
+    )
+    worker_count = min(worker_limit, len(rows))
+
+    if worker_count <= 1:
+        results = [_enrich_candidate_record(client, row) for row in rows]
+    else:
+        with ThreadPoolExecutor(max_workers=worker_count) as executor:
+            # executor.map returns results in the same order as the input rows.
+            # Candidate ordering and downstream ranking inputs are therefore unchanged.
+            results = list(
+                executor.map(
+                    lambda row: _enrich_candidate_record(client, row),
+                    rows,
+                )
+            )
+
+    enriched_rows = [enriched for enriched, _failed in results]
+    enrichment_failures = sum(1 for _enriched, failed in results if failed)
+    return enriched_rows, enrichment_failures
 
 def generate_candidate_pool(
     candidate_limit: int = DEFAULT_CANDIDATE_LIMIT,
@@ -617,37 +714,10 @@ def generate_candidate_pool(
     candidate_frame = candidate_frame.loc[~(candidate_frame["is_watched_tmdb"] | candidate_frame["is_watched_title_year"])].copy().reset_index(drop=True)
     removed_watched = before_exclusion - len(candidate_frame)
 
-    enriched_rows: list[dict[str, Any]] = []
-    enrichment_failures = 0
-    for row in candidate_frame.to_dict(orient="records"):
-        movie_payload = {
-            "id": int(row["tmdb_id"]) if pd.notna(row.get("tmdb_id")) else None,
-            "title": row.get("title"),
-        }
-        if pd.notna(row.get("year")):
-            movie_payload["release_date"] = f"{int(float(row['year']))}-01-01"
-        enriched = _enrich_movie_details(client, movie_payload) or {}
-        if not enriched:
-            enrichment_failures += 1
-            enriched = {
-                "source_id": str(row.get("source_id")),
-                "tmdb_id": int(row["tmdb_id"]) if pd.notna(row.get("tmdb_id")) else pd.NA,
-                "canonical_id": str(row.get("source_id")),
-                "title": row.get("title"),
-                "release_year": row.get("release_year"),
-                "year": row.get("year"),
-                "tmdb_genres": pd.NA,
-                "tmdb_original_language": pd.NA,
-                "tmdb_production_countries": pd.NA,
-                "tmdb_overview": pd.NA,
-            }
-        else:
-            for field in ["tmdb_genres", "tmdb_original_language", "tmdb_production_countries", "tmdb_overview"]:
-                if field not in enriched:
-                    enriched[field] = pd.NA
-        enriched["candidate_sources"] = _unique_list([str(value) for value in row.get("candidate_sources", [])])
-        enriched["candidate_source_ranks"] = _unique_list([str(value) for value in row.get("candidate_source_ranks", [])])
-        enriched_rows.append(enriched)
+    enriched_rows, enrichment_failures = _enrich_candidate_records(
+        client,
+        candidate_frame.to_dict(orient="records"),
+    )
 
     candidate_frame = pd.DataFrame(enriched_rows).reset_index(drop=True)
     candidate_frame = candidate_frame.loc[

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
 import re
 from datetime import datetime
 from dataclasses import dataclass
@@ -28,6 +29,7 @@ from mvp.src.generative_v4.schemas import (
 DEFAULT_QUALIFICATION_MODEL = GENERATION_MODEL
 SEMANTIC_QUALIFICATION_SHORTLIST_SIZE = 48
 SEMANTIC_QUALIFICATION_BATCH_SIZE = 6
+SEMANTIC_QUALIFICATION_MAX_WORKERS = 4
 
 ASPECT_SYNONYMS: dict[str, list[str]] = {
     "comforting": ["comforting", "comfort", "cozy", "coziness", "warm", "gentle", "soothing"],
@@ -939,14 +941,73 @@ def qualify_candidates(
         return qualified_frame, []
 
     base_frame = candidate_subset.copy()
-    for start in range(0, len(candidate_subset), SEMANTIC_QUALIFICATION_BATCH_SIZE):
-        batch = candidate_subset.iloc[start : start + SEMANTIC_QUALIFICATION_BATCH_SIZE].copy().reset_index(drop=True)
-        candidate_payloads = [_candidate_payload_for_llm(_normalize_candidate_payload(row)) for _, row in batch.iterrows()]
-        candidate_ids = [str(payload.get("candidate_id") or payload.get("source_id") or "") for payload in candidate_payloads]
-        duplicate_ids = sorted({candidate_id for candidate_id in candidate_ids if candidate_ids.count(candidate_id) > 1})
+
+    # Each qualification batch is independent: same request, disjoint candidate rows,
+    # no shared ranking state. Running these calls concurrently preserves the exact
+    # candidate set, prompt, model, batch size, and downstream ordering while removing
+    # avoidable network wait time. Keep concurrency deliberately bounded to reduce
+    # rate-limit risk.
+    batch_jobs: list[tuple[int, pd.DataFrame, list[dict[str, Any]], list[str]]] = []
+    for batch_index, start in enumerate(
+        range(0, len(candidate_subset), SEMANTIC_QUALIFICATION_BATCH_SIZE)
+    ):
+        batch = candidate_subset.iloc[
+            start : start + SEMANTIC_QUALIFICATION_BATCH_SIZE
+        ].copy().reset_index(drop=True)
+        candidate_payloads = [
+            _candidate_payload_for_llm(_normalize_candidate_payload(row))
+            for _, row in batch.iterrows()
+        ]
+        candidate_ids = [
+            str(payload.get("candidate_id") or payload.get("source_id") or "")
+            for payload in candidate_payloads
+        ]
+        duplicate_ids = sorted(
+            {candidate_id for candidate_id in candidate_ids if candidate_ids.count(candidate_id) > 1}
+        )
         if duplicate_ids:
-            raise RuntimeError(f"Qualification batch contains duplicate candidate IDs: {duplicate_ids}")
-        llm_outputs, llm_call_count, input_tokens, output_tokens, batch_total_tokens = _qualify_with_llm(request, candidate_payloads)
+            raise RuntimeError(
+                f"Qualification batch contains duplicate candidate IDs: {duplicate_ids}"
+            )
+        batch_jobs.append((batch_index, batch, candidate_payloads, candidate_ids))
+
+    def _run_batch(job):
+        batch_index, batch, candidate_payloads, candidate_ids = job
+        llm_outputs, llm_call_count, input_tokens, output_tokens, batch_total_tokens = (
+            _qualify_with_llm(request, candidate_payloads)
+        )
+        return (
+            batch_index,
+            batch,
+            candidate_ids,
+            llm_outputs,
+            llm_call_count,
+            input_tokens,
+            output_tokens,
+            batch_total_tokens,
+        )
+
+    max_workers = min(SEMANTIC_QUALIFICATION_MAX_WORKERS, len(batch_jobs))
+    if max_workers <= 1:
+        batch_results = [_run_batch(job) for job in batch_jobs]
+    else:
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # executor.map preserves input order; sorting again below is defensive and
+            # makes the ordering guarantee explicit for downstream record construction.
+            batch_results = list(executor.map(_run_batch, batch_jobs))
+
+    batch_results.sort(key=lambda item: item[0])
+
+    for (
+        _,
+        batch,
+        candidate_ids,
+        llm_outputs,
+        llm_call_count,
+        input_tokens,
+        output_tokens,
+        batch_total_tokens,
+    ) in batch_results:
         total_llm_call_count += int(llm_call_count or 0)
         if total_input_tokens is None:
             total_input_tokens = input_tokens
@@ -960,12 +1021,15 @@ def qualify_candidates(
             total_tokens = batch_total_tokens
         elif batch_total_tokens is not None:
             total_tokens += int(batch_total_tokens)
+
         llm_used = llm_outputs is not None
         output_lookup: dict[str, QualificationOutput] = {}
         if llm_outputs is not None:
             parsed_ids = [str(item.candidate_id) for item in llm_outputs]
             parsed_lookup = {str(item.candidate_id): item for item in llm_outputs}
-            duplicate_parsed_ids = sorted({candidate_id for candidate_id in parsed_ids if parsed_ids.count(candidate_id) > 1})
+            duplicate_parsed_ids = sorted(
+                {candidate_id for candidate_id in parsed_ids if parsed_ids.count(candidate_id) > 1}
+            )
             missing_ids = sorted(set(candidate_ids).difference(parsed_lookup))
             extra_ids = sorted(set(parsed_lookup).difference(candidate_ids))
             if duplicate_parsed_ids or missing_ids or extra_ids:
@@ -982,23 +1046,37 @@ def qualify_candidates(
             if candidate_payload.get("raw_rank") is None:
                 candidate_payload["raw_rank"] = 0
             if candidate_payload.get("request_relevance_score") is None:
-                candidate_payload["request_relevance_score"] = float(candidate_payload.get("request_relevance") or 0.0)
+                candidate_payload["request_relevance_score"] = float(
+                    candidate_payload.get("request_relevance") or 0.0
+                )
             if candidate_payload.get("request_relevance_rank") is None:
                 candidate_payload["request_relevance_rank"] = 0
             candidate = RetrievedCandidate.model_validate(candidate_payload)
             output = output_lookup.get(candidate.candidate_id) if output_lookup else None
             if output is None:
                 output = _fallback_qualification_output(request, candidate)
-            structured_ok, structured_supported, structured_unsupported = _structured_constraint_satisfied(candidate, spec.structured_constraints)
-            if (not structured_ok or output.violated_semantic_exclusions) and output.status != "unsupported":
+            structured_ok, structured_supported, structured_unsupported = (
+                _structured_constraint_satisfied(candidate, spec.structured_constraints)
+            )
+            if (
+                not structured_ok or output.violated_semantic_exclusions
+            ) and output.status != "unsupported":
                 violated = list(dict.fromkeys(output.violated_semantic_exclusions))
                 if not structured_ok:
                     violated.extend(structured_unsupported)
                 output = QualificationOutput(
                     candidate_id=output.candidate_id,
                     status="unsupported",
-                    supported_required_aspects=list(dict.fromkeys([*output.supported_required_aspects, *structured_supported])),
-                    unsupported_required_aspects=list(dict.fromkeys([*output.unsupported_required_aspects, *structured_unsupported])),
+                    supported_required_aspects=list(
+                        dict.fromkeys(
+                            [*output.supported_required_aspects, *structured_supported]
+                        )
+                    ),
+                    unsupported_required_aspects=list(
+                        dict.fromkeys(
+                            [*output.unsupported_required_aspects, *structured_unsupported]
+                        )
+                    ),
                     supported_preferred_aspects=output.supported_preferred_aspects,
                     unsupported_preferred_aspects=output.unsupported_preferred_aspects,
                     violated_semantic_exclusions=list(dict.fromkeys(violated)),
@@ -1006,9 +1084,15 @@ def qualify_candidates(
                     grounded_evidence_details=output.grounded_evidence_details,
                     qualification_reason="Candidate violates a structured hard constraint.",
                     request_match=None,
-                    caveat=f"Unsupported structured constraints: {', '.join((structured_unsupported or structured_supported)[:5])}" if (structured_supported or structured_unsupported) else "Candidate violates a structured hard constraint.",
+                    caveat=(
+                        f"Unsupported structured constraints: {', '.join((structured_unsupported or structured_supported)[:5])}"
+                        if (structured_supported or structured_unsupported)
+                        else "Candidate violates a structured hard constraint."
+                    ),
                 )
-            record = _record_from_output(candidate.candidate_id, output, llm_used=llm_used)
+            record = _record_from_output(
+                candidate.candidate_id, output, llm_used=llm_used
+            )
             records.append(record)
             qualified_row = dict(candidate_payload)
             qualified_row.update(record.model_dump())
