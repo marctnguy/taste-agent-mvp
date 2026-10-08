@@ -26,6 +26,7 @@ Round 1 validated semantic taste modelling through an n8n POC. Round 2 built and
 ### Working MVP
 
 - [`mvp_documentation.md`](mvp_documentation.md) — setup, architecture, error handling, testing, performance and limitations
+- MVP demo recording: [Watch the working Streamlit MVP](https://drive.google.com/file/d/1zjmzWOsguTgZxdxXsI7zidOOflcFF3MJ/view?usp=sharing)
 - UI entrypoint: `mvp/streamlit_app.py`
 - Requirements: `requirements.txt`
 - Environment template: `.env.example`
