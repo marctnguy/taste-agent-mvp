@@ -123,6 +123,14 @@ PYTHONPATH=. streamlit run mvp/streamlit_app.py
 
 The dashboard opens locally in the browser.
 
+### Demo Recording
+
+A recorded walkthrough of the working Streamlit MVP is available here:
+
+[Watch the MVP demo](https://drive.google.com/file/d/1zjmzWOsguTgZxdxXsI7zidOOflcFF3MJ/view?usp=sharing)
+
+This recording is also suitable as the backup demo for the final Round 2 presentation.
+
 ---
 
 ## 8. Core AI Capability
