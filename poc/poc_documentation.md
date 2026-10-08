@@ -39,9 +39,11 @@ Preference Weighting
 Taste Model
 ```
 
-The exported workflow is included in:
+The canonical exported workflow remains in the Round 1 repository:
 
-`poc/taste-agent-poc-v03.json`
+`https://github.com/marctnguy/taste-agent-round1/blob/main/poc/workflow/taste-agent-poc-v03.json`
+
+The same repository retains the original POC screenshots, sample data and example Taste Model output.
 
 ---
 
@@ -69,7 +71,7 @@ It does not receive the user's rating, like status, preference class or preferen
 
 ## 4. Quality Controls
 
-The POC introduced several controls that remained important in Round 2:
+The POC introduced several controls that remained important in Round 2.
 
 ### Metadata matching
 
@@ -123,14 +125,12 @@ It also performs semantic enrichment inside the workflow. At production scale, r
 
 ## 7. How to Reproduce
 
-1. Import `poc/taste-agent-poc-v03.json` into n8n.
+1. Download/import the canonical `taste-agent-poc-v03.json` workflow from the Round 1 repository.
 2. Configure TMDB, Google Books and OpenAI credentials.
 3. Reconnect the n8n data-table node to the intended input table after import.
 4. Provide records following the POC schema for film and/or book consumption.
 5. Execute the workflow manually.
 6. Inspect metadata-match status, `ready_for_ai`, structured semantic output and the final Taste Model.
-
-The original Round 1 repository also contains the POC screenshots, sample data and example output used during development.
 
 ---
 
