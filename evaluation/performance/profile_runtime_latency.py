@@ -18,6 +18,13 @@ from mvp.src.prepare import TMDBClient
 
 DEFAULT_PROMPT = "I want something English from the 80s"
 OUTPUT_PATH = Path("evaluation/performance/runtime_latency_profile.json")
+ACCEPTED_BASELINE_TITLES = [
+    "Dead Poets Society",
+    "The Shining",
+    "This Is Spinal Tap",
+    "Maurice",
+    "Stop Making Sense",
+]
 
 
 class Profiler:
@@ -113,8 +120,17 @@ def _tmdb_detail(args: tuple[Any, ...], kwargs: dict[str, Any]) -> str | None:
     return None
 
 
+def _extract_recommendations(result: Any) -> list[dict[str, Any]]:
+    if not isinstance(result, dict):
+        return []
+    response = result.get("response") or {}
+    recommendations = response.get("recommendations") or []
+    if not isinstance(recommendations, list):
+        return []
+    return [item for item in recommendations if isinstance(item, dict)]
+
+
 def install_instrumentation(profiler: Profiler) -> None:
-    # Service-level stages.
     profiler.wrap(
         service_module,
         "understand_request",
@@ -139,7 +155,6 @@ def install_instrumentation(profiler: Profiler) -> None:
         _qualification_detail,
     )
 
-    # Nested retrieval / embedding work.
     profiler.wrap(
         catalog_module,
         "embed_documents",
@@ -153,8 +168,6 @@ def install_instrumentation(profiler: Profiler) -> None:
         lambda args, kwargs: f"chars={len(str(args[0]))}" if args else None,
     )
 
-    # Qualification LLM batches. This is intentionally instrumented separately
-    # so we can see whether sequential batch latency dominates the request.
     profiler.wrap(
         qualification_module,
         "_qualify_with_llm",
@@ -162,7 +175,6 @@ def install_instrumentation(profiler: Profiler) -> None:
         _qualification_detail,
     )
 
-    # TMDB detail enrichment calls made during runtime retrieval.
     profiler.wrap(
         TMDBClient,
         "movie_details",
@@ -177,6 +189,9 @@ def print_report(
     service_init_seconds: float,
     recommend_seconds: float,
     profiler: Profiler,
+    selected_titles: list[str],
+    selected_ids: list[str],
+    matches_accepted_baseline: bool | None,
 ) -> None:
     print("\n" + "=" * 78)
     print("TASTE AGENT RUNTIME LATENCY PROFILE")
@@ -204,6 +219,13 @@ def print_report(
         "embedding/TMDB work performed inside it, and qualification_total includes "
         "its qualification_llm_batch calls."
     )
+    print("\nOutput preservation check:")
+    print(f"Selected titles: {selected_titles}")
+    print(f"Selected IDs:    {selected_ids}")
+    if matches_accepted_baseline is not None:
+        print(f"Matches accepted baseline slate: {matches_accepted_baseline}")
+    else:
+        print("Matches accepted baseline slate: n/a for this prompt")
     print("=" * 78)
 
 
@@ -243,6 +265,20 @@ def main() -> None:
     )
     recommend_seconds = time.perf_counter() - recommend_started
 
+    recommendations = _extract_recommendations(result)
+    selected_titles = [str(item.get("title")) for item in recommendations]
+    selected_ids = [
+        str(item.get("candidate_id") or item.get("source_id") or "")
+        for item in recommendations
+    ]
+    normalized_prompt = " ".join(args.prompt.lower().split())
+    normalized_default = " ".join(DEFAULT_PROMPT.lower().split())
+    matches_accepted_baseline = (
+        selected_titles == ACCEPTED_BASELINE_TITLES
+        if normalized_prompt == normalized_default
+        else None
+    )
+
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -253,11 +289,13 @@ def main() -> None:
         "recommendation_total_seconds": round(recommend_seconds, 4),
         "aggregate": profiler.aggregate(),
         "events": profiler.events,
-        "recommendation_count": len(
-            ((result or {}).get("response") or {}).get("recommendations", [])
-        )
-        if isinstance(result, dict)
+        "recommendation_count": len(recommendations),
+        "selected_titles": selected_titles,
+        "selected_ids": selected_ids,
+        "accepted_baseline_titles": ACCEPTED_BASELINE_TITLES
+        if matches_accepted_baseline is not None
         else None,
+        "matches_accepted_baseline_slate": matches_accepted_baseline,
     }
     output_path.write_text(
         json.dumps(payload, indent=2, ensure_ascii=False),
@@ -269,6 +307,9 @@ def main() -> None:
         service_init_seconds=service_init_seconds,
         recommend_seconds=recommend_seconds,
         profiler=profiler,
+        selected_titles=selected_titles,
+        selected_ids=selected_ids,
+        matches_accepted_baseline=matches_accepted_baseline,
     )
     print(f"\nSaved JSON profile to: {output_path}")
 
