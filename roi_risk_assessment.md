@@ -19,28 +19,119 @@ The ROI model therefore remains a **scenario analysis rather than a forecast**.
 
 ## 2. Business Inputs and Assumptions
 
-The model retains the Round 1 assumptions because Letterboxd does not publicly disclose the internal variables required for a bottom-up forecast.
+The model uses public Letterboxd subscription pricing and a market-benchmarked delivery estimate.
+
+Letterboxd currently lists:
+
+- Pro at **$19/year**
+- Patron at **$49/year**
+
+To keep costs and benefits in one currency, the ROI model converts those values using a fixed planning rate observed on 8 October 2026:
+
+```text
+1 USD = €0.8925
+```
+
+This gives approximate planning values of:
+
+- Pro: **€16.96/year**
+- Patron: **€43.73/year**
+- Pro → Patron annual difference: **€26.78**
 
 | Input | Value / Assumption |
 |---|---:|
 | Letterboxd members, Q2 2026 | 30.7M |
-| Pro annual price | $19 |
-| Patron annual price | $49 |
-| Pro → Patron annual difference | $30 |
+| Pro annual price | $19 / ≈ €16.96 |
+| Patron annual price | $49 / ≈ €43.73 |
+| Pro → Patron annual difference | $30 / ≈ €26.78 |
 | Illustrative relevant Free cohort | 5,000,000 |
 | Illustrative relevant paid cohort | 500,000 |
-| One-time implementation / Pilot cost | $45,000 |
-| Annual operating cost | $30,000 |
-| Year 1 total cost | $75,000 |
-| 36-month total cost | $135,000 |
+| One-time implementation estimate | **€102,000** |
+| Annual operating estimate | **€34,000** |
+| Year 1 total cost | **€136,000** |
+| 36-month total cost | **€204,000** |
 
-The cohort sizes and cost figures are **project assumptions**, not Letterboxd internal figures.
+The cohort sizes remain **project assumptions**, not Letterboxd internal figures.
 
-Important unknowns include paid-member count, churn, conversion rates, ARPU after discounts/tax, internal engineering cost, feature usage frequency and production AI infrastructure cost.
+Important unknowns include paid-member count, churn, conversion rates, ARPU after discounts/tax, actual internal engineering capacity, feature usage frequency and production AI infrastructure cost.
 
 ---
 
-## 3. Value Creation Model
+## 3. Cost Estimate — Bottom-Up Market Benchmark
+
+The original Round 1 business case used a top-down cost estimate. Teacher feedback correctly identified that it was too vague to defend as an implementation budget.
+
+The Round 2 estimate is therefore built from:
+
+> **role × daily rate × expected person-days**
+
+using public Malt category rates for experienced freelancers.
+
+### Market rates used
+
+| Delivery capability | Malt benchmark | Planning rate |
+|---|---:|---:|
+| AI consulting / architecture | €690/day | €690/day |
+| AI engineering | €492/day | €502/day blended AI/ML rate |
+| Machine learning engineering | €512/day | included in €502/day blended rate |
+| Full-stack development | €412/day | €412/day |
+| MLOps | €609/day | €609/day |
+| UX design | €428/day | €428/day |
+| Project management | €585/day | €585/day |
+| Cybersecurity | €615/day | €615/day |
+| QA / technical testing proxy | €399/day Developer & IT benchmark | €399/day |
+
+The €502 AI/ML rate is the midpoint of the Malt AI Engineer and Machine Learning Engineer category averages.
+
+### Implementation work estimate
+
+| Workstream | Person-days | Planning day rate | Estimated cost |
+|---|---:|---:|---:|
+| AI solution architecture / consulting | 12 | €690 | €8,280 |
+| AI / ML engineering | 55 | €502 | €27,610 |
+| Full-stack product engineering | 40 | €412 | €16,480 |
+| MLOps / productionization | 15 | €609 | €9,135 |
+| UX / product design | 12 | €428 | €5,136 |
+| QA / regression / integration testing | 18 | €399 | €7,182 |
+| Cybersecurity review | 5 | €615 | €3,075 |
+| Project management / delivery coordination | 15 | €585 | €8,775 |
+| Privacy / legal review allowance | — | project assumption | €3,000 |
+| **Labour / review subtotal** |  |  | **€88,673** |
+| 15% delivery contingency |  |  | **€13,301** |
+| **Central one-time estimate** |  |  | **€101,974 ≈ €102,000** |
+
+The resulting planning range is:
+
+> **€95,000–€110,000 one-time implementation**
+
+This estimate represents the work required to move from the current MVP to a **pilot-ready, production-oriented implementation**. It is not the cost of the student MVP itself.
+
+The full benchmark and source list are documented in:
+
+`research/malt_cost_benchmark.md`
+
+---
+
+## 4. Annual Operating Cost
+
+The operating estimate separates specialist maintenance work from infrastructure assumptions that cannot yet be calculated from production traffic.
+
+| Operating item | Assumption | Annual estimate |
+|---|---|---:|
+| LLM / embedding APIs, cloud and observability | Usage-dependent project assumption | €10,000 |
+| AI / ML maintenance | 18 days × €502 | €9,036 |
+| Full-stack maintenance | 12 days × €412 | €4,944 |
+| QA / evaluation refresh | 8 days × €399 | €3,192 |
+| MLOps / monitoring | 6 days × €609 | €3,654 |
+| Security review | 2 days × €615 | €1,230 |
+| Privacy / legal review | Project assumption | €1,500 |
+| **Estimated annual operating cost** |  | **€33,556 ≈ €34,000** |
+
+The €10,000 API/cloud line remains deliberately labeled as an assumption. The MVP does not yet provide production traffic volumes from which to derive a reliable usage bill.
+
+---
+
+## 5. Value Creation Model
 
 Taste Agent is proposed as a native premium capability within Letterboxd's existing subscription model.
 
@@ -54,13 +145,15 @@ Hard-to-attribute benefits such as brand differentiation, engagement and partner
 
 ---
 
-## 4. 12-Month ROI Scenarios
+## 6. 12-Month ROI Scenarios
 
-| Scenario | Assumed Free → Pro uplift | Paid churn reduction | Pro → Patron upgrades | Incremental annual revenue | Year 1 cost | ROI |
+The commercial assumptions remain unchanged from the Round 1 sensitivity model. What changes is the cost basis: it is now market-anchored and materially higher.
+
+| Scenario | Assumed Free → Pro uplift | Paid churn reduction | Pro → Patron upgrades | Incremental annual value | Year 1 cost | ROI |
 |---|---:|---:|---:|---:|---:|---:|
-| Conservative | +0.05 pp | 0.25 pp | 1,000 | $101,250 | $75,000 | 35% |
-| Base | +0.10 pp | 0.50 pp | 2,500 | $217,500 | $75,000 | 190% |
-| Upside | +0.25 pp | 1.00 pp | 5,000 | $482,500 | $75,000 | 543% |
+| Conservative | +0.05 pp | 0.25 pp | 1,000 | €90,366 | €136,000 | **-34%** |
+| Base | +0.10 pp | 0.50 pp | 2,500 | €194,119 | €136,000 | **43%** |
+| Upside | +0.25 pp | 1.00 pp | 5,000 | €430,631 | €136,000 | **217%** |
 
 The calculation follows:
 
@@ -68,55 +161,83 @@ The calculation follows:
 ROI = (Net Benefit / Total Cost) × 100
 ```
 
-These scenarios test sensitivity to relatively small subscription-behaviour changes. They do not predict that Taste Agent will achieve them.
+This revision makes an important point visible: under a realistic market-based delivery cost, the conservative scenario **does not break even in Year 1**.
+
+That is not a weakness in the model. It is precisely the reason a controlled Pilot is required before full investment.
 
 ---
 
-## 5. 36-Month ROI Scenarios
+## 7. 36-Month ROI Scenarios
 
 The simplified 36-month model assumes:
 
-- $45,000 initial implementation cost
-- $30,000 annual operating cost
+- €102,000 initial implementation cost
+- €34,000 annual operating cost
 - constant annual incremental benefit
 - no major additional development investment
 - no discount rate
 
 | Scenario | 36-Month Benefit | 36-Month Cost | Illustrative ROI |
 |---|---:|---:|---:|
-| Conservative | $303,750 | $135,000 | 125% |
-| Base | $652,500 | $135,000 | 383% |
-| Upside | $1,447,500 | $135,000 | 972% |
+| Conservative | €271,097 | €204,000 | **33%** |
+| Base | €582,356 | €204,000 | **185%** |
+| Upside | €1,291,894 | €204,000 | **533%** |
 
 This is a simplified sensitivity model, not a discounted cash-flow valuation.
 
 ---
 
-## 6. Break-Even
+## 8. Break-Even
 
 If conversion were the only value mechanism:
 
 ```text
-$75,000 / $19 ≈ 3,948 additional Pro subscriptions
+€136,000 / €16.96 ≈ 8,020 additional Pro subscriptions
 ```
 
 Against the illustrative 5 million relevant Free-member cohort:
 
 ```text
-3,948 / 5,000,000 ≈ 0.079%
+8,020 / 5,000,000 ≈ 0.160%
 ```
 
 The Year 1 break-even threshold is therefore approximately:
 
-> **0.08 percentage points of incremental Free → Pro conversion**
+> **0.16 percentage points of incremental Free → Pro conversion**
 
-This is a useful Pilot decision threshold because it states what commercial uplift would need to be demonstrated rather than assuming the feature will pay for itself.
+This threshold is roughly twice the original top-down estimate and is a more useful Pilot decision gate because it is grounded in a visible delivery budget.
+
+---
+
+## 9. Cost Sources and Limitations
+
+The implementation benchmark uses current public Malt category rates for experienced freelancers rather than individual profile quotes.
+
+Primary sources:
+
+- AI Consultant — Malt
+- AI Engineer — Malt
+- Machine Learning Engineer — Malt
+- Full-Stack Developer — Malt
+- MLOps Engineer — Malt
+- UX Designer — Malt
+- Project Manager — Malt
+- Cybersecurity Expert — Malt
+- Developer & IT Specialist — Malt
+
+Source URLs and methodology are preserved in `research/malt_cost_benchmark.md`.
+
+This does **not** imply that Letterboxd would staff the project entirely with freelancers.
+
+A real delivery model could be cheaper if internal specialists are available, or more expensive if work is procured through an agency, requires deeper native-platform integration, or includes enterprise support commitments.
+
+The purpose is not false precision. It is to make the implementation estimate **auditable and decision-useful**.
 
 ---
 
 # Risk Assessment
 
-## 7. Scoring Method
+## 10. Scoring Method
 
 ```text
 Risk Score = Likelihood × Impact
@@ -133,7 +254,7 @@ Both likelihood and impact are scored from 1 to 5.
 
 ---
 
-## 8. Risk Matrix
+## 11. Risk Matrix
 
 | Risk | Category | Likelihood | Impact | Score | Priority | Mitigation |
 |---|---|---:|---:|---:|---|---|
@@ -152,7 +273,7 @@ Both likelihood and impact are scored from 1 to 5.
 
 ---
 
-## 9. What Round 2 Changed in the Risk Position
+## 12. What Round 2 Changed in the Risk Position
 
 Round 2 reduced several uncertainties but also falsified part of the original product assumption.
 
@@ -174,6 +295,14 @@ Performance work reduced measured recommendation latency from **160.72 seconds t
 
 This is a material improvement, but the remaining latency is still too high to assume production readiness. Latency remains a Pilot engineering KPI.
 
+### Cost credibility
+
+The implementation budget is now built from current Malt market rates and an explicit work breakdown rather than a single top-down estimate.
+
+The revised Year 1 cost of approximately **€136,000** materially changes the ROI profile: the conservative scenario is negative in Year 1, while the base and upside cases remain positive.
+
+This makes the Pilot decision gate more meaningful rather than less attractive.
+
 ### Recommendation quality
 
 The final system added hosted evaluation, human review and regression evidence, but the project still does not claim a statistically established commercial or recommendation winner.
@@ -182,7 +311,7 @@ The final evidence supports continuing to a controlled Pilot rather than full de
 
 ---
 
-## 10. Decision Gates
+## 13. Decision Gates
 
 ### MVP → Pilot
 
@@ -192,6 +321,7 @@ Proceed because:
 - recommendation architecture has been evaluated and hardened
 - major technical assumptions have been tested rather than assumed
 - user-facing recommendations are sufficiently credible for controlled testing
+- the investment case now has a transparent market-based cost model
 
 ### Pilot → Commercial Experiment
 
@@ -214,12 +344,16 @@ Proceed only if:
 
 ---
 
-## 11. Recommendation
+## 14. Recommendation
 
 The business case supports **controlled Pilot investment**, not full rollout.
 
-The highest-value unresolved question is now:
+The revised cost model strengthens that recommendation.
+
+At the market-based implementation cost, Taste Agent does not need an unrealistic commercial effect to justify itself, but it also no longer appears profitable under every plausible scenario.
+
+The highest-value unresolved question remains:
 
 > **Does the working Taste Agent experience create enough incremental discovery value for users to change engagement or subscription behaviour?**
 
-The Pilot should be designed to answer that question with the smallest possible additional investment.
+The Pilot should be designed to answer that question before Letterboxd commits the full implementation budget.
