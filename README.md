@@ -6,26 +6,80 @@ Round 1 validated semantic taste modelling through an n8n POC. Round 2 built and
 
 ---
 
-## Round 2 Submission Map
+## Submission Structure
 
-### Consulting Package
+```text
+taste-agent-mvp/
+├── README.md
+├── feedback/
+│   └── round1_decision.md
+├── research/
+│   ├── sector_research.md
+│   ├── opportunities_risks.md
+│   ├── use_cases.md
+│   └── malt_cost_benchmark.md
+├── charts/
+│   ├── 01-letterboxd-growth.svg
+│   ├── 02-preference-associations.svg
+│   ├── 03-prevalence-vs-preference.svg
+│   ├── 04-roi-scenarios-round1.svg
+│   └── 05-roi-scenarios-round2.svg
+├── evaluation/
+│   ├── eval_plan.md
+│   ├── langsmith.md
+│   └── ...supporting evaluation evidence
+├── use_case_definition.md
+├── poc/
+│   └── poc_documentation.md
+├── roi_risk_assessment.md
+├── compliance/
+│   ├── eu_ai_act_compliance.md
+│   └── gdpr_documentation.md
+├── strategic_plan.md
+├── presentation/
+│   └── README.md
+└── mvp/
+    ├── mvp_documentation.md
+    ├── streamlit_app.py
+    └── ...working MVP code, tests and artifacts
+```
 
-- [`use_case_definition.md`](use_case_definition.md) — business problem, client profile, solution, stakeholders, success criteria, scope and Round 1 → Round 2 evolution
-- [`roi_risk_assessment.md`](roi_risk_assessment.md) — 12/36-month ROI, assumptions, break-even and risk matrix
+The final presentation will be added to `presentation/` as `presentation.pdf` or `presentation.pptx`.
+
+---
+
+## Consulting Package
+
+- [`use_case_definition.md`](use_case_definition.md) — business problem, Letterboxd context, solution, stakeholders, success criteria, scope and Round 1 → Round 2 evolution
+- [`roi_risk_assessment.md`](roi_risk_assessment.md) — market-benchmarked implementation cost, 12/36-month ROI, break-even and risk matrix
 - [`compliance/eu_ai_act_compliance.md`](compliance/eu_ai_act_compliance.md) — AI Act classification, conformity summary and technical-documentation outline
 - [`compliance/gdpr_documentation.md`](compliance/gdpr_documentation.md) — data flows, processing register, lawful-basis candidates, short DPIA, rights and transfers
 - [`strategic_plan.md`](strategic_plan.md) — POC → MVP → Pilot → commercial experiment → full deployment
 - [`feedback/round1_decision.md`](feedback/round1_decision.md) — peer feedback and how Round 2 responded
 
-### POC
+### Research and charts
+
+The relevant Round 1 research is now retained locally under [`research/`](research/) rather than only being referenced externally. The [`charts/`](charts/) folder retains the Round 1 evidence in presentation-ready SVG form and adds the revised Round 2 ROI chart. Chart provenance is documented in [`charts/README.md`](charts/README.md).
+
+The full original Round 1 repository remains available for historical traceability:
+
+`https://github.com/marctnguy/taste-agent-round1`
+
+---
+
+## POC
 
 - [`poc/poc_documentation.md`](poc/poc_documentation.md) — no-code POC architecture, reproduction steps, limits and POC → MVP evolution
-- Canonical Round 1 n8n export and screenshots: `https://github.com/marctnguy/taste-agent-round1`
+- Original n8n workflow export: `https://github.com/marctnguy/taste-agent-round1/blob/main/poc/workflow/taste-agent-poc-v03.json`
 - POC demo recording: [Watch the narrated n8n walkthrough](https://drive.google.com/file/d/1xgIm0cDU0K1vI1VvIf0-W8gcnUDRVAK8/view?usp=sharing)
 
-### Working MVP
+The workflow export remains linked to its canonical Round 1 source rather than maintaining two divergent copies.
 
-- [`mvp_documentation.md`](mvp_documentation.md) — setup, architecture, error handling, testing, performance and limitations
+---
+
+## Working MVP
+
+- [`mvp/mvp_documentation.md`](mvp/mvp_documentation.md) — setup, architecture, error handling, testing, performance and limitations
 - MVP demo recording: [Watch the working Streamlit MVP](https://drive.google.com/file/d/1zjmzWOsguTgZxdxXsI7zidOOflcFF3MJ/view?usp=sharing)
 - UI entrypoint: `mvp/streamlit_app.py`
 - Requirements: `requirements.txt`
@@ -37,17 +91,14 @@ Run locally:
 PYTHONPATH=. streamlit run mvp/streamlit_app.py
 ```
 
-### LangSmith / Evaluation
+---
 
+## LangSmith / Evaluation
+
+- [`evaluation/eval_plan.md`](evaluation/eval_plan.md) — historical Round 1 POC evaluation plan
 - [`evaluation/langsmith.md`](evaluation/langsmith.md) — grader-facing Round 2 evaluation summary
 - `evaluation/langsmith/` — datasets, evaluators and evaluation plans
-- `evaluation/watchlist_personalization/final_evidence/` — canonical hosted comparison, human review and runtime-freeze evidence
-
-### Round 1
-
-The original discovery, sector research, charts, POC artifacts, evaluation plan and presentation remain available at:
-
-`https://github.com/marctnguy/taste-agent-round1`
+- `evaluation/watchlist_personalization/final_evidence/` — canonical hosted comparison, completed human review and runtime-freeze evidence
 
 ---
 
@@ -98,14 +149,6 @@ USER REQUEST
 → GROUNDED EXPLANATION
 → VALIDATION / ABSTENTION
 ```
-
----
-
-## UI
-
-The demo opens on the interpretable Taste Profile, then surfaces recommendation cards and a conversational Taste Agent.
-
-The dashboard/profile can render from tracked artifacts. Live recommendations additionally require the configured environment and the external Letterboxd watchlist ZIP used by the accepted service.
 
 ---
 
