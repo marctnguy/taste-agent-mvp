@@ -133,7 +133,41 @@ This recording is also suitable as the backup demo for the final Round 2 present
 
 ---
 
-## 8. Core AI Capability
+## 8. Demo User Data and Replacing the User
+
+The current Streamlit MVP is a **single-user demonstration**, not a production multi-user application.
+
+When launched in its accepted configuration, the Taste Profile and historical compatibility signal use the frozen historical/export data and derived artifacts created for the demo user. This includes the processed film history, semantic vectors, frozen training split and historical-preference embeddings stored under `mvp/data/` and `mvp/artifacts/`.
+
+The Letterboxd watchlist is loaded separately. The accepted runtime currently looks in the repository parent directory for:
+
+```text
+letterboxd-marctguy-2026-09-17-17-00-utc.zip
+```
+
+and reads `watchlist.csv` from that export.
+
+**Replacing only this ZIP does not replace the full user.** It changes the watchlist / expressed-intent input while leaving the historical Taste Profile and compatibility model based on the frozen demo history. Doing this would therefore create a hybrid configuration rather than a valid new-user profile.
+
+A genuine second user would require the preprocessing/personalization pipeline to be rerun for that user's history so that their own enriched history, embeddings, semantic Taste Profile and historical compatibility inputs are regenerated before launching the recommendation service. The current MVP deliberately keeps those artifacts frozen because Round 2 evaluation depends on a stable reference population.
+
+For a Pilot, this would become an onboarding pipeline:
+
+```text
+USER LETTERBOXD EXPORT
+→ HISTORY INGESTION
+→ METADATA ENRICHMENT
+→ SEMANTIC / EMBEDDING GENERATION
+→ USER TASTE PROFILE + COMPATIBILITY INPUTS
+→ WATCHLIST / INTENT INGESTION
+→ ISOLATED USER RUNTIME
+```
+
+Personal Letterboxd exports should remain local/private and should not be committed to the repository.
+
+---
+
+## 9. Core AI Capability
 
 The MVP's core AI capability actually runs end to end:
 
@@ -149,7 +183,7 @@ The MVP's core AI capability actually runs end to end:
 
 ---
 
-## 9. Error Handling / Safe Behaviour
+## 10. Error Handling / Safe Behaviour
 
 The MVP includes several safe-failure behaviours:
 
@@ -163,7 +197,7 @@ The MVP includes several safe-failure behaviours:
 
 ---
 
-## 10. Evaluation and Testing
+## 11. Evaluation and Testing
 
 Focused checks:
 
@@ -184,7 +218,7 @@ The H12 failure is a pre-existing LLM request-label variation (`based on taste` 
 
 ---
 
-## 11. Performance
+## 12. Performance
 
 A dedicated latency optimization phase reduced recommendation runtime from:
 
@@ -205,7 +239,7 @@ The result is sufficient for MVP demonstration but should **not** be interpreted
 
 ---
 
-## 12. Known Limitations
+## 13. Known Limitations
 
 - current latency remains high for a production consumer interaction
 - the MVP uses one user's historical/export data rather than production multi-user infrastructure
@@ -217,7 +251,7 @@ The result is sufficient for MVP demonstration but should **not** be interpreted
 
 ---
 
-## 13. Production Boundary
+## 14. Production Boundary
 
 The MVP is intentionally small.
 
@@ -236,7 +270,7 @@ Production work would still require:
 
 ---
 
-## 14. MVP Conclusion
+## 15. MVP Conclusion
 
 The MVP demonstrates that Taste Agent is no longer only a conceptual semantic profile.
 
